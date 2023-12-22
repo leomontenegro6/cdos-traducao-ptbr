@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DSVania Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/dsvedit_icon.png</normaloff>images/dsvedit_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Area</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Sector</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Room</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="area">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="sector">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="room">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>State</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="room_state"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="tiled_export">
+        <property name="text">
+         <string>Open in Tiled</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="tiled_import">
+        <property name="text">
+         <string>Import from Tiled</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="set_as_starting_room">
+        <property name="text">
+         <string>Set as starting room</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="copy_room_pointer">
+        <property name="text">
+         <string>Copy room pointer to clipboard</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="edit_map">
+        <property name="text">
+         <string>Edit map</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="toggle_hide_map">
+        <property name="text">
+         <string>Hide map</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="map_graphics_view"/>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>996</width>
+         <height>707</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="RoomView" name="room_graphics_view"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Folder"/>
+    <addaction name="actionExtract_ROM"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionEnemy_Editor"/>
+    <addaction name="actionItem_Editor"/>
+    <addaction name="actionMap_Editor"/>
+    <addaction name="actionText_Editor"/>
+    <addaction name="actionSprite_Editor"/>
+    <addaction name="actionGFX_Editor"/>
+    <addaction name="actionPlayer_Editor"/>
+    <addaction name="actionPlayer_State_Anims_Editor"/>
+    <addaction name="actionMusic_Editor"/>
+    <addaction name="actionItem_Pool_Editor"/>
+    <addaction name="actionTileset_Editor"/>
+    <addaction name="actionMenu_Editor"/>
+    <addaction name="actionSpecial_Object_Editor"/>
+    <addaction name="actionShop_Editor"/>
+    <addaction name="actionQuest_Editor"/>
+    <addaction name="actionWeapon_Synth_Editor"/>
+    <addaction name="actionMagic_Seal_Editor"/>
+    <addaction name="actionApply_ARMIPS_Patch"/>
+    <addaction name="actionAdd_Overlay"/>
+    <addaction name="actionEntity_Search"/>
+    <addaction name="actionAddress_Converter"/>
+    <addaction name="actionFix_Save_Files"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuBuild">
+    <property name="title">
+     <string>Build</string>
+    </property>
+    <addaction name="actionBuild"/>
+    <addaction name="actionBuild_and_Run"/>
+    <addaction name="actionBuild_and_Test"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionEntities"/>
+    <addaction name="actionDoors"/>
+    <addaction name="actionCollision"/>
+    <addaction name="actionLayers"/>
+    <addaction name="actionGlitch_Doors"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionEdit_Room_Props"/>
+    <addaction name="actionEdit_Layers"/>
+    <addaction name="actionEdit_Entities"/>
+    <addaction name="actionEdit_Doors"/>
+    <addaction name="actionAdd_Entity"/>
+    <addaction name="actionAdd_Door"/>
+    <addaction name="actionAdd_Room"/>
+    <addaction name="actionClear_Room_Contents"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuBuild"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExtract_ROM">
+   <property name="text">
+    <string>Extract ROM</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionEnemy_Editor">
+   <property name="text">
+    <string>Enemy Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>E</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionBuild">
+   <property name="text">
+    <string>Build</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionBuild_and_Run">
+   <property name="text">
+    <string>Build and Run</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionOpen_Folder">
+   <property name="text">
+    <string>Open Folder</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="actionText_Editor">
+   <property name="text">
+    <string>Text Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
+   </property>
+  </action>
+  <action name="actionSprite_Editor">
+   <property name="text">
+    <string>Sprite Editor</string>
+   </property>
+   <property name="toolTip">
+    <string>Sprite Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+  </action>
+  <action name="actionItem_Editor">
+   <property name="text">
+    <string>Item Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>I</string>
+   </property>
+  </action>
+  <action name="actionEntity_Search">
+   <property name="text">
+    <string>Entity Search</string>
+   </property>
+   <property name="toolTip">
+    <string>Entity Search</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionEntities">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Entities</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionDoors">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Doors</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionCollision">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Collision</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionLayers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Layers</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionEdit_Layers">
+   <property name="text">
+    <string>Edit Layers</string>
+   </property>
+  </action>
+  <action name="actionMap_Editor">
+   <property name="text">
+    <string>Map Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="actionAdd_Entity">
+   <property name="text">
+    <string>Add Entity</string>
+   </property>
+   <property name="shortcut">
+    <string>A</string>
+   </property>
+  </action>
+  <action name="actionItem_Pool_Editor">
+   <property name="text">
+    <string>Item Pool Editor</string>
+   </property>
+  </action>
+  <action name="actionGFX_Editor">
+   <property name="text">
+    <string>GFX Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>G</string>
+   </property>
+  </action>
+  <action name="actionMusic_Editor">
+   <property name="text">
+    <string>Music Editor</string>
+   </property>
+  </action>
+  <action name="actionTileset_Editor">
+   <property name="text">
+    <string>Tileset Editor</string>
+   </property>
+  </action>
+  <action name="actionPlayer_Editor">
+   <property name="text">
+    <string>Player Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="actionEdit_Entities">
+   <property name="text">
+    <string>Edit Entities</string>
+   </property>
+  </action>
+  <action name="actionSpecial_Object_Editor">
+   <property name="text">
+    <string>Special Object Editor</string>
+   </property>
+  </action>
+  <action name="actionBuild_and_Test">
+   <property name="text">
+    <string>Build and Test</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+  </action>
+  <action name="actionAdd_Overlay">
+   <property name="text">
+    <string>Add Overlay</string>
+   </property>
+  </action>
+  <action name="actionWeapon_Synth_Editor">
+   <property name="text">
+    <string>Weapon Synth Editor</string>
+   </property>
+  </action>
+  <action name="actionEdit_Room_Props">
+   <property name="text">
+    <string>Edit Room Props</string>
+   </property>
+  </action>
+  <action name="actionShop_Editor">
+   <property name="text">
+    <string>Shop Editor</string>
+   </property>
+  </action>
+  <action name="actionEdit_Doors">
+   <property name="text">
+    <string>Edit Doors</string>
+   </property>
+  </action>
+  <action name="actionAdd_Door">
+   <property name="text">
+    <string>Add Door</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+  <action name="actionMagic_Seal_Editor">
+   <property name="text">
+    <string>Magic Seal Editor</string>
+   </property>
+  </action>
+  <action name="actionPlayer_State_Anims_Editor">
+   <property name="text">
+    <string>Player State Anims Editor</string>
+   </property>
+  </action>
+  <action name="actionApply_ARMIPS_Patch">
+   <property name="text">
+    <string>Apply ARMIPS Patch</string>
+   </property>
+  </action>
+  <action name="actionQuest_Editor">
+   <property name="text">
+    <string>Quest Editor</string>
+   </property>
+  </action>
+  <action name="actionAdd_Room">
+   <property name="text">
+    <string>Add Room</string>
+   </property>
+  </action>
+  <action name="actionAddress_Converter">
+   <property name="text">
+    <string>Address Converter</string>
+   </property>
+  </action>
+  <action name="actionClear_Room_Contents">
+   <property name="text">
+    <string>Clear Room Contents</string>
+   </property>
+  </action>
+  <action name="actionFix_Save_Files">
+   <property name="text">
+    <string>Fix Save Files</string>
+   </property>
+  </action>
+  <action name="actionMenu_Editor">
+   <property name="text">
+    <string>Menu Editor</string>
+   </property>
+  </action>
+  <action name="actionGlitch_Doors">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Glitch Doors</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RoomView</class>
+   <extends>QGraphicsView</extends>
+   <header>roomview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>activated()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,232 @@
+
+require_relative 'ui_generic_editor'
+
+class GenericEditorWidget < Qt::Widget
+  attr_reader :fs, :game, :ui
+  
+  slots "item_changed(int)"
+  slots "open_icon_chooser()"
+  slots "open_color_chooser()"
+  
+  def initialize(fs, game, item_type, format_doc, custom_editable_class: nil, hide_bitfields_tree: false)
+    super()
+    @ui = Ui_GenericEditorWidget.new
+    @ui.setup_ui(self)
+    
+    # rbuic4 is bugged and ignores stretch values, so they must be manually set.
+    @ui.horizontalLayout.setStretch(0, 3)
+    @ui.horizontalLayout.setStretch(1, 5)
+    @ui.horizontalLayout.setStretch(2, 8)
+    
+    @fs = fs
+    @game = game
+    
+    if hide_bitfields_tree
+      @num_columns = 4
+      @ui.treeWidget.hide()
+    else
+      @num_columns = 2
+    end
+    
+    @ui.horizontalLayout_2.takeAt(0)
+    @ui.horizontalLayout_2.takeAt(0)
+    @attribute_column_layouts = []
+    @num_columns.times do |col|
+      form_layout = Qt::FormLayout.new()
+      form_layout.fieldGrowthPolicy = Qt::FormLayout::AllNonFixedFieldsGrow
+      form_layout.labelAlignment = Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter
+      @attribute_column_layouts << form_layout
+      
+      vertical_layout = Qt::VBoxLayout.new()
+      vertical_layout.addLayout(form_layout)
+      vertical_spacer = Qt::SpacerItem.new(20, 40, Qt::SizePolicy::Minimum, Qt::SizePolicy::Expanding)
+      vertical_layout.addItem(vertical_spacer)
+      @ui.horizontalLayout_2.addLayout(vertical_layout)
+    end
+    
+    @item_type_name = item_type[:name]
+    
+    @items = []
+    (0..item_type[:count]-1).each do |index|
+      if custom_editable_class
+        item = custom_editable_class.new(index, game)
+      else
+        item = GenericEditable.new(index, item_type, game, fs)
+      end
+      @items << item
+      @ui.item_list.addItem("%02X %s" % [index, item.name])
+    end
+    connect(@ui.item_list, SIGNAL("currentRowChanged(int)"), self, SLOT("item_changed(int)"))
+    
+    @attribute_text_fields = {}
+    @items.first.attribute_integers.keys.each_with_index do |attribute_name, i|
+      form_layout = @attribute_column_layouts[i % @num_columns]
+      
+      label = Qt::Label.new(self)
+      label.text = attribute_name
+      form_layout.setWidget(i/@num_columns, Qt::FormLayout::LabelRole, label)
+      
+      if attribute_name == "Icon"
+        field = Qt::PushButton.new(self)
+        connect(field, SIGNAL("clicked()"), self, SLOT("open_icon_chooser()"))
+      elsif attribute_name =~ /color$/
+        field = Qt::PushButton.new(self)
+        field.objectName = attribute_name
+        connect(field, SIGNAL("clicked()"), self, SLOT("open_color_chooser()"))
+      else
+        field = Qt::LineEdit.new(self)
+      end
+      field.setMaximumSize(80, 16777215)
+      form_layout.setWidget(i/@num_columns, Qt::FormLayout::FieldRole, field)
+      
+      @attribute_text_fields[attribute_name] = field
+    end
+    
+    @items.first.attribute_bitfields.each_with_index do |attribute, col|
+      attribute_name, bitfield = attribute
+      attribute_length = @items.first.attribute_bitfield_lengths[col]
+      
+      (0..attribute_length*8-1).each do |row|
+        tree_row_item = @ui.treeWidget.topLevelItem(row)
+        if tree_row_item.nil?
+          tree_row_item = Qt::TreeWidgetItem.new(@ui.treeWidget)
+        end
+        
+        @ui.treeWidget.headerItem.setText(col, attribute_name)
+        
+        tree_row_item.setText(col, bitfield.names[row])
+      end
+      @ui.treeWidget.setColumnWidth(col, 180)
+    end
+    if @items.first.attribute_bitfields.empty?
+      # If there are no bitfields then blank out the tree widget, otherwise it defaults to showing just a "1".
+      @ui.treeWidget.headerItem.setText(0, "")
+    end
+    
+    @ui.format_doc.setPlainText(format_doc)
+    
+    item_changed(0)
+  end
+  
+  def item_changed(index)
+    item = @items[index]
+    
+    @ui.item_name.setText(item.name)
+    @ui.item_pointer.setText("%08X" % item.ram_pointer)
+    @ui.item_desc.setPlainText(item.description)
+    
+    item.attribute_integers.values.each_with_index do |value, i|
+      form_layout = @attribute_column_layouts[i % @num_columns]
+      
+      attribute_length = item.attribute_integer_lengths[i]
+      string_length = attribute_length*2
+      
+      field = form_layout.itemAt(i/@num_columns, Qt::FormLayout::FieldRole).widget
+      field.text = "%0#{string_length}X" % value
+    end
+    
+    item.attribute_bitfields.values.each_with_index do |value, col|
+      attribute_length = item.attribute_bitfield_lengths[col]
+      
+      (0..attribute_length*8-1).each do |row|
+        tree_row_item = @ui.treeWidget.topLevelItem(row)
+        
+        if value[row]
+          tree_row_item.setCheckState(col, Qt::Checked)
+        else
+          tree_row_item.setCheckState(col, Qt::Unchecked)
+        end
+      end
+    end
+    
+    @ui.item_list.setCurrentRow(index)
+  end
+  
+  def save_current_item
+    item = @items[@ui.item_list.currentRow]
+    
+    item.attribute_integers.each do |attribute_name, value|
+      item[attribute_name] = @attribute_text_fields[attribute_name].text.to_i(16)
+    end
+    
+    item.attribute_bitfields.keys.each_with_index do |attribute_name, col|
+      attribute_length = item.attribute_bitfield_lengths[col]
+      
+      (0..attribute_length*8-1).each do |row|
+        tree_row_item = @ui.treeWidget.topLevelItem(row)
+        
+        if tree_row_item.checkState(col) == Qt::Checked
+          item.attribute_bitfields[attribute_name][row] = true
+        else
+          item.attribute_bitfields[attribute_name][row] = false
+        end
+      end
+    end
+    
+    item.write_to_rom()
+  end
+  
+  def set_icon(new_icon_data)
+    @attribute_text_fields["Icon"].text = "%04X" % new_icon_data
+  end
+  
+  def open_icon_chooser
+    icon_data = @attribute_text_fields["Icon"].text.to_i(16)
+    if @item_type_name =~ /Glyph/
+      mode = :glyph
+    else
+      mode = :item
+    end
+    @icon_chooser_dialog = IconChooserDialog.new(self, fs, mode, icon_data)
+    self.setEnabled(false)
+    @icon_chooser_dialog.setEnabled(true)
+  end
+  
+  def open_color_chooser
+    attribute_name = sender.objectName
+    color_value = @attribute_text_fields[attribute_name].text.to_i(16)
+    
+    options = 0
+    
+    if attribute_name == "Outline color"
+      a = 255
+      b = ((color_value & 0b0111_1100_0000_0000) >> 10) << 3
+      g = ((color_value & 0b0000_0011_1110_0000) >>  5) << 3
+      r = ((color_value & 0b0000_0000_0001_1111) >>  0) << 3
+    else
+      a = ((color_value & 0xFF000000) >> 24) / 31.0 * 255
+      b = ((color_value & 0x00FF0000) >> 16) / 31.0 * 255
+      g = ((color_value & 0x0000FF00) >>  8) / 31.0 * 255
+      r = ((color_value & 0x000000FF) >>  0) / 31.0 * 255
+      options |= Qt::ColorDialog::ShowAlphaChannel
+    end
+    
+    initial_color = Qt::Color.new(r, g, b, a)
+    color = Qt::ColorDialog.getColor(initial_color, self, "Select color", options)
+    
+    unless color.isValid
+      # User clicked cancel.
+      return
+    end
+    
+    color_value = 0
+    if attribute_name == "Outline color"
+      puts "%04X" % color_value
+      color_value |= (color.blue  >> 3) << 10
+      puts "%04X" % color_value
+      color_value |= (color.green >> 3) << 5
+      puts "%04X" % color_value
+      color_value |= (color.red   >> 3) << 0
+      puts "%04X" % color_value
+      
+      @attribute_text_fields[attribute_name].text = "%04X" % color_value
+    else
+      color_value |= (color.alpha / 255.0 * 31).round << 24
+      color_value |= (color.blue  / 255.0 * 31).round << 16
+      color_value |= (color.green / 255.0 * 31).round << 8
+      color_value |= (color.red   / 255.0 * 31).round << 0
+      
+      @attribute_text_fields[attribute_name].text = "%08X" % color_value
+    end
+  end
+end

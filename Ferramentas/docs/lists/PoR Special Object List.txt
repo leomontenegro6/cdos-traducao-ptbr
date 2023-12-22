@@ -1,0 +1,446 @@
+Special objects:
+00 Nothing.
+  Seems to have leftover code from DoS's Balore blocks, but the part that spawns the blocks is commented out, so this does nothing.
+01 Candle or other destructible piece of scenery. Var A controls the type:
+  00-0D Normal objects.
+  0E-0F Money chests.
+  10-11 Normal objects.
+  12 Pharaoh head with money in it.
+  13-19 More normal objects.
+  1A+ Nothing.
+02 Invisible pushable block.
+  Has a red outline around it, but is otherwise invisible.
+03 Changes gravity for enemies, used in Nation of Fools/Burnt Paradise. Only works for certain enemies specifically coded to do this.
+  Var A is 0000 in rooms with the floor on the right, 8000 with the floor on the left, C000 with the floor on the top.
+04 Starts boss rush.
+  Puts a timer on the screen.
+05 Ends boss rush?
+06 Opens boss doors when all enemies are dead or a full minute passes.
+  Only opens boss doors that have Var A = 1 (the type that usually opens when there are no enemies left in the room).
+07 Unused
+08 Unused
+09 Unused
+0A Unused
+0B Unused
+0C Unused
+0D Unused
+0E Unused
+0F Unused
+10 Unused
+11 Unused
+12 Unused
+13 Unused
+14 Unused
+15 Unused
+16 Mirage background effect used in Sandy Grave.
+17 Background with the moon used in Sandy Grave. Var A seems to affect the z-index, lower values meaning closer to the screen.
+18 Background from City of Haze.
+19 Effect that makes the screen very dark except the area around the player. Used in Forest of Doom.
+1A Portrait to City of Haze, Sandy Grave, Nation of Fools, or Forest of Doom.
+  Note that it can still bring you to any area you set, but it will only display the right visuals for the above areas.
+  Var A: Area index of the destination room.
+  Var B:
+    Least significant bit first.
+    Bits 1-6: Room index of destination room.
+    Bits 7-10: Sector index of the destination room.
+    Bits 11-16: Nothing.
+1B Causes player's feet to kick up sand clouds while walking.
+1C Drawbridge.
+  Requires sector overlay 78.
+1D Save point.
+1E Warp point.
+1F Large falling spiked block trap used in Sandy Grave.
+  Var A is the y pos it returns to after falling (should be the same as the entity's y pos).
+  Var B is the y pos it falls down to.
+20 Spiked falling pillar trap used in Sandry Grave.
+  Var A is the y pos it returns to after falling (should be the same as the entity's y pos).
+  Var B is the y pos it falls down to.
+21 Having this entity in the room causes the laser lamps and buttons that activate them (from Sandy Grave) to appear in the room. This entity can sometimes cause crashes.
+  Requires sector overlay 92.
+22 Boss door.
+  Var A is is how the door acts:
+    00 Door outside the boss room that opens when you touch it.
+    01 Door inside the boss room that opens when there are no enemies left in the room.
+    02 Never opens once it's closed. Used in Nest of Evil and Dracula's throne room.
+  Var B is the boss this door is for:
+    00 N/A (Never permanently disappears)
+    01 Dullahan
+    02 Behemoth
+    04 Keremet
+    05 Legion
+    06 Dagon
+    07 Astarte
+    08 Werewolf
+    09 The Creature
+    0A Mummy Man
+    0B Medusa
+    0D Stella
+    0E Stella & Loretta
+    0F Brauner
+    10 Death
+    11 Dracula
+    14 ??? Used in Gergoth's room in Boss Rush Course 1.
+    19 Doppelganger (from Nest of Evil)
+23 Pulsating background effect. Used inside of the worm stomachs.
+24 Makes various food particles fly when the player lands on certain platforms. It's hardcoded to activate only when the player lands on tile 9E. In the appropriate tileset (City of Haze) this is an invisible tile that acts as a platform you can jump through. In order to make the platform visible, place visible platform tiles on a separate, non-collision layer.
+25 Cash register from City of Haze that gives you different pastries depending on how much money you drop into it.
+  Requires sector overlay 93.
+26 Pushable cart.
+  Var A: Affects which miscellaneous flag to set after pushing this cart out of the way.
+    0 - Misc flag 5.
+    1 - Misc flag 7.
+    2+ - Doesn't set a flag, cart will always move back to its original position when you re-enter the room.
+27 Dark Academy background and rain and sound effects.
+  Var A: Affects what sound effects the rain plays.
+28 Train you need to slow down to a stop.
+  Requires sector overlay 104.
+29 Background from 13th Street.
+2A Background from 13th Street.
+2B Red moon background from Forgotten City.
+2C Transition room hider for Sandy Grave.
+2D Transition room hider for Forgotten City.
+2E Motorcycles.
+  Requires sector overlay 86.
+2F Pushable grave from Forest of Doom.
+  Requires sector overlay 101.
+30 Breakable ceiling from Dark Academy that lets rain through after it's broken.
+  Requires sector overlay 111.
+31 The drill cart that breaks a wall in City of Haze.
+  Requires sector overlay 94.
+32 Pushable block from Sandy Grave.
+  Requires sector overlay 91.
+33 Falling boulder.
+  Var A:
+    00 Rolls left.
+    01 Rolls right.
+34 Very large cog.
+35 Cog.
+36 The wall and button that opens it from Sandy Grave/Forgotten City.
+  Var A: Which miscellaneous flag to check and set.
+    0 Misc flag 23 (Sandy Grave)
+    1 Misc flag 24 (Forgotten City)
+    If you set this value higher than 1, it will check/set other misc flags, or even overflow into other unrelated memory.
+37 The ceiling/floor and button that opens them from the Entrance.
+  Var A:
+    0 For the button and floor.
+    1 For the ceiling.
+38 Wall and bell that lowers it.
+  Var A: ? TODO
+39 Large windmill blades spinning in the background.
+  Requires sector overlay 86.
+3A Various objects from corridor where Behemoth chases you.
+  Requires sector overlay 79.
+  Var A: The sprite frame to use for this object.
+    0, 1 - Top/bottom pillar pieces.
+    2, 4, 5, 7, 8 - Pillar pieces that are destroyed by Behemoth and don't come back.
+    A - Platform that is destroyed by Behemoth and doesn't come back.
+    C - Steel door at the end of the corridor that is destroyed by Behemoth and doesn't come back.
+    3, 6, 9, B, D - These sprite frames don't work when placed directly as objects, they have no collision.
+  Unique ID: The original developers gave these objects unique IDs, but they don't seem to be necessary, these objects still work when they all have 0 for their unique IDs.
+3B Breakable wall.
+  Var A: Index of this wall in the breakable wall list for this area.
+    The data in that list affects the sprite frame to use as well as the flag for the breakable wall being destroyed.
+  Which sprite/gfx/palette this object uses is hardcoded depending on the area/sector it's in:
+    Area 0, sectors 0-1: bwall2
+    Area 0, sector 2: bwall7
+    Area 0, sector 4: bwall5
+    Area 0, sector 6: bwall2
+    Area 0, sectors 7-8: bwall4
+    Area 0, sectors 9-A: bwall8
+    Areas 1-2: bwall3
+    Areas 5-6: bwall6
+    Areas 7-8: bwall1
+  If you place this object in an area/sector not listed above, nothing will appear.
+3C Large swinging axe.
+  Var B: Starting rotation. 4000 rotates it by 90 degrees clockwise. For example:
+    0000 Attached to the ceiling.
+    4000 Attached to a right wall.
+    8000 Attached to the floor.
+    C000 Attached to a left wall.
+    These aren't the only values that work - 2000 for example rotates it by 45 degrees clockwise.
+3D Rings of flaming skulls.
+  Var A: Affects the gaps left in the ring.
+    00 No gaps.
+    01 One gap.
+    02 Two gaps, one on each side.
+    03 One large gap that takes up half the ring.
+    04+ No gaps.
+  Var B: Starting rotation. 4000 is equivalent to 90 degrees.
+3E Platform that flips if you stand on it too long.
+  Var A is the graphic style of the platform:
+    00 Composed of multiple logs.
+    01 One long wooden plank.
+3F Platform that floats up and down.
+  Starts at position 0x80,0x80 and moves down to 0x80,0x130, then back to its starting position.
+  Var A: Which platform this is. 0-2.
+    This object is coded so that different values for this could have had different positions and movement speeds, but all three platforms have the same values, so it makes no difference.
+40 Large pushable switch.
+  Requires sector overlay 81.
+41 Wall of fire and button to the left that lowers it.
+  Requires sector overlay 85.
+42 Unused
+43 Crumbling block from Tower of Death.
+44 Sand falling from the ceiling.
+45 Background with the moon and mountains used in the Master's Keep and Throne Room.
+46 Fast mechanical elevator from Tower of Death.
+  Requires sector overlay 85.
+47 Ghosts from Dark Academy.
+  Var A:
+    0 Stairs.
+    1 Pianist.
+    2 Bathroom door.
+    3 Anatomical model.
+    4 Bloody handprints on the blackboard.
+    5 Ghost man that only appears when you're close to him.
+48 Waterwheel platforms elevator from Tower of Death.
+  Requires sector overlay 86.
+49 Rapidly moving clouds background effect used in the Master's Keep and Throne Room.
+4A Hands on the clock from Death's boss room.
+  Requires sector overlay 85.
+  These rotate to match the DS's system time.
+4B Unused
+4C Blockade, similar to the ones in Dawn of Sorrow. Unused.
+  Var A: Type of blockade:
+    0 - Right-facing blockade.
+    1 - Tall right-facing blockade.
+    2 - Left-facing blockade.
+    3 - Tall left-facing blockade.
+4D Pushable rectangular block.
+  Var A: 0 for tall block, 1 for short block.
+4E Pushable and destroyable statue from near the start of the game.
+  Requires sector overlay 79.
+4F Transition room hider for Dracula's Castle.
+50 Thunder and rain visual effects from Dark Academy.
+  Requires sector overlay 109.
+  Var A:
+    0 - Animates thunder lighting up certain backgrounds.
+    1 - Animates rain droplets on certain roofs.
+  Var B: Affects what colors the thunder lights up if var A is 0? TODO
+51 Thunder and rain visual effects from Dark Academy.
+  Requires sector overlay 110.
+  Var A:
+    0 - Animates thunder lighting up certain backgrounds.
+    1 - Animates rain droplets on certain roofs.
+52 Thunder and rain visual effects from Dark Academy.
+  Requires sector overlay 111.
+  Var A:
+    0 - Animates thunder lighting up certain backgrounds.
+    1 - Animates rain droplets on certain roofs.
+53 Thunder and rain visual effects from Dark Academy.
+  Requires sector overlay 112.
+  Var A:
+    0 - Animates thunder lighting up certain backgrounds.
+    1 - Animates rain droplets on certain roofs.
+54 Animates water on backgrounds in Sandy Grave.
+  Requires sector overlay 91.
+55 Animates water on backgrounds in Sandy Grave.
+  Requires sector overlay 92.
+56 Makes the background flicker in Forgotten City.
+  Requires sector overlay 102.
+57 Animates water on backgrounds in Forgotten City.
+  Requires sector overlay 103.
+58 Transition room hider for City of Haze.
+59 Transition room hider for City of Haze.
+5A Transition room hider for City of Haze.
+5B Transition room hider for 13th Street.
+5C Transition room hider for 13th Street.
+5D Transition room hider for Dracula's Castle (connects inside part of Entrance to Behemoth's area).
+5E Transition room hider for Dracula's Castle (connects outside part of Entrance to inside part of entrance).
+5F Room graphics and background for the rooms that contain the four seal portraits.
+  Var A: Where the openings for doors should be.
+    00 Door at bottom right.
+    01 Door at bottom left.
+    02 Door at center left and center right.
+    03 Door at center left.
+  This object loads the sprite data for the blue flames that appear in front of the 13th Street and Burnt Paradise portrait. Therefore this portrait must be in any room with either of those portraits, and it must be before the portraits in the room's entity list so it loads the sprite before those portraits get a chance to load in. If this object is not placed correctly, the portraits will causes crashes or serious visual bugs.
+60 Crumbling block from Great Stairway.
+61 The 3D background from City of Haze.
+  Requires sector overlay 93.
+62 The 3D pyramid in the background in Sandy Grave.
+  Requires sector overlay 91.
+63 The 3D tombstones in the background in Forest of Doom.
+  Requires sector overlay 99.
+64 The 3D indoors background in Forest of Doom.
+  Requires sector overlay 100.
+65 The 3D background and anatomical model in Dark Academy.
+  Requires sector overlay 111.
+66 The 3D background in Dark Academy.
+  Requires sector overlay 112.
+67 The 3D background model of the clock tower, used in the stairway leading up to the throne.
+  Requires sector overlay 87.
+68 Statue/cross.
+  Var A: 0 for the statue of Mary from Nation of Fools. 1 for the cross from 13th Street.
+69 Transition room hider for Master's Keep.
+6A Transition room hider for Master's Keep.
+6B Transition room hider for Master's Keep.
+6C Transition room hider for Forest of Doom.
+6D Transition room hider for Forest of Doom.
+6E Transition room hider for Forest of Doom.
+6F Transition room hider for Forest of Doom.
+70 Transition room hider for Forest of Doom.
+71 Transition room hider for Dark Academy.
+72 Transition room hider for Dark Academy.
+73 Transition room hider for Dark Academy.
+74 Transition room hider for Tower of Death.
+75 Portrait to the Throne Room.
+  Note that it can still bring you to any area you set, but it will only display the right visuals for the above area.
+  Var A: Area index of the destination room.
+  Var B:
+    Least significant bit first.
+    Bits 1-6: Room index of destination room.
+    Bits 7-10: Sector index of the destination room.
+    Bits 11-16: Nothing.
+  This portrait's palette is stored in sector overlay 115, the Lost Gallery's sector overlay. If you place this portrait outside of the Lost Gallery it will have the wrong colors but will otherwise function normally.
+76 Portrait to 13th Street, Forgotten City, Burnt Paradise, or Dark Academy. (Uses different picture frame than 1A.)
+  Note that it can still bring you to any area you set, but it will only display the right visuals for the above areas.
+  Var A: Area index of the destination room.
+  Var B:
+    Least significant bit first.
+    Bits 1-6: Room index of destination room.
+    Bits 7-10: Sector index of the destination room.
+    Bits 11-16: Nothing.
+77 Studio portrait.
+  Sealed with 4 chains. Each of these chains disappears with a different boss death flag being set: Werewolf, The Creature, Medusa, and Mummy Man.
+  When the player goes into the portrait, the black effect emanating out from it actually comes from the sprite of the small square-framed portrait usually in the same room as the studio portrait. If that small portrait sprite is not currently loaded, going into the studio portrait will crash the game on real hardware, and cause visual bugs on emulator.
+  Therefore you should always make sure there is an object 76 or 87 in the same room as the studio portrait. (Note that objects 1A and 86 won't work, they use a different sprite.) This dummy portrait doesn't have to be visible - you can just place it above the room so the player will never see it, but it will still load its sprite.
+78 Cogs and gate that block the way.
+  Requires sector overlay 86.
+79 Area name shown the first time you enter an area. Var A controls which area it is.
+7A Background effect from Buried Chamber of prisoner shaking the bars of the cell.
+7B Rushing water in the foreground.
+7C Transition room hider for Dracula's Castle (connects Great Stairway to other Great Stairway sector).
+7D Transition room hider for Dracula's Castle (connects Great Stairway to Keremet).
+7E Small waterfall.
+  Requires sector overlay 86.
+  Var A: 0 for the top of the waterfall. 1 for the long midsection of the waterfall.
+7F The meat in City of Haze you have to hit for the "Supersonic Punch" quest.
+  Requires sector overlay 93.
+80 Transition room hider for Dracula's Castle (connects Great Stairway to other Great Stairway sector).
+81 Barrier blocking the way to the Throne Room.
+  Requires sector overlay 88.
+  The blocking effect extends all the way down the left edge of the room, but the visuals only appear on the top-left screen.
+82 Wooden door separating areas.
+83 Button and wall it lowers from Great Stairway.
+84 Many crows in a tree that disperse when you get near.
+  Requires sector overlay 99.
+85 Sewers in the background gushing water.
+  Var A: 0 for the ones in the motorcyle room. 1 for the ones in Stella's boss room.
+    This affects their position and z-index.
+86 Portrait to Dracula's Castle or Nest of Evil.
+  Note that it can still bring you to any area you set, but it will only display the right visuals for the above areas.
+  Var A: Area index of the destination room.
+  Var B:
+    Least significant bit first.
+    Bits 1-6: Room index of destination room.
+    Bits 7-10: Sector index of the destination room.
+    Bits 11-16: Nothing.
+87 Portrait to Dracula's Castle or Nest of Evil. (Uses different picture frame than 86.)
+  Note that it can still bring you to any area you set, but it will only display the right visuals for the above areas.
+  Var A: Area index of the destination room.
+  Var B:
+    Least significant bit first.
+    Bits 1-6: Room index of destination room.
+    Bits 7-10: Sector index of the destination room.
+    Bits 11-16: Nothing.
+88 Disappearing ceiling below pushable carts.
+  These disappear automatically once the corresponding cart has been pushed out of the way.
+  Var A: Affects which miscellaneous flag to check.
+    0 - Misc flag 5.
+    1 - Misc flag 7.
+89 Button and floor it explodes from Master's Keep.
+  Var A: 0 for ceiling. 1 for button and floor.
+8A Studio portrait (burned).
+8B The 3D sphinx in the background in the Forgotten City.
+  Requires sector overlay 102.
+8C ??? from room with mechanical elevator in Tower of Death. TODO
+  Requires sector overlay 85.
+8D Cycles through palettes for conveyor belt tiles to make gears look like they're turning.
+  Requires sector overlay 85.
+8E Legion's horizontal boss door and walls that trap you.
+  Requires sector overlay 98.
+8F in the sister's boss room
+  Requires sector overlay 89.
+90 Transition room hider for Nation of Fools.
+91 Transition room hider for Nation of Fools and Burnt Paradise.
+92 Transition room hider for Nation of Fools and Burnt Paradise.
+93 Transition room hider for Nation of Fools.
+94 The 3D background from Dark Academy.
+  Requires sector overlay 109.
+=== Below are events. Var A is the event flag set upon completing this event. Var B is the prerequisite event flag before this event will appear.
+95 Event - In first room of the game.
+  Requires sector overlay 78.
+96 Event - Meeting Wind for the first time.
+  Requires sector overlay 79.
+97 Event - something with Wind?
+  Requires sector overlay 79.
+98 Event - In front of the portrait to City of Haze.
+  Requires sector overlay 79.
+99 Event - In first room of City of Haze.
+  Requires sector overlay 93.
+9A Event - After killing Dullahan.
+  Requires sector overlay 95.
+9B Event - Meeting Death for the first time.
+  Requires sector overlay 81.
+9C Event - Meeting Brauner and the sisters in Sandy Grave.
+  Requires sector overlay 91.
+9D Event - Stella in her boss room.
+  Requires sector overlay 86.
+9E Event - In front of the portrait to Forest of Doom, Charlotte refuses to enter unless you've talked to Wind about Stella's Locket.
+  Requires sector overlay 86.
+9F Event - Talking to Wind about Stella's Locket.
+  Requires sector overlay 79.
+A0 Event - Death in his boss room.
+  Requires sector overlay 85.
+A1 Event - At the barrier that blocks the way to the Throne Room.
+  Requires sector overlay 88.
+A2 Event - in the sister's boss room.
+  Requires sector overlay 89.
+A3 Event - in the sister's boss room. (bad end?)
+  Requires sector overlay 89.
+A4 Event - in the sister's boss room.
+  Requires sector overlay 89.
+A5 Event - in lost gallery
+  Requires sector overlay 115.
+A6 Event - in lost gallery
+  Requires sector overlay 115.
+A7 Event - in the stairway leading up to the throne room
+  Requires sector overlay 87.
+A8 Event - in dracula's throne room?
+  Requires sector overlay 87.
+A9 Event - Dracula defeated and evaporating in the sunlight.
+  Requires sector overlay 90.
+AA Event - in epilogue (bad end?)
+  Requires sector overlay 117.
+AB Event - in epilogue
+  Requires sector overlay 117.
+AC Event - ?
+AD Event - ?
+AE Event - in the sister's boss room.
+  Requires sector overlay 89.
+AF Event - in first room of game?
+  Requires sector overlay 78.
+B0 Event - in lost gallery
+  Requires sector overlay 115.
+B1 Event - ?
+B2 Event - in room that requires the cog
+  Requires sector overlay 86.
+B3 Event - in room that requires the cog
+  Requires sector overlay 86.
+B4 Event - in vincent's room?
+  Requires sector overlay 79.
+B5 Event - in wind's room?
+  Requires sector overlay 79.
+=== Event actors
+B6 Wind event actor.
+B7 Vincent event actor.
+B8 Stella event actor.
+B9 Loretta event actor.
+BA Brauner event actor.
+BB Death event actor.
+BC Dracula event actor.
+BD Eric event actor.
+BE Vampiric Vincent event actor.
+BF Stella's locket
+C0 Spinning portrait with Brauner and the sisters
+C1 The castle in the background during the epilogue
+C2 Loretta's giant icicle attack during cutscenes

@@ -1,0 +1,92 @@
+Consumable format:
+  0xC bytes long.
+  00,2: Item ID.
+  02,2: Icon.
+  04,1: Type of the consumable.
+    0 Restores HP.
+      Var A: Amount of HP to restore.
+    1 Restores MP.
+      Var A: Amount of MP to restore.
+    2 Cures a status effect.
+      Var A: Bitfield of status effects to cure. Bit 1 for poison, 2 for curse, 4 for petrify.
+    3 Makes the player invincible.
+      Var A: Number of frames to be invincible.
+    4 Cannot be used.
+  05,1: ?
+  06,2: Var A.
+    See above for what this does depending on the consumable type.
+  08,4: ?
+
+Weapon format:
+  0xC bytes long.
+  00,2: Item ID.
+  02,2: Icon.
+  04,2: Bitfield of special whip properties this whip has.
+    Each bit:
+      0010 Crushing Stone (Charge attack)
+      0200 Steel Tip
+      0400 Platinum Tip
+      0800 Energy Circle (Whip spins automatically)
+      1000 Bullet Tip (Fire projectile from tip if at full health)
+    Multiple bits can be used together to give the whip multiple properties. Note that Steel Tip overrides Platinum Tip and Crushing Stone overrides Energy Circle.
+  06,1: Strength stat (signed).
+  07,1: Defense stat (signed).
+  08,1: Intelligence stat (signed).
+  09,1: Luck stat (signed).
+  0A,2: Bitfield for the elemental damage types this weapon deals.
+
+Body armor and Accessory format:
+  0xC bytes long.
+  00,2: Item ID.
+  02,2: Icon.
+  04,1: Multiple:
+    Bits 0-2: Type of armor:
+      0 - Accessory.
+      1 - Hand armor.
+      2 - Body armor.
+      3 - Head armor.
+      4 - Leg armor.
+    Bit 3: No effect? Set only for Crush Boots.
+    Bits 4-7: Unused?
+  05,1: Unused?
+  06,1: Strength stat (signed).
+  07,1: Defense stat (signed).
+  08,1: Intelligence stat (signed).
+  09,1: Luck stat (signed).
+  0A,2: Bitfield for what elemental resistances this armor gives you.
+
+Spellbook format:
+  4 bytes long.
+  00,2: Item ID.
+  02,2: Icon.
+
+Relic format:
+  4 bytes long.
+  00,2: Item ID.
+  02,2: Icon.
+
+Furniture format:
+  4 bytes long.
+  00,2: Item ID.
+  02,2: Icon.
+
+Subweapon format:
+  0xC bytes long.
+  00,1: Maximum number of this subweapon you can have in the room at once.
+    Once this limit is reached the player won't be able to use the subweapon again until one of them disappears.
+  01,1: Heart cost of using this subweapon.
+  02,1: Number of entities created each time this subweapon is used.
+    This value is used so the game engine knows to not let you create too many subweapon entities at once.
+    There are 8 entities slots available for subweapons to use.
+  03,1: ???
+  04,4: Create code.
+  08,4: Update code.
+
+Spell format:
+  0xC bytes long.
+  00,4: Create code.
+  04,1: Which cast animation for the player when using this spell.
+  05,1: ???
+  06,2: Mana cost of using this spell.
+  08,2: Heart cost of using this spell.
+  0A,2: 

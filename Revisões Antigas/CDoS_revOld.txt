@@ -1,0 +1,209 @@
+Modo Ataq. Chefes -- Modo de Chefes
+Modo Config. Inimigo --
+Selecionar Dados -- Escolher Jogo
+Copiar Dados -- Copiar Jogo
+Elimitar Dados -- Deletar jogo
+Clear (gráfico) -- Limpo
+
+MP -- PM (Mind Points -- Pontos Mentais)
+HP -- PV (Health Points -- Pontos de Vitalidade)
+
+Celia Fortuna -- Celia Fortner (sugiro manter)
+Dimitri -- Dmiitri (também sugiro manter)
+
+Imp -- Duende
+Warg -- Fenrir (nome usado no japonês)
+Demônio de Chamas -- Demônio de Fogo
+Merman -- Tritão
+Atirador Alamaric -- Arqueiro Alamárico
+Aragem -- Zéfiro (Zephyr)
+Bruxa Aprendiz -- Aprendiz de Bruxa
+Geléia -- Gosma
+Guilhotina -- Guilhotineiro
+Sombra Congelada -- Aparição de Gelo
+Arm. Machado -- Armad. de Machado
+Caveira Arqueira -- Esquel. Arqueiro
+Cavaleiro de Arm. -- Fidalgo Blindado
+Armadura-Bomba -- Armad. de Bomba
+Macaco-Esqueleto -- Esqueleto Macaco
+Manticore -- Mantícora
+A Criatura -- Frankenstein
+Corpseweed -- ?
+Yeti -- Pé Grande / Homem-das-Neves (é o Abominável homem das neves.)
+Almas Dançarinas -- Fantasma Dançarino (porque focam-se no homem dançarino, ao invés da mulher)
+Mini Diabo -- Diabinho
+Valkyria -- Valquíria
+Armadura Grande -- Armad. Gigante
+Peixe Matador -- Peixe Assassino
+Homem Pulga -- Homem-Pulga
+Hárpia -- Harpia (não tem acento)
+Trol da Caverna -- Chupa-cabra (versão japonesa)
+Mímico -- Imitador
+Armadura em Disco -- Armadura de Disco (a armadura não está dentro de um disco. ela ataca com disco)
+Acalasamento Mortal -- Companheiro Morto (se refere ao cão, por mais incomum que se pareça)
+Bugbear -- Bicho Papão (é um monstro que invoca medo em quem se aproxima.)
+Tártaro -- Górgone (Gorgon, monstro da mitologia grega)
+Gr. Armadura Mach. -- ?!?!
+Missionário Morto -- Cruzado Morto (é um dos soldados que foram pras cruzadas. guerrear em nome da igreja)
+Erinys -- Erínia (aportuguesamento de uma lenda da mitologia nórdica)
+Succubus -- Súcubo (aportuguesamento desse demônio feminino)
+Diabo de Chamas -- Demônio de Fogo
+Tanjelly -- Gosma Bege / Gosma Bronzeada
+Demônio Arco -- Arquidemônio (oposto de Arcanjo)
+Malphas -- Malfas
+Mestre dos Bonecos -- Rei Titereiro
+Zephyr -- Zéfiro (mitologia grega. é uma das divindades grevas do vento. ou melhor, de um dos quatro ventos)
+Companhia Bat -- Colônia de Morcegos
+Chrono Mage -- Mago do Tempo (inspirado diretamente do coelho de óculos de Alice no País das Maravilhas)
+
+Arpão -- Lança
+Florete -- Rapieira (Florete fica legal, mas o que sugeri fica bem melhor assim.)
+Cortador -- Cutall (sugiro manter)
+Baselard - Baselarde
+Pendante -- Pingente
+Cota de Malha -- Hauberk (sugiro manter)
+Manto de Mago -- Manto do Mago
+Anel de Runas -- Anel Runa
+Notícias UMA *.* -- Artigos UMA *.* (artigos de jornal?)
+Armadura Ninja -- Traje Ninja
+Nébula -- Nebula / Nebulosa (sugiro não alterar)
+Funga-no-Cangote -- ?!?!
+Botão Sangrento -- Botão Ensangüentado (se couber)
+Anel de Shaman -- Anel Xamã ("Shaman" não existe, e sim "Xamã". "Xamãnismo" isso, "Rei Xamã" aquilo, etc.)
+Lágrima de Sangue -- Gota de Sangue (é um acessório equipável de cor vermelha)
+Anel de Satan -- Anel do Satã ("Satan" não existe, a menos que esteja se referindo a DBZ da vida)
+Chicote Knuckle -- Punho Chicote
+Faca de Combate -- Faca de Guerra
+Foice Mortal -- Foice da Morte (é a foice da própria morte, no jogo)
+Roupa de Kung Fu -- Traje de Kung Fu
+Jaqueta de Biker -- Jaqueta de Motoqueiro (abreviar caso necessário)
+Fadiga de Guerra -- Farda Militar ("Fadiga" é muito literal, e não soa como traje, e sim como cansaço ou afim.)
+Roupa de Olrox -- Traje de Olrox / Terno de Olrox
+Armadura Demoníaca -- Cota Demoníaca (caso seja grande demais, uma opção pra tentar evitar abreviação)
+Foice de Arremessar -- Foice Jogável / Foice Arremessável
+Anel Come-Almas -- Anel Devora-Almas / Devora-Almas
+Armadura Negra -- Terno Negro (Pitch Black Suit, o desenho indica que é um terno escuro)
+
+Pancake -- Panqueca
+Hamburger -- Hambúrguer (aportuguesamento correto)
+Soda Cremosa -- ?!?!
+Carne Gostosa -- Carne Saborosa
+Poção Forte -- Poção Grande
+Super Poção -- Poção Grande
+Concentração -- Elixir (literal demais pra esse item que cura PM)
+Alta Concentração -- Elixir Grande (literal demais pra esse item que cura mais PM que o anterior)
+Poção de Desenc. -- Poção Anti-Praga / Anti-Praga / Anti-Maldição
+Carne Podre -- Carne Estragada
+Frango Frito -- Frango Assado
+Estrela-do-mar Ferv. -- Estrela-do-Mar (omitir o resto porque não cabe, e não é bem necessário)
+
+Manto da Serenidade -- Manto Sereno (assim cabe)
+Capa Rubra -- Manto Rubro / Manto Escarlate
+Pendante do Coração -- Pingente de Coração
+Soqueira Kaiser -- Soqueira Cáiser
+
+Convite Malígno -- Convite Maligno (não se põe acento no 'í')
+
+Luz do Luar Platina -- Luar de Platina
+A Fleeting Respite -- Alívio Passageiro
+Entrando na Noite Escura -- Na Escuridão da Noite
+Almas de Batalha Escarlate -- Alma Guerreira Rubra
+Fúria de Batalha Penetrante -- Fúria Penetrante de Batalha
+Luz do Luar Momentânea -- Luar Momentâneo
+
+
+Temp -- Tempo
+COMPLETUDE -- TAXA (se refere ao porcentual)
+
+"Não dá para ler!" -- "É proibido ler!"
+"Gravação falhou." -- "Houve um problema ao salvar."
+"Atira ossos." -- "Joga ossos."
+"was crafted!" -- "foi forjada!" (se refere a uma nova arma que a gente ganha ao fundir com uma alma)
+"Está ok assim?" -- "Está bom assim?" / "Tem certeza disso?"
+"Invocar um cão." -- "Invoca um cão."
+"Invocar um gato." -- "Invoca um gato."
+"Arremeçar lanças" -- "Arremessa lanças"
+"Resume a game." -- "Continuar jogo."
+"Uma maça grande." -- "Uma clava grande."
+"Uma espada pequena" -- "Uma espada pequena. (ponto final)
+"Anula maldição." -- "Anula pragas."
+"Restaura x HP." -- "Recupera x PV." / "Recupera x de PV."
+"Restaura x MP." -- "Recupera x PM." / "Recupera x de PM."
+"Restaura todo o HP." -- "Recupera todos os PV."
+"Restaura todo o MP." -- "Recupera todos os PM."
+"Um pendante simples." -- "Um pingente simples."
+"Served al dente." -- "Ótimo para quem não consegue mastigar."
+"Um arpão normal." -- "Uma lança comum."
+"Atira Une no inimigo." -- "Joga Unes nos inimigos."
+"Ataca com o rabo." -- "Ataca com uma cauda."
+"Obtain more hearts." -- "Ganha mais corações."
+"A spear of divinity." -- "Uma lança divina." / "Uma lança de alto nível de divinidade."
+"Restaura HP gradualmente." -- "Recupera PV aos poucos."
+"Invoca uma bola de Geléia saltitante." -- "Invoca uma Gosma saltitante."
+"Um arpão tridente." -- "Uma lança com três dentes."
+"Tem um rabo venenoso." -- "Ataca com uma cauda venenosa."
+"Uma espada de matar dragão." -- "Espada feita para matar dragões."
+"Atira cartões como armas." -- "Atira cartas como armas." (cartas de baralho. é da alma do palhaço)
+"Atira a cabeça de Cabeça de Peixe." -- "Joga um Cabeça de Peixe."
+"Um pendante em formato de coração." -- "Um pingente em formato de coração."
+"Isso se sacode e ginga." -- "Balança e sacode quando é movido." (é a descrição do pudim)
+"Uma fatia de bife podre." -- "Uma fatia de bife estragado."
+"Um arpão usado por cavaleiros." -- "Uma lança usada por cavaleiros."
+"Jorra um fluxo de água." -- "Atira um jato d'água."
+"Uma besta com muitas pernas." -- "Um monstro com várias pernas."
+"Suave, felpudo e doce." -- "Leve, macio e doce."
+"Uma roupa de combate de ninja." -- "Vestimenta de combate usada por ninjas."
+"Uma vestimenta de treino atlética." -- "Traje de atletas. Geralmente usado em treinos."
+"Um manto usado pela Morte." -- "Manto que já foi usado pela Morte."
+"O quê? Você já está indo?" -- "O quê? Cê já tá indo embora?"
+"Lança um explosivo de alto poder." -- "Lança um explosivo altamente potente."
+"Renova HP ao tomar sangue." -- "Recupera PV ao beber sangue."
+"Uma vestimenta feita de correntes temperadas." -- "Uma vestimenta feita de correntes entrelaçadas."
+"Invoca uma Hárpia como um familiar." -- "Invoca uma Harpia como um familiar." (não há acento em "Harpia")
+"Um sopa cremosa com croutons." -- "Um sopa deliciosa. Servida com pãezinhos torrados."
+"Coxa de frango frita crocante." -- "Coxa de frango assado, muito crocante."
+"Um arpão demoníaco de cinco pontas." -- "Uma lança demoníaca de cinco pontas."
+"Pós-Batalha - Memórias Tristes -" -- (não seria "Memórias Felizes", a julgar pelo 'azul' no inglês?)
+"Uma faca de combate para questões militares." -- "Uma faca de guerra usada por militares."
+"Senta na cadeira para recuperar HP." -- "Senta na cadeira para recuperar PV."
+"Modo Play Vs via Modo Sem Fio?" -- "Jogar no Modo Versus, pelo Modo Sem Fio?"
+"Dispara com suco saboroso." -- ?!?!
+"Uma espada usada pelos montadores da cavalaria." -- "Uma espada usada por montadores de cavalaria."
+"Uma espada samurai japonesa famosa." -- "Uma espada japonesa muito famosa, usada por samurais."
+"Uma espada de matar dragão demoníaca." -- "Uma espada demoníaca feita para matar dragões."
+"Uma pedra preciosa vermelha da cor de sangue." -- "Uma pedra preciosa vermelha cor-de-sangue."
+"Escolha o monstro a ser visto." -- "Escolha o monstro para visualizar."
+"Tem uma textura gelatinosa e firme." -- "Tem uma textura firme e gelatinosa."
+"Invoca Mini Diabo como um familiar." -- "Invoca Diabinho como um familiar."
+"Invoca Corpseweed como um familiar." -- ?!?!
+"Eu vou pagar alto por coisas boas." -- "Se cê tiver coisa boa, Vou te pagar muito bem!"
+"Um demônio com aprendizado com o tempo." -- "Um demônio que é mestre em habilidades de controlar o tempo."
+"MODO BOSS RUSH foi destravado!" -- "MODO DE CHEFES foi destravado!"
+"Uma espada com uma ponta pouco cortante." -- "Uma espada de ponta cega." (Blunt Sword, talvez)
+"Equipe para dar pancadas similares às de chicotes." -- "Desfira socos que parecem com chicotadas."
+"Permeia os punhos com fúria divina." -- "Impregna os punhos com fúria divina." / "Dá aos os punhos uma fúria divina."
+"Uma capa de cor rubra bem viva." -- "Uma capa de cor rubra bem vivaz."
+"Um amuleto de boa sorte para a prosperidade." -- "Um amuleto de boa sorte que traz prosperidade."
+"Alterna habilidades do tipo Almas Táticas." -- ?!?!
+"Atira flechas com precisão mortal." -- "Atira flechas de precisão mortal."
+"Uma espada com uma reputação macabra." -- "Espada com uma reputação macabra." / "Uma espada com reputação macabra."
+"Cota de malha construída para ter fácil movimento." -- "Cota de malha projetada para dar boa movimentação ao usuário."
+"Algun botões estão duplicados." -- "Alguns botões estão duplicados."
+"Um esqueleto que semeia plantas mal assombradas." -- "Um esqueleto que semeia plantas mal-assombradas." (hífen)
+"Uma espada curta de origem do Leste Indiano." -- "Uma espada curta oriunda do Leste Indiano."
+"Uma espada curta com empunhadura em formato de L." -- "Uma espada curta com empunhadura em formato de I." ("I" ou "L"?)
+"Parece que isso pode fazer deixá-lo mais forte." -- "Parece que isso pode deixá-lo mais forte."
+"Um arqueiro terrível e um anjo caído." -- "Um arqueiro temeroso, e também um anjo decaído." / "Um arqueiro temível, e também um anjo decaído."
+
+
+"Alguns dias atrás, Yoko me cumprimentou." -- "Alguns dias atrás, a Yoko deu um ´´oi´´ pra mim."
+"Ei, você esqueceu alguma coisa?" -- "Ei, cê não tá esquecendo de nada não?"
+"Eu, bem-vindo. Eu recebi umas coisas novas." -- "Ei, bem-vindo. Tenho coisa nova pra ti."
+"Eu estou com a sensação de que Yoko está me evitando..." -- "Tô com uma sensação que a Yoko tá me evitando..."
+"Bem-vindo novamente, Soma. O que você gostaria hoje?" -- "Seja bem-vindo, Soma. O que você gostaria hoje?"
+"Eu acho que você está muito determinado. Então, como posso ajudá-lo?" -- "É, você parece estar muito determinado. Então, como posso ajudá-lo?"
+"Eu não vi Yoko hoje. Será que eu fiz alguma coisa que a irritou?" -- "Rapaz, não vi a Yoko hoje. Será que eu fiz algo que deixou ela com raiva?"
+"Yoko sorriu para mim. Aquela senhorita está apaixonada por mim, pode acreditar." -- "A Yoko sorriu pra mim. Aquela senhorita tá apaixonada por mim, pode ter certeza."
+"Bem, veja..." -- "Bem, sabe o que é..."
+"Estou meio enrolado aqui! Está tudo especial hoje." -- "Eu tô na boa aqui! Vou deixar tudo especial hoje."
+"Mas eu não posso permitir que você cause mais estragos..." -- "Mas eu não posso permitir que você cause traga caos ao mundo..."

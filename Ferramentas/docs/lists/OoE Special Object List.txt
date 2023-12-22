@@ -1,0 +1,452 @@
+Special Objects:
+00 Nothing.
+01 Magnes grapple point.
+  Var A:
+    0 Doesn't move.
+    1 Moves horizontally.
+    2 Moves vertically.
+  Var B: Distance in pixels away from its starting point it should move right/down before turning around and heading back left/up to its starting point.
+02 Destructible.
+  Var A:
+    00 A statue that yields a glyph when destroyed.
+      Var B controls what glyph it is, it's the global ID of the glyph + 1.
+      Furthermore, var B + 1 (global ID + 2) will be used as the pickup flag for this glyph statue.
+    01-1E A candle.
+    1F+ Buggy, it looks like a glyph statue but has a messed up palette, and it may yield either a glyph or money like a candle.
+03 Nothing.
+04 Large yellow block with spikes on its right side that the player can push.
+  Part of an unused puzzle?
+  The spikes damage both the player and enemies.
+05 Stone block that the player can push.
+  Can be pushed off an edge and falls. Breaks if it hits the ground.
+  If it falls into water at least 8 pixels deep it won't break.
+  If it falls into water at least 0x11 pixels deep it will raise water level up by 0x30 pixels.
+06 Water level.
+07 Paries entry point.
+  Var A:
+    0 - Points left.
+    1 - Points right.
+08 Starts practice mode with "3 2 1 Start!"
+09 Ends practice mode.
+0A Powerup in practice mode. Will only appear if in practice mode, as triggered by object 08.
+  Var A is which powerup:
+    00 Invincibility.
+    01 Increased run speed.
+    02 High jump.
+    03 Darkness skull.
+0B Crash. Appears in unused Wygol Village room.
+0C Nothing? Appears in unused Wygol Village room.
+0D Boarded up door in unused Wygol Village room. Both this and 0E must be there for the door to appear.
+  Var A is which door, 0 being the leftmost and 3 being the rightmost.
+0E Boarded up door in unused Wygol Village room. Both this and 0E must be there for the door to appear.
+  Var A is which door, 0 being the leftmost and 3 being the rightmost.
+0F Nothing? Appears in unused Wygol Village room. Like 0D and 0E, there are 4 of these corresponding to the 4 doors, but removing 0F doesn't make the door disappear.
+10 adds the boss rush timer to the screen. timer doesn't go away. reentering the room restarts the timer.
+11 Boss rush portal that takes you to the next boss. Doesn't appear unless the boss rush timer is on screen. Crashes when you enter it.
+  Var A: Boss ID.
+12 Crash. Used in final room of boss rush that gives you the prize.
+13 Pot of infinite big hearts.
+14 Row of spikes.
+  Var A is the style of spikes:
+    00 Normal floor spikes (Lighthouse)
+    04 Stone floor spikes (Tymeo Mountains)
+    08 Metal floor spikes (Mechanical Tower)
+    09 Metal left wall spikes
+    0A Metal ceiling spikes (Mechanical Tower)
+    0C Ice floor spikes (Tristis Pass)
+    10 Spiked balls (Training Hall)
+  Var B is the number of blocks wide the spikes span.
+  Spikes can be broken by touching them while transformed into Arma Machina.
+15 Wooden/green chest.
+  The item in this chest is randomized when you enter the area from the world map. The item pool used for each area can be changed in the Item Pool Editor.
+  Will appear as a sparkling green chest if the item inside is was selected from a rare item pool.
+  Var A: The unique ID of this chest in the area. Can be from 0-B.
+  Chests 0-B use pickup flags 180-18B respectively, in order to temporarily keep track of whether each chest has been opened or not.
+  For item pools 8 and 9, chest 0 is guaranteed to be a rare chest.
+  For item pool A, no chests can be rare chests.
+  Otherwise, the chance for each chest to be rare is:
+    10% + 0.1%*luck
+  Or, if you have the Treasure Hat equipped:
+    30% + 0.1%*luck
+16 Red/gold chest.
+  Var A controls what item is inside it, it's the global ID of the item + 1. 0 means the chest won't appear. If you put a glyph in the chest nothing will appear when you open it. If the ID belongs to a relic the chest will automatically appear as gold instead of red.
+  Var B is the flag for whether you've opened this chest yet or not.
+17 Blue chest.
+  Hidden in the floor, you must stand over it and crouch to reveal it.
+  Var A and var B work like red/gold chests.
+18 Moving clouds background from Barracks.
+  Requires sector overlay 71.
+19 Part of the waterfall in Tristis pass. This object is responsible for making it impossible for Shanoa to jump up the waterfall, and making bubbles appear around Shanoa when she is inside it.
+  Requires sector overlay 57.
+1A Movement blocker.
+  The area covered by this object will act impassable, both when Shanoa is in human form and in Paries form.
+  Var A: Width of the area in blocks.
+  Var B: Height of the area in blocks.
+1B Background shadow for all entities in the room.
+  Var A: Z-index for the shadows to be drawn at.
+  Var B: If set to the index of the layer farthest in the background, the shadow will not appear on that layer.
+    If set to 4, the shadow will appear on all layers.
+    If set to the index of a layer other than the one farthest in the background it won't succeed at hiding the shadow on that layer, and instead just set that layer's opacity to 1E.
+1C Background shadow for all entities in the room.
+  Var A: Z-index for the shadows to be drawn at.
+  Var B: If set to the index of the layer farthest in the background, the shadow will not appear on that layer.
+    If set to 4, the shadow will appear on all layers.
+    If set to the index of a layer other than the one farthest in the background it won't succeed at hiding the shadow on that layer, and instead just set that layer's opacity to 1E.
+1D Background from outside the Castle Entrance.
+1E Fog near the ground.
+1F Foreground candles from Underground Labyrinth.
+  Requires sector overlay 68.
+  Var A:
+    0 Small candles.
+    1 Large candles.
+20 The ring of flaming heads with a magnes point in the center.
+  Var B: The speed it rotates at.
+21 Foreground pillars from Arms Depot.
+  Var A:
+    0 In the foreground, very close to the camera and transparent
+    1 In the foreground
+    2 In the background
+22 Area that slows the player's movement significantly.
+  Var A: Width in pixels for the area to extend.
+23 Volaticus blocker.
+  Requires sector overlay 43.
+  Prevents using Volaticus in rooms that have this object in them.
+  Var A: 0 for normal. 1 to display the message saying that Volaticus cannot be used. This message will appear every time you exit and re-enter the Training Hall.
+24 Opens Large Cavern boss doors.
+  When Jiang Shi is in the room and is defeated, this object will open the boss doors (since Jiang Shi technically doesn't die, the boss doors won't open themselves without this).
+  If var A is 0, then after 60 seconds it will open boss doors even if there are still enemies left alive in the room. This is used in Large Cavern rooms other than the boss room.
+  If var A is 1, it does not open doors after 60 seconds. But it still opens doors when Jiang Shi dies, so this should be used in Jiang Shi's room.
+  (Note that it only opens boss doors that have var A = 1, the type that usually would open when there are no enemies left in the room.)
+25 Cross.
+  Requires sector overlay 62.
+26 Rat running around.
+27 Iron maiden trap.
+  Requires sector overlay 51.
+28 Lighthouse elevator.
+  Requires sector overlay 53.
+  Also spawns the platforms and ceilings Brachyura destroys.
+29 Moving platform.
+  Moves by seeking out its waypoints (object 2A).
+  It moves to each waypoint in the order they were placed in the room, then goes back to its starting position and repeats the process.
+  Unique ID: Must match the unique ID of this platform's waypoints.
+  Var A: Sprite animation to use.
+  Var B: Speed to move.
+2A Moving platform waypoint.
+  Unique ID: Must match the Unique ID of the platform this waypoint is for.
+2B Area exit.
+  Touching it puts you back on the world map. Extends infinitely vertically. Also draws the arrow pointing out.
+  Var A: The area index of the area to unlock when exiting via this exit.
+    0 does not unlock Dracula's Castle, it unlocks no area.
+  Var B:
+    0 Doesn't do anything extra.
+    1 Also unlocks the lower right entrance to Kalidus Channel. This should only be done after the player has visited at least one of the other entrances to Kalidus Channel, otherwise the game will crash when they enter Kalidus Channel.
+    2 Also unlocks the Large Cavern.
+2C Wygol door that leads into a house.
+  Requires sector overlay 41.
+  Var A:
+    Low byte: The room index of the house to go into.
+    High byte: 0 to enter the house from the left, 1 to enter from the right.
+  Var B: Y pos to enter the room at.
+2D Wooden door inside houses in Wygol.
+  Requires sector overlay 40.
+  Var A and B: The X and Y coordinates of the door in town to come out of. Must be the exact coordinates of an object 2C, otherwise Shanoa will appear in the center of town.
+2E Wooden door that connects areas.
+2F Rotating lamp at the top of the Lighthouse.
+  Requires sector overlay 53.
+  Var A:
+    0 Spawns a Luminatio glyph on top of the lamp that you can absorb to stop the light.
+    1 Does not spawn Luminatio.
+30 Small block that crumbles after Shanoa stands on it for a second.
+31 Moving spike thing from Training Hall.
+  Var A:
+    00 Moves horizontally
+    01 Like 01 but bloody
+    02 Moves vertically
+    03 Like 02 but bloody
+    04 Doesn't move
+  Var B: Movement speed in subpixels per frame.
+32 Falling boulder. Unused?
+33 Falling boulder.
+34 Warp point.
+  Var A: Affects the background reflected in the floating water. Can be 00-0A.
+  Var B: Affects the background reflected in the floating water. Can be 00-01.
+35 Cycles through palettes.
+  Var A: Which palette cycling to use. (List 022B6998.)
+36 Transition room hider.
+  Var A is which room graphics to use:
+    00 underwater. Bubbles come out of Shanoa's mouth as if she was underwater.
+37 Moving clouds in the background.
+  Keeps the Y pos you set. Horizontally spans the entire room. Moves horizontally.
+  Var A: Which graphic to use for the clouds. Can be 0-7.
+  Var B: Speed in subpixels per frame for the clouds to move left.
+38 Waves in the background of Kalidus Channel.
+  Requires sector overlay 46.
+39 Water level.
+  Var A:
+    Vertical distance in pixels for the waves to move the water level up or down.
+    For example, a value of 0x20 means at its highest point the water level will be 2 blocks above the position you placed it at, and at its lowest point the water level will be 2 blocks below the position you placed it at.
+    0 means the water level does not move up or down.
+  Var B:
+    If Var A is 0, this is the z-index for the water level to be drawn on.
+    Otherwise, it's the speed for the water level to move up and down at. This is relative to the total distance the water level needs to travel, so for larger values of Var A the water level will move faster even if Var B is the same.
+3A 3D boat in the background of Kalidus channel.
+  Requires sector overlay 46.
+3B Pneuma glyph and the wind puzzle around it.
+  Requires sector overlay 55.
+3C Water splashes around the 3D boat in the background of Kalidus channel.
+  No effect unless object 3A is also placed in the room.
+3D Pages that fly out whenever you land on the ground.
+  Requires sector overlay 69.
+3E Searchlights.
+  Also puts a dark blue overlay over the whole room.
+  Var A:
+    0 Spawns four Spear Guards if the player gets caught.
+    1 Takes control away from the player and wakes up the Giant Skeleton. (If he's not in the room the game will softlock.)
+    2 Spawns a Tin Man if the player gets caught. Killing this Tin Man spawns a blue chest with the Strength Ring in it.
+    3 Spawns an Evil Force if the player gets caught.
+3F Cat.
+  Var A: Which cat it is:
+    00 Tofu (white)
+    01 Ink (black)
+    02 SoyBeanFlour (orange)
+    03 Tom (gray)
+  Var B: How the cat acts.
+    00 Cat returned to its home in Wygol village.
+    01 Jumping up trying to free its master.
+    02 Crouched/standing, meowing. Can be picked up.
+40 The falling block puzzle from the Monastery that spawns the Cubus Glyph.
+  Requires sector overlay 78.
+  Clearing out all these falling blocks spawns a blue chest with the Justice Ring in it.
+41 Object that floats (supposed to be in the water). Var A changes what it is:
+  00 Log platform
+  01 Crate platform
+  02 Red ball
+  03 Rubber ducky
+42 A trap from Minera Prison Island.
+  When var A is 0, it's a guillotine.
+    In normal mode it will wait for the player to get close to it and come down.
+    In hard mode it comes down automatically, var B is the delay in frames between each time it comes down.
+  When var A is greater than 0, it's a swinging axe.
+    Var A controls the length of the axe's chain.
+    Var B is the speed at which it swings.
+43 Pair of large curtains in the background.
+  Requires sector overlay 65.
+44 Lapiste glyph and the boulder trap that comes with it.
+  Requires sector overlay 68.
+45 Rock stalactite.
+  Requires sector overlay 55.
+  Var A: Which graphic of stalactite to use. 0-5.
+  Var B:
+    0 Hanging on the ceiling. Will fall down to the floor when Shanoa gets near it, damaging her if it hits her.
+    1 Already on the floor.
+46 Save point.
+  Obeys the x pos you set but ignores the y pos. Instead it decides its y pos by placing itself on the highest point of solid ground at the given x pos (excluding the ceiling).
+47 used in the upper frozen waterfall room with Vol Grando.
+  Requires sector overlay 57.
+48 used in the lower frozen waterfall room.
+  Requires sector overlay 57.
+49 used in the upper frozen waterfall room with Vol Grando.
+  Requires sector overlay 57.
+4A used in the lower frozen waterfall room.
+  Requires sector overlay 57.
+4B Boss door.
+  Var A is is how the door acts. Values:
+    00 Door outside the boss room that opens when you touch it.
+    01 Door inside the boss room that opens when there are no enemies left in the room.
+    02 Never opens. (Still disappears if the boss death flag is set.)
+  Var B controls which boss it's linked to - if that boss is dead the door won't appear. Values:
+    00 Used in Large Cavern. TODO
+    01 Arthroverta
+    02 Giant Skeleton
+    03 Brachyura
+    04 Man Eater
+    05 Rusalka
+    06 Goliath
+    07 Gravedorcus
+    08 Albus
+    09 Barlowe
+    0A Wallman
+    0B Blackmore
+    0C Eligor
+    0D Death
+    0E ??? TODO
+    0F Dracula
+4C Electricity hazard that spawns the Vol Fulgur glyph from Minera Prison Island.
+  Requires sector overlay 52.
+4D Wooden door in Ecclesia. Unlike a regular wooden door (2E), this one will be locked at the beginning of the game.
+  Requires sector overlay 42.
+4E Ecclesia door.
+  Requires sector overlay 42.
+4F The ground and rocks from Gravedorcus's room.
+  Requires sector overlay 63.
+50 Background torches in Eligor's room.
+  Requires sector overlay 76.
+51 Cerberus statue from Forsaken Cloister.
+  Requires sector overlay 77.
+52 Fire hazard.
+  Var A:
+    0 Points up
+    1 Points right
+    2 Points down
+    3 Points left
+  Var B:
+    Low byte: Delay in frames between each time it erupts.
+    High byte:
+      Affects delay of the initial eruption when you first enter the room.
+      The initial delay is 0x1E + low byte - high byte.
+      If high byte is greater than or equal to low byte, the delay is just 0x1E.
+  If in Dracula's Castle and picked-up-item-flag index 24 (Vol Ignis puzzle) is set, this object will not appear.
+  If this object's X and Y are both zero, this will instead spawn the Vol Ignis glyph and give the room a red glow effect.
+53 Generator puzzle from Mechanical Tower that spawns the Morbus glyph.
+  Requires sector overlay 72.
+54 Makes the room dark and spawns Vol Umbra glyph. Absorbing the glyph gets rid of the darkness. From Mystery Manor.
+  Requires sector overlay 60.
+55 Area name shown the first time you enter an area.
+  Var A: Controls which area it is.
+  Var B: Flag for the player seeing this area name.
+56 Gear from Tower of Death with a magnes point attached to it.
+  Var A: The direction:
+    00 Clockwise
+    01 Counter-clockwise
+57 Background from Mechanical Tower.
+  Requires sector overlay 72.
+58 Wygol's sky background.
+  Requires sector overlay 41.
+59 Wall that blocks the way with a switch to the right of it that lowers the wall.
+  Requires sector overlay 66.
+5A Rocks and sea mines that blow up the rocks.
+  Requires sector overlay 46.
+  Var A affects the position of the rocks:
+    0 Leftmost screen.
+    1 Two screens from the left.
+5B Floors in Kalidus Channel that disappear when the rocks below them are blown up.
+  Requires sector overlay 46.
+  Var A is which entity 5A to be linked to, set to the same as 5A's var A.
+5C Breakable wall.
+  Var A: Which breakable wall sprite to use (index in list 022B6C54).
+  Var B: Which wall data in this area's breakable wall list to use (index in one of 022B6BF4's lists).
+5D Castle in the distance during the ending sequence.
+  Requires sector overlay 84.
+5E Metal gate with a button to the right of it to unlock it.
+  Var A:
+    0 Single gate.
+    1 Large row of many gates.
+5F Spawns villagers, events, and barrels in Wygol Village.
+  Var A: Which of Wygol's rooms to spawn entities for:
+    0 - In Eugen and Aeon's house.
+      Spawns Eugen if event flag 38 is set.
+      Spawns Aeon if event flag 3C is set.
+    1 - In Daniela's house.
+      Spawns Daniela if event flag 57 is set.
+    2 - In Laura's house.
+      Spawns Laura if event flag 32 is set.
+    3 - In Jacob's house.
+      Spawns Jacob if event flag 2A is set.
+    4 - In Anna and Irina's house.
+      Spawns Anna if event flag 4B is set.
+      Spawns Irina if event flag 53 is set.
+    5 - Outdoors.
+      Always spawns barrels.
+      Spawns event 67 if event flag 6 is set.
+      Spawns Nikolai inside Torpor if event flag 7 is set.
+      Spawns Nikolai if event flags 7 and 8 are set.
+      Spawns event 6E if event flag C is set.
+      Spawns George if event flag D is set.
+      Spawns Abram if event flag 2D is set.
+      Spawns Marcel if event flag 40 is set.
+      Spawns Serge if event flag 47 is set.
+      Spawns Monica if event flag 4F is set.
+60 Spawns Barlowe, events, and Dracula's soul vessel in Barlowe's room in Ecclesia.
+  Requires sector overlay 42.
+  Which entities it spawns depend on certain event flags. TODO
+=== Below are events. Var A is the event flag set upon completing this event. Var B is the prerequisite event flag before this event will appear.
+61 Event - Talking to Albus in the first room of the game.
+  Requires sector overlay 42.
+  Also loads graphics for the flash of light through the windows when Albus is talking to himself.
+62 Event - Talking to Barlowe in the second room of the game.
+  Requires sector overlay 42.
+63 Event - First tutorial.
+  Requires sector overlay 42.
+64 Event - Second tutorial, fight vs skeletons.
+  Requires sector overlay 42.
+65 Event - Third tutorial.
+  Requires sector overlay 42.
+66 Event - Meeting Albus in the Monastery.
+  Requires sector overlay 78.
+  Also loads graphics for the map that Albus marks the village on.
+67 Event - First time entering Wygol Village and finding Nikolai trapped in Torpor.
+  Requires sector overlay 41.
+68 Event - Nikolai trapped in Torpor (not the first time entering Wygol).
+  Requires sector overlay 41.
+69 Event - Albus in Minera Prison Island.
+  Requires sector overlay 51.
+6A Event - something with barlowe?
+  Requires sector overlay 42.
+6B Event - At end of Lighthouse.
+  Requires sector overlay 53.
+6C Event - Albus in Skeleton Cave.
+  Requires sector overlay 64.
+6D Event - Saving George from Torpor in Skeleton Cave.
+  Requires sector overlay 64.
+6E Event - Nikolai telling you Albus came and took their blood.
+  Requires sector overlay 41.
+6F Event - Albus in Giant's Dwelling.
+  Requires sector overlay 59.
+70 Event - something with barlowe?
+  Requires sector overlay 42.
+71 Event - Room before Albus in Oblivion Ridge when Shanoa senses Dominus.
+  Requires sector overlay 62.
+72 Event - Albus in Oblivion Ridge.
+  Requires sector overlay 62.
+73 Event - something with barlowe?
+  Requires sector overlay 42.
+74 Event - At the start of Mystery Manor when Shanoa senses Albus.
+  Requires sector overlay 60.
+75 Event - ? in Albus's boss room in Mystery Manor.
+  Requires sector overlay 60.
+76 Event - Shanoa about to absorb the final piece of Dominus in Mystery Manor.
+  Requires sector overlay 60.
+77 Event - Talking with Barlowe before the bad ending.
+  Requires sector overlay 42.
+78 Event - Barlowe telling you to use Dominus before the bad ending.
+  Requires sector overlay 42.
+79 Event - Shanoa getting her memories back after absorbing the final piece of Dominus in Mystery Manor.
+  Requires sector overlay 60.
+7A Event - Before fighting Barlowe.
+  Requires sector overlay 42.
+7B Event - After defeating Barlowe.
+7C Event - Dracula's Castle appearing in the distance.
+7D Event - Shanoa talking to herself in Ecclesia after Dracula revives.
+7E Event - View of Shanoa approaching the castle.
+  Requires sector overlay 67.
+7F Event - Shanoa talking to herself at the Castle Entrance.
+  Requires sector overlay 67.
+80 Event - Finding the Cerberus Gate for the first time.
+81 Event - Used in all three rooms that have Cerberus glyphs in them.
+82 Event - Used in all three rooms that have Cerberus glyphs in them.
+83 Event - Used in all three rooms that have Cerberus glyphs in them.
+84 Event - This must be present for the Cerberus Statue to respond to being hit by the Cerberus glyphs.
+85 Event - Shanoa meeting Dracula.
+  Requires sector overlay 75.
+86 Event - Shanoa defeated Dracula, but needs to use Dominus to kill him.
+  Requires sector overlay 75.
+87 Event - Dracula is dead, Shanoa talks with Albus.
+  Also loads graphics for Shanoa's smile.
+88 Event - Good ending.
+89 Event - A villager trapped in Torpor.
+  Var A: In addition to being the event flag set by this event, it also controls which villager appears. Hardcoded values:
+    0D George (Shows wrong text. For proper support, apply the ooe_allow_moving_george.asm patch.)
+    2A Jacob
+    2D Abram
+    32 Laura
+    38 Eugen
+    3C Aeon
+    40 Marcel
+    47 Serge
+    4B Anna
+    4F Monica
+    53 Irina
+    57 Daniela
+8A Event - Magnes glyph and tutorial.
+8B Event - "Controlling Albus" tutorial.
+8C Event - Albus mode ending.

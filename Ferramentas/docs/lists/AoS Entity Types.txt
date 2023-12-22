@@ -1,0 +1,62 @@
+Entity types:
+
+00 Nothing.
+
+01 Enemy.
+  Subtype determines which enemy. It's equal to ID of enemy in the bestiary, except starting at 0 instead of at 1.
+
+02 Special object.
+  Subtype determines which object. See special object list for details on each object.
+
+03 Generic candle.
+  Unaffected by subtype.
+  Var A: Which candle graphic. 0-F.
+    Note that this only matters for the last candle placed in the room. All other candles in the room copy the last one.
+  Var B: Affects amount of money this candle can drop.
+    0 - 1 or 10G
+    1 - 10 or 50G
+    2 - 50 or 100G
+    3 - 100 or 500G
+    4 - 500 or 1000G
+    5 - 1000 or 2000G
+
+04 Pickup. Subtype:
+  00 Nothing?
+  01 Money.
+    Var A: Flag for having picked up this money.
+    Var B: The amount of money. From 0 to 6: $1 $10 $50 $100 $500 $1000 $2000.
+  02 Item: consumable.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the consumable.
+  03 Item: weapon.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the weapon.
+  04 Item: body armor/accessory.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the body armor/accessory.
+  05 Red soul candle.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the soul.
+  06 Blue soul candle.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the soul.
+  07 Yellow soul candle.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the soul.
+  08 Ability soul candle.
+    Var A: Flag for having picked up this item.
+    Var B: The local ID of the soul.
+      1 - Grave Keeper
+      2 - Skeleton Blaze
+      3 - Malphas
+      4 - Kicker Skeleton
+      5 - Hippogryph
+      6 - Galamoth
+
+05 Hard mode pickup.
+  Appears only on hard mode.
+  Subtype/Var A/Var B work the same as normal pickups.
+
+06 All-souls-found pickup.
+  Appears only once you have all souls.
+  Subtype/Var A/Var B work the same as normal pickups.

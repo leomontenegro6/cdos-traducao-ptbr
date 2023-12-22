@@ -1,0 +1,40 @@
+AoS Enemy DNA format:
+  0x24 bytes long.
+  00,4: Create code pointer.
+  04,4: Update code pointer.
+  08,2: Item 1. Global ID+1 of the item.
+  0A,2: Item 2. Global ID+1 of the item.
+  0C,2: Max HP.
+  0E,2: Max MP.
+  10,2: EXP.
+  12,1: Soul rarity.
+    00 means the soul has no chance to drop at all, but after that it scales from common to rare.
+    The formula for calculating the soul's drop chance is as follows:
+      The numerator of the chance is 6 if you don't own any of the soul already, or 3 if you do.
+      If you're on hard mode and you don't own any of the soul the numerator is 7 instead.
+      If Soul Eater Ring is equipped, add 8 to the numerator.
+      The denominator is: max(0x10, this_number*8 + 0x20 - floor(LCK/0x10))
+  13,1: Attack stat.
+  14,1: Defense stat.
+  15,1: Item 1 rarity.
+    Scales from common to rare.
+    The formula for calculating item 1's drop chance is as follows:
+      The numerator of the chance is 4 normally, or 8 if you have the Rare Ring equipped.
+      The denominator is: max(0x10, (this_number*4 + 0x10 - floor(LCK/0x10)))
+  16,1: Item 2 rarity.
+    Works the same as item 1 rarity.
+  17,1: Soul type.
+    0 - Red soul.
+    1 - Blue soul.
+    2 - Yellow soul.
+    3 - Ability soul.
+  18,1: Soul index in that type's list.
+  19,1: ???
+  1A,2: Which elements this enemy is weak to. Bitfield.
+  1C,2: Which elements this enemy is resistant to. Bitfield.
+  1E,2: ???
+  20,2: ???
+    The exact effect this has seems to depend on the individual enemy's code.
+    It's somehow related to the enemy entity's bitfield of sprite drawing (entity+58).
+    For example, Bat will unset its "do not draw" bit of that bitfield every frame, but only if this value is 0.
+  22,2: ???

@@ -1,0 +1,168 @@
+00 Save point.
+01 Warp point.
+  Allows you to warp between castles by pressing up, and between warp points in the same castle by pressing down.
+  You should place two of these objects in each warp room - one should have Unique ID 0, and the other should have Unique ID 1.
+  (Only the one with Unique ID 0 is necessary for the warp to work correctly, but the one with Unique ID 1 is the other half of the warp gate, so the warping between castles animation will look strange without it.)
+  Var A: Affects the palette of the warp gate.
+    0 Castle A palette
+    1 Castle B palette
+02 Teleporter.
+03 Breakable wall.
+  Var A: Which breakable wall flag to check.
+04 sets a flag?
+  Var B: Which breakable wall flag to set.
+05 Door.
+  Var A:
+    0 Wooden door.
+    1 Magic door unlocked by MK's Bracelet.
+    2 Skull door.
+    3 Lure door.
+  Var B: Event flag index for whether the player has unlocked this door yet.
+    If this event flag is not already set, it gets set when the player goes through this door, and shows a message saying which key was used.
+    If Var A is 2 is says the Skull Key was used, if it's 3 or 0 it says the Lure Key was used.
+    If Var A is 1 Var B is irrelevant, it always checks event flag 28.
+06 Boss door.
+  Var A is is how the door acts:
+    00 Door outside the boss room that opens when you touch it.
+      Note that if the player enters the room through this door it will act locked like one inside the boss room and not open when the player touches it.
+    01 Door inside the boss room that opens when the boss is killed.
+  Var B is the boss this door is for:
+    01 Giant Bat
+    02 Skull Knight
+    03 Living Armor
+    04 Golem
+    05 Minotaur
+    06 Devil
+    07 Giant Merman
+    08 Max Slimer
+    09 Peeping Big
+    0A Legion (saint)
+    0B Shadow
+    0C Minotaur Lv2
+    0D Legion (corpse)
+    0E Talos
+    0F Death
+    10 Cyclops
+    11 Talos (chase)
+    12 Pazuzu
+07 Circle of light around player in dark rooms.
+08 Pushable crates.
+  Var A: Which room's arrangement of crates to use. This is an index in list 080E2690.
+09 Button.
+  Var A: Event flag to set when you press the button.
+    Note that this also affects the GFX and palette used, so only use 0-3 for this or it will crash.
+  Var B:
+    0 Normal, can be pressed by the player.
+    1 Can only by pressed by a Mimic.
+      The way it identifies whether an entity is a Mimic or not is it checks to see if the entity is the first entity with the update code pointer 08057139. Therefore if there are multiple Mimics only the first can press the switch.
+0A Tall gate.
+  Var A: Event flag that opens this gate.
+0B Floodgate.
+0C Button and crate.
+  You have to put the crate on the button to open a stone gate (object 0D).
+  Var A: Event flag to set when the button is pressed and unset when the button is unset.
+0D Stone gate.
+  Var A: Event flag that opens the gate.
+0E blood waterfall?
+  Var A:
+  Var B:
+0F 
+10 Cracked wall that can be broken with the Crushing Stone.
+  Var A: ??? Either 0 or FFFF
+  Var B: Event flag index for whether this wall has been destroyed.
+11 Cogs.
+  Var A: Which room's arrangement of cogs to use. This is an index in list 084B09F8.
+  Var B: 0 for full cogs, 1 for cogs with a quarter of them broken off and not standable.
+12 Swinging pendulums.
+  Var A: ?
+  Var B: ?
+13 Giant hammer that hits Bronze Guarder back.
+  Var A:
+    0 for the giant hammer and button that activates the hammer.
+    1 for the wall that gets destroyed when hit by the Bronze Guarder.
+  Var B:
+    If var A is 0, var B has no effect.
+    If var A is 1, var B is the event flag to set when the wall is destroyed to indicate that it's gone.
+      Note that Bronze Guarder is hardcoded to check event flag 24, so he will not stay dead if this is changed to something else (but the wall itself will stay detroyed).
+14 Iron gate.
+  Var A: Event flag that opens this gate.
+15 Machine with cogs you can hit.
+  Var A: Event flag to set once the player hits thie machine enough.
+16 Cog that you can hit to spin it.
+  Var A:
+    0 for the useless cog in Castle A.
+    1 for the cog in Castle B you have to hit to open the ceiling.
+17 Giant gears that crush Guardian Armor.
+  Var A: 0 for bottom gear, 1 for top gear.
+18 Small spinning gear in the background.
+  Var A: Spinning speed. Positive is clockwise, negative is counterclockwise.
+19 Animated pendulum in a background grandfather clock.
+1A Merchant.
+1B Lightning that lights up windows.
+1C Boss rush?
+1D Ball race.
+  Creates the giant metal ball, the gates, and the button to start the race.
+  Var A: ? 0 or 1
+1E Statue and ramp in the second room of the game.
+1F Elevator.
+  Var A: Which elevator it is. Affects the number of floors and distance between the floors.
+    0 Has 4 floors, each 0x200 pixels apart.
+    1 Has 4 floors, each 0x1A8 pixels apart.
+    2 Has 2 floors, 0x210 pixels apart. This also doubles as the lift that raises you into the center of the castle.
+20 Giant swinging axe.
+21 Giant Crocomire skull and logs holding it up.
+22 Giant skull you roll.
+23 Giant rock and logs holding it up.
+24 Water.
+25 Spikes.
+  These are invisible, the spike graphics should be part of the room's tiles.
+  Var A: Affects the width of the spike hitbox somehow.
+26 Event.
+  Var A: Which event.
+    00 Start of the game.
+    01 Meeting Death in the Marble Corridor.
+    02 
+    03 
+    04 
+    05 
+    06 
+    07 
+    08 
+    09 
+    0A 
+    0B 
+    0C 
+    0D 
+    0E 
+    0F 
+    10 
+    11 
+    12 
+    13 
+  Var B: Event flag set when this event is completed.
+27 Drawbridge.
+28 Lydie.
+  Var A: Which event. Seems unused.
+  Var B: Event flag of the corresponding event. Lydie will not appear once this is set.
+29 wide floor blockade?
+2A Furniture in the furniture room.
+  Also changes the music.
+2B Guillotine blade trap.
+  Var A: Sprite frame index to use.
+    0 Guillotine blade trap.
+    1-5 Bloody bones laying around for decoration.
+  Var B: ?
+2C Ceiling breakable by the Crush Boots.
+  Var A: Event flag index for whether this ceiling has been broken or not yet.
+2D Locked floor gate.
+  Var A:
+    0 Left half of the gate.
+    1 Right half of the gate.
+  Var B: Event flag index for whether this gate has been unlocked.
+2E Boulder that gets destroyed by Gate Guarder rolling into it.
+  Var A: Event flag to set.
+2F The castle in the background in the epilogue.
+30 Destroyable hand statue holding something shiny.
+  Var B: Event flag to set when destroyed.
+  Destroying this normally unlocks the floor gate to the center of the castle, but you can change var B to set any other event flag.
+31 Ends Maxim's boss fight when you defeat him?

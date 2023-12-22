@@ -1,0 +1,1115 @@
+
+=== 02000000 - 020F6B3F: Most of ARM9
+
+02007354,4 - Hardcodes 022EB1A0, the start of asset memory.
+020072A8,4 - Hardcodes 023E0000, the end of asset memory.
+
+0206D994,1 - Hardcodes the number of attribute points (1) to give to all attributes when the player absorbs a glyph.
+
+020B0854-020B4853 - List of sine and cosine values.
+  Entry length 4.
+  There are 0x1000 entries in this list, with the index corresponding to an input value of 0 to 359 degrees.
+  00,2: Sine of the input value.
+  02,2: Cosine of the input value.
+  The sine/cosine values range from -0x1000 to 0x1000, corresponding to -1.0 to 1.0.
+
+020B5D50 - List of layer scroll modes.
+  Each is 3 bytes long.
+  00,1: Horizontal scrolling multiplier (8 = 1.0).
+  01,1: Vertical scrolling multiplier (8 = 1.0).
+  02,2: Autoscrolling type.
+    0 - No autoscrolling.
+    1 - Horizontal autoscrolling.
+      Byte 00 is the speed of horizontal scrolling.
+    2 - Vertical autoscrolling.
+      Byte 01 is the speed of vertical scrolling.
+
+020B6148-020B6197 - List of overlays for each area/sector.
+
+020B619C-020B61BF - The palette list used for the map.
+
+020B61C0-020B61E7 - List of the number of map tiles in each area's map. Halfwords.
+020B61E8-020B620F - List of map dimensions.
+  Entry length 2.
+  00,1: Width.
+  01,1: Height.
+
+020B61E8-020B620F - List relating to each area somehow? TODO
+  Each entry is 2 bytes long.
+  00,1: ?
+  01,1: ?
+  Wygol's entry seems to affect its map somehow, but otherwise this doesn't seem to have any effect.
+
+020B6364-020B7467 - Enemy DNA list.
+
+020D7FB4,4 - Starting X pos on new game.
+020D7FB8,4 - Starting Y pos on new game.
+
+020B6210 - something related to shanoa. changing this area at random seriously affects shanoa, from her physics to her graphics, corrupting everything about her.
+
+020C9854-020D7477 - Most palette data.
+
+020D7478 - List of color tints? These might be used by the slash trails of weapons.
+  Entry length 8?
+
+020D7954-020D7987 - List of what song plays in each sector of Dracula's Castle.
+020D79D8-020D7A27 - List of what song plays in each area (except Dracula's Castle).
+
+020D7920-020D7953 - List of ??? for each sector of Dracula's Castle.
+020D7988-020D79D7 - List of ??? in each area (except Dracula's Castle).
+
+020D8CEC-020ECA0B - List of assets.
+  Entry length 0x20.
+  Asset indexes are indexes in this list.
+  00,4: Asset pointer.
+  04,2: Type of asset.
+    0001 - GFX.
+    0008 - Sprite.
+    0010 - 3D model.
+    0040 - 3D texture.
+    0080 - Skeleton file.
+    0100 - Font.
+  06,1A: Filename. The end is padded with null bytes.
+
+020ECAA0,4 - When in a transition room, this is the current sector index that is loaded.
+
+020EF27C-020EF36B - List of voice SFX indexes for each player.
+  Entry length 0x30.
+  00,4: SFX index for attacking (random 1).
+  04,4: SFX index for attacking (random 2).
+  08,4: SFX index for attacking (random 3).
+  0C,4: SFX index for attacking (random 4).
+  10,4: SFX index for using glyph union.
+  14,4: 
+  18,4: 
+  1C,4: 
+  20,4: 
+  24,4: 
+  28,4: 
+  2C,4: 
+
+020ECBB8 - List of which assets to load for each sector.
+  This is a list of pointers, one for each area.
+  Each of those pointers points to a list of pointers, one for each sector in that area.
+  Each of those pointers points to a list of assets indexes to load for that sector.
+
+020ECCE0-020ECD07 - List of map draw offsets. These offset each map from the upper left corner of the screen.
+  Entry length 2.
+  00,1: X offset in groups of 2 tiles.
+  01,1: Y offset in groups of 2 tiles.
+
+020ECD3C-020ECD87 - List of pointers to lists of secret doors for each area.
+  If a pointer is 0 that means the area has no secret doors.
+
+020ECD88 - List of pointers to data for what rooms have and haven't been explored by the player for each area.
+
+020ECDDC - List of areas.
+
+020ECE84 - List of map tile metadata.
+020ECED8 - List of map tile line data.
+020ECF2C - List of map row widths.
+
+020EEC00 - Shanoa's list of hitbox pointers.
+
+020EEC94
+
+020EEFF4
+
+020EF004-020EF193 - Lists of which sprite animations are for which player states for each player character (state anims).
+  The "State anims ptr" in the player data points to the appropiate entry in this list.
+  Specific pointers for each player:
+    020EF004-020EF053: Shanoa
+    020EF054-020EF0A3: Arma Felix
+    020EF0A4-020EF0F3: Arma Chiroptera
+    020EF0F4-020EF143: Arma Machina
+    020EF144-020EF193: Albus
+  Each list is 0x50 bytes long. Each state takes up 1 byte for 0x50 states in total.
+  Each entry is the sprite animation index for that state index.
+
+020EF1F8-020EF26F - List of starting/base stats for each player.
+  Entry length 0x18.
+  00,2: ATK
+  02,2: DEF
+  04,2: STR
+  06,2: CON
+  08,2: INT
+  0A,2: MND
+  0C,2: LCK
+  0E,2: Unused?
+  10,4: Bitfield of resistances.
+  14,4: ??? 0x8002 0x0002
+
+020EF48C-020EF4C3 - Weapons (unused).
+020EF4C4-020EF50B - Relics.
+020EF50C-020EF6AF - Leg armor.
+020EF6B0-020EF8CB - Body armor.
+020EF8CC-020EFB87 - Back glyphs.
+020EFB88-020EFE57 - Head armor.
+020EFE58-020F0163 - Accessories.
+020F0164-020F04C7 - Glyph unions.
+020F04C8-020F0A07 - Consumables.
+020F0A08-020F10E7 - Shoulder glyphs.
+
+020F1164-020F1203 - List of enemies that need a certain enemy overlay and which overlay they need.
+  Each entry is 8 bytes long.
+  0,4: Enemy ID.
+  4,4: Overlay ID.
+
+020F2814 - List of enemy files to load.
+020F343C - List of special object files to load.
+020F3688 - List of special object ??
+020F370C - List of special object create code pointers
+020F3940 - List of special object update code pointers.
+02298AD0 - List of special object ???
+02345CF8 - List of special object ???
+
+020F367C - What type of top screen is currently displayed.
+  00 Black screen
+  01 White screen
+  02 Black screen
+  03 Konami logo
+  04 Cross with inverted bat wings
+  05 Normal map
+  06 Name of area selected, for world map and warp rooms
+  07 Enemy info
+  08 Wygol village map
+  09 Painting of a castle
+  0A Blue rectangle, for the main menu
+  0B Black screen
+  0C Black screen
+  0D 
+  0E 
+  0F Crash
+020F3684 - What the next type of top screen should be.
+  This is what 020F367C will change into when the game finishes playing a fading out animation.
+
+020F3B7C - List of something related to item IDs?
+  It has 37, 50, 6F in the list, which are the last Global ID+1s of arm glyphs, back glyphs, and glyph unions respectively.
+
+020F3BA0 - something related to cerberus glyphs...?
+  used by func 0206AA6C
+  entry length 8
+  04,2: 
+020EEF4C - something related to cerberus glyphs...?
+  entry length 8
+  00,4:
+  04,4:
+
+020F3BC0 - List of GFX for glyphs.
+  Entry length 0x10.
+  0,2: GFX asset index.
+  2,2: Sprite asset index.
+  4,4: GFX asset pointer.
+  8,4: ??? 0
+  C,4: Palette pointer.
+
+020F4158-020F415E - List of which summon index corresponds to each summon's glyph ID+1.
+  Entry length 1.
+  The index in this list is the glyph ID+1 - 0x48.
+
+020F44A0 - List of GFX asset indexes for images of enemies in the bestiary.
+  Each entry is 4 bytes long.
+  The filenames are like /sc/f_elist00.dat. They're 1-dimensional.
+  Each image has 4 enemies on it.
+020F451C - List of palette list pointers for images of enemies in the bestiary.
+  Each palette list has 4 palettes in it, one for each enemy.
+
+020F4A56 - change from 08 to FF and "Shanoa" text appears in bottom left of screen, and dialogue in events doesn't work correctly.
+
+020F58B0-020F5AEF - List of quests.
+  Entry length 0x10.
+  00,2: Quest reward.
+    Usually the global ID+1 of the item.
+    A negative number means no reward.
+    If the reward is gold, this is the amount of gold.
+    This value is just for the freely given reward, items this quest unlocks in the shop are handled by list 022228D4.
+  04,4: Pointer to list of requirements to complete this quest (see below).
+  08,1: Bitfield.
+    01 - Reward is gold
+    02 - ?? Only used for Jacob's unused quest, "Get Business Started"
+    04 - Is a kill quest
+    08 - ?? Used for The Killing Scream (record Banshee's wail with Phonograph)
+Requirement lists for fetch quests:
+  The first halfword is the number of items in this list.
+  Then those items are each listed as global item IDs+1. Halfwords.
+Requirement lists for kill quests:
+  First halfword is the index in list 02100688, the list of enemies killed for each kill quest.
+  Second halfword is number of that enemy you need to kill.
+
+=== 020F6B3F: End of most of ARM9.
+
+020FFC46 - Number of frames to keep the game logic paused.
+
+020FFC54,4 - Game's current uptime in frames.
+  This is set to 0 when resetting the game with select+start+L+R as well.
+  This value is used to randomize the RNG seed when loading a save.
+
+020FFC58 - Start of game object.
+
+020FFC88 - normally 0. 12 when in paries state. 12 prevents pausing.
+
+020FFC8C-020FFC8F - Bitfield of global game flags.
+  0x00000001 - ? can't use magic tickets
+  0x00000002 - Set during boss fights. Disables suspending, magical tickets, and keeps boss doors shut.
+  0x00400000 - Don't update the player's position on the map or set any map tiles as explored.
+  0x80000000 - ? can't use magic tickets
+
+020FFC9C - Pointer to current room.
+020FFCA0 - Pointer to next room to transition into.
+020FFCAC,2 - Current room's X pos on the map.
+020FFCAE,2 - Current room's Y pos on the map.
+020FFCB0,2 - Player's X pos on the map.
+020FFCB2,2 - Duplicate current room's X pos on the map?
+020FFCB4,2 - Player's Y pos on the map.
+020FFCB6,2 - Duplicate current room's Y pos on the map?
+020FFCB9,1 - Current area index.
+
+020FFD20,4 - Pointer to the player (02109820).
+020FFD2C,4 - Can have a pointer to the player, or 0?
+
+020FFD34 - Player's current base stats.
+  020FFD34,2 - ATK
+  020FFD36,2 - DEF
+  020FFD38,2 - STR
+  020FFD3A,2 - CON
+  020FFD3C,2 - INT
+  020FFD3E,2 - MND
+  020FFD40,2 - LCK
+  020FFD42,2 - Unused?
+  020FFD44,4 - Bitfield of resistances.
+020FFD48 - Player's current stats.
+  020FFD48,2 - ATK
+  020FFD4A,2 - DEF
+  020FFD4C,2 - STR
+  020FFD4E,2 - CON
+  020FFD50,2 - INT
+  020FFD52,2 - MND
+  020FFD54,2 - LCK
+  020FFD56,2 - Unused?
+  020FFD58,4 - Bitfield of resistances.
+020FFD5C - Player's current stats, with bonus stats added.
+  020FFD5C,2 - ATK
+  020FFD5E,2 - DEF
+  020FFD60,2 - STR
+  020FFD62,2 - CON
+  020FFD64,2 - INT
+  020FFD66,2 - MND
+  020FFD68,2 - LCK
+  020FFD6A,2 - Unused?
+  020FFD6C,4 - Bitfield of resistances.
+020FFD70 - Player's current bonus stats.
+  020FFD70,2 - ATK
+  020FFD72,2 - DEF
+  020FFD74,2 - STR
+  020FFD76,2 - CON
+  020FFD78,2 - INT
+  020FFD7A,2 - MND
+  020FFD7C,2 - LCK
+  020FFD7E,2 - Unused?
+  020FFD80,4 - Not bonus resistances, instead this is 0 or 1 to indicate whether any bonuses are active.
+
+020FFDDC,4 - Bitfield of damage types that most recently hit the player.
+
+Player's current bonus elemental attribute points (AP):
+020FFE04,2 - Bonus strike AP. Set to 0x1800 by Blow Ring.
+020FFE06,2 - Bonus slash AP. Set to 0x1800 by Wind Ring.
+020FFE08,2 - Bonus fire AP. Set to 0x1800 by Ruby Ring.
+020FFE0A,2 - Bonus ice AP. Set to 0x1800 by Sapphire Ring.
+020FFE0C,2 - Bonus electric AP. Set to 0x1800 by Emerald Ring.
+020FFE0E,2 - Bonus holy AP. Set to 0x1800 by Diamond Ring.
+020FFE10,2 - Bonus dark AP. Set to 0x1800 by Onyx Ring.
+
+020FFE9C,2 - Bitfield of buttons the player is currently pressing.
+  0001 - A
+  0002 - B
+  0004 - Select
+  0008 - Start
+  0010 - Right
+  0020 - Left
+  0040 - Up
+  0080 - Down
+  0100 - R
+  0200 - L
+  0400 - X
+  0800 - Y
+  2000 - Debug
+020FFE9E,2 - Bitfield of buttons the player just pressed this frame.
+
+020FFEC4 - List of collidable entities.
+  Each entry is 8 bytes long.
+  00,4: Type of collision.
+    0 - A jump-through platform you can slide on.
+    1 - A jump-through platform you can fall through.
+    2 - A completely solid block.
+  04,4: Pointer to the entity.
+
+020FFF68,4 - Pointer to an entity. For Anna's rescue event, this has a pointer to the cat.
+
+021000BC,4 - Screen scrolling x pos.
+021000C0,4 - Screen scrolling y pos.
+021000C8,4 - Screen scrolling x pos for entity rendering purposes.
+021000CC,4 - Screen scrolling y pos for entity rendering purposes.
+
+0210013C,4 - Pointer to current room's entity list.
+
+=== 02100144 - 021007D3: Data that gets saved to the save file. 0x690 bytes long.
+
+Bitfields of which map tiles you have explored:
+02100144-021001C1: Dracula's Castle
+021001C2-021001C5: Wygol Village
+021001C6-021001C9: Ecclesia
+021001CA-021001D9: Training Hall
+021001DA-021001E2: Ruvas Forest
+021001E2-021001E7: Argila Swamp
+021001E8-02100207: Kalidus Channel
+02100208-0210021B: Somnus Reef
+0210021C-02100231: Minera Prison Island
+02100232-02100239: Lighthouse
+0210023A-02100253: Tymeo Mountains
+02100254-02100269: Tristis Pass
+0210026A-02100273: Large Cavern
+02100274-0210027D: Giant's Dwelling
+0210027E-02100285: Mystery Manor
+02100286-0210028D: Misty Forest Road
+0210028E-02100295: Oblivion Ridge
+02100296-0210029D: Skeleton Cave
+0210029E-021002AD: Monastery
+021000AA-021000BB: Epilogue & Boss Rush Mode & Practice Mode
+Format: Each tile takes up two bits. If just the lower bit is set, the tile has been revealed by a map item. If both bits are set, the tile has been visited.
+This also controls whether an area is marked NEW on the map or not. At least one tile in the area must be explored for the NEW to go away.
+
+021002B0,2 - Current level
+021002B2,2 - ?
+021002B4,2 - Current HP
+021002B6,2 - Max HP
+021002B8,2 - Current MP
+021002BA,2 - Max MP
+021002BC,2 - Current hearts
+021002BE,2 - Max hearts
+
+Currently equipped items:
+021002C0,2 - Arm glyph on Y-button
+021002C2,2 - Arm glyph on X-button
+021002C4,2 - Back glyph
+021002C6,2 - Glyph union
+021002C8,2 - Body armor
+021002CA,2 - Head armor
+021002CC,2 - Leg armor
+021002CE,2 - Accessory 1
+021002D0,2 - Accessory 2
+
+Glyph sleeve A:
+021002D2,2 - Arm glyph on Y-button
+021002D4,2 - Arm glyph on X-button
+021002D6,2 - Back glyph
+Glyph sleeve B:
+021002E4,2 - Arm glyph on Y-button
+021002E6,2 - Arm glyph on X-button
+021002E8,2 - Back glyph
+Glyph sleeve C:
+021002F6,2 - Arm glyph on Y-button
+021002F8,2 - Arm glyph on X-button
+021002FA,2 - Back glyph
+
+0210030C,4 - Current EXP
+02100310,4 - Current gold
+
+02100314,2 - Bitfield of status effects on the player.
+  0x1 - Poison
+  0x2 - Curse
+  0x4 - Petrify
+02100316,2 - Frames left until poison expires.
+  It takes 0x4B0 - CON*8 total frames for it to expire.
+  The 0x4B0 constant is at 020EF270.
+02100318,2 - Frames left until curse expires.
+  It takes 0x4B0 - MND*8 total frames for it to expire.
+  The 0x4B0 constant is at 020EF274.
+0210031A,2 - Number of button presses left until you break free of petrify.
+  It takes 0x2D total button presses to break free.
+  The 0x2D constant is at 020EF278.
+
+Player's current elemental attribute points (AP):
+0210031C,2 - Strike AP
+0210031E,2 - Slash AP
+02100320,2 - Fire AP
+02100322,2 - Ice AP
+02100324,2 - Electric AP
+02100326,2 - Holy AP
+02100328,2 - Dark AP
+The more AP you have for attributes that your current weapon has, the higher the attack multiplier you get.
+A 1% attack boost takes 0x147 (0d327) AP.
+A 100% attack boost (double) takes 0x8000 (0d32768) AP.
+A 200% attack boost (triple) takes 0xFFFF (0d65535) AP.
+
+0210032C-02100339 - List of current EXP for each of the summon glyphs. Halfwords.
+  0210032C,2 - Fidelis Caries
+  0210032E,2 - Fidelis Aranea
+  02100330,2 - Fidelis Polkir
+  02100332,2 - Fidelis Alate
+  02100334,2 - Fidelis Medusa
+  02100336,2 - Fidelis Noctua
+  02100338,2 - Fidelis Mortus
+  They need 0x7FFF EXP to reach level 2, and 0xFFFE EXP to reach level 3.
+  The summon hitting an enemy gives it only 3 EXP per hit.
+  But absorbing a duplicate of the summon glyph gives it 0x7D0 EXP (decimal 2000).
+
+02100342,1 - Current glyph sleeve (0 1 or 2 for A B or C).
+
+02100344-02100353 - Bitfield of which enemies have been killed at least once so they show up in the bestiary.
+02100354-02100363 - Bitfield of which enemy item 1 drops have been seen so they show up in the bestiary.
+02100364-02100373 - Bitfield of which enemy item 2 drops have been seen so they show up in the bestiary.
+
+02100374,4 - Total playtime in frames.
+
+02100378-0210037F - Miscellaneous flags.
+  Bit indexes:
+  00 - Lighthouse ceilings have been destroyed and elevator is functional.
+  06 - Cerberus gate down.
+  includes flags for which area titles have been seen by the player (e.g. "Monastery")
+  also includes flags which breakable walls/secret doors have been uncovered on the map. 27 means the one at the bottom right of dracula's castle.
+  31 - Kalidus Channel gets the "NEW" with the hand pointing to the bottom right entrance.
+  32 - Player saw the hand pointing at the bottom right entrance of Kalidus Channel and then entered Kalidus through any of its entrances (not necessarily the one that was pointed to).
+
+02100388 - Bitfield of event flags.
+  01 00000002 - Saw the intro event where you talk to Albus in the first room of the game.
+  02 00000004 - Saw the event the event where Albus steals Dominus.
+  03 00000008 - Saw the first tutorial event.
+  04 00000010 - Saw the second tutorial event.
+  05 00000020 - Saw the third tutorial event.
+  06 00000040 - Met Albus in Monastery.
+  07 00000080 - Saw Nikolai trapped in Torpor in Wygol. (Note that this flag actually counts as rescuing Nikolai due to a bug.)
+  08 00000100 - Freed Nikolai from Torpor in Wygol. (This does not count as rescuing Nikolai.)
+  09 00000200 - Met Albus in Minera Prison Island and got the first piece of Dominus from him.
+  0A 00000400 - (barlowe related, set by event 6A)
+  0B 00000800 - Saw the event at the end of the Lighthouse.
+  0C 00001000 - Met Albus in Skeleton Cave.
+  0D 00002000 - Rescued George in Skeleton Cave.
+  0E 00004000 - 
+  0F 00008000 - Met Albus in Giant's Dwelling and got the second piece of Dominus from him.
+  10 00010000 - (barlowe related, set by event 70)
+  11 00020000 - Saw the event before the room with Albus in Oblivion Ridge.
+  12 00040000 - Met Albus in Oblivion Ridge.
+  13 00080000 - (barlowe related, set by event 73)
+  14 00100000 - Saw the event in the first room of Mystery Manor.
+  15 00200000 - (albus in mystery manor related, set by event 75)
+  16 00400000 - (albus in mystery manor related, set by event 76)
+  17 00800000 - Saw event where you talk to Barlowe before the bad ending.
+  18 01000000 - Saw event where Barlowe tells you to use Dominus before the bad ending.
+  19 02000000 - Saw event where Shanoa gets her memories back after absorbing the final piece of Dominus in Mystery Manor.
+    This activates the event where you bring the Dominus pieces to barlowe before you fight him.
+  1A 04000000 - Saw event before fighting Barlowe.
+    This activates the Barlowe fight in ecclesia.
+  1B 08000000 - Saw event after fighting Barlowe.
+  1C 10000000 - Saw Dracula's Castle appearing in the distance.
+  (more)
+0210038C - Bitfield of event flags, continued.
+  2A 00000400 - Rescued Jacob
+  2D 00002000 - Rescued Abram
+  32 00040000 - Rescued Laura
+  38 01000000 - Rescued Eugen
+  3C 10000000 - Rescued Aeon
+02100390 - Bitfield of event flags, continued.
+  40 00000001 - Rescued Marcel
+  47 00000080 - Rescued Serge
+  4B 00000800 - Rescued Anna
+  4F 00008000 - Rescued Monica
+  53 00080000 - Rescued Irina
+  57 00800000 - Rescued Daniela
+
+02100398-021003CB - Bitfield of pickup flags.
+  Valid pickup flags range from 000 to 19F.
+  Hardcoded flags:
+    021 - Lapiste puzzle
+    024 - Vol Ignis puzzle
+    028 - Vol Fulgur puzzle
+    0B2 - Justice Ring blue chest spawned by clearing out all the falling blocks in Monastery.
+    0B5 - Strength Ring blue chest spawned by the Tin Man in Minera.
+    160-16D - Whether you've successfully beaten the boss for a given no-damage blue chest without taking damage.
+    170-17D - Whether you've taken the medal from a no-damage blue chest.
+    180-18B - For wooden chests in each area to temporarily use.
+
+021003CC-021003D3 - Bitfield of areas unlocked on the world map.
+  Each area takes up 2 bits.
+  The lower bit makes the area visible on the map but not selectable.
+  The upper bit makes it both visible and accessible, overriding the lower bit.
+  The order the areas are in is the same as their area index - so the lowest 2 bits of the first byte are Dracula's Castle, etc.
+
+021003D8-021003DB - Bitfield of ? flags.
+02223C00-02223C13 - List of ? indexes for each area.
+  Each entry is a byte. It's the index in bitfield 021003D8 for this area.
+  When you enter an area, that area's bit gets set in bitfield 021003D8.
+  What is this used for?
+
+021003E4-021003E7 - Boss death flags.
+  01 00000002 Arthroverta
+  02 00000004 Giant Skeleton
+  03 00000008 Brachyura
+  04 00000010 Maneater
+  05 00000020 Rusalka
+  06 00000040 Goliath
+  07 00000080 Gravedorcus
+  08 00000100 Albus
+  09 00000200 Barlowe
+  0A 00000400 Wallman
+  0B 00000800 Blackmore
+  0C 00001000 Eligor
+  0D 00002000 Death
+  0E 00004000 Dracula?
+  0F 00008000 Dracula
+
+021003E8-0210054A - Start of list of what glyphs and items you own (owned item info).
+  Each item takes up 1 byte.
+  The index in this list is the global ID+1 of the item, so Confodere is at 021003EA.
+  The low nibble (4 bits) controls how many you have.
+  Bit 5: Whether you've ever owned any of this item.
+  Bit 6: Whether this item is available for sale in the shop.
+  Bit 7: (For relics) Whether this relic is currently equipped.
+  Bit 8: ? Set for all items you've owned except HP/MP/Heart Max Ups.
+
+021005F0-02100601 - Quest statuses. Each takes up half a byte, in the order of low nibble first, high nibble second. Value for each quest:
+  0 - Not started.
+  1 - Started.
+  3 - Started and accomplished, but not turned in.
+  7 - Completed.
+
+02100630,4 - Total gold you've spent at the shop.
+  Jacob gives you the VIP Card at 100000.
+
+02100688 - List of number of enemies you've killed for each kill quest.
+02100688,1 - Number of Black Crows (enemy 17) killed.
+02100689,1 - Number of Werewolves (enemy 3D) killed.
+0210068A,1 - Number of Jiang Shi (enemy 67) killed.
+
+021006C0,4 - X pos to save to the save file.
+021006C4,4 - Y pos to save to the save file.
+021006C8,4 - Z pos to save to the save file.
+021006CC,1 - Area index to be saved to the save file.
+021006CD,1 - Sector index to be saved to the save file.
+021006CE,1 - Room index to be saved to the save file.
+
+021006CF-0210078C - List of player-positioned map reminder markers.
+  Each marker is 2 bytes long:
+    00,1: X pos
+    01,1: Y pos
+  Each area has 5 markers. Area 13 has no markers.
+
+0210078D - Top screen to be saved to the save file.
+0210078E - ID of the last enemy you attacked. For the enemy info on the top screen.
+  79 means no enemy, just a blank info screen.
+
+02100790,1 - Current game mode.
+  0 - Shanoa mode.
+  1 - Albus mode.
+  2 - Boss rush mode.
+  3 - ?
+  4 - Practice mode.
+02100791,1 - 
+02100792,1 - Current playable character.
+  0 - Shanoa.
+  1 - Arma Felix.
+  2 - Arma Chiroptera.
+  3 - Arma Machina.
+  4 - Albus.
+02100794,1 - Current difficulty.
+  0 - Normal mode.
+  1 - Hard mode.
+  Hard mode reduces the damage the player does to enemies to 0.9x.
+02100797,1 - Music volume.
+02100798,1 - SFX volume.
+02100799,1 - Voice volume.
+0210079A,1 - Max level.
+0210079B,1 - Audio-related bitfield.
+  & 01 - Set for English voices, clear for Japanese voices.
+  & 02 - Set for surround sound, clear otherwise.
+0210079C,2 - Bonus HP given by HP max ups.
+  Each HP max up gives +0x14 HP. The maximum is +0x258 HP, then any additional HP max ups do nothing. That's equivalent to 0x1E HP max ups in total.
+0210079E,2 - Bonus MP given by MP max ups.
+  Each MP max up gives +0xA MP. The maximum is +0x12C MP, then any additional MP max ups do nothing. That's equivalent to 0x1E MP max ups in total.
+021007A0,2 - Bonus hearts given by heart max ups.
+  Each heart max up gives +0xA hearts. The maximum is +0x12C hearts, then any additional heart max ups do nothing. That's equivalent to 0x1E heart max ups in total.
+
+021007A2-021007B9 - List of items currently in wooden/green chests in this area.
+  There are 0xC items in this list, each is a halfword.
+  This list is randomized every time you enter an area.
+  See 02223B08 for which items are available to be chosen in which areas.
+
+=== 021007D3: End of data that gets saved to the save file.
+
+021007D5 - 0 when starting a new game, 1 when loading a save.
+
+02100B34,4 - Has a pointer to 022EB1A0, the start of asset memory.
+
+02100A9C,4 - Bitfield of fade out timers currently running?
+  Take the index of a timer in list 02100AC8 and add 0x10 and you get the index of a bit in this bitfield.
+  If the bit is set, the timer is still counting down.
+  If the bit is not set, the timer has reached 0.
+02100AC8 - List of fade out timer countdowns currently running? (for the bottom screen)
+02100ADC - List of fade out timer countdowns currently running? (for the top screen)
+  Each entry is a word, which is the number of frames left in the countdown.
+02100AA0 - List of increment values to add to entries in list 02100AF0 every frame (bottom screen)
+02100AB4 - List of increment values to add to entries in list 02100B04 every frame (top screen)
+02100AF0 - List of current bottom screen fade out values.
+02100B04 - List of current top screen fade out values.
+  Divide these values by 0x1000 to get the value to put in 0400006C/0400106C.
+
+
+02101140,2 - Bitfield of buttons the player is currently pressing.
+  0001 - A
+  0002 - B
+  0004 - Select
+  0008 - Start
+  0010 - Right
+  0020 - Left
+  0040 - Up
+  0080 - Down
+  0100 - R
+  0200 - L
+  0400 - X
+  0800 - Y
+  2000 - Debug
+02101142,2 - Bitfield of buttons the player just pressed this frame.
+
+02101124,1 - Whether touch screen has been touched for at least 2 frames.
+02101125,1 - Whether touch screen has been touched for exactly 2 frames.
+02101126,1 - Whether the location currently touched on the touch screen is the same as the location touched last frame.
+02101127,1:
+  Upper nibble: Whether the location currently touched on the touch screen is different from the location touched last frame.
+  Lower nibble: Whether touch screen is currently being touched or not.
+02101128,2 - X pos on the touch screen that was last touched. (Signed.)
+0210112A,2 - Y pos on the touch screen that was last touched. (Signed.)
+0210112C,2 - X pos on the touch screen that was last touched. (Signed.)
+0210112E,2 - Y pos on the touch screen that was last touched. (Signed.)
+02101130,2 - X pos on the touch screen that was last touched and held for at least 2 frames. (Signed.)
+02101132,2 - Y pos on the touch screen that was last touched and held for at least 2 frames. (Signed.)
+02101134,2 - X pos on the touch screen that was last touched and held for at least 3 frames. (Signed.)
+02101136,2 - Y pos on the touch screen that was last touched and held for at least 3 frames.
+02101138,2 - X pos on the touch screen that was last touched and held for at least 4 frames. (Signed.)
+0210113A,2 - Y pos on the touch screen that was last touched and held for at least 4 frames. (Signed.)
+0210113C,2 - X pos difference on the touch screen touched compared to last frame. (Signed.)
+0210113E,2 - Y pos difference on the touch screen touched compared to last frame. (Signed.)
+
+
+021011F4,2 - Next globally unique ID for an entity.
+  This is incremented every time an entity is created so that entities have a uniquely identifier number, even across different rooms.
+  This starts at 1 when resetting the game.
+  When FFFF is exceeded, it loops back around to 1. (0 is skipped.)
+
+02101200-021091FF - List of extra entity memory.
+  Each slot takes up 0x100 bytes.
+  0x80 entries in total.
+  Known to be used by:
+  * Skeletally animated joints
+  * Peeping Eye's eye and tail
+  * White Dragon's body sections
+  * Background curtains waving in the wind
+
+Format of extra entity memory used for skeletally animated joints:
+  00,4: Number of entities
+  30-6F: Pointers to each individual joint entity used by this enemy.
+  40,4: Pointer to entity of some kind?
+  5C,1: ?
+  70-8F: List of globally unique entity IDs for each individual joint entity used by this enemy.
+    Halfwords. This is copied from joint entity+12.
+  90,1: Number of joint entities used by this skeletally animated enemy?
+
+02109200-0210927F - List of how many consecutive slots are used in list 02112698 for each entity.
+  Each entry is a byte. The byte is the number of slots in a row that are used by this group of entity slots.
+  For example, if an entity requests 5 slots of entity memory, the first 5 bytes in this list will all be 5.
+
+02109280,4 - Total slots in list 02101200 that are currently in use.
+
+02101308 - Pointer to glyph entity that should trigger an event when it's absorbed.
+0210130C - Pointer to ?? entity. Related to glyph that triggers an event when it's absorbed.
+
+02101418 - glyph distortion matrixes?
+0210012C - 1 when glyph is being absorbed, 0 otherwise
+02101548 - x pos to distort towards
+0210154C - y pos to distort towards
+02100124 - x pos to distort towards
+02100128 - y pos to distort towards
+
+02100CCC-02100FEB - List of assets that are currently loaded and where.
+  Entry length 8. 0x64 entries in total.
+  00,4: Asset index. (Or -1 if this slot is currently unused.)
+  04,4: Pointer to where in asset memory the asset data is loaded. (Or 0 if this slot is currently unused.)
+
+02109280,4 - Number of skeletally animated enemies in the current room.
+
+=== 021092A0 - 0211DF5F: Entities currently loaded into memory. Each is 0x160 bytes long. They range from 0-F1.
+
+What each range of entity slots is for:
+00-03  021092A0-0210981F  Used when the game is booting up
+04-04  02109820-0210997F  Player.
+06-06  02109AE0-02109C3F  ?
+08-10  02109DA0-0210A9FF  Player Y-button arm glyphs.
+11-19  0210AA00-0210B65F  Player X-button arm glyphs.
+1A-20  0210B660-0210BFFF  Player back glyphs.
+2A-2A  0210CC60-0210CDBF  ?
+2A-F1  0210CC60-0211DF5F  World map icons. (In practice it uses slots 2B-3D.)
+2D-7C  0210D080-02113E7F  Room entities, including enemies and special objects.
+7D-E8  02113E80-0211D2FF  Various things including particles and enemy projectiles.
+EA-EB  0211D460-0211D720  Menus.
+EC-EC  0211D720-0211D87F  Used in term list?
+EE-EE  0211D9E0-0211DB3F  Used when loading a save
+F0-F0  0211DCA0-0211DDFF  ?
+
+02109820 - Start of the player's entity memory.
+02109850 - Player's x pos.
+02109854 - Player's y pos.
+021098F0 - Bitfield of player state booleans.
+  0x00000001 - Moving.
+  0x00000002 - Moving forward
+  0x00000004 - Facing left.
+  0x00000008 - Crouching.
+  0x00000010 - In air.
+  0x00000020 - Double jumping.
+  0x00000040 - 
+  0x00000080 - Bouncing after a jumpkick.
+  0x00000100 - There's a ceiling right above the player's head (when jumping up or crouching in a small space).
+  0x00000200 - Standing on jump-through platform.
+  0x00000400 - There's a ceiling right above the player's head (when crouching in a small space).
+  0x00000800 - Taking damage in the air.
+  0x00001000 - There's a ceiling right above the player's head (when standing normally).
+  0x00002000 - Backdashing.
+  0x00004000 - Jumpkicking.
+  0x00008000 - Swinging melee weapon.
+  0x00010000 - Using Y-button arm glyph.
+  0x00020000 - Using X-button arm glyph.
+  0x00040000 - Using back glyph.
+  0x00080000 - Using glyph union.
+  0x00100000 - Sliding.
+  0x00200000 - Jumpkicking.
+  0x00400000 - Taking damage.
+  0x00800000 - 
+  0x01000000 - Dying.
+  0x02000000 - 
+  0x04000000 - 
+  0x08000000 - 
+  0x10000000 - Set for one frame when you start sliding or use a glyph or glyph union.
+  0x20000000 - Set for one frame when you finish playing the animation for using an arm glyph or glyph union.
+  0x40000000 - 
+  0x80000000 - Set for one frame when you use a glyph union. Also set if you are currently attached to a magnes point.
+021098FC - Bitfield.
+  0x0004 - Player can't move left/right.
+  0x1000 - Player isn't affected by gravity or jumping, like with volaticus.
+02109904 - This is where the player data's bitfield at offset 0x28 is stored.
+02109928 - Bitfield.
+  0x04: On floor slope that slopes up-right.
+  0x08: On floor slope that slopes up-left.
+  0x10: Touching a ceiling.
+  0x20: Touching a floor.
+  0x40: Pressing up against a left wall.
+  0x80: Pressing up against a right wall.
+02109932 - Number of jumps player has left.
+02109934 - Number of frames left for mercy jump left.
+  4 when on ground. 0 when you can't jump.
+
+=== 0211DF5F: End of entities currently loaded into memory.
+
+0211E0C0-0211F0BF - List of sprite info for currently loaded entities.
+  The halfword at +6C in an entity's memory is the index in this list.
+  Each entry is 0x10 bytes long.
+  00,2: 
+  02,2: 
+  08,4: Affects GFX. Index in list 02128664.
+  0C,4: Sprite pointer.
+
+0211FC60 - Start of list of globally loaded palettes.
+
+02128664 - list of loaded gfx?
+  Entry length 0x10.
+  00,2: 
+  04,1: 
+
+02128BDC - List of hitboxes.
+  Each entry is 0x14 bytes long, containing two hitboxes 0xA bytes long each.
+  The index in this list is at offset+0xA7 in the entity memory.
+
+021389C0,4 - Current RNG seed.
+  The most recent random number generated is stored here.
+  It is used to affect the next random number generated.
+
+0213A5C0-0213A77F - Data for the current room's 4 layers. Each is 0x70 bytes long.
+  00,4: Pointer to the layer's metadata.
+  08,4: x position on the screen.
+  0C,4: y position on the screen.
+  14,4: Scroll mode's horizontal multiplier (0x1000 = 1.0).
+  18,4: Scroll mode's vertical multiplier (0x1000 = 1.0).
+  1C,4: Scroll mode's autoscroll type.
+  34,4: RGBA color multipliers.
+  38,2: Width in pixels.
+  3A,2: Height in pixels.
+  3C,2: Texture format for how this layer should be rendered. 0-7.
+    3 - 16 colors.
+    4 - 256 colors.
+  44,4: Texture VRAM offset.
+  51,1: Scroll mode's autoscroll type.
+  58,4: Opacity.
+  60,2: Bitfield of ?.
+    0100 - Turn off and layer will be invisible?
+
+0213C7C0-213CFBF - Tile mapping for BG2 layer.
+
+
+021427E0-02142BDF - List of OBJs in the bottom screen OAM.
+  Entry length 0x10.
+02142D60,4 - Pointer to the OAM sprite slots list for the bottom screen (02142DC4).
+02142D64,4 - Total number of slots in the OAM sprite slots list for the bottom screen (A0).
+02142D7C - List of ? for the bottom screen OAM.
+  Entry length 4.
+
+02145B2C-02145F2B - List of OBJs in the top screen OAM.
+  Entry length 0x10.
+021460AC,4 - Pointer to the OAM sprite slots list for the top screen (02146110).
+021460B0,4 - Total number of slots in the OAM sprite slots list for the top screen (A0).
+021460C8 - List of ? for the top screen OAM.
+  Entry length 4.
+
+02142DC4-02145343 - OAM sprite slots list for the bottom screen.
+02146110-0214868F - OAM sprite slots list for the top screen.
+  Format:
+  00,2: Bitfield
+  02,2: Bitfield
+    & 0020 - If set, this sprite is visible.
+    & 0040 - If set, this slot is in use. Otherwise, it's considered a free slot.
+  08,1: GFX tile index offset, in terms of 0x80 8x8 tiles (or 0x1000 bytes).
+  09,1: Palette index offset.
+  0C,4: 
+  10,4: 
+  14,2: 
+  24,4: X pos (in subpixels).
+  28,4: Y pos (in subpixels).
+  2C,4: Z pos (0-F).
+  34,4: Pointer to 020B5C78??
+  38,2: FFFF?
+  3A,2: Frame index
+  34,4: Pointer to the sprite data
+
+0214B124 - List of OAM sprite slot pointers in use by the map screen.
+  0x16 entries in total.
+0214B180 - List of OAM sprite slot pointers in use by the warp select screen.
+  0xA entries in total.
+
+
+02149028,4 - Currently loaded sector overlay index.
+
+0214B08C,1 - Area index of the map you're currently viewing on the map screen.
+0214B090,4 - Bitfield of which areas you have the map unlocked for. This is used by the map menu.
+  The area index is the index of the bit.
+0214B0C6,1 - Number of explored area entrances on the current area's map.
+  If this is less than 2, you auto-enter the area when selecting it on the world map, instead of being given the choice of what entrance to go in.
+0214B0C7-0214B0EE - List of unlocked warp points on the currently displayed map.
+  Entry length 5.
+  8 entries in total.
+  00,1: X pos of the warp.
+  01,1: Y pos of the warp.
+  02,1: X index of this warp room compared to other warp rooms.
+    Used for deciding what warp room to select when pressing left/right on the dpad. Left selects the warp room with 1 less X index, right selects the warp room with 1 more X index.
+  03,1: Y index of this warp room compared to other warp rooms.
+    Used for deciding what warp room to select when pressing up/down on the dpad. Up selects the warp room with 1 less Y index, down selects the warp room with 1 more Y index.
+  04,1: Area name index for this warp.
+  (Note that entries in this list are not zeroed out when switching maps, so don't read any more than the number of warps at 0214B0F1,1.)
+0214B0EF,1 - Index of the warp point the player is currently physically located at.
+0214B0F0,1 - Index of the currently selected warp on the warp select screen.
+0214B0F1,1 - Total number of warp points unlocked on the current map.
+
+when you first enter a new area, the game determines which entrance room to put you at by the sector/room indexes listed on the map metadata. so if you switch the indexes of the first and second entrance the game will put you at the second instead.
+
+there's a switch statement at 02045A84 where it hardcodes the sector and room index of the "default" entrance for each area.
+
+0214B1E0-021511DF - Pixel data for the map.
+
+021516D0 - Game state
+  00 - Booting up and showing nintendo/konami logos
+  01 - In game
+  02 - In game
+  03 - Pause screen
+  04 - Glyph menu
+  05 - Equip menu
+  06 - Use item menu
+  07 - Relic menu
+  08 - Config menu
+  09 - 
+  0A - Villager menu
+  0B - Viewing one villager's info
+  0C - 
+  0D - 
+  0E - 
+  0F - Enemy guide
+  10 - 
+  11 - Glyph guide
+  12 - Item guide
+021516E0,02151D8C - which file you have selected in file select. 0 1 or 2.
+
+02151CDC - Song currently playing in sound test?
+0215AA08 - Song currently playing. FF when no song is playing.
+0215AA10 - Music volume.
+
+0215A8E4,2 - 1 for English voices, 0 for Japanese voices.
+
+021DD240 - Area name index shown on the top screen.
+  Used for the world map as well as warp points.
+
+021DD05C,4 - Bitfield.
+  & 00000001 - If this is not set, the player hasn't saved the game once yet.
+
+=== 021DD280 - 021FFD9F: Overlays 0-1 (Strings)
+
+=== 021FFFC0 - 02223C3F: Overlays 19-20 (?)
+
+02214F68 (in overlay 19) - the hardcoded value for the type of top screen to show on starting a new game.
+
+0221A114 - list of songs to play in sound test.
+
+Sprite info for the main menu:
+  0221AC50,4 - Sprite file asset index.
+  0221AC54,4 - Number of GFX assets.
+  0221AC58,4 - Has a pointer to the list of GFX asset indexes.
+  0221AC5C,4 - Has the palette pointer.
+  0221AC60-0221AC87 - Has the GFX asset indexes.
+
+022228D4 - List of which shop item pool gets unlocked by each quest.
+  If a pointer is 0, that quest doesn't unlock any items in the shop.
+
+02223B08 - List of which wooden/green chest item pool to use for each area.
+  Each entry is 1 byte long. It's the index in list 02223B20.
+02223B20-02223BCF - Wooden/green chest item pools. 02223B20-02223B77 are common item pools, 02223B98-02223BCF are rare item pools.
+  Each pool is 8 bytes long.
+  Each has 4 items, 2 bytes each. They're the global IDs of the item +1.
+
+=== 02223C3F: End of overlays 19-20
+
+=== 02223E00 - 022B723F: Overlays 21-23 (?)
+
+Sprite info for the pause menu:
+  022B48CC,4 - Sprite file asset index.
+  022B48D0,4 - Number of GFX assets.
+  022B48D4,4 - Has a pointer to the list of GFX asset indexes.
+  022B48D8,4 - Has the palette pointer.
+  022B48DC-022B48F3 - Has the GFX asset indexes.
+
+022B590C - List of sprite files for each event actor.
+  Entry length 4. Each entry is the asset index of the sprite file.
+022B5950 - List of palette pointers for each event actor.
+022B59D8
+022B5A1C
+
+022B5B1C-022B5B8B - List of face portrait GFX asset indexes.
+  0x1C entries in total.
+022B5B8C-022B5BFB - List of face portrait palette pointers.
+  0x1C entries in total.
+  All entries just point to 021FFDA0. Not because they all have the same palette, but because their palettes are all at the start of different overlays each starting at 021FFDA0.
+022A5D40-022A5DAF - List of face portrait palette overlay indexes.
+  0x1C entries in total.
+
+022B5C10-022B5C91 - List of villagers.
+  Entry length 0xA.
+  00,2: X pos.
+  02,2: Y pos.
+  04,1: Var A of the object 5F that should create this villager in Wygol.
+  05,1: Area index this villager is in.
+  06,1: Sector index this villager is in.
+  07,1: Room index this villager is in.
+    The area/sector/room indexes are used during the bad ending when cycling through the villagers the player missed.
+  08,1: Event flag index for this villager being rescued.
+  09,1: Padding, always 00.
+
+022B5D60-022B5DAB - List of X and Y positions for each area's world map icon.
+  Entry length 4.
+  00,2: X pos of this area's icon. (Signed.)
+  02,2: Y pos of this area's icon. (Signed.)
+
+022B6BF4 - List of pointers to lists of breakable walls for each area.
+  Each area's list:
+  The breakable wall's var B of the breakable wall is the index in this list.
+  Each breakable wall is 6 bytes long.
+  Bytes 1-5: TODO
+  Byte 6: Miscellaneous flag number for this breakable wall being destroyed. FF means it won't stay destroyed.
+
+022B6C54 - List of breakable wall sprites.
+  Each is 8 bytes long.
+  00,2: Asset index of sprite file for this breakable wall.
+  02,2: Asset index of graphic file for this breakable wall.
+  04,4: Palette pointer.
+
+022B6CA6 - List of destructibles.
+  Entry length 8.
+  The destructible's var A is the index in this list.
+  00,1: Destructible sprite index. This is the index in list 022B6DA0.
+  01,1: Animation/frame index.
+    Modifier bit 0001 controls whether this is an animation or frame index.
+  02,1: Destroyed frame index.
+    Used to create the flying particles after this destructible is destroyed.
+  03,1: Frame/animation index of glow visual behind this destructible.
+    FF to just use a generic circle as the glow visual.
+    Modifier bit 0100 controls whether this is a frame or animation index.
+  04,1: Palette offset.
+  05,1: What the destructible yields when destroyed.
+    0 - A single heart, or if you're at max hearts a single coin instead.
+    1 - A large number of coins.
+    2 - A glyph.
+  06,2: Bitfield of modifiers.
+    0001 - The destructible sprite is a single frame, instead of an animation.
+    0002 - Flip horizontally.
+    0004 - Has no glow.
+    0008 - When destroyed, the destructible doesn't break apart into flying particles, instead it just creates a small flame at its center.
+    0010 - Use destroy SFX 34B.
+    0020 - Use destroy SFX 349. (Overrides bit 0010.)
+    0040 - Use destroy SFX 34D. (Overrides bits 0010 and 0020.)
+    0080 - Floats in the air.
+    0100 - The glow is an animation, instead of a single frame.
+022B6DA0 - List of destructible sprites.
+  Entry length 0x14.
+  The first byte from list 022B6CA6 is the index in this list.
+  00,4: Sprite asset index.
+  04,4: GFX asset index.
+  08,4: GFX pointer.
+  0C,4: Sprite pointer.
+  10,4: Palette pointer.
+
+022B6FB4 - List of transition room sprites & effects.
+  Each is 0x10 bytes long.
+  0xD entries in total.
+  00,4: Pointer to a list of asset indexes for GFX files.
+  04,8: Asset index of sprite file.
+  08,4: Palette list pointer.
+  0C,2: ???
+  0E,2: Affects special effects.
+
+022B7298,1 - Next villager index to show in the bad ending when cycling through missed villagers.
+
+=== 022B73A0 - 022C1FBF: Overlays 24-38 (Enemy code)
+
+=== 022B73A0 - 022BD07F: Overlay 39 (Code?)
+
+=== 022C1FE0 - 022EB19F: Overlays 40-85 (Room data)
+
+022E4ABC-022E4B7B - In Kalidus Channel sector 0 (overlay 46), this space is past the end of overlay 46, but is used by the rock and sea mines puzzle.
+
+022EB1A0 - Start of asset memory.
+022EB1C8,4 - Pointer to an asset. Maybe the last asset currently in memory? 022EBC1C
+022EB1D6,2 - ?? bitfield
+023DFB90 - an asset
+Asset format:
+  00,
+  02,2: 
+  04,4: Asset size.
+  08,4: Pointer to a different asset, or 0?
+  0C,4: Pointer to a different asset, or 0?
+  10+: The actual asset data.
+
+022FFA90 - shanoa's hitbox data
+
+0234C200-0237FFFF - Free space.
+
+023FFC20 - Number times the player has soft reset the game with select+start+L+R. If this is greater than 0, the game skips showing the Nintendo/Konami/Actimagine/ESRB logos as well as the intro movie on startup.
+
+023FFDA0,4 - Has a pointer to 022EB1A0, the start of asset memory
+023FFDC4,4 - Has a pointer to 023E0000, the end of asset memory.
+
+=== 02900000 - 0290103F: Some of ARM9
+=== 02A00000 - 02A0726F: Some of ARM9
+
+=========
+
+f_ascii.dat - contains letters of the alphabet and such for displaying text. 1-dimensional gfx mode.

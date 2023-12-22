@@ -1,0 +1,318 @@
+0x0DA,Restores 100 HP. 
+0x0DB,Restores 200 HP. 
+0x0DC,Restores all HP. 
+0x0DD,Restores 100 MP. 
+0x0DE,Restores 200 MP. 
+0x0DF,Restores all of your MP. 
+0x0E0,Cures poison. 
+0x0E1,Nullifies the effects of curses. 
+0x0E2,Restores 29 HP. 
+0x0E3,Restores 290 HP. 
+0x0E4,"Simple, but tasty. "
+0x0E5,"A deliciously appetizing \n
+mushroom."
+0x0E6,A creamy soup with croutons. 
+0x0E7,Mouth-wateringly delicious. 
+0x0E8,"Noodles floating in a broth made \n
+from pork bones."
+0x0E9,Topped with a cherry. 
+0x0EA,"Soft, fluffy, and sweet. "
+0x0EB,Low-fat milk--for your bones. 
+0x0EC,Decaffeinated coffee.
+0x0ED,Sip slowly and relax. 
+0x0EE,It wiggles and jiggles. 
+0x0EF,"A plump, sweet strawberry. "
+0x0F0,A melon of the finest quality. 
+0x0F1,Bursting with flavorful juice. 
+0x0F2,"A food made of fried, minced meat \n
+sandwiched in pieces of bread."
+0x0F3,Crisply fried chicken thigh. 
+0x0F4,The king of junk food. 
+0x0F5,Sweet and delicious. 
+0x0F6,It's nothing without maple syrup. 
+0x0F7,Russian-style fried meat dumpling. 
+0x0F8,"May give the illusion of bulking \n
+up muscle mass."
+0x0F9,"One of the world's three great \n
+delicacies. Duck liver paste."
+0x0FA,"One of the world's three great \n
+delicacies. Sturgeon eggs."
+0x0FB,"One of the world's three great \n
+delicacies. Rare black mushroom."
+0x0FC,A veritable cornucopia of seafood. 
+0x0FD,Served al dente. 
+0x0FE,"A thick vanilla ice cream loaded \n
+with egg yolks."
+0x0FF,"A seafood dish seasoned with curry \n
+powder."
+0x100,"Has a firm, jelly-like texture. "
+0x101,"A toxic mushroom that induces \n
+hallucinations."
+0x102,A slab of rotting beef. 
+0x103,"Its expiration date is from three \n
+years ago."
+0x104,Are you brave enough to open it? 
+0x105,"One portion of the castle's  \n
+floor plan is written on it."
+0x106,"One portion of the castle's  \n
+floor plan is written on it."
+0x107,"One portion of the castle's  \n
+floor plan is written on it."
+0x108,"Exclusive Scoop! \n
+Abominable Snowman Discovered?!"
+0x109,"Snowman living on the mountains? \n
+Spotted near the mountain village!"
+0x10A,"According to witnesses, the beast \n
+appeared to be searching for food."
+0x10B,"Terror Alert! \n
+His Name is Mothman!"
+0x10C,"There have been numerous sightings \n
+of the creature high in the sky."
+0x10D,"The latest reports indicate it is \n
+drawn to intense light."
+0x10E,"The light apparently came \n
+from thunderbolts!"
+0x10F,"Up in the Sky! \n
+Is it a Man?"
+0x110,"Let us call this airborne being \n
+the Flying Humanoid."
+0x111,"Could we ever achieve contact with \n
+this aerial being?"
+0x112,"With great regret, we announce \n
+that this is our final issue."
+0x113,An oddly shaped key. 
+0x114,5000 points 
+0x115,5000 points 
+0x116,5000 points 
+0x117,"A Magic Seal drawn to seal the \n
+flow of dark energy."
+0x118,"A Magic Seal drawn to seal the \n
+flow of dark energy."
+0x119,"A Magic Seal drawn to seal the \n
+flow of dark energy."
+0x11A,"A Magic Seal drawn to seal the \n
+flow of dark energy."
+0x11B,"A Magic Seal drawn to seal the \n
+flow of dark energy."
+0x11C,Bare fists. 
+0x11D,"A cheap pocket knife. \n
+It cuts poorly."
+0x11E,A military-issue combat knife. 
+0x11F,"A short sword with an I-shaped \n
+haft."
+0x120,"A short sword of East Indian \n
+origin."
+0x121,"A bejeweled short sword featuring\n
+elaborate ornamentation."
+0x122,"A thrusting sword with a tapered \n
+blade."
+0x123,A small sword. 
+0x124,"A sword designed for superior \n
+defense."
+0x125,A light and easy-to-handle sword. 
+0x126,A sword made for stabbing. 
+0x127,A sword with a whip-like blade. 
+0x128,"A flexible, articulated sword made \n
+for executions."
+0x129,"A beautifully decorated sword \n
+made of damask."
+0x12A,"A holy chain with a will of its \n
+own."
+0x12B,A sword with a stubby blade. 
+0x12C,A sword used by cavalry riders. 
+0x12D,A common type of sword. 
+0x12E,"A demonic sword in the shape of \n
+a cross."
+0x12F,"A frightening sword that contains \n
+venom in its blade."
+0x130,"A sword hewn from the wood of \n
+a divine tree."
+0x131,"An extravagantly beautiful sword. \n
+Quite valuable."
+0x132,"A sword that may petrify the \n
+target."
+0x133,"A demonic sword that freezes all \n
+that it touches."
+0x134,"An intensely hot sword that \n
+scorches everything it touches."
+0x135,"A sword blessed by divinity. \n
+It is designed for defense first."
+0x136,"A demonic sword tempered \n
+by fairies."
+0x137,"A sword whose name means \n
+""Blessed Wind."""
+0x138,Alucard's favorite sword. 
+0x139,"A heavy, two-handed sword. "
+0x13A,"A sword with a wide, crescent \n
+blade used by Normans."
+0x13B,"A massive sword that is made \n
+to smash through its targets."
+0x13C,"A sword of giants that was \n
+tempered by fairies."
+0x13D,A demonic sword of finality. 
+0x13E,A dragon-slaying sword. 
+0x13F,A demonic dragon-slaying sword. 
+0x140,A sword taken from a Final Guard. 
+0x141,"An indefatigable sword. \n
+Its blade glitters with light."
+0x142,A standard spear. 
+0x143,"A long pole tipped with a broad \n
+blade."
+0x144,"A long pole fitted with a wide \n
+blade."
+0x145,A spear used by knights. 
+0x146,A three-pronged spear. 
+0x147,A demonic five-pronged spear. 
+0x148,A spear tempered by witches. 
+0x149,A spear of divinity. 
+0x14A,"A divine thunderbolt that pierces \n
+everything it touches."
+0x14B,A large club. 
+0x14C,"A club with a star-shaped head. \n
+A brutal weapon."
+0x14D,A hammer of a thunder-god. 
+0x14E,"A sturdy axe with a single-edged \n
+head."
+0x14F,"A combat axe with a double-edged \n
+head."
+0x150,A very heavy combat axe. 
+0x151,"A huge battle axe. \n
+It is exceptionally heavy."
+0x152,"An axe crafted from gold. \n
+Its performance is outstanding."
+0x153,"A scythe used by Death to \n
+gather souls."
+0x154,A sword with a dull cutting edge. 
+0x155,"A traditional sword used by \n
+samurai."
+0x156,"A sword named after the legendary\n
+swordsmith, Nagasone Kotetsu."
+0x157,A famed Japanese samurai sword. 
+0x158,"A Japanese sword with the full \n
+name of Bizen Osafune Nagamitsu."
+0x159,"Onimaru Kunitsuna, a sword said to \n
+have slain Oni demons."
+0x15A,"Doujikiri Yasutsuna, a sword said \n
+to have cut off a demon's arm."
+0x15B,"A sword with a macabre \n
+reputation. "
+0x15C,"Metal knuckles to be worn on \n
+fists."
+0x15D,"Hard knuckle guards worn by \n
+ancient boxers."
+0x15E,Equip to throw whip-like punches. 
+0x15F,"Enables punches to be thrown at \n
+the speed of sound."
+0x160,Imbues knuckles with divine rage. 
+0x161,Fires 9mm rounds. 
+0x162,"Shoots silver bullets that have \n
+been ritually blessed."
+0x163,"A throwing weapon with a curved \n
+blade."
+0x164,"A throwing weapon with a sharp, \n
+circular blade."
+0x165,"A battle axe designed for \n
+throwing."
+0x166,"A small throwing sickle used by \n
+ninjas."
+0x167,Rocket-propelled grenade. 
+0x168,"An insidious stuffed toy filled  \n
+with iron sand."
+0x169,"Only a true master can  \n
+wield a weapon this deadly."
+0x16A,""
+0x16B,Clothes worn regularly. 
+0x16C,A simple garment made of cloth. 
+0x16D,An athletic training suit. 
+0x16E,"Looks like it can make you \n
+stronger."
+0x16F,"A leather jacket worn by \n
+motorcyclists."
+0x170,"Sturdy clothes made for military \n
+use."
+0x171,A ninja's combat garment. 
+0x172,Clothes that summon luck. 
+0x173,"A luxurious suit with fine \n
+detailing throughout."
+0x174,"A jacket woven with a special \n
+fabric that resists cuts."
+0x175,"A suit that is the color of inky \n
+darkness."
+0x176,A suit favored by Count Olrox. 
+0x177,"A tunic imbued with Dracula's dark \n
+power."
+0x178,"A suit of armor crafted out of \n
+leather."
+0x179,A breastplate fashioned from iron. 
+0x17A,"A mail suit with metal rings sewn \n
+on."
+0x17B,"A mail suit with scale-like plates \n
+sewn on."
+0x17C,A suit made of woven chains. 
+0x17D,"Chain mail made for easy \n
+movement. "
+0x17E,"A torso armor with a rounded \n
+profile."
+0x17F,"A mail suit that occasionally \n
+blocks attacks."
+0x180,"An armor tempered by a \n
+waterfall over many millenniums."
+0x181,"A mail suit that is imbued with \n
+demonic power."
+0x182,A robe made of woven silk. 
+0x183,A robe worn by mages. 
+0x184,A robe woven by elves. 
+0x185,"A fire-resistant robe made from \n
+the hide of a wyrm."
+0x186,"A water-resistant robe that is \n
+imbued with elemental power."
+0x187,"A blessed robe that calms \n
+the spirit."
+0x188,A robe once worn by Death. 
+0x189,A plain cape. 
+0x18A,"A sturdy cape popular among \n
+travelers."
+0x18B,A cloak in a vivid crimson color. 
+0x18C,"A cloak the color of inky \n
+darkness."
+0x18D,A plain pendant. 
+0x18E,A heart-shaped pendant. 
+0x18F,A macabre necklace. 
+0x190,A necklace that symbolizes fire. 
+0x191,Beads with a cross made of silver. 
+0x192,A scarf made of knitted wool. 
+0x193,"A red scarf that has an air of \n
+melancholy."
+0x194,"A cold-beating garment made of \n
+a new synthetic material."
+0x195,"A belt that provides support to \n
+muscles."
+0x196,"A black belt worn by skilled \n
+fighters."
+0x197,"A belt worn by a deity of war. \n
+It amplifies power."
+0x198,An earring in the shape of a hoop. 
+0x199,"A stud earring embedded with a \n
+blue-green gem."
+0x19A,A stud earring made of silver. 
+0x19B,A stud earring made of gold. 
+0x19C,"A deep-red stud earring made of \n
+ruby."
+0x19D,"An expensive stud earring made of \n
+platinum."
+0x19E,A red jewel the color of blood. 
+0x19F,A good-luck charm for prosperity. 
+0x1A0,"A talisman from Hakuba Shrine. \n
+Said to suppress dark souls."
+0x1A1,A ring once worn by the dark lord. 
+0x1A2,"A ring that raises the appearance \n
+of rare items."
+0x1A3,"A ring that raises the appearance \n
+of souls."
+0x1A4,"A ring that boosts the speed of \n
+MP restoration."
+0x1A5,Gain more experience points.
+0x1A6,"A ring that makes monsters drop \n
+more money."
+0x1A7,"A ring that ceaselessly draws dark\n
+power from chaos."

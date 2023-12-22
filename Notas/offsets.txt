@@ -1,0 +1,32 @@
+0x00284308 (2638600, em decimal) - Paletas do jogo - em 15bpp BGR, Modo 2 Dimensões, 2x* (duas colunas)
+
+0x0017C018 - Bala / Guardião / Encanto
+0x00290F9C - Alfabeto estranho
+0x010B7C20 - Habilidade
+0x0117DC20 - Configuração
+0x01209C60 - Inimigo
+0x012B1C60 - Usar Item / Biblioteca / Selo Mágico
+0x012FC820 - Staaart / Goool!!!!
+0x01313020 - Configuração / Usar Item / Habilidade
+0x0132DE40 - Música / Voz / Efeitos Sonoros / Modo de Som / Config. de Som
+0x0136C820 - Círculo abertura (com créditos do Hyllian)
+0x028AA188 - Nomes Localidades Mapa
+0x02966188 - Level Up / Guard / Curse / Poison / Stone
+0x02A36988 - Nomes Modo de Edição de Mapas
+0x02B54188 - Nomes Modo de Troca de Almas
+0x02C00208 - Licenciado pela Nintendo
+0x02C34188 - Nomes 'Equipar'
+0x02C56188 - Nomes Modo VS
+0x02C7E188 - Nomes Yoko - Fusão de almas com armas
+0x02C96188 - Nomes Menu de Escrita de Nome
+0x02CA2F88 - Nomes Modo de Troca de Almas
+0x02CF2188 - Nomes Modo VS
+0x02CFCF88 - Nomes Modo VS
+0x02D44188 - Créditos
+0x02D54188 - 'The End'
+0x02D64188 - Nomes Modo de Troca de Almas
+0x02D78188 - Nomes Hammer - Venda de itens
+0x02E1E188 - Nomes Menu Principal
+0x02E40988 - Nomes Menu Principal - Iniciar Jogo
+0x02E56188 - Nomes Modo de Troca de Almas
+0x02EB8F88 - "Escolher Nível"

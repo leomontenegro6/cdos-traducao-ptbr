@@ -1,0 +1,213 @@
+
+0801A3E0 - something related to item types? used by enemy drop code
+
+080C42F4-080C4303 - List of GFX pages containing item icons.
+
+080C5428-080C5447 - List of how VRAM indexes map to tile offsets in VRAM.
+  Each entry is a halfword.
+  The index is a VRAM index in terms of 128x32px chunks.
+  Each value is an offset in VRAM in terms of 8x8px tiles. So multiply this by 0x20 to get the offset in bytes.
+  The way these indexes would map out visually to VRAM is like this:
+    [    0    ] [    4    ]
+    [    1    ] [    5    ]
+    [    2    ] [    6    ]
+    [    3    ] [    7    ]
+    [    8    ] [    C    ]
+    [    9    ] [    D    ]
+    [    A    ] [    E    ]
+    [    B    ] [    F    ]
+  So e.g. E means the player's spot in VRAM, 0 means the common sprite's spot, C means the player's spell's spot, etc.
+
+080C5458-080C5467 - List of animation functions.
+  The animation's function index is the index in this list.
+  4 entries in total.
+    0 - 080130A4
+    1 - 08013130
+    2 - 080131BC
+    3 - 08013268
+
+080C5508 - Font character mapping.
+
+080C7E38-080CA15F - Enemy DNA list.
+
+080DAD94-080DC193 - Map tile metadata.
+080DC194-080DC693 - Map tile line data.
+080DC694-080DC69B - Map secret door data.
+
+080E2120 - List of x/y positions when for the player when starting a new game or loading a save.
+  Entry length 6.
+  00,2: X pos.
+  02,2: Y pos.
+  04,2: ?
+  Entry 00 is for ?
+  Entry 01 is for starting a new game.
+  Entry 02 is for loading a save.
+
+080E2308-080E23C7 - List of subweapons.
+080E23C8-080E23E7 - List of which piece of armor increases the strength of each subweapon.
+  Entry length 4.
+  These are the armor indexes of each piece of armor.
+  For example, entry 1 (for Knife) is 7C (armor index of Logoth's Ring).
+
+080E2944-080E29AF - List of GFX pointers for spells (skill GFX info).
+  Entry length 4, each entry is just a GFX pointer.
+080E29B0 - List of GFX pointers for Juste?
+
+080E29D4-080E2C13 - List of spells.
+  Entry length 0xC.
+  00,4: Code pointer.
+  04,1: Spell cast animation.
+    00 - None.
+    01 - Point to the sky.
+    02 - Jump up and float for a while.
+    03 - Float for a while.
+    04 - Rapidly throw knives.
+    05 - 
+    06 - 
+  05,1: ?
+  06,2: Mana cost.
+  08,2: Heart cost.
+  0A,2: GFX index in list 080E2944.
+
+08494E1A - list of songs in sound mode?
+
+08494EA4 - List of special object create code pointers.
+08494F6C - List of special object update code pointers.
+
+08495034-08495047 - List of room special effect function pointers.
+  The room's "Special Effect" number minus 1 is the index in this list.
+  These functions get called with the room's "Palette Shift Type" as argument r0.
+  There are 5 function in total.
+  The functions:
+    00 - No function
+    01 - 08026A58 - Shifts palettes.
+      The argument determines which palettes are shifted and how.
+      Specifically, the argument is an index used to determine which function to call.
+      The list of palette shifting function pointers is 084B1470.
+      There are 0x13 entries in total, so the argument can be 00-12.
+    02 - 08026BC8 - Gives the background the 3D-perspective effect (for Sky Walkway's sky).
+    03 - 08026BE0 - Scrolls the background horizontally, and also shifts palettes.
+      The argument determines which palettes are shifted and how, but if the argument is 0 no palettes will be shifted.
+      Also, removing this special effect from the rooms that have it in vanilla causes them to lag very badly?
+    04 - 08026C04 - Gives the background the 3D-perspective effect, and also shifts palettes.
+      The argument determines which palettes are shifted and how.
+    05 - 08026B34 - 3D-looking clock tower in the background.
+
+0849507C - List of warp rooms.
+  Entry length 0xC.
+  00,2: X pos of the warp room on the map.
+  02,2: Y pos of the warp room on the map.
+  04,4: Room pointer of this warp room in Castle A.
+  08,4: Room pointer of this warp room in Castle B.
+    Note that these two pointers are used when warping when pressing down.
+    When switching castles by pressing up, it simply uses the door in the room that is on top of the room itself.
+
+084950DC - List of songs that play in each sector.
+  Entry length 2.
+  A song index of 00 means to not change the song playing and just keep playing whatever the previous song was.
+  The regular sector index is not the index in this list. Instead a different sector index, from the map tile data, is used.
+  This different sector index differentiates between when two different area names are in the same sector, for example Marble Corridor and Room of Illusion.
+  The full list of the indexes for this list are:
+    00 Entrance A
+    01 Entrance B
+    02 Marble Corridor A
+    03 Marble Corridor B
+    04 Shrine of the Apostates A
+    05 Shrine of the Apostates B
+    06 Castle Top Floor A
+    07 Castle Top Floor B
+    08 Skeleton Cave A
+    09 Skeleton Cave B
+    0A Luminous Cavern A
+    0B Luminous Cavern B
+    0C Aqueduct of Dragons A
+    0D Aqueduct of Dragons B
+    0E Sky Walkway A
+    0F Sky Walkway B
+    10 Clock Tower A
+    11 Clock Tower B
+    12 Castle Treasury A
+    13 Castle Treasury B
+    14 Room of Illusion A
+    15 Room of Illusion B
+    16 The Wailing Way A
+    17 The Wailing Way B
+    18 Chapel of Dissonance A
+    19 Chapel of Dissonance B
+
+08495FAE - font data?
+
+08496316-08498C27 - List of font pixel data.
+  Entry length 0xE. 0x2EF entries total.
+  00,0C: The pixels.
+  0C,02: The Shift JIS character number (big endian).
+
+08498C34 - List of save rooms.
+
+084B096C-084B097B - List of GFX pointers for different buttons and the walls they open (object 09).
+084B097C-084B098B - List of palette list pointers for different buttons and the walls they open (object 09).
+084B098C-084B099B - List of sprite pointers for different buttons and the walls they open (object 09).
+084B099C-084B099F - List of palette indexes for different buttons and the walls they open (object 09).
+  The button's var A is the index in these lists. Should be 0-3.
+
+084B1554-084B15A7 - List of face portrait assets.
+  00,04: GFX pointer.
+  04,04: Palette list pointer.
+  08,04: BG layer metadata pointer.
+
+084B15C0 - List of allowable items that can be in the shop.
+  Entry length 4.
+  00,1: Item type:
+    3 - Consumable.
+    5 - Armor.
+    Note that any other value not listed defaults to being a consumable.
+  01,1: Item index.
+  02,2: Price.
+
+084B1714 - List of specific shop item pools.
+  List of pointers to shop item pools.
+  The index in this list is the merchant's Var A*2. If in Castle B, add +1. (In other words, even numbered indexes are for Castle A, odd numbered indexes are for Castle B.)
+  Format of each item pool:
+  The first byte is the number of items in this item pool.
+  Then is a list of each item. Each entry is 1 byte. It's the index in the list of allowable shop items (084B15D4).
+Specific shop pools:
+  084B16DC-084B16EB - Castle Treasury A shop pool.
+  084B1680-084B1689 - Castle Treasury B shop pool.
+  084B16F0-084B16FF - Luminous Cavern A shop pool.
+  084B1690-084B169A - Luminous Cavern B shop pool.
+  084B16C8-084B16D7 - Castle Top Floor A shop pool.
+  084B16A0-084B16AF - Castle Top Floor B shop pool.
+  084B1704-084B1710 - Entrance A shop pool.
+  084B1704-084B1710 - Entrance B shop pool.
+  084B16B4-084B16C3 - Clock Tower A shop pool.
+  084B16B4-084B16C3 - Clock Tower B shop pool.
+
+084B173C-084B178B - List of create code pointers for events.
+084B178C-084B17DB - List of update code pointers for events.
+  Var A of the event entity is the index in these lists.
+
+084B23F0-084B2413 - List of candle GFX pointers.
+  The candle's type is the index in this list.
+084B2414-084B2437 - List of candle palette list pointers.
+  The candle's type is the index in this list.
+084B2438-084B2443 - List of candle palette indexes.
+  The candle's type is the index in this list.
+  This is which index in the palette list to use for this candle, since some palette lists are shared by more than one candle.
+084B2444-084B2467 - List of candle sprite pointers.
+  The candle's type is the index in this list.
+084B2474-084B2497 - List of candle hitboxes.
+  Entry length 4.
+  The candle's type is the index in this list.
+  00,1: Hitbox left X (negative).
+  01,1: Hitbox top Y (negative).
+  02,1: Hitbox right X.
+  03,1: Hitbox bottom Y.
+
+084B24A4-084B25F3 - Consumable item data.
+084B25F4-084B265F - Weapon item data.
+084B2660-084B2C5F - Armor item data.
+084B2C60-084B2C73 - Spellbook item data.
+084B2C74-084B2CA3 - Relic item data.
+084B2CA4-084B2D1F - Furniture item data.
+
+084B2D20 - list of text index names for items?

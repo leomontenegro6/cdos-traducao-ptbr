@@ -1,0 +1,283 @@
+00 Wooden door.
+  Var A: Which door visual to use.
+    0 Normal.
+    1 Alterate. Unused.
+01 Pushable crates.
+02 Boss door.
+  Var A is is how the door acts:
+    00 Door outside the boss room that opens when you touch it.
+      Note that if the player enters the room through this door it will act locked like one inside the boss room and not open when the player touches it.
+    01 Door inside the boss room that opens when the boss is killed.
+  Var B is the boss this door is for:
+    00 Graham
+    01 Death
+    02 Julius
+    03 (Unused)
+    04 Headhunter
+    05 Legion
+    06 Balore
+    07 Chaos
+    08 (Unused)
+    09 (Unused)
+    0A Manticore
+    0B Creaking Skull
+    0C Big Golem
+    0D (Unused)
+    0E (Unused)
+    0F Great Armor
+03 Boss rush boss door.
+04 Boss door (forces player to enter room).
+  This boss door can be placed away from the edge of the screen and the player will automatically walk past it when entering the room.
+  Var A is is how the door acts:
+    00 Door outside the boss room that opens when you touch it.
+      Note that if the player enters the room through this door it will act locked like one inside the boss room and not open when the player touches it.
+    01 Door inside the boss room that opens when the boss is killed.
+  Var B is the boss this door is for:
+    00 Graham
+    01 Death
+    02 Julius
+    03 (Unused)
+    04 Headhunter
+    05 Legion
+    06 Balore
+    07 Chaos
+    08 (Unused)
+    09 (Unused)
+    0A Manticore
+    0B Creaking Skull
+    0C Big Golem
+    0D (Unused)
+    0E (Unused)
+    0F Great Armor
+05 Arena door.
+06 Darkness door.
+07 Applies a visual effect to the room.
+  Var A: What kind of visual effect:
+    0 - Adds bats flying and clouds floating in the background (Castle Corridor).
+      Var B: Affects the placement of the bats and clouds.
+    1 - Applies palette shifting to a certain palette.
+      Var B:
+        00 - Makes the moon flicker in the background (Castle Corridor) (unused)
+        01 - Makes the moon flicker in the background (Castle Corridor)
+        02 - Makes the moon flicker in the background (Castle Corridor)
+        03 - Animates surface of the water so it looks like it's moving (Castle Corridor)
+        04 - Makes the moon's reflection on the surface of the water flicker (Castle Corridor)
+        05 - ??? (Castle Corridor)
+        06 - Makes the moon flicker in the background (Castle Corridor)
+        07 - ??? (Underground Reservoir)
+        08 - ??? (Underground Reservoir)
+        09 - ??? (Underground Reservoir)
+        0A - ??? (Underground Reservoir)
+        0B - ??? (Underground Reservoir)
+        0C - ??? (Underground Reservoir)
+        0D - ??? (The Arena)
+        0E - ??? (Underground Reservoir)
+        0F - ??? (Underground Reservoir)
+        10 - ??? (Underground Reservoir)
+        11 - ??? (Underground Reservoir)
+        12 - ??? (Underground Reservoir)
+        13 - ??? (Underground Reservoir)
+        14 - ??? (Underground Reservoir)
+        15 - ??? (Underground Reservoir)
+        16 - ??? (Underground Reservoir)
+        17 - ??? (Underground Reservoir)
+        18 - ??? (Dance Hall)
+        19 - ??? (Study)
+        1A - ??? (Clock Tower)
+        1B - Makes the moon flicker in the background (Clock Tower)
+        1C - ??? (Clock Tower)
+        1D - ??? (Forbidden Area)
+        1E - ??? (Forbidden Area)
+        1F - ??? (Forbidden Area)
+        20 - ??? (Forbidden Area)
+        21 - ??? (Floating Garden)
+        22 - Makes the gear platforms turn? (Clock Tower)
+        23 - Makes the gear platforms turn? (Clock Tower)
+        24 - ??? (Clock Tower)
+        25 - ??? (Chaos phase 2 room)
+        26 - ??? (Clock Tower)
+        27 - ??? (Clock Tower)
+        28 - ??? (Clock Tower)
+        29 - ??? (Inner Quarters)
+        2A - ??? (Inner Quarters)
+        2B - ??? (Inner Quarters)
+        2C - ??? (Inner Quarters)
+        2D - ??? (Inner Quarters)
+        2E - ??? (Inner Quarters)
+        2F - ??? (Inner Quarters)
+        30 - ??? (Inner Quarters)
+        31 - ??? (Inner Quarters)
+        32 - ??? (Inner Quarters)
+        33 - ??? (Top Floor)
+        34 - ??? (Top Floor)
+        35 - ??? (Top Floor)
+        36 - Makes the cloud background flash when lightning strikes (Inner Quarters)
+        37 - ??? (Epilogue room)
+        38 - ??? (Epilogue room)
+        39 - ??? (Epilogue room)
+        3A - ??? (Epilogue room)
+        3B - ??? (Epilogue room)
+        3C - Makes the buildings in the background flicker when lightning strikes (Inner Quarters)
+        3D - Makes the clouds in the background flicker when lightning strikes (Inner Quarters)
+        3E - Makes the edges of windows in the background flicker when lightning strikes (Inner Quarters)
+        3F - ??? (Inner Quarters)
+        40 - ??? (Inner Quarters)
+        41 - ??? (Inner Quarters)
+        42 - Makes the background glow and animates moving red lines (Chaos phase 1 room)
+        43 - 
+    2 - Adds bats flying in the background (Top Floor).
+      Var B: Affects the placement of the bats.
+    3 - Gives the whole room a greyscale effect (Chaotic Realm)
+      Var B: 0
+    4 - Changes the music.
+      Var B: Song index.
+      Note: This doesn't work if you load into the room directly, such as with test room or if its the first room of the game. You must walk into it via a door.
+08 Breakable wall.
+  Var A: Which breakable wall appearance to use. 00-12. Affects graphics and hitbox.
+  Var B: Miscellaneous flag index.
+    The breakable wall sets this when it's destroyed and uses it to stay destroyed.
+    If this index is 0, the wall will never stay permanently destroyed. (testme)
+09 Wall that can be destroyed (not by the player's weapon).
+  Var A: Which breakable wall appearance to use. 00-12. Affects graphics and hitbox.
+  Var B: Miscellaneous flag index.
+    Once something else sets this flag, the wall will destroy itself.
+0A Boss-death-conditional enemy.
+  Once a certain boss death flag has been set this will spawn an enemy.
+  Var A: Enemy ID to spawn.
+  Var B: The index of the boss death flag to check (in bitfield 0200037E).
+0B Event-conditional enemy.
+  Once a certain event flag has been set this will spawn an enemy.
+  Var A: Enemy ID to spawn.
+  Var B: The index of the event flag to check (in bitfield 0200033C).
+0C Waterfalls.
+  Causes some of the water in the room to push you down.
+  Var A:
+    0 The huge waterfall from room 00-07-21.
+    1 The small waterfalls from room 00-07-11.
+0D Bell.
+  Rings when you land on top of it.
+0E Destructible.
+  Var A: Which destructible. 0-D.
+  Var B: Affects amount of money this destructible can drop.
+    0 - 1 or 10G
+    1 - 10 or 50G
+    2 - 1G
+    3 - 10G
+    4 - 50G
+    5 - 100G
+    6 - 500G
+    7 - 1000G
+0F Flame.
+  Var A: ?
+10 Boss rush clear reward.
+11 Starts boss rush.
+12 Various background visuals.
+  Var A:
+    0 Body-length window that gets blown open.
+    1 Water rushing out of a grate.
+    2 Moon.
+    3 Moon. Positioned lower than 2.
+13 Ball on a chain you can swing by attacking.
+  Var A: ?
+  Var B: Miscellaneous flag index.
+    Once the player swings this ball far enough, it will set this flag.
+14 Boat.
+  Var A:
+    0 Boats spawn from the background that are affected by physics in the water. Always moves right.
+    1 Single boat can be pushed on the ground.
+    2 Single boat that moves back and forth regularly.
+15 Moon portal to/from Chaotic Realm.
+16 Portal to Chaos.
+17 Elevator.
+18 Chest.
+  Var A:
+    0 Full of money.
+    1 Full of Rippers.
+19 Skull that moves around in a rectangular path.
+1A Nothing, unused.
+1B Button that reverses conveyor belts.
+1C Save point.
+  Object 1D must also be in the room for the save point to work?
+1D Walls of save room/warp room.
+  Var A: ?
+1E Nothing, unused.
+1F Warp point.
+20 Event.
+  Var A: Which event.
+    03 Cutscene at the start of the game.
+    04 Meeting Graham for the first time.
+    05 Meeting Yoko for the first time.
+    06 Meeting J for the first time.
+    07 Meeting Graham for the second time and him finding out Soma has the power to rule.
+    08 Meeting Yoko for the second time and discussing Graham.
+    09 Graham stabs Yoko.
+    0A Balore?
+    15 Fight with Julius?
+      The Julius enemy must be in the room for this event to work.
+    16 Before Chaos, "you're not alone".
+    17 Epilogue?
+    18 Epilogue?
+    19 Meeting Hammer for the first time.
+    1A Hammer in the first room of the game.
+    1B Mina in the first room of the game.
+      This is also responsible for replacing the Castle Corridor BGM with ambient wind sounds.
+    1C Yoko in the first room of the game.
+    1D Epilogue?
+    1E Soma floating in white space after defeating Chaos.
+    1F Bad ending.
+  Var B: Unused. Event 03 has this set to 3A, but it doesn't seem to have any effect for any event.
+21 Falling spike trap from Arena.
+22 D-pad puzzle from Arena.
+23 Water flowing down in the bath room.
+24 Mist in the bath room.
+25 Legion members emerging from the background.
+  Var A: ?
+  Var B: ?
+26 Statue in the background of the Arena that attacks you with its hand and foot.
+27 The damaging hand from one of the background statues in the Arena.
+  This object is normally spawned by object 26 instead of being placed manually, but it can also be placed manually and seems to work.
+28 The damaging foot from one of the background statues in the Arena.
+  This object is spawned by object 26. It doesn't seem to appear when placed manually.
+29 Vertically moving platform.
+  Var A: The target Y pos it should move before cycling back to its starting position.
+  Var B:
+    0 Metal platform.
+    1 Metal platform.
+    2 Wet rock platform.
+    3 Platform with a clock in it.
+2A Horizontally moving platform.
+  Var A: The target X pos it should move before cycling back to its starting position.
+  Var B:
+    0 Metal platform.
+    1 Metal platform.
+    2 Wet rock platform.
+    3 Platform with a clock in it.
+2B Water flowing from the large fountian in the Floating Garden.
+2C Clouds moving in the background of the Floating Garden.
+2D Statue before the stairway to the throne room.
+2E Three flames in the eyes of a background skull.
+  Light up when you get near it.
+2F Something from the Julius fight?
+  Var A: ?
+30 Something from the Julius fight?
+31 Something from the Julius fight?
+  Var A: ?
+32 Crumbling platform.
+33 Visual effect of water splashing at the bottom of a waterfall.
+  Var A: ?
+34 Swinging pendulum.
+  Var A: Initial swing direction.
+    0 Swing left first.
+    1 Swing right first.
+  Var B: Affects how wide and slowly it swings.
+    The lower the number, the slower and wider it will swing.
+    For example, 2 slowly swings a full 180 degrees, while 4 swings 90 degrees.
+    0 and 1 do not properly swing back and forth at all, it simply continues to rotate in a circle forever.
+35 Metal gate/button.
+  Var A:
+    0 Button.
+    1 Metal gate.
+36 Cog.
+  Var A: ?
+37 Demon head gate.
+  Must face away from it for its mouth to open.

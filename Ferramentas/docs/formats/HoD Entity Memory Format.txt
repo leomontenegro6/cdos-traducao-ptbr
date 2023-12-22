@@ -1,0 +1,46 @@
+
+Memory used for entities in HoD is 02000418 - 02007C17. Each entity is 0x80 bytes long. They range from 0-EF.
+
+00,4: Pointer to update code.
+04,4: Pointer to draw code.
+08,1: Entity index of the previous entity created before this one.
+  This is used when drawing all entities. The game draws entities in the reverse order they were created in.
+09,1: Entity index of the next entity created after this one.
+  This is used when this entity is deleted to update the previous entity index value so that's still accurate.
+0B,1: 
+0D,1: 
+10,4: Bitfield?
+  & 00000002 - 
+12,1: Index in object palette VRAM where this entity's palette is loaded.
+17,1: Index in object VRAM where this entity's GFX are loaded.
+22,1: 
+38,2: Var A.
+3A,2: Var B.
+3E,1: Subtype.
+3F,1: Unique ID in room.
+40,2: Remaining number of frames to be invincible for (for when the player uses a Medicine Jar).
+48,4: X pos on the screen in subpixels.
+  In the GBA games, each pixel is 0x10000 subpixels.
+  Note that unlike the DSVanias, there is no X/Y pos in the room. Only on the screen.
+4C,4: Y pos on the screen in subpixels.
+  In the GBA games, each pixel is 0x10000 subpixels.
+  Note that unlike the DSVanias, there is no X/Y pos in the room. Only on the screen.
+4A,2: X pos on the screen in pixels.
+  Sometimes only the upper halfword of the X/Y pos is read.
+4E,2: Y pos on the screen in pixels.
+  Sometimes only the upper halfword of the X/Y pos is read.
+50,4: X velocity in subpixels.
+54,4: X velocity in subpixels.
+58,4: X acceleration in subpixels.
+5C,4: Y acceleration in subpixels.
+60,1: Bitfield of drawing related flags?
+  & 40 - Horizontal flip.
+61,1: Bitfield of ?
+62,1: Bitfield of ?
+66,1: Sprite info index.
+  This is an index in the currently loaded sprite info list, 020154FC.
+67,1: Current sprite frame.
+68,4: Pointer to animation list?
+6C,1: Bitfield related to sprite?
+6E,1: Current animation index?
+70,1: 

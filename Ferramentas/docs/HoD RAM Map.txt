@@ -1,0 +1,267 @@
+
+02000008,4 - Current RNG seed.
+  The most recent random number generated is stored here.
+  It is used to affect the next random number generated.
+
+0200000C,1 - Game state.
+  00 - Konami logo screen.
+  01 - Title screen.
+  02 - Game start.
+  03 - Ingame.
+  04 - Select boss rush difficulty.
+  05 - 
+  06 - Sound mode.
+  07 - Game over screen
+  08 - 
+  09 - Credits
+  0A - Prologue
+  0B - Beat boss rush hard mode congratulations screen with "SIMON BELMONT FOREVER" text
+  0C - Nintendo logo screen.
+  0D - Debug menu, main screen
+  0E - Debug menu, sprite viewer
+  0F - Spawns you in a test room with a bat
+  10 - Debug menu, ???
+  11 - Debug menu, ???
+  12 - Debug menu, ???
+  13 - Debug menu, ???
+0200000D,1 - Game substate.
+
+02000010,1 - 
+
+02000011,1 - Entity index of the last entity created.
+
+02000068,4 - Current room pointer.
+0200006C,4 - ?? room pointer.
+02000070,1 - Bitfield.
+  Bit 0: Is currently in Castle B.
+  Bits 1-7: ?
+02000071,1 - Current sector index, not counting Castle A/B.
+  So 0 is Entrance, 1 is Marble Corridor, etc. 1 is not Entrance B.
+
+02000076,2 - currently playing song?
+
+=== 0200008C - 0200035B: Section that gets saved to the save file. 2D0 bytes long.
+
+0200030C,1 - something related to which save you saved in?
+  Bit 0: 0 if the player saved in Castle A, 1 if in Castle B.
+  Bits 1-7: X pos on the map the player saved in.
+0200030D,1 - something related to which save you saved in?
+  Bits 0-5: Y pos on the map the player saved in.
+  Bits 6-7: ???
+
+02000310,4 - Bitfield of breakable walls destroyed.
+
+02000314-0200031F - Bitfield of event flags and miscellaneous flags.
+  Includes which ceilings the player has destroyed with the Crush Boots.
+  Bits 0, 1, 2, and 3 are for the walls you lower by pressing a button.
+  Bit 30 indicates hard mode, which doubles damage taken.
+
+02000330-02000353 - Bitfield of pickup flags.
+
+02000358,4 - Bitfield of boss death flags.
+  01 00000002 Giant Bat
+  02 00000004 Skull Knight
+  03 00000008 Living Armor
+  04 00000010 Golem
+  05 00000020 Minotaur
+  06 00000040 Devil
+  07 00000080 Giant Merman
+  08 00000100 Max Slimer
+  09 00000200 Peeping Big
+  0A 00000400 Legion (saint)
+  0B 00000800 Shadow
+  0C 00001000 Minotaur Lv2
+  0D 00002000 Legion (corpse)
+  0E 00004000 Talos
+  0F 00008000 Death
+  10 00010000 Cyclops
+  11 00020000 Talos (chase)
+  12 00040000 Pazuzu
+
+020003A8,1 - ? music related
+
+020003B0-020003B7 - Bitfield of entity used unique IDs in the current room.
+  The unique ID must be unique for all entities in the room.
+  Unlike the DSVanias, a unique ID of 0 must also be unique, and doesn't make an entity exempt.
+
+=== 0200035B: End of section that gets saved to the save file.
+
+020003A8,1 - ???
+  Bits 3-5: Index in list 080E2120 to get the position the player should be in when loading a save file.
+
+020003B8,4 - Current room's entity list pointer.
+
+02000404,4 - Bitfield of global game flags.
+  00000001 - Disables controls. Used while going through doors, warping, etc.
+  00000008 - Makes the screen flash white? Related to subweapon's "Unknown" field?
+  00000020 - Set during events?
+  00000040 - Set during warping?
+  00000200 - Set while warping and during events?
+  00000400 - Set during ending event?
+  00008000 - Set during ending event?
+  00010000 - Set during ending event?
+  00040000 - Set during events? Related to subweapon's "Unknown" field?
+  00080000 - Related to subweapon's "Unknown" field?
+  00200000 - Set during boss fights. Disables quick save.
+
+02000408,1 - Current shop pool index (index in list 084B1714).
+
+=== 02000418-02007C17: Entity memory. Each entity is 0x80 bytes long. Entities range from 00-EF.
+
+What each range of entity slots is for:
+00-00  02000418-02000497  Player.
+01-0F  02000498-02000C17  Player subweapons/spells and the current subweapon icon.
+10-12  02000C18-02000D97  ?
+14-3F  02000E18-02002417  Room entities.
+40-CF  02002418-02006C17  Various other things including particles and enemy projectiles.
+D0-EF  02006C18-02007C17  ?
+
+02000418 - Player's entity memory.
+
+0200042D - Currently selected song index in sound mode.
+
+02000DAF,1 - Current entry index selected in the bestiary/shop.
+
+=== 02007C17: End of entities currently loaded into memory.
+
+Extra memory used for rendering special effects:
+02007C18,1 - bitfield?
+02007C19,1 - "V-Count Setting", the upper 8 bytes to be stored to the I/O register "General LCD Status".
+02007C1A,1 - Size of the data in bytes...?
+02007C1C,4 - Pointer to where the data should be DMAed to.
+02007C20,??? - The data.
+
+0200A428 - List of BG layers currently loaded.
+  Entry length 0x18.
+  There are 4 entries here:
+    00 0200A428 - BG0
+    01 0200A440 - BG1 (room layer 00).
+    02 0200A458 - BG2 (room layer 01).
+    03 0200A470 - BG3 (room layer 02).
+  Format:
+  00,4: Pointer to layer metadata.
+  06,2: Layer scrolling X pos.
+  0A,2: Layer scrolling Y pos.
+  14,1: Visual effect.
+    List of visual effects:
+    FF - The screen will not scroll more than 1.5 screens to the right, making the room appear to be 1.5 screens wide. This only works correctly on layer 0, if another layer has this it causes bugs where the player will warp around the room.
+    00 - No effect.
+    0D - Layer 01 will be transparent.
+    0F - Layer 00 will be transparent.
+
+0200A444,4 - X pos of the left of the camera in subpixels.
+0200A448,4 - Y pos of the top of the camera in subpixels.
+0200A44C,4 - X velocity of the camera in subpixels.
+0200A450,4 - Y velocity of the camera in subpixels. 
+
+0201444C - Bitfield of which tiles in the current room are breakable wall tiles.
+
+0201524D,1 - "Has Breakable Wall" flag copied from the current room's room data. 0 or 1.
+
+02015250 - ?? Related to sprite info
+  Entry length 0x14.
+
+020154FC-020163FB - List of sprite info for currently loaded entities.
+  The byte at +66 in an entity's memory is the index in this list.
+  Each entry is 0x10 bytes long. Slots range from 00-EF (the same number as the number of entity slots available).
+  00,2: Previous sprite info slot index...?
+    FFFF means there is no previous slot because this is the first slot.
+  02,2: Next sprite info slot index...?
+    FFFF means there is no next slot because this is the last slot.
+  04,4: ???
+  08,4: Index in object VRAM of the GFX to use.
+  0C,4: Sprite pointer.
+
+020163FE,2 - Something related to initializing a new sprite info entry?
+  This is an index in list 02015250
+
+020181E4 - List of currently active palette shifters.
+  Entry length 0xC.
+  00,4: Palette list pointer.
+  04,4: Pointer to the data that specifies how to shift the palette?
+  08,2: Counter for number of frames on this palette index?
+  0A,1: 
+  0B,1: 
+
+02018494 - List of pointers to all subweapon entities.
+  This is used to make sure you don't go over a subweapon's "Max at once".
+
+020184F8,4 - Current player character.
+  0 - Juste.
+  1 - Simon.
+  2 - Maxim.
+
+020184FC,4 - Pointer to the animations list copied from the current player data.
+02018500,4 - Pointer to the movement params copied from the current player data.
+02018510,4 - Misc bitfield copied from the current player data.
+
+02018528,4 - Bitfield of damage types the player currently deals?
+
+0201852E,2 - Bitfield of status effects on the player.
+  0x1 - Poison
+  0x2 - Curse
+  0x4 - Petrify
+
+02018534,2 - 
+
+0201853C,2 - Number of subweapon entity slots currently available to use.
+  This is 8 when there are no subweapons in use.
+  When a subweapon is used, this is decreased by that subweapon's "Num entities created" value.
+
+0201854E,2 - Current HP.
+02018550,2 - Current MP.
+
+Current stats:
+02018552,2 - STR
+02018554,2 - DEF
+02018556,2 - INT
+02018558,2 - LCK
+
+02018568-02018767 - List of player trail positions.
+  Each entry is 8 bytes long. 0x40 trail entries in total.
+  00,2: X pos of this trail in the room.
+  02,2: X pos of this trail in the room.
+  04,1: Whether this trail should be horizontally flipped (facing left).
+
+02018770 - Bitfield of ?
+
+0201877C,1 - Player's current level.
+
+0201877E,1 - Currently equipped subweapon:
+  00 - None
+  01 - Knife
+  02 - Axe
+  03 - Cross
+  04 - Holy Water
+  05 - Holy Book
+  06 - Sacred Fist
+  07 - Shuriken
+0201877F,1 - Currently selected spell.
+  Bits 0-6: Which spellbook is selected:
+    0 - Invalid
+    1 - Fire
+    2 - Ice
+    3 - Bolt
+    4 - Wind
+    5 - Summoning
+  Bit 7: On if a spellbook is enabled, off if disabled.
+
+02018780,1 - Currently equipped body armor.
+02018781,1 - Currently equipped non-body armor 1.
+02018782,1 - Currently equipped non-body armor 2.
+02018783,1 - Currently equipped non-body armor 3.
+02018784,1 - Currently equipped weapon.
+
+02018794,2 - Current hearts.
+
+List of which items you own and how many (owned item info):
+020187A0-020187BB - Consumables.
+020187BE- TODO
+  Each item takes up 1 byte.
+
+020187BC,2 - Bitfield of weapons you own.
+
+0200A46C,1 - visual effect?
+
+03000000-030003FF - List of sprites in the OAM.
+03000C00-03000BFF - List of sprites in the OAM (copy?).

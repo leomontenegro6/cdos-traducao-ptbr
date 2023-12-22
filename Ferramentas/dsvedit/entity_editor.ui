@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EntityEditor</class>
+ <widget class="QDialog" name="EntityEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Entity Editor</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="6" column="1">
+      <widget class="QComboBox" name="type"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QComboBox" name="subtype"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Entity #</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Pointer</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Unique ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Y Pos</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>X Pos</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Byte 8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Var A</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Var B</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Subtype</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="y_pos"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="entity_index"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="pointer"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="x_pos"/>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="unique_id"/>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="var_b"/>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="var_a"/>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="byte_8"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Offset up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="offset_up"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="entity_doc"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="delete_entity_button">
+       <property name="text">
+        <string>Delete entity</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>entity_index</tabstop>
+  <tabstop>pointer</tabstop>
+  <tabstop>x_pos</tabstop>
+  <tabstop>y_pos</tabstop>
+  <tabstop>unique_id</tabstop>
+  <tabstop>type</tabstop>
+  <tabstop>subtype</tabstop>
+  <tabstop>offset_up</tabstop>
+  <tabstop>byte_8</tabstop>
+  <tabstop>var_a</tabstop>
+  <tabstop>var_b</tabstop>
+  <tabstop>entity_doc</tabstop>
+  <tabstop>delete_entity_button</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

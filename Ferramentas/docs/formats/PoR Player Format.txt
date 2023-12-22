@@ -1,0 +1,62 @@
+Player format:
+  0x58 bytes long.
+  00,4: GFX list pointer.
+  04,4: Sprite pointer.
+  08,4: Palette list pointer.
+  0C,4: Pointer to list of which sprite animation to use for what state.
+  10,2: Asset index of first GFX file.
+  12,2: Asset index of sprite file.
+  14,4: Walking speed.
+  18,4: First jump force.
+  1C,4: Second jump force.
+  20,4: Slide force.
+  24,4: Bitfield of what actions the player can do.
+    Bit 1: Can slide.
+    Bit 2: Can attack with weapons.
+    Bit 6: Can jumpkick.
+    Bit 7: Can up+L superjump (Griffon Wing).
+    Bit 8: During a slide the player can press B again to slidejump.
+    Bit 12: Can whip diagonally (Whip Skill 2).
+    Bit 13: Uses Jonathan's voice instead of Richter's.
+    Bit 17: Player is not affected by gravity.
+  28,4: Bitfield of ?
+    Bit 1: Player's sprite is horizontally flipped.
+    Bit 2: Can smash head into ceiling if you hit it with enough force. (Normally with a superjump.)
+    Bit 3: Is currently the partner character.
+      This shouldn't be set manually in the player editor. The game sets this automatically when you change characters. It affects the voice played when changing characters, and whether taking damages hurts your HP or your MP. Setting this bit won't make the AI take control of the character.
+    Bit 4: Can do combo tech (including Critical Art).
+    Bit 5: Is female.
+      Affects Zacchino and Astarte's attacks.
+      Also reduces the speed this player pushes blocks at.
+    Bit 6: Don't interrupt double jump animation when the player releases B.
+      This is used for Charlotte so her broom animation always plays out fully.
+    Bit 7: Unknown, used for everyone except Stella and Loretta.
+  2C,4: Backdash force.
+  30,4: Backdash friction.
+  34,2: Number of frames for a backdash to last.
+  36,
+  38,4: Elemental damage types that apply to this player's slides and jumpkicks.
+    Bit 18: Take half damage and reflect projectiles.
+      All damage will be exactly halved. There's no minimum of 1 damage here, so 1 damage gets halved to 0.
+      Most projectiles will be destroyed on contact with you, dealing no damage. Projectiles that can't be destroyed will simply pass through you. However, Dracula's projectiles will still do damage to you.
+      This bit is set when using Stonewall or Maria's turtle (Gnebu).
+    Bit 19: If this bit is off, the player can't be hit at all. Can still hit enemies.
+  3C,4: Pointer to list of which combo techs this player can do.
+    This list is 4 bytes long. Each byte is which technique for a given button combo, with 00 meaning no technique.
+  40,2: Sprite Y offset in pixels.
+  42,2: Which color index within the player's palette is for the player's outline.
+    Whichever color in the player's palette is at this index will flicker white when calling your partner or switching characters.
+    To be more specific, it swaps that color between the color specified in the below "Outline color" field and a white color (#B8B8B8).
+    You can set this to 0 to disable it, since color index 0 is always transparent anyway.
+  44,2: Outline color.
+  46,2:
+  48,
+  4C,4: Pointer to list of hitbox pointers.
+  50,2: Height in pixels.
+    This is negative because it's the offset off the floor the player extends.
+    This if for collision checking with tiles, not enemies.
+  52,2: Which player face icon to use. This is a frame index in the common sprite.
+  54,4: Pointer to list of swing animations.
+    This points to a list of pointers, one for each swing animation type (specified in the item data for the weapon).
+    Located at those pointers are a list of which animation to use in the player's sprite file depending on the state.
+      In order: Attacking standing, attacking crouched, attacking in air, finish attacking standing, finish attacking crouched.

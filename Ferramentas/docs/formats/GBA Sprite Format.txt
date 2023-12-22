@@ -1,0 +1,81 @@
+
+Sprite header format:
+00,2: Number of frames this sprite has.
+02,2: Number of animations this sprite has.
+04,4: Pointer to the start of the list of the sprite's frames.
+08,4: Pointer to the start of the this sprite's first animation.
+  If this sprite has no animations, this is just a pointer back to this sprite header instead.
+  In HoD, it always points back to this sprite header.
+0C,4: Pointer to the start of the list of pointers to each of the sprite's animations.
+  Only exists in AoS. In HoD, the sprite header is only 0xC bytes long.
+
+Sprite parts:
+Each part is 0xC bytes long.
+  00,1: X pos (signed).
+  01,1: Y pos (signed).
+  02,?: ?
+  04,1: X offset on the GFX page.
+  05,1: Y offset on the GFX page.
+  06,1: Width.
+  07,1: Height.
+  08,1: OBJ size and shape.
+    Bits 0x0F: OBJ shape.
+    Bits 0xF0: OBJ size.
+  09,1: GFX page index.
+    Not everything uses this as the GFX page index though - weapons for example seem to use it for something else.
+  0A,1: Flip bits.
+    Least significant bit first.
+    Bit 1: Vertical flip
+    Bit 2: Horizontal flip.
+  0B,1: Affects palette?
+    If the lowest bit of this value is set, then it changes the palette of this part, but only if the entity has the lowest bit of the value at entity+62 set as well.
+
+List of hitboxes:
+Each hitbox is 4 bytes long.
+  00,1: X pos (signed).
+  01,1: Y pos (signed).
+  02,1: Width.
+  03,1: Height.
+
+List of sprite frames:
+Each frame is 0x10 bytes long.
+  00,4: 00 00 00 00
+  04,1: The number of hitboxes this frame has.
+  05,1: The number of parts this frame has.
+  06,2: 00 00
+  08,4: Pointer to the first hitbox to use. 0 if this frame has 0 hitboxes.
+  0C,4: Pointer to the first part to use.
+
+Animations:
+Each animation is 4 bytes long.
+  00,2: Number of frames in this animation.
+  02,2: Function index. Index in list 080E2B34, which is a list of pointers to functions to call.
+  04,?: List of keyframes in this animation. See below for the format.
+    For type 0, this is a pointer to the list of keyframes.
+    For types 1, 2, and 3, this is just the list itself directly.
+
+List of keyframes for function index 0:
+Each keyframe is 0x10 bytes long.
+  00,1: Frame index to use.
+  01,1: Delay (in frames) for this frame to be displayed.
+  02,?
+
+List of keyframes for function index 1:
+Each keyframe is 4 bytes long.
+  00,1: Frame index to use.
+  01,1: Delay (in frames) for this frame to be displayed.
+  02,2: ?
+
+List of keyframes for function index 2:
+Each keyframe is 8 bytes long.
+  00,2: Frame index to use.
+  02,2: Delay (in frames) for this frame to be displayed.
+  04,4: Hitbox data. See the hitbox format above.
+
+List of keyframes for function index 3:
+Each keyframe is 0xC bytes long.
+  00,2: Frame index to use.
+  02,2: Delay (in frames) for this frame to be displayed.
+  04,4: ???
+    This is argument r1 to func 08042884
+  08,4: Hitbox data. See the hitbox format above.

@@ -1,0 +1,178 @@
+
+Memory used for entities in PoR is 020FC500 - 0211173F. Each entity is 0x160 bytes long. They range from 0-F5.
+
+000,4: Pointer to update code.
+004,4: Pointer to draw code.
+008,4: Pointer to destroy code.
+00D,1: State of the entity. Each entity's update code handles this differently.
+010,2: Somehow affects the projectiles/subentities spawned by this entity.
+  0B is used for players.
+  Any values besides 0B and the skill/weapon will damage the player, not enemies.
+012,2: Globally unique ID for this entity.
+014,2: Frame counter 1.
+016,2: Frame counter 2.
+020,1: Polygon ID for drawing this entity.
+021,1: Opacity.
+024,4: X pos on the screen.
+028,4: Y pos on the screen.
+02C,4: Z position.
+030,4: X pos.
+034,4: Y pos.
+038,4: Z position.
+03C,4: X velocity.
+040,4: Y velocity.
+048,4: X friction.
+04C,4: Y acceleration (gravity).
+064,2: Rotation.
+  Every 0x4000 is equivalent to 90 degrees.
+066,2: Min random dist? (For the portrait blocking flames)
+068,2: Max random dist? (For the portrait blocking flames)
+06C,2: Sprite info index.
+  This is an index in the currently loaded sprite info list, 020FA200.
+074,4: Bitfield related to sprite drawing.
+  0004 Enable rotation.
+  0020 Ignore part palette indexes. Always used palette 0 for every part.
+    Note that things that affect the entire entity's palette are not affected by this, like the entity's palette offset. Only the palette specified by each sprite part is ignored.
+  0080 Direction. Set if facing left, clear if facing right. (Horizontal flip.)
+  0100 
+  8000 
+078,4: Pointer to sprite animation list.
+07C,2: Current animation index.
+07E,2: Current keyframe index in this animation.
+080,2: Bitfield of sprite animation properties.
+  01 - Animation finished. This is set automatically by SpriteAnimate when an animation finishes its first loop.
+  02 - Do not loop animation
+  04 - Play animation in reverse
+  08 - Do not animate, just freeze on whatever the current keyframe is
+084,2: Current sprite frame index.
+086,2: Palette index in the list of globally loaded palettes.
+088,2: Palette index in the list of globally loaded palettes. Unused?
+08A,2: Palette offset for this entity. Gets added to the value at 086,2.
+08C,2: Affects how this entity is rendered.
+  0 - Normal.
+  1 - Transparency is rendered as white.
+  2 - Sprite is rendered as black, transparency is normal.
+  3 - Sprite and transparency are transparent.
+08E,2: ??? 8000
+090,1: Upper left corner vertex's red color multiplier.
+091,1: Upper left corner vertex's green color multiplier.
+092,1: Upper left corner vertex's blue color multiplier.
+093,1: Upper left corner vertex's unused color multiplier.
+094,1: Lower left corner vertex's red color multiplier.
+095,1: Lower left corner vertex's green color multiplier.
+096,1: Lower left corner vertex's blue color multiplier.
+097,1: Lower left corner vertex's unused color multiplier.
+098,1: Lower right corner vertex's red color multiplier.
+099,1: Lower right corner vertex's green color multiplier.
+09A,1: Lower right corner vertex's blue color multiplier.
+09B,1: Lower right corner vertex's unused color multiplier.
+09C,1: Upper right corner vertex's red color multiplier.
+09D,1: Upper right corner vertex's green color multiplier.
+09E,1: Upper right corner vertex's blue color multiplier.
+09F,1: Upper right corner vertex's unused color multiplier.
+0A0,2: Sprite x offset relative to the entity's position.
+0A2,2: Sprite y offset relative to the entity's position.
+0A4,1: Controls the iframes this entity should give.
+  This is an index in list 020BE4C8 - a list of different iframes values. Each entry is 1 byte long.
+  This value is only read when the entity is initialized, changing it after the entity already exists has no effect.
+0A5,1: 
+0A6,1: Hitbox bitfield.
+  Bits:
+  0x1: Whether this entity's hitboxes are active or not.
+0A7,1: Index of this entity's hitbox in the global hitbox list (0213291C).
+0A8,2: Damage.
+0AA,2: Physical defense.
+0AC,4: Bitfield of damage types.
+0B0,4: Bitfield of resistances.
+0B4,4: Bitfield of weaknesses.
+0B8,2: Number of iframes this entity gives.
+0BA,2: 
+0BC,2: Physical force of the attack. This affects how strongly enemy body parts get thrown back.
+0BE,2: 
+0C0,2: Magical defense.
+0C2,2: 
+0C4,4: 
+0C8,4: On-hurt-player callback.
+  This function pointer is called when the entity collides with the player.
+0CC,4: On-damaged callback.
+  This function pointer is called when the entity collides with a player weapon.
+0DC,2: Counter?
+0DE,2: Counter?
+0EC,4: Pointer to child entity?
+0F0,4: Pointer to another child entity?
+0FC,2: 
+120,4: Bitfield of ???.
+  0x20 - ? something checked many times by enemies.
+12E,2: 
+132,1: Subtype.
+133,1: Unique ID in room from entity list.
+13C,2: Var A.
+13E,2: Var B.
+149,1: 
+158,4: Pointer to the extra entity memory for this entity in list 02112698.
+  Or 0 if the entity does not have any extra entity memory.
+15C,4: Index in list 02112698 of the first extra entity memory slot used.
+
+For players:
+0D0,4: Bitfield of player state booleans.
+0D4,4: Bitfield of ???
+  If bits 10000 and 20000 are both set, or if bit 40000 is set, the player is on a jumpthrough platform?
+  00000020 - Standing on a tile floor (not a collidable entity). This is set regardless of whether the floor is solid or jumpthrough.
+0DC,4: Bitfield of ?
+0E0,4: Bitfield of partner states?
+  00000002 - Can't move.
+  00000020 - Is called out.
+  00004000 - Told to stand still with the Wait Cube.
+  00040000 - Jumping.
+0E4,4: Bitfield of ??? from player data.
+0E8,2: ???.
+  This is 1 when the player is doing a critical art/combo tech.
+  This is 4 when the player is not present (neither player-controlled nor AI-controlled).
+  This is 8 when the player is doing a dual crush.
+  Otherwise, this counts down every frame until it reaches 0.
+0EA,2: Number of frames left before the current spell is charged.
+  Normally decreases by 1 per frame, but decreases by 2 per frame when Sorceress Crest is equipped.
+0EC,1: 0 for player 1, 1 for player 2.
+0ED,1: Which player character index this player is. 2 is Stella, 3 is Loretta, etc.
+0F4,4: Pointer to their state->anims mapping.
+0FC,2: 
+0FE,2: Player's animation state. This is the index in their state->anim mapping list to get the new animation.
+100,4: Bitfield of player state booleans. Seems very similar to 0D0, but not exactly the same.
+104,4: Bitfield of ???. Similar to 0D4
+124,4: Duplicate of x pos?
+128,4: Duplicate of y pos?
+12C,4: Drawn x pos offset for the katar critical.
+130,4: Drawn y pos offset for the axe critical.
+144,1: Most recent weapon index swung.
+146,1: Most recent button combo index input.
+
+For room entities:
+132,1: Subtype.
+
+For enemies:
+120,4: Bitfield of ???
+  00002000 - If set, grants SP when killed.
+    This is set when this enemy is hit by a subweapon (determined by the "is a subweapon" bit in the skill's damage types bitfield.)
+128,2: Current HP. Originally copied from the max HP from the enemy DNA.
+12A,2: The magical defense value from the enemy DNA.
+138,2: The attack value from the enemy DNA.
+13A,2: The physical defense value from the enemy DNA.
+
+For skills:
+110,4: Bitfield.
+  00000001 - Horizontally flipped.
+  00000002 - Skill was used by an enemy (e.g. Doppelganger) as opposed to the player.
+    This overrides this skill's on-hurt-enemy callback function with a different one so that it hurts the player instead.
+    It also changes the damage calculation formula, so that it uses the enemy's attack value in place of the player's INT, and so the enemy's attack value is weighted more than the skill's damage multiplier.
+114,4: Pointer to the entity that used this skill (e.g. player/Doppelganger).
+11A,2: The ID of the skill.
+11D,1: The ID of the skill?
+11E,1: The skill multiplier. (1 or 2.)
+  For spells it varies depending on if it's half charged or fully charged.
+  For subweapons it varies depending on whether it's mastered or not.
+
+For items:
+0D0,4: Pointer to the item data for this item.
+
+For player weapons:
+0D0,4: Weapon index of this weapon.

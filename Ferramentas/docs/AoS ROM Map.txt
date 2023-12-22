@@ -1,0 +1,220 @@
+
+Starting stats (hardcoded):
+08033DC2,1 - Starting STR
+08033DC6,1 - Starting CON
+08033DCA,1 - Starting INT
+08033DCE,1 - Starting LCK
+
+0804BA26,1 - Number of ability souls in the game (hardcoded).
+
+080E0DF8 - List of songs->text indexes for sound test mode.
+  Entry length 4.
+  00,2: Song index.
+  02,2: Text index.
+
+080E1320 - List of damage multipliers for the player's jumpkick/weapon/slide attacks.
+  Each entry is a halfword.
+  Indexes:
+    2 (080E1324) - Jumpkick
+    3 (080E1326) - Weapon
+    4 (080E1328) - Slide (and Julius's uppercut)
+  The other types of attack don't use this list so those entries are just 0.
+  A 0x10 multiplier is equivalent to 1.0. For example, jumpkick has a multiplier of 8, meaning jumpkick damage is equivalent to STR*0.5.
+
+080E13BC-080E1553 - List of skill gfx.
+  Entry length 0xC.
+  00,4: GFX pointer
+  04,4: Palette pointer
+  08,4: Sprite pointer
+
+080E15A8 - List of red souls.
+
+080E1CD0 - List of OBJ palette indexes for each soul type.
+  4 entries, each is a byte, the OBJ palette index for that type of soul.
+  0 (red) - 7
+  1 (blue) - 6
+  2 (yellow) - 8
+  3 (ability) - 9
+
+080E2B04-080E2B23 - List of how VRAM indexes map to tile offsets in VRAM.
+  Each entry is a halfword.
+  The index is a VRAM index in terms of 128x32px chunks.
+  Each value is an offset in VRAM in terms of 8x8px tiles. So multiply this by 0x20 to get the offset in bytes.
+  The way these indexes would map out visually to VRAM is like this:
+    [    0    ] [    4    ]
+    [    1    ] [    5    ]
+    [    2    ] [    6    ]
+    [    3    ] [    7    ]
+    [    8    ] [    C    ]
+    [    9    ] [    D    ]
+    [    A    ] [    E    ]
+    [    B    ] [    F    ]
+  So e.g. F means the player's spot in VRAM, 0 means the common sprite's spot, E means the player's weapon's spot, etc.
+
+080E2B34-080E2B43 - List of animation function pointers?
+  4 entries in total.
+  The animation's function index is the index in this list.
+
+080E2B4C - List of metadata about variable-width font characters.
+  Entry length 4. 0xDD entries in total?
+  The index in this list is the index of the text character.
+  00,01: ? (This is read, but is always just 0.)
+  01,01: Width of this character in pixels.
+  02,02: ? (This doesn't seem to be read, and is always just 0.)
+
+0850A136-0850AD75 - List of font pixel data.
+  Entry length 0xE. 0xE0 entries total.
+  The first entry is character 0x20.
+  00,0C: The pixels.
+  0C,02: The character number (big endian). Not sure if this is used for anything.
+
+080E9644 - List of enemy DNA.
+
+080EA628-020EA709 - List of the enemy name text IDs.
+  Entry length 2.
+08506936-08506A49 - List of item description text IDs.
+  Entry length 2.
+
+080E11C4 - Soma's sprite pointer.
+  This sprite has no animations and only a single static frame composed of two parts placed on top of each other.
+  This is basically just a dummy to put Soma's top and bottom halves together from how they're arranged in VRAM.
+
+08118D08-08118D23 - List of entity sizes for checking if certain entities have gone off screen (so their logic can be paused until they're on screen again).
+  Entry length 4.
+  00,2: Width.
+  02,2: Height.
+  These aren't perfect representations of every entity's size, just generic sizes like 8x8, 16x16, 48x48, etc, used to estimate the size.
+
+081183F4-08118437 - A palette list, probably for several things?
+  Palette 01 has the text colors used in the bestiary list.
+
+082097D4 - Soma's palette.
+  0801462E - Has it hardcoded.
+
+08264398 - GFX tiles for the pause screen.
+0826664C - Palette list for the pause screen.
+  These include Soma's face, the static text, menu borders, etc.
+
+084F0D8C,1 - New game starting sector index.
+084F0D8D,1 - New game starting room index.
+084F0D92,2 - New game starting X pos.
+084F0D94,2 - New game starting Y pos.
+
+084F106C - List of songs that play in each sector.
+  Halfwords.
+
+084F10AC-084F10B3 - List of create function pointers for each player character (Soma and Julius).
+084F10B4-084F10BB - List of update function pointers for each player character (Soma and Julius).
+
+084F1238 - List of pointers to weapon swing animation indexes.
+  Index is the player's state, 0 for standing, 1 for crouching, 2 for in the air. (Maybe more?)
+  Each pointer points to a list of player animation indexes. Each group of 3 bytes is for a weapon attack type. Each byte within the group is for a weapon swing animation.
+
+084F128C - differentiates evil butcher/ripper knives
+  Entry length 0x10.
+  00,4: GFX pointer
+  04,4: Palette pointer
+  08,4: Sprite pointer
+  0C,
+
+084F12C8 - Has data to differentiate projectile red souls that share the same code pointer 08025785/08028EC1.
+  The red soul data's var A is the index in this list.
+  Entry length 0x18.
+  00,4: X velocity.
+  04,4: Initial Y velocity.
+  08,4: Y acceleration (gravity).
+  0C,1: Skill GFX index.
+  0D,1: Sprite frame index.
+  0E,1: Sprite animation index.
+  0F,1: Palette index?
+  10,2: SFX to play on throw.
+    0 means no SFX.
+  12,2: Bitfield affecting the behavior of the projectile.
+    ?
+    0001 - Whether this projectile's sprite should be animated as opposed to a static frame.
+      If set, the projectile's animation is set to the animation index at 0E.
+      If not, the projectile's frame is set to the frame index at 0D.
+    0002 - Breaks on contact with the floor?
+    0008 - If set, this entity's pointer gets stored to 02013160.
+    0080 - runs code at 0802583C
+    0200 
+    0400 
+  14,2: 
+  16,?
+
+0850E968 - List of room pointers for transition rooms.
+  00000000 marks the end of the list.
+
+085254A0-085254BF - List of layer metadata pointer for each pause menu subscreen.
+  8 entries in total.
+  Each entry:
+    00 0815E940 - Main pause screen
+    01 0815E790 - Soul set
+    02 0815E8B0 - Equip
+    03 0815E820 - Item use
+    04 0815E700 - Ability souls
+    05 0815E700 - Unused (would be for Sleep)
+    06 0815E670 - Config
+    07 0815E700 - Unused (would be for Enemy)
+
+085255FC - List of palette shifts.
+  Entry length 8.
+  0,4: Palette list pointer.
+  4,2: Palette index.
+  6,2: Duration in frames to stay on this palette.
+
+08525FBC-08525FFB - List of warp points.
+  Entry length 8.
+  00,2: X pos on the map in tiles.
+  02,2: Y pos on the map in tiles.
+  04,4: Room pointer of the warp point.
+
+08526004 - List of breakable wall gfx/palette/sprites.
+  Entry length 0xC.
+  0x8 entries total.
+  00,4: GFX asset pointer.
+  04,4: Palette list pointer.
+  08,4: Sprite pointer.
+
+08526064 - List of breakable walls.
+  Entry length 0xC.
+  0x12 entries total.
+  Var A of the breakable wall entity is the index in this list.
+  00,2: Which visual type to use for this wall.
+    Index in list 08526004.
+  02,1: Palette index.
+  03,1: Sprite frame index.
+  04,1: 
+  05,1: 
+  06,1: Width in pixels.
+  07,1: Height in pixels.
+  08,1: 
+  09,1: (gets copied to the breakable wall entity+14,1)
+  0A,2: Unused, padding?
+
+08526390-085263A7 - List of boss rush rewards.
+  00,2: Maximum number of frames you can take to complete boss rush and still get this reward.
+  04,4: Item global ID+1 of the reward.
+
+08526658-085266D7 - List of pointers to event create functions (for object 20).
+  The event object's var A is the index in this list.
+085266D8-08526757 - List of pointers to event update functions (for object 20).
+  The event object's var A is the index in this list.
+
+Shop item pools:
+08526C6C-08526C77 - List of shop item pools:
+  08526C04
+  08526C1C
+  08526C40
+  In each of those item pools, the first byte is the number of items in this pool.
+  Then each item also takes up one byte. But these aren't item IDs - they're indexes in list 085269FC.
+085269FC - List of allowable items that can be in the shop.
+  Each entry is 4 bytes long.
+  00,1: Item type.
+  01,1: Item index.
+
+08526C78-08526CE3 - List of BG layer info for each event face portrait.
+  Entry length 0xC.
+  00,04: GFX pointer.
+  04,04: Palette list pointer.
+  08,04: Layer metadata pointer.

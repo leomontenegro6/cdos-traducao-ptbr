@@ -1,0 +1,1724 @@
+
+01FFE32C DMA
+  ; r0 - Which DMA channel to use (0-3)
+  ; r1 - Address to copy from
+  ; r2 - Address to copy to
+  ; r3 - Word count and DMA control
+  ; If the DMA channel is 0, then after doing the requested DMA, this function also does a DMA from address 00000000 to address 00000000, which appears invalid. Not sure why it does this.
+
+01FFE294 DMA2
+  ; r0 - Which DMA channel to use (0-3)
+  ; r1 - Address to copy from
+  ; r2 - Address to copy to
+  ; r3 - Word count and DMA control
+  ; If the DMA channel is 0, then after doing the requested DMA, this function also does a DMA from address 00000000 to address 00000000, which appears invalid. Not sure why it does this.
+
+0209E570 FillMemory
+  ; Fills a certain region of memory with a given value.
+  ; r0 - Value to fill with
+  ; r1 - Starting address to fill
+  ; r2 - Number of bytes to fill
+0209E584 CopyMemory
+  ; r0 - Address to copy from
+  ; r1 - Address to copy to
+  ; r2 - Number of bytes to copy
+  ; Copies in groups of words. Won't work right if the number of bytes to copy isn't divisible by 4.
+
+02042FA4 LoadSave
+  ; r0 - Save slot
+  ; Returns r0 - ? seems to be 0 when save loaded successfully, 4 when the save is corrupted
+
+02043744 LoadSaveRelated??
+  ; r0 - ? 0?
+  ; r1 - ? 1?
+  ; r2 - ? 02122C10?
+  ; r3 - Total length of the save file in bytes.
+  ; If this returns 0, the save is corrupted, or 1 for not corrupted...?
+020B0728 LoadSaveRelated2??
+  ; r0 - 0213D264?
+  ; r1 - 0213D144?
+  ; r2 - Length in bytes to check
+  ; Compares two sequences of bytes to see if they're equal. Returns 0 if equal, 1 if not.
+
+020118B8 CalculateSHA1
+  ; r0 - Pointer to where to store the calculated SHA1 hash
+  ; r1 - Pointer to the start of the data to calculate the SHA1 for
+  ; r2 - Length in bytes of the data to calculate the SHA1 for
+020A35D0 InitializeSHA1Buffer
+  ; r0 - Pointer to the SHA1 buffer (02132180)
+  ; Stores the following bytes to the buffer:
+  ; 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10 F0 E1 D2 C3 00 00 00 00 00 00 00 00 00 00 00 00
+  ; Or in words instead of bytes, that's:
+  ; 67452301 EFCDAB89 98BADCFE 10325476 C3D2E1F0 
+020A3474 ???SHA1
+  ; r0 - Pointer to the SHA1 buffer (02132180)
+  ; r1 - Pointer to the start of the data to calculate the SHA1 for
+  ; r2 - Length in bytes of the data to calculate the SHA1 for
+020A3278 ???SHA12
+  ; r0 - Pointer to the SHA1 buffer (02132180)
+  ; r1 - Pointer to where to store the calculated SHA1
+020A3634 ???SHA13MultiplesOf0x40BytesOnly
+  ; r0 - Pointer to the SHA1 buffer (02132180)
+  ; r1 - Pointer to the start of the data to calculate the SHA1 for
+  ; r2 - Length in bytes of the data to calculate the SHA1 for, rounded DOWN to the nearest 0x40
+
+02007970 LoadOverlay
+
+02012D20 GetEntitySlot
+  ; r0 - Minimum entity index to check
+  ; r1 - Maximum entity index to check
+  ; r2 - Update function pointer for the new entity
+
+0201DA80 GetExtraEntityMemory
+  ; r0 - Entity
+  ; r1 - Number of free bytes needed
+  ; Looks for a consecutive number of free slots in list 02112698 that are enough to cover the number of bytes needed.
+  ; (Note that it determines the number of slots needed with (num_bytes/0x100)+1, so if num_bytes is divisible by 0x100 it gives you one more slot than is actually needed.)
+  ; It then stores a pointer to the start of that free memory to entity+158.
+  ; It also stores the index of the first free slot in the list to entity+15C.
+  ; It also returns that pointer to the start of the free memory.
+
+02015078 UpdateGame
+
+02012920 UpdateAndDrawAllEntitiesAndTiles
+02012B60 UpdateAllEntities
+02012960 DrawAllEntitiesAndTiles
+02002F00 DrawTiles
+02012784 ProcessInput
+
+02034D3C UpdatePauseMenuState?
+  ; Returns: Game substate to switch to, or -1 to stay in this substate.
+
+02033464 EnterOverlappingDoor
+  ; r0 - Player entity
+  ; Check if the player is on top of a door, and try to enter that door.
+  ; This function has a bug where if the player is 1 pixel inside a right or down door it won't count it as overlapping the door, which allows the suspend glitch to exist.
+  ; The bugged lines of code are at 02033524 and 0203353C, they check if the player's X/Y is greater than the room's width/height, when they should check greater than or equal.
+
+0201BB6C AssetGetPointer
+  ; r0 - Asset index
+  ; Returns the pointer at 020CDAFC+(r0*0x20)
+0201BB58 AssetGetName
+  ; r0 - Asset index
+  ; Returns 020CDAFC+(r0*0x20)+6, where the asset's filename starts
+0201BB44 AssetGetType
+  ; r0 - Asset index
+  ; Returns 020CDAFC+(r0*0x20)+4, where the asset's type is
+02012358 AssetGetHardcodedFreeSpace
+  ; r0 - Hardcoded free space index (in list 0213226C)
+
+021DCA34 LoadEntityAssets
+  ; r0 - Entity subtype
+  ; r1 - Entity type (1 for enemies to use list 020CD88C, 2 for special objects to use list 020E19DC)
+021DCB14 GetEntityAssetPointerByIndex
+  ; r0 - Entity subtype
+  ; r1 - Entity type (1 or 2)
+  ; r2 - Index of the asset in this entity's list of assets
+021DCA94 GetEntityAsset???
+  ; r0 - Entity subtype
+  ; r1 - Entity type (1 or 2)
+  ; r2 - Index of the asset in this entity's list of assets
+021DCC14 GetEntityAssetsListPointer
+  ; r0 - Entity subtype
+  ; r1 - Entity type (1 or 2)
+
+021DC994 LoadEnemyOverlay
+  ; r0 - Entity subtype
+  ; r1 - Entity type
+  ; If this entity is an enemy (type 1), it checks to see if it needs an enemy overlay, and loads it if it does.
+
+02016014 LoadGfxAsset?
+  ; r0 - Gfx pointer
+0205B20C LoadAsset???
+  ; r0 - Menu entity
+  ; r1 - Asset index
+
+0201BA0C InitializeSpriteAssetFile
+  ; Initializes the standalone sprite file format with pointers in place of file offsets so that it can be used by the game engine.
+
+0204D5FC PlaySfxAtPos
+  ; r0 - Sfx index
+  ; r1 - x pos
+  ; r2 - y pos
+  ; r3 - z pos
+02060CC0 PlaySfx???
+  ; Has some internal role in playing sfx?
+0204D6B0 PlaySfx???2
+0205C798 PlaySong
+  ; r0 - Song index
+0204D4E4 PlaySongWithVariableUpdates
+  ; r0 - Song index
+  ; Calls PlaySong, then stores the song index to 0213D654 and 0213D65C (the song about to be played and the song currently playing variables).
+0204D374 PlaySongWithVariableUpdatesExceptInBossRush
+  ; r0 - Song index
+  ; If game mode (at 02111F51) is boss rush (4) this will do nothing.
+  ; Otherwise it calls PlaySongWithVariableUpdates.
+021FBA9C PlayCharSwitchVoice
+  ; r0 - Player index you're switching from
+  ; r1 - Player index you're switching to
+  ; Reads from list 0221E1DC to know which voice line to play for this combination of characters.
+
+0204D168 GetSongIndexForArea
+  ; r0 - Area index
+  ; Returns the song index for this area's background music.
+  ; It has some hardcoded return values:
+  ;   For area index E, it returns song index 3 (Jail of Jewels).
+  ;   For the Forgotten City, if the current room's Y pos on the map is >= 3, it returns song index B (In Search of the Secret Spell).
+
+02096F04 SetScreenBrightness
+  ; r0 - Where to store the brightness value. 0400006C for the bottom screen, 0400106C for the top screen.
+  ; r1 - The brightness to set.
+  ;   Positive (1 to 0x10) makes the whole screen whiter, negative (-1 to -0x10) makes the whole screen blacker.
+  ; Used for screen fade out transitions.
+
+02050544 ShowTextPopup
+  ; r0 - Text index of the text to display.
+
+02032D90 TeleportPlayer
+  ; r0 - Area index
+  ; r1 - Sector index
+  ; r2 - Room index
+  ; r3 - X pos (pixels)
+  ; [r13] - Y pos (pixels)
+  ; Note that you should call TriggerRoomTransition immediately after calling this for it to actually work.
+  ; Calling TeleportPlayer without TriggerRoomTransition will just bug out the game.
+02032CF4 TriggerRoomTransition
+
+02054784 SetOAMDataForElementalSymbols
+  ; r2 - X
+  ; r3 - Y
+
+021E43E4 GiveItem
+  ; r0 - Item type (2 is consumables, etc)
+  ; r1 - Item index
+021E4374 RemoveItem
+  ; r0 - Item type (2 is consumables, etc)
+  ; r1 - Item index
+  ; Reduces the number of this item you have by 1.
+  ; If you already have 0, ???
+021E4428 SetOwnedItemNum
+  ; r0 - Item type (2 is consumables, etc)
+  ; r1 - Item index
+  ; r2 - Number to set
+  ; Doesn't add or subtract, simply overrides the number of the item you own with r2.
+021E45A4 GetOwnedItemNum
+  ; r0 - Item type (2 is consumables, etc)
+  ; r1 - Item index
+021E54B4 PickupItem
+  ; The player picks up an item, deleting the entity, showing the item's name in the corner, etc.
+  ; r0 - Pointer to the item entity to delete
+  ; r1 - Item type (2 is consumables, etc)
+  ; r2 - Item index
+  ; r3 - Sound effect to play when picking up item
+  ; [r13,0] - ?
+021E4574 GetOwnedItemNum
+  ; r0 - Global ID+1 of the item
+
+021DDA28 MakeItemPickup1?
+  ; r0 - Item room entity (the one placed in the level editor)
+021E4F14 MakeItemPickup2?
+  ; r0 - Item room entity (the one placed in the level editor)
+  ; r1 - 1?
+021E5090 MakeItemPickup3?
+  ; r0 - Item room entity (the one placed in the level editor)
+  ; r1 - Pointer to item data
+  ; r2 - Update function
+  ; r3 - Draw function
+  ; [r13] - On-touch function?
+  ; [r13,4] - 1?
+0202C62C LoadGFXNeededForItem
+  ; r0 - Pointer to item data
+  ; r1 - Item pickup entity pointer + 0xD0
+  ; r2 - 0?
+0202C8B0 ItemIconGFXPage???
+  ; r0 - Index of the page of icons
+0202CC60 LoadItemIconGFXPage
+  ; r0 - Index of the page of icons
+  ; Returns: GFX asset pointer of this page of item icons, or 0 if it failed to load the gfx asset.
+021E6020 InitializeItemPickupGravity
+  ; r0 - Item pickup entity
+  ; Sets Y velocity to 0x1000 and the gravity (Y accel) to 0x199.
+021E5BB4 ItemPickupUpdate
+021E60A0 ItemPickupDraw
+021E5FF8 ItemPickup???
+021E51E4 TouchItemPickup?
+
+021E46C4 GetItemPointerByTypeIndex
+  ; r0 - Item type (2 is consumable, etc)
+  ; r1 - Index of the item
+021E476C GetItemIDByTypeIndex
+  ; r0 - Item type (2 is consumable, etc)
+  ; r1 - Index of the item
+  ; Returns r0 - global ID+1 of the item
+021E4860 GetItemTypeByGlobalID+1
+  ; r0 - Item global ID+1
+  ; Returns the item type (2 is consumables, etc)
+
+021D95D4 EnemyCheckDrops
+  ; r0 - Entity
+
+02005A18 GetCollisionDataBySubpixelPos
+  ; r0 - X pos in subpixels
+  ; r1 - Y pos in subpixels
+  ; Returns the collision data of the tile at the designated point.
+02005A3C GetCollisionDataByPixelPos
+  ; r0 - X pos in pixels
+  ; r1 - Y pos in pixels
+  ; Returns the collision data of the tile at the designated point.
+
+02214F34 GiveSkill
+  ; r0 - Skill index
+  ; r1 - Number of the skill to give
+02215B88 GetOwnedSkillNum
+  ; r0 - Skill index
+02215BBC GetOwnedSkillNum2
+  ; r0 - Skill index
+  ; This is effectively the same as GetOwnedSkillNum.
+  ; The only difference is that it adds the return value of GetOwnedSkillNum and function 02215B24 together and returns that. But function 02215B24 simply always returns 0, so it has no effect. (02215B24 was probably used for debugging something and commented out in the release build.)
+02215B2C SetNumOwnedSkill
+  ; r0 - Skill index
+  ; r1 - Number of the skill to set
+
+02043DF0 ShopGetItemPrice
+  ; r0 - Global ID of the item (can be a skill)
+  ; r1 - 
+  ; r2 - 
+
+02214D70 SkillGetCurrentSP
+  ; r0 - Skill index
+  ; Returns the current SP the player has for this skill.
+02214CA4 SkillAddSP
+  ; r0 - Skill index
+  ; r1 - SP to add
+02215ACC GetSkillDamageMultiplier
+  ; r0 - ?
+  ; r1 - Skill index
+  ; Returns 1 if the subweapon is not mastered, or 2 if it is.
+02214C38 SkillCheckMastered?
+  ; r0 - Skill index
+
+02207C54 CheckAccessoryEquipped
+  ; r0 - Player index (0 or 1)
+  ; r1 - Accessory index
+  ; Checks both accessory slots on the specified player.
+02207C9C CheckItemEquippedAndActive
+  ; r0 - Slot (0 for weapon, 3 for head armor, etc)
+  ; r1 - Item index
+  ; Will return true if either player 1 or player 2 have this item equipped, but only if your partner is called out. If your partner is hidden away, only the controlled character's equipment matters.
+  ; This is used for Eye for Decay.
+02214E9C ???PlayerSkill
+  ; r0 - Pointer to a player entity
+  ; Gets the skill index of the given player's currently equipped skill, and then does something with it. This is called when you use a skill, and called constantly as Charlotte is charging up a spell.
+  ; Then returns true or false.
+
+021FC77C PlayerFullRecover
+  ; Fully restores player HP and MP.
+02209AEC SubtractMP
+  ; r0 - MP to subtract
+
+021E3A94 UseConsumable
+  ; r0 - Index of the consumable
+  ; Calls func 021E3AA8 with r1=0 and r2=1.
+
+0205582C TopScreenUpdateAndDraw
+
+02030570 MapGetExploredTileListForArea
+  ; r0 - Area index
+  ; Returns r0 - Pointer to the start of this area's list of explored tiles.
+  ; These pointers are hardcoded instead of being a simple list.
+02030214 MapGetMetadataListPointer
+  ; r0 - Area index
+020301FC MapGetLineDataListPointer
+  ; r0 - Area index
+0202FFF4 MapGetRowWidthsListPointer
+  ; r0 - Area index
+0202FFD8 MapGetWidth
+  ; r0 - Area index
+0202FFBC MapGetHeight
+  ; r0 - Area index
+0203099C MapGetDrawXOffset
+  ; r0 - Area index
+02030984 MapGetDrawYOffset
+  ; r0 - Area index
+02030710 MapGetTotalNumTiles
+  ; r0 - Area index
+02032E68 MapGetNumExploredTiles
+  ; r0 - Area index
+02032DF0 MapGetPercentExplored
+  ; r0 - Area index
+  ; Returns the proportion of explored map tiles on this map out of decimal 1000 (so 100% with one decimal point).
+02032E34 AllMapsGetPercentExplored
+  ; Adds up the percentages explored on each of the individual 10 maps into a total percentage out of decimal 10000 (so 1000% with one decimal point).
+0203022C MapGreyOutAllExploredTiles
+
+0203000C MapGet???
+  ; r0 - Area index
+  ; r1 - X pos on the map
+  ; r2 - Y pos on the map
+  ; Returns ???
+0203093C MapGetCurrentArea???
+  ; r0 - X pos on the map
+  ; r1 - Y pos on the map
+  ; Returns ???
+
+0202F138 MapDraw???ForArea
+  ; r0 - Area index
+02004000 MapShowChanges1??
+  ; This must be called after 0202F138 for any visual changes to take effect... but only for the warp select, not the map menu?
+0202E854 MapShowChanges2??
+  ; This must be called after 0202F138 for any visual changes to take effect?
+0202E5B0 MapDraw???ForCurrentArea
+
+02051B38 WarpScreenAddObjects??
+  ; Seems responsible for adding the blinking position indicator and warp selection objects to the warp screen.
+0202DF18 SetWarpSelectScreenAreaIndexAndOtherThings?
+  ; r0 - Area index (to store to 0211AA71)
+
+0203072C WarpScreenSetWarpCycleOrder
+  ; Sets the horizontal and vertical cycle orders for all the warp points.
+
+02055CF4 SetTopScreenAreaName
+  ; r0 - Area name index (to store to 0211A756)
+
+0202DB68 GetSectorIndexByRoomPosOnCurrentAreaMap
+  ; r0 - Room X pos on the map in tiles
+  ; r1 - Room Y pos on the map in tiles
+0202DB3C GetRoomIndexByRoomPosOnCurrentAreaMap
+  ; r0 - Room X pos on the map in tiles
+  ; r1 - Room Y pos on the map in tiles
+0202DBF4 GetMapTileMetadata
+  ; r0 - Room X pos on the map in tiles
+  ; r1 - Room Y pos on the map in tiles
+  ; r2 - Area index
+
+0202E5F8 UpdatePlayerPositionOnMap
+  ; Updates the four variables holding both players' positions on the map (0211177C, 0211177E, 02111780, 02111782).
+  ; Then it reads the controlled player's position on the map, calls MapGetTileIndexByTileXAndY, and sets the bits for that tile index as explored.
+02030104 MapGetTileIndexByTileXAndY
+  ; r0 - Area index
+  ; r1 - X pos on the map in tiles
+  ; r2 - Y pos on the map in tiles
+  ; Returns the index of the tile in this map's list of tiles, or FFFF if there's no tile at this position.
+
+020347D0 DummyUpdate
+
+022028E0 PlayerUpdate
+021F6044 PartnerUpdate
+021FA7E8 PartnerMoveToPos
+  ; r0 - X pos (subpixels)
+  ; r1 - Y pos (subpixels)
+02202AD4 PlayerFloatingUpdate
+021F5EF4 PartnerFloatingUpdate
+
+021F5004 SwitchPlayers
+021F5AC0 CheckCanSwitchPlayers
+
+021FDDD0 PlayerUpdateVariousThings?
+  ; Among the things this does: scrolls the screen to the player, swaps out which GFX pages are loaded for the player
+021F4628 PlayerUpdateSwapGFX
+  ; r0 - Player entity
+
+021DBF9C WhipDangleUpdate
+  ; r0 - Some kind of entity pointer? (e.g. 020FF100 or 020FFD60)
+  ; This function hardcodes the hand position that is the center of the whip dangle.
+  ; 021DBFFC and 021DBFF8 hardcode Jonathan's hand's X and Y offsets relative to his position.
+  ; 021DBFF0 and 021DBFEC hardcode Richter's hand's X and Y offsets relative to his position.
+  ; 021DBFAC and 021DBFC0 hardcode any other character's hand's X and Y offsets relative to their position.
+  ; 021DC00C hardcodes the Y offset to add when the player is crouching.
+02216F08 NebulaUpdatePosition
+  ; r0 - Weapon entity
+  ; 02216F14 hardcodes the player's hand Y offset relative to their position.
+  ; 02216F28 hardcodes the additional hand Y offset for when the player is crouching.
+  ; 02216F20 hardcodes the player's hand X offset relative to their position.
+
+02012E44 DeleteEntity
+  ; r0 - Entity pointer
+02012CBC DeleteEntity2
+  ; r0 - Entity pointer
+  ; Calls the entity's detroy code, does some other things?, then calls DeleteEntity.
+
+0201291C DummyUpdate
+  ; Does nothing, immediately returns.
+
+02208C28 CalcPlayerAttack
+  ; r0 - Player index
+  ; r1 - ?
+  ; Returns r0 - the new attack value
+
+0220A038 CalcDamageToPlayer
+  ; Calculates the damage an enemy should do to a player.
+  ; r0 - Player number to damage. 0 or 1.
+  ; r1 - Base damage.
+  ; r2 - Damage types bitfield.
+021DA18C CalcDamageToEnemy
+  ; Calculates the damage a player/player weapon/player skill should do to an enemy.
+  ; r0 - Enemy entity taking damage (entity+0xA4 pointer)
+  ; r1 - Player/player weapon/player skill entity dealing damage (entity+0xA4 pointer)
+  ; r2 - Pointer to ?? on the stack
+
+021FC148 PlayerSetDamageAndTypes
+  ; r0 - Player entity pointer
+  ; r1 - Damage value
+  ; r2 - Damage types bitfield
+  ; r3 - Physical force of the attack
+
+02208A38 GetStatusEffectOnPlayer
+  ; r0 - Which player index (0 or 1)
+  ; Returns the index of the lowest-indexed status effect on that player.
+  ; So if the player is both poisoned and cursed, this function will return 0 to indicate poison, not 1 to indicate cursed. If the player is cursed but not poisoned it will return 1 to indicate cursed.
+  ; Returns -1 if this player isn't afflicted by any status effect.
+
+02012F68 Rand
+02012F30 RandMax
+  ; Max random number is r0-1. Min is 0.
+02013008 RandMax2
+  ; Max random number is r0-1. Min is 0.
+  ; How does this differ from RandMax??
+02013024 RandMaxRandSign
+  ; Min random number is -r0. Max is r0-1.
+
+020216B0 LoadSpriteMultiGfx
+  ; r0 - Entity ptr
+  ; r1 - Sprite ptr
+  ; r2 - GFX list ptr
+  ; r3 - Palette list ptr
+  ; [r13],1 - How to load GFX:
+  ;   0 - Loading a singular GFX...?
+  ;   1 - Loading from a list of GFX, and all GFX in the list should be loaded.
+  ;   2 - Loading from a list of GFX, but only load the first GFX in the list.
+020217C8 LoadSpriteSingleGfx
+  ; r0 - Entity ptr
+  ; r1 - Sprite ptr
+  ; r2 - GFX asset ptr
+  ; r3 - Palette list ptr
+0201FECC LoadCommonSprite
+  ; r0 - Entity
+02021364 LoadSpriteMultiGfx2?
+  ; Arguments taken are the same as LoadSpriteMultiGfx.
+  ; Unsure how this is different. This is called by Andras for example.
+02010654 LoadGFX
+  ; r0 - GFX asset pointer
+  ; r1 - 0x14? index in list 020FB204
+  ; r2 - Number of GFX pages to load
+  ; r3 - Size of each GFX page. 1 for 128x128 pages. 4 for 256x256 pages.
+
+020165D4 GetOAMAttributesBySpritePartSize
+  ; r0 - Part width in pixels
+  ; r1 - Part height in pixels
+  ; Returns r0 - the OAM shape and size attributes that match the width and height provided.
+  ; It takes both width/0x10 and height/0x10 and clamps them within range 0-3.
+  ; Then it uses (width*0x10)+height*4 as the index in list 020BE4DC, which has the OAM attributes for each size.
+
+020158FC GetNextFreeOAMSlotIndex
+  ; r0 - 0 for bottom screen, 1 for top screen
+  ; Returns the next free index in the OAM list, or -1 if there are no free slots.
+
+021DD000 LoadRoomEntities
+  ; r0 - Room's entity list pointer
+021DD190 LoadRoomSpecialObjects
+  ; r0 - Room's entity list pointer
+021DD424 LoadRoomEnemies
+  ; r0 - Room's entity list pointer
+021DD39C LoadRoomPickups
+  ; r0 - Room's entity list pointer
+021DD068 LoadRoomFontLoaders
+  ; r0 - Room's entity list pointer
+021DD75C LoadRoomEntity
+  ; r0 - Pointer to the entity in the room's entity list.
+
+021DCC40 InitializeRoomEnemyOrSpecialObject
+  ; r0 - Entity subtype
+  ; r1 - Entity type (1 or 2)
+  ; Loads this entity's assets from its asset list.
+  ; For enemies with resistance bit 0x80000000 set, it does not load their GFX assets.
+  ; Also calls LoadEnemyOverlay.
+
+02015AFC LoadPalette
+  ; r0 - Palette list pointer
+  ; r1 - Number of palettes
+  ; r2 - ?
+0200E954 LoadPalette2
+  ; r0 - Palette list pointer
+  ; r1 - 0?
+  ; r2 - Number of palettes to load (or 0 to load all palettes in the list)
+  ; Returns the index in the globally loaded palette list that this palette got loaded into. (This index then gets stored at entity+86 and entity+88.)
+0200EA44 GetFreeRoomEntityPaletteSlot
+  ; r0 - Palette list pointer
+  ; r1 - Number of palettes to load
+  ; Finds an appropriate spot in the list of currently loaded room entity palettes for these palettes to be loaded, and returns in the index in that list.
+  ; If this palette list is already in the room entity palette list, it returns the index it's already been loaded at.
+  ; If there's not enough consecutive free slots to fit the number of palettes needed, it returns -1 instead.
+
+
+0202125C EntitySetVertexColorMultipliers
+  ; r0 - Entity
+  ; r1 - The color multipliers to set. In the form of 00BBGGRR.
+  ; Gives all four corner vertexes the same color multipliers.
+
+0202131C GetNextFreePolygonID
+  ; Increments the value at 0211175C, and returns the new value.
+
+0202BD9C SpriteDrawAnim???
+  ; r0 - Entity
+  ; r1 - 
+  ; r2 - 
+  ; r3 - 
+  ; [r13] - 
+  ; [r13,4] - Animation index
+
+
+021D7E80 EntityMoveToFloor
+  ; Teleports entity downwards to the nearest floor.
+  ; r0 - Pointer to entity
+  ; r1 - Pointer to ??. May have the physical size of this entity?
+  ;   For skeleton, this is 022B21A0.
+  ;   04,2: ?? in pixels.
+
+0200E8EC EntityInitializeSprite
+  ; r0 - Entity
+  ; Calculates the pointer to this entity's sprite info in the currently loaded sprite info list.
+  ; Then calls EntityInitializeSprite2 with r0=sprite_info_pointer and r1=entity_pointer+0x78.
+02010E6C EntityInitializeSprite2
+  ; r0 - Pointer to a currently loaded sprite info (in list 020FA200).
+  ; r1 - Pointer to animation data within the entity memory (entity_pointer+0x78).
+  ; This function sets the entity's sprite animation list pointer (at entity+0x78). And then stores 0 to the unknown bitfield at entity+0x80.
+
+021D8D4C FacePlayer
+  ; r0 - Entity
+  ; Faces the controlled player by either setting or unsetting the horizontal flip bit (bit 0x80 of bitfield entity+0x74).
+  ; Not 100% sure on some of the exact details here, it does something depending on whether bit 0x20 of bitfield entity+0x120 is set or not.
+021D8DF8 GetPlayerXPos
+  ; r0 - Entity calling this function
+  ; Might get the X pos of whichever of the 2 players is closer to the enemy?
+
+020140F4 EntityUpdateHitbox???
+  ; r0 - Entity
+  ; gets sprite info pointer... and doesn't use it.
+  ; gets hitbox pointer
+
+0201DF8C ???EnemyStoreEntityPointerSomewhere
+  ; r0 - Entity
+  ; r1 - 0?
+  ; stores entity pointer at 0x020E66E8+r1*0xC
+  ; stores 0 (single byte) right after the place the entity pointer got stored.
+  ; used by the Skeleton enemy's create code if var B is not 0.
+
+021DAB70 EnemyCheckStatusEffects
+  ; r0 - Enemy entity
+  ; r1 - Bitfield of ???. Maybe which status effects to check??
+  ; Returns r0 - 1 if the enemy is frozen and shouldn't move at all. 0 if the enemy can still move.
+  ; The enemy AI calls this, and if the return value isn't 0 the AI returns early.
+
+021D8A28 CheckPlayerClose
+  ; r0 - Entity to check how close the player is to it
+  ; r1 - Minimum X pos to the left in pixels (negative)
+  ; r2 - Minimum Y pos upwards in pixels (negative)
+  ; r3 - Maximum X pos to the right in pixels (positive)
+  ; [r13,0] - Maximum Y pos downwards in pixels (positive)
+  ; Returns: 0 if the player is out of range, 1 if in range.
+
+02013518 GetEntityHitboxPtr
+  ; r0 - Entity pointer
+
+02013B10 SetHitbox
+  ; r0 - Entity
+  ; r1 - X pos
+  ; r2 - Y pos
+  ; r3 - Z pos
+  ; [r13] - Lower halfword is hitbox's left X offset. Upper halfword is hitbox's top Y offset.
+  ; [r13,4] - Lower halfword is hitbox's right X offset. Upper halfword is hitbox's bottom Y offset.
+  ; [r13,8] - Which hitbox (0 or 1)
+  ; [r13,C] - Hitbox type
+02014CB4 SetAbsoluteHitbox
+  ; r0 - Entity
+  ; r1 - Lower halfword is left X. Upper halfword is top Y.
+  ; r2 - Lower halfword is right X. Upper halfword is bottom Y.
+  ; r3 - Which hitbox (0 or 1)
+  ; [r13] - Hitbox type
+
+020108B0 GetSpriteInfoPointer
+  ; r0 - Index in the currently loaded sprite info list, 020FA200. This is from entity+0x6C.
+  ; Returns r0 - Pointer to the entry in that list. (0x020FA200 + index*0x10)
+
+0200E76C EntityGetCurrentSpriteFramePointer
+  ; r0 - Entity pointer
+  ; Returns a pointer in the entity's sprite data to the frame corresponding to the entity's current frame index.
+
+0200EF40 SpriteDrawEntity
+  ; A number of entities have this has their draw code.
+  ; r0 - Pointer to entity
+0200EF84 SpriteDrawNormal
+  ; r0 - Pointer to entity
+0200F2FC SpriteDrawSmall
+  ; ???
+  ; r0 - Pointer to entity
+0200F5B8 SpriteDrawPart
+  ; r0 - Pointer to entity
+  ; r1 - Pointer to part
+
+02010DD4 SetSpriteAnim
+  ; r0 - Entity+78
+  ; r1 - Anim index to set
+  ; Stores the anim index to entity+7C.
+02010DC4 SetSpriteAnimAndProperties
+  ; r0 - Entity+78
+  ; r1 - Anim index to set
+  ; r2 - Anim properties bitfield
+  ; Stores the properties bitfield to entity+80, then calls SetSpriteAnim.
+0200E8A4 SetSpriteAnimSafe
+  ; r0 - Entity
+  ; r1 - Anim index to set
+  ; Checks the entity's sprite to be sure r1 is a valid animation index for this sprite. If it's not valid, use anim 0 instead.
+  ; Then calls SetSpriteAnim to set the anim.
+0200E894 SetSpriteAnimAndPropertiesSafe
+  ; r0 - Entity
+  ; r1 - Anim index to set
+  ; r2 - Anim properties bitfield
+  ; Stores the properties bitfield to entity+80, then calls SetSpriteAnimSafe.
+
+021FED58 PlayerSetStateAnim
+  ; r0 - Entity
+  ; r1 - Animation state index. This is the index in their state->anims mapping list.
+  ; r2 - ? Stored to entity+FC
+  ; This sets the player's animation state.
+021FEE34 PlayerSetStateAnimAndProperties
+  ; r0 - Pointer to player entity
+  ; r1 - State index
+  ; r2 - Anim properties bitfield
+  ; Sets the player's animation state and the animation properties at entity+80.
+
+021DB0A4 GenericDraw
+  ; The draw function for enemies, enemy projectiles, player skills, skill pickups, special objects, dust, explosions, etc.
+  ; Not used for players, item pickups, destructibles, or particles from destroyed destructibles/enemies.
+
+0206DC34 BossRushTimerUpdate
+0206DC38 BossRushTimerDraw
+0201DE24 DrawTimerNumber
+  ; r0 - Entity
+  ; r1 - X pos on the screen (of the first digit)
+  ; r2 - Y pos on the screen
+  ; r3 - Number to draw
+  ; This draws just one part of the timer (minutes, or seconds, or milliseconds). In order for the three parts to be properly spaced there should be a 0x18000 difference between each of their X positions.
+
+021FE5FC SetEntityCollision
+  ; r0 - Entity pointer
+  ; r1 - Type of collision.
+  ;   0 - A jump-through platform you can slide on.
+  ;   1 - A jump-through platform you can fall through.
+  ;   3 - A completely solid block.
+
+02004A8C SetFakeBlockCollision
+  ; r0 - X pos of the block in pixels
+  ; r1 - Y pos of the block in pixels
+020049B0 SetFakeBlockCollisionMulti
+  ; r0 - X pos in pixels
+  ; r1 - Y pos in pixels
+  ; r2 - Width in blocks
+  ; r3 - Height in blocks
+  ; Used by the temporary walls added during the Legion fight.
+
+020BD268 FloatConvertFromInt
+  ; r0 - Integer
+  ; Returns r0 - The integer converted to a float
+020BD2B0 FloatMultiply
+  ; r0 - First float number to multiply
+  ; r1 - Second float number to multiply
+  ; Returns r0 - Result
+020BD1AC FloatConvertToInt
+  ; r0 - Float
+  ; Returns r0 - The float converted to an integer
+; Online tool for converting between int and float represented as hex: https://gregstoll.dyndns.org/~gregstoll/floattohex/
+
+020BD93C Divide
+  ; Divides r0 by r1 and returns the result.
+
+02208218 CheckPlayerPushColliding
+  ; Checks if the player is walking into a certain entity.
+  ; r0 - Entity to check if the player is pushing.
+02207D18 GetPlayerPushSpeed
+  ; It will check both players, only adding the speed of the player(s) that have the pushing state bit active (0x04000000).
+  ; For males, base speed is 0x1000.
+  ; For females, base speed is 0x800.
+  ; Strength Glove adds +0x800.
+
+02215394 CheckRelicEnabled
+  ; r0 - Index of the relic to check. 0-F.
+
+021D9148 SetDefensesFromEnemyDNA
+  ; r0 - Entity pointer
+  ; r1 - Enemy ID
+  ; Copies defense values from the enemy DNA into the entity.
+  ; This is also used for projectiles spawned by an enemy.
+021D9184 InitializeEnemyFromDNA
+  ; r0 - Entity pointer
+  ; Copies values from the enemy DNA into the entity.
+  ; It detects which enemy it is by the ID at +132 in the entity.
+
+02014FCC SetDamageAndTypes
+  ; r0 - Entity pointer
+  ; r1 - Damage value
+  ; r2 - Damage types bitfield
+  ; Stores r1 to entity+A8 and r2 to entity+AC if the entity's hitbox is active (entity+A6)
+02014F40 SetDamage
+  ; r0 - Entity pointer
+  ; r1 - Damage value
+  ; Stores r1 to entity+A8 if the entity's hitbox is active (entity+A6)
+02014FB0 SetDefenses
+  ; r0 - Entity pointer
+  ; r1 - Physical defense
+  ; r2 - Resistances
+  ; r3 - Weaknesses
+  ; Only stores these if the entity's hitbox is active (entity+A6)
+02014F9C SetMagicDefense
+  ; r0 - Entity pointer
+  ; r1 - Magical defense
+  ; Only stores these if the entity's hitbox is active (entity+A6)
+02014F2C SetIframes
+  ; r0 - Entity pointer
+  ; r1 - Iframes
+  ; Stores r1 to entity+B8 if the entity's hitbox is active (entity+A6)
+02014F08 SetIframesByIndex
+  ; r0 - Entity pointer
+  ; Only does anything if the entity's hitbox is active (entity+A6)
+  ; Gets the entity's iframes index from entity+A4.
+  ; Then gets the actual iframes from list 020BE4C8 and stores that to entity+B8.
+02014FE4 SetCallbacksAndIframesIndex
+  ; r0 - Entity
+  ; r1 - Iframes index to store at entity+A4
+  ; r2 - On-hurt-player callback to store at +C8
+  ; r3 - On-damaged callback to store at +CC
+  ; Also initializes the entity's hitbox.
+
+02214330 SubweaponInitialize
+
+022151A0 CalculateSkillDamage
+  ; r0 - Skill entity
+  ; The formula is:
+  ; (note: depends on player 1/2 obviously. also depends on "Type" from the skill.)
+  ; For spells, the code starts at 02215204:
+  ;   damage = (dmg_mult*int)/8 + int/16 + dmg_mult
+  ;   damage *= charge_mult (1 or 2 for half or fully charged)
+  ; For subweapons, it starts at 02215234:
+  ;   damage = (dmg_mult*int)/16 + int/32 + dmg_mult
+  ; If the subweapon's SP to master is 0:
+  ;   damage += (damage/2 + 1)
+  ; Otherwise:
+  ;   damage += current_sp * (damage + dmg_mult/2 + 4) / sp_to_master
+  ; If an enemy uses the skill, the formula is instead:
+  ;   damage = (dmg_mult*enemy_attack)/32 + enemy_attack/2 + dmg_mult
+
+020128E8 GetEntitySlotIndexByPointer
+  ; r0 - Entity
+  ; Calculates and returns the entity index in the list of all entities.
+
+021D386C CalculateDropChance
+  ; r0 - The base item drop chance from the enemy DNA.
+  ; Returns: The drop chance, out of decimal 10000. For example, 528 means a 5.28% drop chance. Note that drop chances cap at 50% (5000).
+
+02055210 RenderTextToTopScreen?
+  ; r0 - 
+  ; r1 - 
+  ; r2 - 
+  ; r3 - 
+  ; [r13] - X pos (in terms of 8x8 tiles)
+  ; [r13,4] - Y pos (in terms of 8x8 tiles)
+  ; [r13,8] - Text index to draw
+  ; [r13,C] - 
+0200A2A0 RenderNumberText?
+  ; r0 - 
+  ; r1 - 
+  ; r2 - 
+  ; r3 - 
+  ; [r13] - X pos (in terms of 8x8 tiles)
+  ; [r13,4] - Y pos (in terms of 8x8 tiles)
+  ; [r13,8] - Integer to draw
+  ; [r13,C] - 
+  ; [r13,10] - 
+0200870C RenderTextToTiles2
+  ; r0 - X pos (in terms of 8x8 tiles)
+  ; r1 - Y pos (in terms of 8x8 tiles)
+  ; r2 - 
+  ; r3 - 
+  ; [r13] - 
+  ; [r13,4] - 
+  ; [r13,8] - 
+  ; [r13,C] - Text index of the text to render (e.g. 516 is a single colon)
+  ; [r13,10] - 
+  ; [r13,14] - 
+
+020555B0 RenderSpriteToOAM
+  ; r0 - Pointer to the sprite header
+  ; r1 - 
+  ; r2 - 
+
+0203D3AC InitializeMenuBG1
+  ; r0 - Menu entity (02110F00)
+0205B5C0 LoadBGLayerMultiGfx
+  ; r0 - Menu entity (02110F00)
+  ; r1 - GFX list pointer
+  ; r2 - Palette list pointer
+  ; r3 - Layer metadata pointer
+0205B6CC LoadBGLayerSingleGfx
+  ; r1 - GFX asset pointer
+  ; r2 - Palette list pointer
+  ; r3 - Layer metadata pointer
+
+020557C8 SetTopScreen
+  ; r0 - Top screen type to change to
+
+02014EA0 DamagePlayer?
+02014EC4 TakeDamage?
+
+0207B520 InitializePortrait
+  ; r0 - Entity pointer
+  ; r1 - Which portrait sprite to use (index in list 020F4E84)
+  ; r2 - Which portrait frame to use? 0 for the frame used by early game portraits. 1 for the frame used by portraits in the Studio Portrait room. TODO
+  ; r3 - Speed that the whole portrait oscillates up and down at. Also affects how far it oscillates.
+  ;   Usually this speed is 0x4000. But the portrait that leads to the throne room uses 0.
+  ; [r13] - X pos for this portrait to place the player at after they take it
+  ; [r13,4] - 1 if the boss of this portrait has been defeated, 0 if it's still alive.
+02079980 PortraitDraw
+  ; r0 - Portrait entity
+
+02010788 EntityInitSpriteAndPalette
+  ; r0 - Child entity
+  ; r1 - Sprite pointer
+  ; r2 - Palette list pointer
+
+02020858 EntityInitSpriteAndPaletteFromParent
+  ; r0 - Parent entity
+  ; r1 - Child entity
+  ; Initializes the child with the sprite and palette of the parent.
+
+020F6270 GameObject
+020CA580 PointerToGameObject
+
+; Enemy-specific code
+0222D5DC EnemyZombieCreate
+0222D828 EnemyZombieUpdate
+0222E6C0 EnemyBatCreate
+0222E86C EnemyBatUpdate
+022451A4 EnemySkeletonCreate
+022452D0 EnemySkeletonUpdate
+022459D4 EnemySkeletonSpawnBrokenPieces
+02245BFC EnemySkeletonBrokenPieceUpdate
+02245E10 EnemySkeletonSpawnBoneProjectile
+  ; r0 - Parent skeleton entity
+  ; r1 - 0 or 1?
+02246034 EnemySkeletonBoneProjectileUpdate
+02297320 EnemyAxeArmorCreate
+022974F4 EnemyAxeArmorUpdate
+0226D430 EnemyDeathMaskCreate
+0226D5AC EnemyDeathMaskUpdate
+02295F4C EnemyZacchinoCreate
+02296040 EnemyZacchinoUpdate
+0224A038 EnemyStudentWitchCreate
+0224A168 EnemyStudentWitchUpdate
+0229BE08 EnemySlingerCreate
+0229BEFC EnemySlingerUpdate
+0225452C EnemyMiniDevilCreate
+0225460C EnemyMiniDevilUpdate
+0229D420 EnemyMudManCreate
+0229D830 EnemyMudManUpdate
+022353BC EnemyMermanCreate
+02235424 EnemyMermanUpdate
+02238BE0 EnemyUneCreate
+02238D2C EnemyUneUpdate
+02246A70 EnemySkullArcherCreate
+02246B88 EnemySkullArcherUpdate
+022509FC EnemyUkobackCreate
+02250688 EnemyUkobackUpdate
+022776E0 EnemyForneusCreate
+02277774 EnemyForneusUpdate
+022A5F80 EnemyPeepingEyeCreate
+022A6384 EnemyPeepingEyeUpdate
+0227A420 EnemySkullBartenderCreate
+0227A538 EnemySkullBartenderUpdate
+0222D3CC EnemyWightCreate
+0222D3D8 EnemyWightUpdate
+0223BA9C EnemyFrozenShadeCreate
+0223BBD8 EnemyFrozenShadeUpdate
+022D7900 EnemyAndrasCreate ; Overlay 72
+022D7A98 EnemyAndrasUpdate ; Overlay 72
+02278AB4 EnemyInvisibleManCreate
+02278BE8 EnemyInvisibleManUpdate
+022D7900 EnemyGolemCreate ; Overlay 76
+022D7A64 EnemyGolemUpdate ; Overlay 76
+022A4618 EnemyPersephoneCreate
+022A479C EnemyPersephoneUpdate
+022425FC EnemyMimicCreate
+022426D4 EnemyMimicUpdate
+02242DB4 EnemyLarvaCreate
+02242DC8 EnemyLarvaUpdate
+0227CFA8 EnemyLerajieCreate
+0227D07C EnemyLerajieUpdate
+022630F8 EnemySpittleBoneCreate
+02263248 EnemySpittleBoneUpdate
+022890C4 EnemyGhostCreate
+02289184 EnemyGhostUpdate
+022A3DE0 EnemyRedSkeletonCreate
+022A3ED4 EnemyRedSkeletonUpdate
+02252D10 EnemyArmorKnightCreate
+02252ED0 EnemyArmorKnightUpdate
+022888B0 EnemyEctoplasmCreate
+02288594 EnemyEctoplasmUpdate
+0222EB14 EnemyBonePillarCreate
+0222EC88 EnemyBonePillarUpdate
+022337F4 EnemyFleamanCreate
+022339EC EnemyFleamanUpdate
+022D8218 EnemyGreatArmorCreate ; Overlay 44
+022D84FC EnemyGreatArmorUpdate ; Overlay 44
+022D7918 EnemyCatoblepasCreate ; Overlay 48
+022D7CE4 EnemyCatoblepasUpdate ; Overlay 48
+02259EE4 EnemySlimeCreate
+0225A0DC EnemySlimeUpdate
+022917B0 EnemyMummyCreate
+0229186C EnemyMummyUpdate
+022D7900 EnemyDragonZombieCreate ; Overlay 68
+022D7AB8 EnemyDragonZombieUpdate ; Overlay 68
+022411A4 EnemyKillerClownCreate
+022412F0 EnemyKillerClownUpdate
+022AA698 EnemyCoppeliaCreate
+022AAA18 EnemyCoppeliaUpdate
+022702C4 EnemyHangedBonesCreate
+02270568 EnemyHangedBonesUpdate
+022B07AC EnemyFlyingSkullCreate
+022B0714 EnemyFlyingSkullUpdate
+022D7900 EnemySandWormCreate ; Overlay 69
+022D7ADC EnemySandWormUpdate ; Overlay 69
+0225E3EC EnemyWhiteDragonCreate
+0225E61C EnemyWhiteDragonUpdate
+022D7900 EnemyAmphisbaenaCreate ; Overlay 62
+022D7CAC EnemyAmphisbaenaUpdate ; Overlay 62
+022D7900 EnemyElgizaCreate ; Overlay 54
+022D7E10 EnemyElgizaUpdate ; Overlay 54
+022899D0 EnemyGreatGhostCreate
+02289C78 EnemyGreatGhostUpdate
+0229485C EnemyDevilWheelCreate
+022949D0 EnemyDevilWheelUpdate
+022744DC EnemyCrossbowArmorCreate
+02274678 EnemyCrossbowArmorUpdate
+022A8438 EnemyLilithCreate
+022A85B0 EnemyLilithUpdate
+022AF884 EnemySkeletonFlailCreate
+022AF78C EnemySkeletonFlailUpdate
+0229B0D8 EnemySkeletonGunmanCreate
+0229B460 EnemySkeletonGunmanUpdate
+0228E920 EnemyHillGuardCreate
+0228EA4C EnemyHillGuardUpdate
+02257488 EnemyImpCreate
+0225758C EnemyImpUpdate
+02236E18 EnemyHarpyCreate
+02236F0C EnemyHarpyUpdate
+02238BC4 EnemyCorpseweedCreate
+02238BD4 EnemyCorpseweedUpdate
+02246220 EnemyMedusaHeadCreate
+022467B4 EnemyMedusaHeadUpdate
+02252088 EnemySkelerangCreate
+022518F0 EnemySkelerangUpdate
+0223ECFC EnemyGaibonCreate
+0223EDF4 EnemyGaibonUpdate
+0223DB34 EnemySlograCreate
+0223DC28 EnemySlograUpdate
+022A110C EnemyFlyingArmorCreate
+022A123C EnemyFlyingArmorUpdate
+02262364 EnemyBlueCrowCreate
+02262454 EnemyBlueCrowUpdate
+0228B134 EnemyFrogCreate
+0228B214 EnemyFrogUpdate
+0223AF10 EnemyKillerDollCreate
+0223B070 EnemyKillerDollUpdate
+02272960 EnemyKillerBeeCreate
+02272A58 EnemyKillerBeeUpdate
+02268520 EnemyDogetherCreate
+02268600 EnemyDogetherUpdate
+0227B360 EnemyBeeHiveCreate
+0227B4C8 EnemyBeeHiveUpdate
+02293378 EnemyMoldyCorpseCreate
+022934A0 EnemyMoldyCorpseUpdate
+02298B1C EnemyTombstoneCreate
+02298C84 EnemyTombstoneUpdate
+022D7CEC EnemyTreantCreate ; Overlay 45
+022D8078 EnemyTreantUpdate ; Overlay 45
+022972F8 EnemyRedAxeArmorCreate
+02297314 EnemyRedAxeArmorUpdate
+02287134 EnemyManeatingPlantCreate
+0228744C EnemyManeatingPlantUpdate
+02282B78 EnemySkeletonBlazeCreate
+02282954 EnemySkeletonBlazeUpdate
+022AE5D0 EnemyRazorBatCreate
+022AE238 EnemyRazorBatUpdate
+022812F4 EnemyWyvernCreate
+02281088 EnemyWyvernUpdate
+02258444 EnemyMalachiCreate
+022585A4 EnemyMalachiUpdate
+0224ED70 EnemySpinDevilCreate
+0224EE80 EnemySpinDevilUpdate
+022A85BC EnemySuccubusCreate
+022A86F8 EnemySuccubusUpdate
+022D7918 EnemyFlameDemonCreate ; Overlay 47
+022D7924 EnemyFlameDemonUpdate ; Overlay 47
+0224B458 EnemyDeadCrusaderCreate
+0224B57C EnemyDeadCrusaderUpdate
+0226AB44 EnemyHeavyArmorCreate
+0226AC8C EnemyHeavyArmorUpdate
+022D7900 EnemyMalphasCreate ; Overlay 46
+022D7A48 EnemyMalphasUpdate ; Overlay 46
+022D7900 EnemyFinalGuardCreate ; Overlay 44
+022D7948 EnemyFinalGuardUpdate ; Overlay 44
+022848C8 EnemyGlasyaLabolasCreate
+022845F0 EnemyGlasyaLabolasUpdate
+0222D3E4 EnemyGhoulCreate
+0222D3F0 EnemyGhoulUpdate
+022D7900 EnemyRuler'sSwordCreate ; Overlay 71
+022D7A4C EnemyRuler'sSwordUpdate ; Overlay 71
+0224C21C EnemyWitchCreate
+0224C33C EnemyWitchUpdate
+022717AC EnemySkeletonTreeCreate
+02271AD0 EnemySkeletonTreeUpdate
+0227F818 EnemyBusterArmorCreate
+0227F824 EnemyBusterArmorUpdate
+022868BC EnemyArmoredFleamanCreate
+02286A04 EnemyArmoredFleamanUpdate
+022D7900 EnemyAmalaricSniperCreate ; Overlay 77
+022D79FC EnemyAmalaricSniperUpdate ; Overlay 77
+022908A0 EnemyOldAxeArmorCreate
+0229097C EnemyOldAxeArmorUpdate
+022D7900 EnemyGorgonCreate ; Overlay 48
+022D790C EnemyGorgonUpdate ; Overlay 48
+022A2A20 EnemyJackO'BonesCreate
+022A2B90 EnemyJackO'BonesUpdate
+0225E394 EnemyTanjellyCreate
+0225E3E0 EnemyTanjellyUpdate
+02252C08 EnemyDeadWarriorCreate
+0225277C EnemyDeadWarriorUpdate
+0228AA60 EnemyToadCreate
+0228AB50 EnemyToadUpdate
+02299BD4 EnemyAliorumnasCreate
+02299CF4 EnemyAliorumnasUpdate
+0229CCBC EnemyDodoCreate
+0229CDCC EnemyDodoUpdate
+02264348 EnemyViceBeetleCreate
+02264354 EnemyViceBeetleUpdate
+022D7900 EnemyAluraUneCreate ; Overlay 73
+022D7AA0 EnemyAluraUneUpdate ; Overlay 73
+0228B664 EnemyLightkeeperCreate
+0228B764 EnemyLightkeeperUpdate
+02261464 EnemyBlackCrowCreate
+0226156C EnemyBlackCrowUpdate
+02234B80 EnemyMandragoraCreate
+02234C7C EnemyMandragoraUpdate
+02243D74 EnemyWakwakTreeCreate
+02243EF4 EnemyWakwakTreeUpdate
+0224DB80 EnemyGuillotinerCreate
+0224DC90 EnemyGuillotinerUpdate
+022A7620 EnemyNyxCreate
+022A7720 EnemyNyxUpdate
+0228CA98 EnemyMinotaurCreate
+0228CB8C EnemyMinotaurUpdate
+02249370 EnemyMothmanCreate
+022494D8 EnemyMothmanUpdate
+0228F454 EnemyLauraCreate
+0228F54C EnemyLauraUpdate
+02247D20 EnemyYorickCreate
+02247F04 EnemyYorickUpdate
+0227C048 EnemyDragonflyCreate
+0227C164 EnemyDragonflyUpdate
+02260380 EnemyQuetzalcoatlCreate
+02260490 EnemyQuetzalcoatlUpdate
+022343EC EnemyRipperCreate
+022345C4 EnemyRipperUpdate
+022DBC10 EnemyPoisonWormCreate ; Overlay 69
+022DBC1C EnemyPoisonWormUpdate ; Overlay 69
+0222C840 EnemyGhostDancerCreate
+0222CA7C EnemyGhostDancerUpdate
+02265CA0 EnemyDemonHeadCreate
+02265E2C EnemyDemonHeadUpdate
+0229E700 EnemyLesserDemonCreate
+0229E8C0 EnemyLesserDemonUpdate
+0222D3B4 EnemyGhoulKingCreate
+0222D3C0 EnemyGhoulKingUpdate
+022866C4 EnemyVapulaCreate
+02286410 EnemyVapulaUpdate
+022D7900 EnemyIronGolemCreate ; Overlay 45
+022D7CE0 EnemyIronGolemUpdate ; Overlay 45
+022972D0 EnemyDoubleAxeArmorCreate
+022972EC EnemyDoubleAxeArmorUpdate
+022D7900 EnemyDemonCreate ; Overlay 47
+022D790C EnemyDemonUpdate ; Overlay 47
+0222FB70 EnemyBoneArkCreate
+0222FCD8 EnemyBoneArkUpdate
+022403CC EnemySkeletonFarmerCreate
+022405C4 EnemySkeletonFarmerUpdate
+022D7900 EnemyAlastorCreate ; Overlay 75
+022D79FC EnemyAlastorUpdate ; Overlay 75
+0224518C EnemyGoldSkeletonCreate
+02245198 EnemyGoldSkeletonUpdate
+022550B0 EnemyCaveTrollCreate
+0225519C EnemyCaveTrollUpdate
+02264360 EnemyAmduciasCreate
+02264480 EnemyAmduciasUpdate
+022D7D14 EnemyBaloreCreate ; Overlay 43
+022D8090 EnemyBaloreUpdate ; Overlay 43
+022D7900 EnemyGergothCreate ; Overlay 50
+022D7D58 EnemyGergothUpdate ; Overlay 50
+022D7900 EnemyZephyrCreate ; Overlay 49
+022D7B28 EnemyZephyrUpdate ; Overlay 49
+022D7900 EnemyAguniCreate ; Overlay 67
+022D7A98 EnemyAguniUpdate ; Overlay 67
+022D7900 EnemyAbaddonCreate ; Overlay 51
+022D7A78 EnemyAbaddonUpdate ; Overlay 51
+02233028 EnemyDoppelgangerCreate
+02233258 EnemyDoppelgangerUpdate
+022D7900 EnemyFakeTrevorCreate ; Overlay 70
+022D7C84 EnemyFakeTrevorUpdate ; Overlay 70
+022DB8AC EnemyFakeGrantCreate ; Overlay 70
+022DBAA0 EnemyFakeGrantUpdate ; Overlay 70
+022DD5E4 EnemyFakeSyphaCreate ; Overlay 70
+022DD7C4 EnemyFakeSyphaUpdate ; Overlay 70
+022D7900 EnemyDullahanCreate ; Overlay 58
+022D7ED8 EnemyDullahanUpdate ; Overlay 58
+022D7900 EnemyBehemothCreate ; Overlay 53
+022D7E2C EnemyBehemothUpdate ; Overlay 53
+022D7900 EnemyKeremetCreate ; Overlay 56
+022D7AC8 EnemyKeremetUpdate ; Overlay 56
+022D7900 EnemyAstarteCreate ; Overlay 74
+022D7AD0 EnemyAstarteUpdate ; Overlay 74
+022D7900 EnemyLegionCreate ; Overlay 52
+022D7C50 EnemyLegionUpdate ; Overlay 52
+022D7BA4 EnemyDagonCreate ; Overlay 59
+022D7900 EnemyDagonUpdate ; Overlay 59
+022D7900 EnemyDeathCreate ; Overlay 64
+022D7CB4 EnemyDeathUpdate ; Overlay 64
+022D7900 EnemyStellaCreate ; Overlay 63
+022D7DC0 EnemyStellaUpdate ; Overlay 63
+022DECF4 EnemyLorettaCreate ; Overlay 63
+022DEE44 EnemyLorettaUpdate ; Overlay 63
+022D7900 EnemyBraunerCreate ; Overlay 55
+022D7CE4 EnemyBraunerUpdate ; Overlay 55
+022D7AE4 EnemyTheCreatureCreate ; Overlay 60
+022D7900 EnemyTheCreatureUpdate ; Overlay 60
+022DAE58 EnemyWerewolfCreate ; Overlay 57
+022DAB40 EnemyWerewolfUpdate ; Overlay 57
+022D7900 EnemyMedusaCreate ; Overlay 61
+022D7D5C EnemyMedusaUpdate ; Overlay 61
+022DC788 EnemyMummyManCreate ; Overlay 66
+022DC494 EnemyMummyManUpdate ; Overlay 66
+02231C28 EnemyWhip'sMemoryCreate
+02232134 EnemyWhip'sMemoryUpdate
+022E49C4 EnemyDraculaCreate ; Overlay 64
+022E4CD0 EnemyDraculaUpdate ; Overlay 64
+022D7964 EnemyTrueDraculaCreate ; Overlay 65
+022D7CA4 EnemyTrueDraculaUpdate ; Overlay 65
+
+; Special object-specific code
+0206D0C4 Object00Create
+0206D160 Object00Update
+0206F6D0 Object01Create
+0206F8C4 Object01Update
+0206DF44 Object02Create
+0206DFCC Object02Update
+020734B8 Object03Create
+020734E4 Object03Update
+0206D924 Object04Create
+0206DA34 Object04Update
+0206D164 Object05Create
+0206D1BC Object05Update
+020733CC Object06Create
+020733D8 Object06Update
+020344BC Object07Create
+020344C0 Object07Update
+020344B4 Object08Create
+020344B8 Object08Update
+020344AC Object09Create
+020344B0 Object09Update
+020344A4 Object0ACreate
+020344A8 Object0AUpdate
+0203449C Object0BCreate
+020344A0 Object0BUpdate
+02034494 Object0CCreate
+02034498 Object0CUpdate
+0203448C Object0DCreate
+02034490 Object0DUpdate
+02034484 Object0ECreate
+02034488 Object0EUpdate
+0203447C Object0FCreate
+02034480 Object0FUpdate
+02034474 Object10Create
+02034478 Object10Update
+0203F078 Object11Create
+0203F07C Object11Update
+02044730 Object12Create
+02044734 Object12Update
+02044728 Object13Create
+0204472C Object13Update
+02044720 Object14Create
+02044724 Object14Update
+02049278 Object15Create
+0204927C Object15Update
+020758BC Object16Create
+02075950 Object16Update
+02071540 Object17Create
+02071598 Object17Update
+0206CFEC Object18Create
+0206D04C Object18Update
+02070828 Object19Create
+02070824 Object19Update
+0207918C Object1ACreate
+020791F0 Object1AUpdate
+0206F58C Object1BCreate
+0206F3CC Object1BUpdate
+022E8820 Object1CCreate ; Overlay 78
+022E8A00 Object1CUpdate ; Overlay 78
+0207E840 Object1DCreate
+0207DF0C Object1DUpdate
+020826C0 Object1ECreate
+020828D0 Object1EUpdate
+020818E4 Object1FCreate
+020819A8 Object1FUpdate
+02081D10 Object20Create
+02081E0C Object20Update
+022E8948 Object21Create ; Overlay 92
+022E8AC0 Object21Update ; Overlay 92
+020716AC Object22Create
+020718D4 Object22Update
+02085DE8 Object23Create
+02085E78 Object23Update
+02070360 Object24Create
+020703C0 Object24Update
+022E90F4 Object25Create ; Overlay 93
+022E8FB4 Object25Update ; Overlay 93
+0206C338 Object26Create
+0206C15C Object26Update
+0206CAA4 Object27Create
+0206CA3C Object27Update
+022E9CF0 Object28Create ; Overlay 104
+022E9B08 Object28Update ; Overlay 104
+0206CF7C Object29Create
+0206CFDC Object29Update
+0206CF0C Object2ACreate
+0206CF6C Object2AUpdate
+020714DC Object2BCreate
+02071534 Object2BUpdate
+020754A4 Object2CCreate
+02075504 Object2CUpdate
+02075438 Object2DCreate
+02075498 Object2DUpdate
+022EA2E0 Object2ECreate ; Overlay 86
+022E9E80 Object2EUpdate ; Overlay 86
+022E8B74 Object2FCreate ; Overlay 101
+022E889C Object2FUpdate ; Overlay 101
+022E8C68 Object30Create ; Overlay 111
+022E8BD8 Object30Update ; Overlay 111
+022E9824 Object31Create ; Overlay 94
+022E9720 Object31Update ; Overlay 94
+022E8B94 Object32Create ; Overlay 91
+022E8840 Object32Update ; Overlay 91
+02070A18 Object33Create
+02070B1C Object33Update
+02072C6C Object34Create
+02072CF4 Object34Update
+02072F30 Object35Create
+02072FFC Object35Update
+020807D8 Object36Create
+020809B4 Object36Update
+020803B4 Object37Create
+02080648 Object37Update
+0207F890 Object38Create
+0207FAA4 Object38Update
+020817B4 Object39Create
+02081798 Object39Update
+022EC118 Object3ACreate ; Overlay 79
+022EC69C Object3AUpdate ; Overlay 79
+0206E4C8 Object3BCreate
+0206EA4C Object3BUpdate
+02069EEC Object3CCreate
+02069BA4 Object3CUpdate
+02066FCC Object3DCreate
+02066C38 Object3DUpdate
+0206B49C Object3ECreate
+0206B390 Object3EUpdate
+0206A5E8 Object3FCreate
+0206A358 Object3FUpdate
+022E90F8 Object40Create ; Overlay 81
+022E8E94 Object40Update ; Overlay 81
+022E92D8 Object41Create ; Overlay 85
+022E91AC Object41Update ; Overlay 85
+020682D0 Object42Create
+020682CC Object42Update
+02066AE8 Object43Create
+02066A30 Object43Update
+0206AE44 Object44Create
+0206AD4C Object44Update
+0206CE9C Object45Create
+0206CEFC Object45Update
+022E99CC Object46Create ; Overlay 85
+022E9D2C Object46Update ; Overlay 85
+02075E28 Object47Create
+02075F64 Object47Update
+022EB024 Object48Create ; Overlay 86
+022EA654 Object48Update ; Overlay 86
+020680FC Object49Create
+020680EC Object49Update
+022E982C Object4ACreate ; Overlay 85
+022E98D0 Object4AUpdate ; Overlay 85
+022D7900 Object4BCreate ; Overlay 65
+022D7960 Object4BUpdate ; Overlay 65
+0206F328 Object4CCreate
+0206F3C8 Object4CUpdate
+02064E5C Object4DCreate
+02064C38 Object4DUpdate
+022E90D0 Object4ECreate ; Overlay 79
+022E8CD4 Object4EUpdate ; Overlay 79
+02075284 Object4FCreate
+0207357C Object4FUpdate
+022E8B34 Object50Create ; Overlay 109
+022E8B0C Object50Update ; Overlay 109
+022E8A40 Object51Create ; Overlay 110
+022E8A18 Object51Update ; Overlay 110
+022E9490 Object52Create ; Overlay 111
+022E9468 Object52Update ; Overlay 111
+022E8AD0 Object53Create ; Overlay 112
+022E8AA8 Object53Update ; Overlay 112
+022E8E8C Object54Create ; Overlay 91
+022E8E64 Object54Update ; Overlay 91
+022E8934 Object55Create ; Overlay 92
+022E890C Object55Update ; Overlay 92
+022E89A8 Object56Create ; Overlay 102
+022E8980 Object56Update ; Overlay 102
+022E8934 Object57Create ; Overlay 103
+022E890C Object57Update ; Overlay 103
+02075064 Object58Create
+0207357C Object58Update
+02074EB0 Object59Create
+0207357C Object59Update
+02074D00 Object5ACreate
+0207357C Object5AUpdate
+02074B48 Object5BCreate
+0207357C Object5BUpdate
+020749D4 Object5CCreate
+0207357C Object5CUpdate
+0207420C Object5DCreate
+0207357C Object5DUpdate
+020743BC Object5ECreate
+0207357C Object5EUpdate
+02069534 Object5FCreate
+02069530 Object5FUpdate
+02066A48 Object60Create
+02066A30 Object60Update
+022E94F4 Object61Create ; Overlay 93
+022E946C Object61Update ; Overlay 93
+022E9104 Object62Create ; Overlay 91
+022E9100 Object62Update ; Overlay 91
+022E8938 Object63Create ; Overlay 99
+022E8934 Object63Update ; Overlay 99
+022E8AE8 Object64Create ; Overlay 100
+022E8A14 Object64Update ; Overlay 100
+022E9AD4 Object65Create ; Overlay 111
+022E9AFC Object65Update ; Overlay 111
+022E8C60 Object66Create ; Overlay 112
+022E8BF8 Object66Update ; Overlay 112
+022E8A20 Object67Create ; Overlay 87
+022E8A48 Object67Update ; Overlay 87
+02075554 Object68Create
+020756AC Object68Update
+02074860 Object69Create
+0207357C Object69Update
+020746EC Object6ACreate
+0207357C Object6AUpdate
+02074574 Object6BCreate
+0207357C Object6BUpdate
+020740A0 Object6CCreate
+0207357C Object6CUpdate
+02074030 Object6DCreate
+0207357C Object6DUpdate
+02074078 Object6ECreate
+0207357C Object6EUpdate
+02073FE8 Object6FCreate
+0207357C Object6FUpdate
+02073E50 Object70Create
+0207357C Object70Update
+02073CE4 Object71Create
+0207357C Object71Update
+02073CBC Object72Create
+0207357C Object72Update
+02073C58 Object73Create
+0207357C Object73Update
+020751EC Object74Create
+0207357C Object74Update
+02079150 Object75Create
+02079180 Object75Update
+02078F5C Object76Create
+02079144 Object76Update
+02076AEC Object77Create
+02076C98 Object77Update
+022EB460 Object78Create ; Overlay 86
+022EB568 Object78Update ; Overlay 86
+02065F1C Object79Create
+02065508 Object79Update
+0206A864 Object7ACreate
+0206A774 Object7AUpdate
+020682E0 Object7BCreate
+020682D4 Object7BUpdate
+02073AC0 Object7CCreate
+0207357C Object7CUpdate
+02073A5C Object7DCreate
+0207357C Object7DUpdate
+0206C6AC Object7ECreate
+0206C6A0 Object7EUpdate
+022E9FF8 Object7FCreate ; Overlay 93
+022E9FC0 Object7FUpdate ; Overlay 93
+020739BC Object80Create
+0207357C Object80Update
+022E8820 Object81Create ; Overlay 88
+022E89DC Object81Update ; Overlay 88
+02071FD8 Object82Create
+02072168 Object82Update
+0207F52C Object83Create
+0207F6B4 Object83Update
+022E8A68 Object84Create ; Overlay 99
+022E8B04 Object84Update ; Overlay 99
+02085CC4 Object85Create
+02085D5C Object85Update
+02078EEC Object86Create
+02078F50 Object86Update
+02078E50 Object87Create
+02078EE0 Object87Update
+0206A1D8 Object88Create
+0206A10C Object88Update
+0207EF48 Object89Create
+0207F178 Object89Update
+02076A5C Object8ACreate
+02076AE8 Object8AUpdate
+022E89C4 Object8BCreate ; Overlay 102
+022E89C0 Object8BUpdate ; Overlay 102
+022EAA1C Object8CCreate ; Overlay 85
+022EAA18 Object8CUpdate ; Overlay 85
+022EAE38 Object8DCreate ; Overlay 85
+022EAD74 Object8DUpdate ; Overlay 85
+022E8820 Object8ECreate ; Overlay 98
+022E8960 Object8EUpdate ; Overlay 98
+022E8C00 Object8EDraw ; Overlay 98
+022E8820 Object8FCreate ; Overlay 89
+022E88E4 Object8FUpdate ; Overlay 89
+02073898 Object90Create
+0207357C Object90Update
+02073778 Object91Create
+0207357C Object91Update
+02073658 Object92Create
+0207357C Object92Update
+02073580 Object93Create
+0207357C Object93Update
+022E8E4C Object94Create ; Overlay 109
+022E8E48 Object94Update ; Overlay 109
+022EA2A4 Object95Create ; Overlay 78
+022E9D00 Object95Update ; Overlay 78
+022EB9F4 Object96Create ; Overlay 79
+022EB584 Object96Update ; Overlay 79
+022EBB50 Object97Create ; Overlay 79
+022EBA48 Object97Update ; Overlay 79
+022EBD6C Object98Create ; Overlay 79
+022EBBA0 Object98Update ; Overlay 79
+022EA418 Object99Create ; Overlay 93
+022EA328 Object99Update ; Overlay 93
+022E8EFC Object9ACreate ; Overlay 95
+022E8820 Object9AUpdate ; Overlay 95
+022E8AC4 Object9BCreate ; Overlay 81
+022E8820 Object9BUpdate ; Overlay 81
+022E9860 Object9CCreate ; Overlay 91
+022E937C Object9CUpdate ; Overlay 91
+022EC408 Object9DCreate ; Overlay 86
+022EB850 Object9DUpdate ; Overlay 86
+022EC9B0 Object9ECreate ; Overlay 86
+022EC844 Object9EUpdate ; Overlay 86
+022EC0F0 Object9FCreate ; Overlay 79
+022EBD94 Object9FUpdate ; Overlay 79
+022EB308 ObjectA0Create ; Overlay 85
+022EAEE8 ObjectA0Update ; Overlay 85
+022E8FDC ObjectA1Create ; Overlay 88
+022E8D58 ObjectA1Update ; Overlay 88
+022E97C8 ObjectA2Create ; Overlay 89
+022E930C ObjectA2Update ; Overlay 89
+022E91F4 ObjectA3Create ; Overlay 89
+022E8EC0 ObjectA3Update ; Overlay 89
+022E8DB4 ObjectA4Create ; Overlay 89
+022E8970 ObjectA4Update ; Overlay 89
+022E935C ObjectA5Create ; Overlay 115
+022E90E8 ObjectA5Update ; Overlay 115
+022E9034 ObjectA6Create ; Overlay 115
+022E8820 ObjectA6Update ; Overlay 115
+022E8BB4 ObjectA7Create ; Overlay 87
+022E8A70 ObjectA7Update ; Overlay 87
+022E99AC ObjectA8Create ; Overlay 87
+022E8C40 ObjectA8Update ; Overlay 87
+022E8DAC ObjectA9Create ; Overlay 90
+022E8820 ObjectA9Update ; Overlay 90
+022E9BD0 ObjectAACreate ; Overlay 117
+022E96E8 ObjectAAUpdate ; Overlay 117
+022E9500 ObjectABCreate ; Overlay 117
+022E8820 ObjectABUpdate ; Overlay 117
+021D1890 ObjectACCreate
+021D1878 ObjectACUpdate
+021D1984 ObjectADCreate
+021D18B8 ObjectADUpdate
+022EA124 ObjectAECreate ; Overlay 89
+022E9B28 ObjectAEUpdate ; Overlay 89
+022EA76C ObjectAFCreate ; Overlay 78
+022EA324 ObjectAFUpdate ; Overlay 78
+022E9EB4 ObjectB0Create ; Overlay 115
+022E96B8 ObjectB0Update ; Overlay 115
+021D1A40 ObjectB1Create
+021D19AC ObjectB1Update
+022ECD38 ObjectB2Create ; Overlay 86
+022ECC40 ObjectB2Update ; Overlay 86
+022ECBF4 ObjectB3Create ; Overlay 86
+022EC9E4 ObjectB3Update ; Overlay 86
+022E9D98 ObjectB4Create ; Overlay 79
+022EA138 ObjectB4Update ; Overlay 79
+022E9254 ObjectB5Create ; Overlay 79
+022E9670 ObjectB5Update ; Overlay 79
+021D2938 ObjectB6Create
+021D293C ObjectB6Update
+021D2930 ObjectB7Create
+021D2934 ObjectB7Update
+021D2928 ObjectB8Create
+021D292C ObjectB8Update
+021D2920 ObjectB9Create
+021D2924 ObjectB9Update
+021D2918 ObjectBACreate
+021D291C ObjectBAUpdate
+021D2910 ObjectBBCreate
+021D2914 ObjectBBUpdate
+021D2908 ObjectBCCreate
+021D290C ObjectBCUpdate
+021D2900 ObjectBDCreate
+021D2904 ObjectBDUpdate
+021D28F8 ObjectBECreate
+021D28FC ObjectBEUpdate
+
+; Skill-specific code
+02212C28 SkillPuppetMasterUse
+02212984 SkillAxeRichterUse
+0221240C SkillCrossRichterUse
+02211CE4 SkillHolyWaterRichterUse
+02211248 SkillCrossGrandRichterUse
+0220B398 SkillSeiryuUse
+0220B104 SkillSuzakuUse
+0220AF28 SkillByakkoUse
+0220B0F8 SkillGnebuUse
+02210A60 SkillKnifeUse
+02210F50 SkillAxeUse
+02210BCC SkillCrossUse
+02210BBC SkillHolyWaterUse
+022106B4 SkillBibleUse
+02210398 SkillJavelinUse
+0220FCB8 SkillRicochetRockUse
+0220F6B4 SkillBoomerangUse
+0220F3C0 SkillBwakaKnifeUse
+0220F24C SkillShurikenUse
+0220F204 SkillYagyuShurikenUse
+0220B3E0 SkillDiscusUse
+0220ECDC SkillKunimitsuUse
+0220F03C SkillKunaiUse
+0220E72C SkillPaperAirplaneUse
+0220EA70 SkillCreamPieUse
+0220B88C SkillCrossbowUse
+0220E350 SkillDartUse
+0220DE1C SkillGrenadeUse
+0220D9C8 SkillSteelBallUse
+0220D65C SkillStonewallUse
+0220D38C SkillOffensiveFormUse
+0220D38C SkillDefensiveFormUse
+0220D19C SkillTauntUse
+0220C894 SkillWreckingBallUse
+0220C5C0 SkillRampageUse
+0220C518 SkillKneeStrikeUse
+0220BE14 SkillAuraBlastUse
+0220C1B4 SkillRocketSlashUse
+021EE890 SkillToadMorphUse
+021EE55C SkillOwlMorphUse
+021ED488 SkillSanctuaryUse
+021EDDA0 SkillSpeedUpUse
+021EE200 SkillBerserkerUse
+021EB934 SkillEyeforanEyeUse
+021F10EC SkillClearSkiesUse
+021F0B84 SkillTimeStopUse
+021EF338 SkillHealUse
+021EF134 SkillCurePoisonUse
+021EF134 SkillCureCurseUse
+021EEF14 SkillSTRBoostUse
+021EEF14 SkillCONBoostUse
+021EEF14 SkillINTBoostUse
+021EEF14 SkillMINDBoostUse
+021EEF14 SkillLUCKBoostUse
+021EEF14 SkillALLBoostUse
+021EC060 SkillGaleForceUse
+021EBBF0 SkillRockRiotUse
+021EF6F4 SkillRagingFireUse
+021E9498 SkillIceFangUse
+021ED0B4 SkillThunderboltUse
+021EFE38 SkillSpiritofLightUse
+021EAD34 SkillDarkRiftUse
+021EA5A4 SkillTempestUse
+021ECD10 SkillStoneCircleUse
+021EC654 SkillIceNeedleUse
+021F0628 SkillExplosionUse
+021EFA80 SkillChainLightningUse
+021E9ED4 SkillPiercingBeamUse
+021E8FD0 SkillNightmareUse
+021E8AD4 SkillSummonMedusaUse
+021E858C SkillAcidicBubblesUse
+021E80A0 SkillHexUse
+021E7890 SkillSalamanderUse
+021E97E0 SkillCocytusUse
+021EB268 SkillThor'sBellowUse
+021E7220 SkillSummonCrowUse
+021E6D14 SkillSummonGhostUse
+021E69A0 SkillSummonSkeletonUse
+021E65E4 SkillSummonGunmanUse
+021E625C SkillSummonFrogUse
+021E25BC SkillRushUse
+021E1E70 SkillHolyLightningUse
+021E1088 SkillAxeBomberUse
+021E0D5C Skill1,000BladesUse
+021E06B8 SkillVolcanoUse
+021E0104 SkillMeteorUse
+021DFAA0 SkillGrandCruzUse
+021DF3A0 SkillDivineStormUse
+021DEA98 SkillDarkGateUse
+021DE628 SkillGreatestFiveUse
+
+; Quest-specific code
+02041768 QuestPreparationsCheckCompleted
+02041564 QuestSupersonicPunchCheckCompleted
+020416FC QuestGhostsOfTheDesertCheckCompleted
+0204145C QuestDefenderOfTheStairsCheckCompleted
+020413F8 QuestFindTheKingOfBirdsCheckCompleted
+02041328 QuestOvercomeTheCurseCheckCompleted
+02041720 QuestTheStatue'sTearCheckCompleted
+020416A8 QuestHolyAppearanceCheckCompleted
+0204165C QuestNumberOfFortuneCheckCompleted
+02041128 QuestMentalTraining1CheckCompleted
+02041104 QuestMentalTraining2CheckCompleted
+020414E8 QuestTheSpearOfLegendCheckCompleted
+020410C0 QuestMentalTraining3CheckCompleted
+0204141C QuestTheNestOfEvilCheckCompleted
+02041368 QuestDefeatTheGhoulKingCheckCompleted
+020412E4 QuestAbandonGreedCheckCompleted
+02041588 QuestARankHunterCheckCompleted
+0204107C QuestMentalTraining4CheckCompleted
+020414C0 QuestSRankHunterCheckCompleted
+0204138C QuestTheGamblerCheckCompleted
+02041618 QuestHandsOfTheClockCheckCompleted
+02041518 QuestPoisonVsPoisonCheckCompleted
+02041260 QuestBuildYourStrength1CheckCompleted
+0204123C QuestBuildYourStrength2CheckCompleted
+020411B8 QuestBuildYourStrength3CheckCompleted
+02041744 QuestPrayBeforeTheCrossCheckCompleted
+02041174 QuestBuildYourStrength4CheckCompleted
+02041484 QuestLostPageCheckCompleted
+02041308 QuestTheHundredTasksCheckCompleted
+020415B0 QuestMasterTheHolyPowerCheckCompleted
+020412B4 QuestAlmightyCheckCompleted
+02041284 QuestTheGreatSageCheckCompleted
+
