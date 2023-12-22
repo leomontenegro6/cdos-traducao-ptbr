@@ -2,3 +2,7 @@
 *.sav
 Extracted files*
 test.bat
+Ferramentas/cache/*
+cdos_dawndignity*
+cdos_nomagicseals*
+cdos_orig*
