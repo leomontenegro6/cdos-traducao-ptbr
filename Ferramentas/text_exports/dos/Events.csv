@@ -8,484 +8,480 @@ poder de controlar as almas dos monstros\n
 que habitam no castelo. Este poder maligno\n
 quase me consumiu por completo, mas fui\n
 salvo graças à força de meus amigos, que\n
-eu mim depositaram suas esperanças.\n
+em mim depositaram suas esperanças.\n
 Faz um ano desde então e eu acreditava\n
 estar em paz comigo mesmo...\n
 \n
 "
 0x4A7,"{NAME 0x01}{PORTRAIT 0x08}
 Ha ha!\n
-Are you serious?\n
+É verdade, né?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x01}
-Yeah, and that’s when\n
-Hammer decided to--\n
+Então, naquele momento,\n
+o Hammer chegou e...\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x01}{PORTRAIT 0x07}
-Wait... Soma, can I ask\n
-you something?\n
+Ei... Soma, posso te\n
+perguntar uma coisa?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Yeah, of course, Mina.\n
-What’s wrong?\n
+Sim, é claro, Mina.\n
+O que foi?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x07}
-It’s been a year since it\n
-all happened, hasn’t it?\n
+Faz um ano desde que aquilo\n
+tudo aconteceu, não foi?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Yeah, just about.\n
+Sim, por aí mesmo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x07}
-And what was it called?\n
-You know, the ability to\n
-use the power of monsters?\n
+E como é que se chamava mesmo?\n
+Digo, a habilidade de usar\n
+o poder dos monstros?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-You mean the power of\n
-dominance?\n
+Fala do poder da dominância?\n
 {WAITINPUT}{SAMECHAR}
-I lost it when we escaped\n
-Dracula’s Castle, remember?\n
+Eu perdi ele quando fugimos\n
+do castelo do Drácula, lembra?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x09}
-I know, but... \n
-It’s just that I get this\n
-terrible feeling inside...\n
+Eu sei, mas... \n
+É que eu tive um\n
+mal pressentimento...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-It’s probably nothing...\n
-Look, don’t worry, okay?\n
+Cê se preocupa demais.\n
 {WAITINPUT}{SAMECHAR}
-This past year, I haven't\n
-been able to use any of the\n
-powers I gained. \n
+Neste último ano, eu não consegui\n
+usar nenhum dos poderes que\n
+adquiri.\n
 {WAITINPUT}{SAMECHAR}
-And--\n
+Além disso...\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x09}{PORTRAIT 0x1B}
-You... You’re Soma Cruz,\n
-aren’t you?\n
+Você é Soma Cruz,\n
+não é?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Uh... Yeah...\n
-And you are?\n
+Ahn... Sim...\n
+E você, quem é?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x09}{PORTRAIT 0x1B}
-You may call me Celia.\n
+O meu nome é Celia.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x06}{PORTRAIT 0x1B}
-But not for long...\n
+Farei com que você morra aqui.\n
 {WAITINPUT}{SAMECHAR}
-Come forth, my servants!\n
+Avante, meus servos!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-What?!\n
+O quê?!\n
 {WAITINPUT}{SAMECHAR}
-Mina, get back!\n
+Mina, para trás!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x03}
-Damn it!\n
-Of all the worst--\n
+Droga!\n
+Por que justo agora--\n
 {WAITINPUT}{NEWCHAR}{NAME 0x09}{PORTRAIT 0x0D}
 Soma!\n
-You back off, too!\n
+Para trás, você também!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x01}{PORTRAIT 0x07}
-Mr. Arikado!\n
+Sr. Arikado!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x06}{PORTRAIT 0x1B}
-Genya Arikado, the\n
-guardian?! Hmph!\n
-You shall not interfere!\n
+Você é o guardião dele, Genya Arikado?!\n
+Hmph! Não interfira!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x02}{PORTRAIT 0x0D}
-A barrier!\n
+Uma barreira!\n
+Droga, não há outro jeito.\n
 {WAITINPUT}{SAMECHAR}
-Quick, Soma!\n
-Use this!\n
+Soma! Use esta arma!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}"
 0x4A8,"{NAME 0x06}{PORTRAIT 0x1B}
-Soma Cruz, I shall see your\n
-demise. That is certain.\n
-Using whatever means...\n
+Soma Cruz. Farei de tudo\n
+para matá-lo.\n
+Custe o que custar.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-Wait!\n
+Espere!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-Save your energy.\n
-You won’t catch her now.\n
+É inútil segui-la.\n
+Desista.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Damn it!\n
+Droga!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x07}
-Soma, are you all right?\n
+Soma, você está ferido?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Yeah, I’m fine. But that\n
-power... It returned!\n
-Arikado, what’s going on?\n
+Estou bem.\n
+Mas o poder da dominância voltou!\n
+Arikado, o que isso quer dizer?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-The power didn’t “return.""\n
-It was always with you.\n
+Seu poder nunca desapareceu.\n
+Ele sempre esteve com você.\n
 {WAITINPUT}{SAMECHAR}
-You just never had a need \n
-for it since you fled the castle.\n
+Você só não o queria mais,\n
+desde que fugiu do castelo.\n
 {WAITINPUT}{SAMECHAR}
-And that set free all the\n
-souls that you had gained\n
-dominance over.\n
+Então, todas as almas que você\n
+havia dominado antes, foram\n
+libertadas.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-You mean I couldn’t use the\n
-power because I was never\n
-in any danger? Hmm.\n
+Sem as almas que controlei, eu não\n
+podia usar os poderes. Faz sentido...
 {WAITINPUT}{SAMECHAR}
-Anyway, who was that woman?\n
-She seemed to know you.\n
+Falando nisso, quem era aquela mulher?\n
+Ela parecia te conhecer.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-Celia Fortner. She's the\n
-priestess of a new and \n
-rapidly growing cult.\n
+Celia Fortner. Ela é a fundadora\n
+de um culto que tem ganhado\n
+seguidores recentemente.\n
 {WAITINPUT}{SAMECHAR}
-We suspected she was up to\n
-something, so we’ve been\n
-keeping tabs on her.\n
+Suspeitamos que ela estava\n
+planejando algo, por isso estávamos\n
+observando-a de perto.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x09}
-But why would someone like\n
-that come after Soma?\n
+Por que alguém como ela\n
+está atrás de Soma?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-They want to resurrect the\n
-lord of darkness.\n
+Ela pretende ressuscitar\n
+o senhor das trevas.\n
 {WAITINPUT}{SAMECHAR}
-Like some sought to do with Dracula.\n
+Tal como alguns tentaram uma vez\n
+fazer com Drácula.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-I guess they don’t like the\n
-fact that I didn’t become\n
-the “lord of darkness.""\n
+Então creio que ela não gosta do\n
+fato de eu ter recusado me tornar\n
+o senhor das trevas.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-Not only that, they intend\n
-to create a new lord by \n
-eliminating you.\n
+Pior que isso. Ela pretende matá-lo,\n
+assim dando vida a um novo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x09}
-E-Eliminating?\n
+Ah não...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-But Soma, you don’t need to\n
-get any more involved with\n
-this. Let us deal with it.\n
+Mas Soma, você não precisa\n
+se envolver mais nisso.\n
+Deixe o resto conosco.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-That woman...\n
+Aquela mulher...\n
 {WAITINPUT}{SAMECHAR}
-She said she would “see my\n
-demise.""\n
+Ela disse “Farei de tudo\n
+para matá-lo"".\n
+Se ela...\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x01}{PORTRAIT 0x07}
 Soma...\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}
-Several days later...\n
+Alguns dias depois...\n
 {WAITINPUT}{NEWCHAR}"
 0x4A9,"{NAME 0x00}{PORTRAIT 0x00}
-So, the cult's base is here.\n
+Então essa é a sede do culto...\n
 {WAITINPUT}{SAMECHAR}
-Hammer's info wasn't so iffy\n
-after all.\n
+Por essa não esperava. As informações\n
+que Hammer me passou eram mesmo\n
+confiáveis.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x09}{PORTRAIT 0x18}
-Gahaha!\n
-You doubted my word?!\n
+Hahaha!\n
+Pode crer que sim!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
 H-Hammer?\n
-What are you doing here?\n
+O que cê tá fazendo aqui?\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x04}{PORTRAIT 0x18}
-What, are ya dense?\n
-Who told ya 'bout this place?\n
-Wait, it was me\n
+Hã? Você é trouxa?\n
+Fui eu quem te falou desse lugar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Well, yeah, but...\n
+Isso é verdade, mas...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
-Hey, you got your mind on\n
-doin’ somethin’ wicked, huh?\n
-I want in, buddy.\n
+Vai botar pra quebrar lá dentro, né?\n
+Quero entrar nessa também!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x04}{PORTRAIT 0x19}
-And, hey, what happened\n
-to that pretty little lady?\n
-You remember, right?\n
+Ah, e como é que vai aquela\n
+gatinha loira de antes?\n
+Lembra dela, né?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-You mean Yoko?\n
-She's not coming.\n
-In fact, I haven't told a soul.\n
+A Yoko? Ela não vem.\n
+Aliás, eu nem avisei nada a ela.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x04}{PORTRAIT 0x1A}
-Huh? She ain’t comin’?\n
-Well, why not?!\n
+Como é que é? Por que não chamou\n
+ela pra cá?!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x04}{PORTRAIT 0x18}
-Aw, man...\n
-Well, since I'm here, I'd\n
-better make the best of it.\n
+Ah, cara. Que vacilo...\n
+Bem, já que eu tô aqui,\n
+não tenho outra escolha.\n
 {WAITINPUT}{SAMECHAR}
-I guess I'm back in\n
-business, and you’re \n
-my customer!\n
+Acho que vou abrir uma loja\n
+de novo. Aqui, como seu parceiro.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Hammer, look, I'm saying\n
-this for your own good.\n
-You really should leave.\n
+Hammer, eu não quero ser rude,\n
+mas é melhor você ir embora.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
-Can't do that, I'm afraid.\n
+Infelizmente não dá mais. Quando você\n
+me procurou, parecia estar empenhado\n
+em fazer alguma coisa.\n
 {WAITINPUT}{SAMECHAR}
-I know when someone’s in\n
-trouble and I’m not just\n
-gonna leave ya here.\n
+Não vou te perguntar sobre o que\n
+vai fazer. Mas também não vou ser\n
+idiota e te deixar aqui sozinho.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Okay...\n
-I appreciate it.\n
+Eu entendo.\n
+Obrigado, de qualquer jeito.\n
+Se cuida.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
-I'll scope out the area and\n
-find a spot to set up shop.\n
+Bom, vou procurar algum lugar\n
+por perto daqui para abrir a loja.\n
 {WAITINPUT}{SAMECHAR}
-See ya around!\n
+Até mais.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x04}{PORTRAIT 0x1A}
-Man, why wouldn’t he just\n
-tell her about this...?\n
+Humpf!\n
+Tsc, tsc...\n
+Por que ele não chamou ela?\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
 ...\n
 {WAITINPUT}{NEWCHAR}"
 0x4AA,"{NAME 0x00}{PORTRAIT 0x00}
-Huh?\n
+Ahn?\n
 {WAITINPUT}{NEWCHAR}{PORTRAIT 0x02}
-Those two...\n
+Aqueles dois...\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x12}
-Oh! Soma!\n
+Ah! Soma!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
 ...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Yoko. Julius.\n
-What are you two doing here?\n
+O que vocês dois tão fazendo aqui?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Funny you should ask that.\n
-We got wind of this cult\n
-from a tip by Arikado.\n
+É a gente que pergunta isso.\n
+Pegamos uma informação do Arikado\n
+e viemos investigar o culto.\n
 {WAITINPUT}{SAMECHAR}
-I'm investigating with\n
-Mr. Belmont. I’m sure you\n
-remember him, the hunter.\n
+Estou investigando junto com o\n
+Sr. Belmont. Com certeza se lembra\n
+dele, o caçador de vampiros.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
-Soma, please understand.\n
+Soma, por favor entenda.\n
 {WAITINPUT}{SAMECHAR}
-If the darkness draws you in...\n
-I have no choice but to\n
-destroy you.\n
+Se a escuridão o consumir...\n
+não terei escolha senão matá-lo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Yes, I know...\n
+Sim, eu sei...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
-Then, there is no reason\n
-for you to be here.\n
+Então, não tem motivo para você\n
+vir até aqui.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-That's right.\n
-You’re only putting \n
-yourself in danger.\n
+É isso mesmo.\n
+Exatamente como Julius disse.\n
+Você está apenas se colocando em perigo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-That Celia woman...\n
-Not only was she after me,\n
-shie tried to harm Mina, too.\n
+Aquela mulher, Celia...\n
+Ela planejou envolver Mina\n
+para me matar.\n
 {WAITINPUT}{SAMECHAR}
-I’m not gonna stop \n
-until I find her.\n
+Não posso ficar de braços cruzados.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
-You're determined, I see.\n
+Está determinado, pelo visto.\n
 {WAITINPUT}{SAMECHAR}
-Then, I have nothing more\n
-to say.\n
+Nesse caso, não tenho mais\n
+nada a dizer.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x12}
-Wait. Wait, Julius.\n
-How can you just say that?\n
+E-espera, Julius.\n
+Por que está consentindo a ele?\n
+Ei, me escuta!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
-I'll be going now.\n
+Eu estou indo agora.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x12}
-Wait a second.\n
-I'm coming, too.\n
+Ei, peraí.\n
+Eu vou também.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
-No, Yoko, you stay.\n
-We'll need a contact here,\n
-just in case.\n
+Não, Yoko, você fica aqui.\n
+Em caso de emergência, se não tivermos\n
+um contato de fora, teremos problemas.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x12}
-Hey, wait!\n
-You can’t just...!\n
+Pera um pouco!\n
+Cê não pode...!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x14}
-Men! They're so selfish!\n
+Homens são sempre tão egoístas!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x14}
-I bet you have no intention\n
-of going home, either.\n
+De todo modo, aposto que você\n
+também não tem intenção de ir\n
+embora, né?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Well, uh...\n
+Não mesmo...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x14}
-Fine, then.\n
-Here, take this.\n
+Certo.\n
+Então, fique com isso.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-And this is?\n
+E isso é o quê?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x14}
-A Magic Seal.\n
+Um selo mágico.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Magic Seal?\n
+Selo mágico?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-The cult leader appears\n
-to create gates that draw\n
-the power of darkness.\n
+Parece que a líder do culto pode\n
+criar um portal para invocar o\n
+poder das trevas.\n
 {WAITINPUT}{SAMECHAR}
-Monsters exposed to that\n
-power are said to be\n
-invincible.\n
+Dizem que monstros influenciados\n
+por este poder são invencíveis.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-So how am I supposed to\n
-destroy them?\n
+Então como derrotamos eles?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-That's where this Magic\n
-Seal comes in.\n
+É aí que entra o selo mágico.\n
 {WAITINPUT}{SAMECHAR}
-Want to practice using it?\n
+Quer praticar como se usa ele?\n
 {WAITINPUT}{NEWCHAR}{CHOICE}{NAME 0x00}{PORTRAIT 0x00}
-Sure, I’ll give it a try.\n
-No, that’s okay.\n
+Sim, quero tentar.\n
+Não, agora não.\n
 "
 0x4AB,"{NAME 0x03}{PORTRAIT 0x10}
-Good. Now watch closely.\n
-Draw a figure exactly as shown.\n
+Ótimo. Agora observe com atenção.\n
+Desenhe em sua mente uma figura\n
+exatamente como será mostrada.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x10}
-Okay, now you try it.\n
+Ok, agora é a sua vez de tentar.\n
 {WAITINPUT}{NEWCHAR}"
 0x4AC,"{NAME 0x03}{PORTRAIT 0x10}
-Wait, hold on.\n
-That's not the right shape.\n
+Espera, um momento.\n
+Esse não é o desenho correto.\n
 {WAITINPUT}{SAMECHAR}
-The small circles indicate\n
-where you have to touch. \n
-Don’t be too hasty, okay?\n
+Os círculos pequenos indicam\n
+onde você tem que tocar.\n
+Não tenha tanta pressa, tá?\n
 {WAITINPUT}{SAMECHAR}
-Oh, yes, and you also have\n
-to touch the points in the\n
-proper sequence.\n
+Ah, é, você também tem que\n
+tocar nos pontos na ordem certa.\n
 {WAITINPUT}{NEWCHAR}{ENDCHOICE 0x04AF}"
 0x4AD,"{NAME 0x03}{PORTRAIT 0x10}
-Um...\n
-The Magic Seal has to be\n
-drawn in one stroke.\n
+Ahn...\n
+O selo mágico tem que ser\n
+desenhado numa linha só.\n
 {WAITINPUT}{SAMECHAR}
-You can't draw the pattern\n
-in pieces.\n
+Você não pode desenhar a figura\n
+por partes.\n
 {WAITINPUT}{NEWCHAR}{ENDCHOICE 0x04AF}"
 0x4AE,"{NAME 0x03}{PORTRAIT 0x10}
-That's too slow.\n
+Lento demais.\n
 {WAITINPUT}{SAMECHAR}
-The Magic Seal won't be\n
-created if it's not drawn\n
-within a set time.\n
+O selo mágico não será\n
+criado se não for desenhado\n
+a tempo.\n
 {WAITINPUT}{NEWCHAR}{ENDCHOICE 0x04AF}"
 0x4AF,"{NAME 0x00}{PORTRAIT 0x00}
-I get it.\n
+Saquei.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Want to try again?\n
+Quer tentar de novo?\n
 {WAITINPUT}{NEWCHAR}{CHOICE}{NAME 0x00}{PORTRAIT 0x00}
-Okay, once more.\n
-No, it's okay.\n
+Certo, de novo.\n
+Não, agora não.\n
 "
 0x4B0,"{NAME 0x03}{PORTRAIT 0x10}
-Okay, I'll show you again.\n
+Certo, vou te mostrar de novo.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x10}
-Okay, now you try it.\n
+Ok, sua vez de tentar.\n
 {WAITINPUT}{NEWCHAR}"
 0x4B1,"{NAME 0x03}{PORTRAIT 0x10}
-Good, that's it.\n
-Just don’t forget how you\n
-did that.\n
+Bom. É isso aí.\n
+Não esqueça como você fez\n
+pra desenhar o selo.\n
 {WAITINPUT}{NEWCHAR}{ENDCHOICE 0x04B3}"
 0x4B2,"{NAME 0x03}{PORTRAIT 0x13}
-Oh...\n
-Well, that's fine, then.\n
+Ah...\n
+É, tá bom, então.\n
 {WAITINPUT}{NEWCHAR}{ENDCHOICE 0x04B3}"
 0x4B3,"{NAME 0x03}{PORTRAIT 0x10}
-Oh, one more thing.\n
+Ah, mais uma coisa.\n
 {WAITINPUT}{SAMECHAR}
-You can practice drawing\n
-a Magic Seal anytime.\n
+Você pode praticar como se desenha\n
+selos magicos a hora que quiser.\n
 {WAITINPUT}{SAMECHAR}
-If you're not sure how\n
-to do it, you should \n
-definitely practice.\n
+Se não tiver confiante em como se faz\n
+pra desenhar os selos, é bom você\n
+praticar com certeza.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Got it.\n
+Tudo bem.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-A Magic Seal activates on\n
-its own when it's needed.\n
-Give it a try and see.\n
+Um selo mágico se ativa por si só\n
+quando for necessário.\n
+Você vai entender na prática.\n
 {WAITINPUT}{SAMECHAR}
-Okay, now...\n
+Bem, então...\n
 {WAITINPUT}{SAMECHAR}
-Let's go, Soma.\n
+Vamos indo, Soma.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Huh?\n
-Go where?\n
+Hein?\n
+Pra onde?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-It's a dead end here.\n
+Aqui é um beco sem saída.\n
 {WAITINPUT}{SAMECHAR}
-Only Julius could get in\n
-from somewhere like this.\n
+Só o Julius consegue entrar\n
+por aqui.\n
 {WAITINPUT}{SAMECHAR}
-We should go back and find\n
-a different way in.\n
+Temos que voltar e procurar\n
+por alguma outra entrada\n
+diferente.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-All right.\n
-If we have to...\n
+Certo.\n
+Faz sentido...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-There's no shelter from the\n
-rain and wind here, either.\n
+E eu também quero me proteger\n
+do tempo aqui. Está nevando e\n
+o vento está muito frio.\n
 {WAITINPUT}{SAMECHAR}{PORTRAIT 0x11}
-Will you escort me?\n
+Me acompanha?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Uh...\n
-Sure, of course.\n
+Err...\n
+Tá, tá bom.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Thanks.\n
-Let's go.\n
+Obrigada.\n
+Então, vamos andando.\n
 {WAITINPUT}{NEWCHAR}"
 0x4B4,"{NAME 0x03}{PORTRAIT 0x10}
-This door...\n
-It looks like you'll need\n
-a Magic Seal right away.\n
+Ah, essa porta...\n
+Parece que o selo mágico vai\n
+ser necessário agora mesmo.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x10}
-Most likely, you’ll need a\n
-a Magic Seal to finish off\n
-the monster in here.\n
+Muito provavelmente você vai\n
+precisar desenhar um selo mágico\n
+para derrotar o monstro lá dentro.\n
 {WAITINPUT}{SAMECHAR}
-Just be calm and focus.\n
-I'll be waiting here.\n
+Fique calmo e dê seu melhor.\n
+Eu vou ficar esperando aqui.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-No problem.\n
+Tudo bem.\n
 {WAITINPUT}{NEWCHAR}"
 0x4B5,"{NAME 0x03}{PORTRAIT 0x10}
-You did it!\n
+Você conseguiu!!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Using Magic Seals is a\n
-piece of cake.\n
+Já peguei o jeito.\n
+Usar selos mágicos\n
+é mamão com açúcar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Don't be too sure.\n
-That Magic Seal won't be\n
-useful forever.\n
+Não fique tão confiante ainda.\n
+Você não será capaz de usar o\n
+mesmo selo mágico para sempre.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-What do you mean?\n
+O que você quer dizer?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-They will probably prepare\n
-new and more complex\n
-patterns for Magic Seals.\n
+Provavelmente eles vão preparar\n
+selos novos e mais complexos\n
+de se desenhar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Hmm...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-But not to worry.\n
-They'll have the Magic Seal\n
-patterns hidden somewhere.\n
+Mas não se preocupe. Se procurar\n
+por aí, com certeza você vai achar\n
+novos selos escondidos em algum lugar.\n
 {WAITINPUT}{SAMECHAR}
-If they don't, the gates to\n
-the dark side will be useless.\n
+Sem eles, os portais para o mundo\n
+das trevas não funcionarão.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-I get it.\n
+Entendi.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-I won't keep holding you\n
-up as my escort anymore.\n
-I can manage now.\n
+Bem, você só precisa me\n
+acompanhar até aqui. De agora em\n
+diante eu posso me cuidar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-You sure?\n
-In that case, I'll be going now.\n
+Tudo bem.\n
+Então eu vou indo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Oh, there is one more\n
-thing though.\n
+Ah, tem mais uma coisa.\n
 {WAITINPUT}{SAMECHAR}
-Julius may have some new\n
-information, so come see\n
-me if you're close by.\n
+Pode ser que eu consiga algumas\n
+informações de Julius, então venha\n
+me visitar se estiver por perto.\n
 {WAITINPUT}{SAMECHAR}
-And Soma, please don't do\n
-anything reckless.\n
+E... Soma, não faça nada\n
+imprudente, tá?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Count on it.\n
-You take care, too, Yoko.\n
+Tudo bem. E cê se cuida também\n
+também, Yoko.\n
 {WAITINPUT}{NEWCHAR}"
 0x4B6,"{NAME 0x03}{PORTRAIT 0x10}
-Soma, please don't do\n
-anything reckless.\n
+Soma, não faça nada\n
+imprudente, tá?\n
 {WAITINPUT}{NEWCHAR}"
 0x4B7,"{NAME 0x00}{PORTRAIT 0x00}
 !!\n

@@ -5,7 +5,7 @@ places with it."
 mirrors."
 0x312,"Create a space that inflicts \n
 spiritual damage."
-0x313,Throw bones. 
+0x313,Arremessa ossos. 
 0x314,Summon Zombie. 
 0x315,Throw an axe upwards. 
 0x316,Summon a cat. 
@@ -72,7 +72,7 @@ swarm foes."
 0x345,Transform into a bat and fly. 
 0x346,"Move at high speed while \n
 creating a shock wave."
-0x347,Attack with a spinning spear.
+0x347,Ataca com uma lança giratória.
 0x348,Create tornadoes. 
 0x349,"Shoot arrows with deadly \n
 accuracy."
@@ -127,7 +127,7 @@ familiar."
 beam."
 0x367,"Summon the Grim Reaper's \n
 scythe to attack enemies."
-0x368,Raise STR. 
+0x368,Aumenta FORÇA. 
 0x369,Increase CON. 
 0x36A,Increase INT. 
 0x36B,Raise LUCK. 

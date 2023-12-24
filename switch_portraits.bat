@@ -14,11 +14,13 @@ IF "%1" == "original" GOTO original
 GOTO dawndignity
 
 :dawndignity
-copy ".\dawndignity_portraits\data\sc\*" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\sc\"
+copy ".\Arquivos Patches\dawndignity_portraits\data\sc\*" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\sc\"
+copy ".\Arquivos Patches\dawndignity_portraits\overlay\overlay_0004.bin" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\ftc\overlay9_4"
 GOTO end
 
 :original
-copy ".\original_portraits\data\sc\*" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\sc\"
+copy ".\Arquivos Patches\original_portraits\data\sc\*" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\sc\"
+copy ".\Arquivos Patches\original_portraits\overlay\overlay_0004.bin" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\ftc\overlay9_4"
 GOTO end
 
 :end

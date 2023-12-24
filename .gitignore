@@ -2,7 +2,5 @@
 *.sav
 Extracted files*
 test.bat
+Arquivos Patches/cdos_orig*
 Ferramentas/cache/*
-cdos_dawndignity*
-cdos_nomagicseals*
-cdos_orig*

@@ -69,14 +69,14 @@ Seals."
 0x416,Interrupt the game?
 0x417,"There is already another\n
 suspended file."
-0x418,Overwrite the file?
+0x418,Sobrescrever o arquivo?
 0x419,"The game can't be\n
 interrupted now."
-0x41A,Data has been saved.
-0x41B,Save failed.
+0x41A,Jogo salvo com sucesso.
+0x41B,Houve um problema ao salvar.
 0x41C,"Magic Seals can't be\n
 practiced now."
-0x41D,Save the game?
+0x41D,Salvar o jogo?
 0x41E,Start game.
 0x41F,Copy saved data.
 0x420,Delete saved data.
@@ -150,18 +150,18 @@ fusing a soul with a weapon."
 0x459,Quit Wireless Mode?
 0x45A,Trade souls via Wireless Mode?
 0x45B,Play VS Mode via Wireless Mode?
-0x45C,"Bullet-type\n
-Tactical Soul\n
-Press {BUTTON UP} + {BUTTON Y} to use.\n
-Consumes MP on use."
-0x45D,"Guardian-type\n
-Tactical Soul\n
-Press {BUTTON R} to use.\n
-Consumes MP while in effect."
-0x45E,"Enchant-type\n
-Tactical Soul\n
-Takes effect when equipped.\n
-Does not consume MP."
+0x45C,"Alma Tática\n
+do Tipo Bala\n
+Pressione {BUTTON UP} + {BUTTON Y} para usar.\n
+Consome PM ao usar."
+0x45D,"Alma Tática\n
+do Tipo Guardião\n
+Pressione {BUTTON R} para usar.\n
+Consome PM durante o efeito."
+0x45E,"Alma Tática\n
+do Tipo Encanto\n
+Surte efeito quando equipado.\n
+Não consome PM."
 0x45F,"Ability-type\n
 Tactical Soul\n
 Takes effect automatically.\n
@@ -180,10 +180,10 @@ Takes effect automatically.\n
 0x46B,"Data loading failed.\n
 Please turn power off and reinsert\n
 the Game Card."
-0x46C,"Save Room\n
+0x46C,"Sala de Salvamento\n
  \n
-Press {BUTTON UP} in front of the statue to\n
-save the game."
+Pressione {BUTTON UP} na frente da estátua\n
+para salvar o jogo."
 0x46D,"Warp Room\n
  \n
 Press {BUTTON UP} in front of the device to\n
