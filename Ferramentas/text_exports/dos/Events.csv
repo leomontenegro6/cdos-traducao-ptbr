@@ -476,7 +476,7 @@ me visitar se estiver por perto.\n
 E... Soma, não faça nada\n
 imprudente, tá?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Tudo bem. E cê se cuida também\n
+Tudo bem. E cê se cuida\n
 também, Yoko.\n
 {WAITINPUT}{NEWCHAR}"
 0x4B6,"{NAME 0x03}{PORTRAIT 0x10}

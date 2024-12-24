@@ -16,11 +16,13 @@ GOTO dawndignity
 :dawndignity
 copy ".\Arquivos Patches\dawndignity_portraits\data\sc\*" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\sc\"
 copy ".\Arquivos Patches\dawndignity_portraits\overlay\overlay_0004.bin" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\ftc\overlay9_4"
+echo Alternado para os retratos do Dawn of Dignity
 GOTO end
 
 :original
 copy ".\Arquivos Patches\original_portraits\data\sc\*" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\sc\"
 copy ".\Arquivos Patches\original_portraits\overlay\overlay_0004.bin" ".\Extracted files Castlevania - Alvor da Tristeza (BR)\ftc\overlay9_4"
+echo Alternado para os retratos originais
 GOTO end
 
 :end

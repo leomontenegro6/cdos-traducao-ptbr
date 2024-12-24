@@ -1,230 +1,232 @@
-0x21E,"A rotting corpse of a villager, animated \n
-by magic."
-0x21F,"A bloodsucking bat that lurks in the \n
-castle."
-0x220,"A small spirit doomed to wander \n
-the castle grounds for all eternity."
-0x221,"A skeletal corpse controlled by magic. \n
+0x21E,"Um cadáver esquelético controlado por\n
+mágica."
+0x21F,"Um morcego hematófago que se\n
+esconde no castelo."
+0x220,"Um espírito pequeno condenado a\n
+vagar pelo castelo pela eternidade."
+0x221,"Um cadáver esquelético controlado por\n
+magia."
+0x222,"Uma mesa possuída por um espírito\n
+invocado numa sessão espírita."
+0x223,"Uma criatura que mantém vigilância\n
+em áreas específicas do castelo."
+0x224,"Soldado de armadura altamente\n
+habilidoso com machados."
+0x225,"Um arqueiro feito de ossos. \n
 "
-0x222,"An enchanted desk possessed by \n
-a spirit summoned in a seance."
-0x223,"A creature that keeps watch in the \n
-castle."
-0x224,"An armor-clad soldier that is highly \n
-skilled with axes."
-0x225,"An archer made of bone. \n
+0x226,"Um lobo que cospe chamas intensas. \n
 "
-0x226,"A wolf that breathes intense flames. \n
+0x227,"Uma lâmina maligna possuída\n
+por um demônio demente."
+0x228,"Um soldado de armadura equipado com\n
+um arpão mortal."
+0x229,"Uma bruxa que ainda está\n
+aprendendo a fazer feitiços."
+0x22A,"Um animal primitivo que mata com\n
+suas próprias mãos."
+0x22B,"Um soldado com armadura que\n
+arremessa bombas."
+0x22C,"Uma figura de barro gigante\n
+com vitalidade artificial."
+0x22D,"Um monstro composto de uma\n
+substância gelatinosa."
+0x22E,"Uma planta misteriosa que se\n
+alimenta de sangue."
+0x22F,"Um cadáver esquelético de um macaco\n
+controlado por magia."
+0x230,"Um monstro com corpo de leão, asas\n
+de morcego e cauda de escorpião."
+0x231,"Um molusco gigantesco com uma concha\n
+igualmente enorme."
+0x232,"Um pássaro monstruoso que controla\n
+relâmpagos."
+0x233,"Uma planta mitológica que dizem trazer\n
+a morte àqueles que as desenterram."
+0x234,"Um esqueleto que persegue seu próprio\n
+crânio incessantemente."
+0x235,"Um esqueleto que semeia plantas\n
+mal-assombradas."
+0x236,"Uma criatura humanóide construída de\n
+vários cadáveres."
+0x237,"A baforada dessa besta bovina\n
+transforma seres vivos em pedra."
+0x238,"Um ser imundo que saiu da tumba para\n
+se alimentar de cadáveres."
+0x239,"Uma Une que se alimenta de\n
+nutrientes de cadáveres."
+0x23A,"O notório e abominável\n
+Homem-das-Neves."
+0x23B,"Possuído pelos rancores dos mortos,\n
+ataca todos os seres vivos."
+0x23C,"Espíritos de nobres que dançam com\n
+grande elegância."
+0x23D,"Uma figura misteriosa que flutua\n
+no horizonte distante."
+0x23E,"Um diabinho com um grande coração."
+0x23F,"Uma reencarnação do antigo\n
+deus serpente."
+0x240,"Uma árvore ancestral animada por\n
+uma vontade pura e maléfica."
+0x241,Um arqueiro terrível e um anjo caído.
+0x242,"Uma guerreira com um lindo rosto e\n
+um mau coração."
+0x243,"Um cavaleiro pesado construído de\n
+cadáveres de guerreiros poderosos."
+0x244,"Uma boneca assassina que vaga\n
+em busca de organismos vivos."
+0x245,"Um esqueleto que habita o castelo.\n
+Sempre carrega um prato de curry."
+0x246,"Uma empregada doméstica demoníaca que\n
+trabalha para um barão sobrenatural."
+0x247,"Uma feiticeira com a habilidade de soltar\n
+uma ampla variedade de feitiços."
+0x248,"Uma besta com muitas pernas. \n
 "
-0x227,"An evil blade possessed by a  \n
-demented demon."
-0x228,"An armor-clad soldier equipped with\n
-a deadly spear."
-0x229,"A witch-in-training who is still \n
-learning how to cast spells properly."
-0x22A,"A savage man that kills with its bare \n
-hands."
-0x22B,An armor-clad soldier that tosses bombs.
-0x22C,"A giant clay figure imbued with \n
-an artificial life force."
-0x22D,"A monster composed of a gel-like \n
-substance."
-0x22E,"An eerie plant that feeds on blood. \n
+0x249,"Um demônio fascinante que ilude\n
+suas vítimas com uma beleza falsa."
+0x24A,"Um palhaço com intenções assassinas.\n
+Também um jogador de poker astuto."
+0x24B,"Um esqueleto que arremessa\n
+bumerangues com grande habilidade."
+0x24C,"Um homenzinho sinistro que salta como\n
+se fosse uma pulga."
+0x24D,"Guardião do Inferno. \n
 "
-0x22F,"A skeletal corpse of an ape that is \n
-controlled by magic."
-0x230,"A monster with the body of a lion, the \n
-wings of a bat, and a scorpion's tail."
-0x231,"A monstrous mollusk imbued with the \n
-castle's dark power."
-0x232,"A monstrous bird that wields lightning. \n
+0x24E,"Dizem que cortou milhares de cabeças\n
+com sua guilhotina ensanguentada."
+0x24F,"Um dos guardiões das profundezas do\n
+inferno. Ele é bastante pessimista."
+0x250,"Um ouriço do mar gigante que esteve\n
+perto da extinção devido à pesca ilegal."
+0x251,"Um javali do inferno com\n
+habilidades de luta excepcionais."
+0x252,"Crânios de dinossauros animados\n
+por uma força demoníaca."
+0x253,"Restos fossilizados de um dinossauro,\n
+animados por uma força demoníaca."
+0x254,"Uma árvore horrorizante que pode\n
+produzir troncos de homens."
+0x255,"Um diabinho pequenino que adora\n
+fazer travessuras."
+0x256,"Uma criatura-pássaro bizarra com\n
+o tronco de uma mulher."
+0x257,"Um dos guardiões das profundezas do\n
+inferno."
+0x258,"Um ser pagão dos tempos antigos que\n
+causa medo a todos com a sua presença."
+0x259,"Fera sanguinária que extrai as\n
+entranhas de cabras com sua língua."
+0x25A,"Um espírito muito cruel que habita um\n
+verme gigante."
+0x25B,"Um inseto horrível que adora se\n
+alimentar de corações."
+0x25C,"Um monstro aquático que ataca a presa\n
+que se aproxima da água."
+0x25D,"Os restos esqueléticos de um\n
+peixe animado por poder negro."
+0x25E,"Um monstro criado em grande número\n
+da cabeça de Medusa."
+0x25F,"Um demônio furioso cujo corpo\n
+está envolto em chamas."
+0x260,"Um antigo peixe devorador de homens.\n
+Dizem ser bastante saboroso."
+0x261,"Assume a aparência de um baú do tesouro\n
+para atrair vítimas desavisadas."
+0x262,"Um pirata zumbi amaldiçoado pela\n
+sua própria ganância."
+0x263,"Uma alma penada que manipula\n
+ar frio."
+0x264,"Uma forma de vida artificial e\n
+maléfica, criada por um estudioso."
+0x265,"Um soldado de armadura que é perito em\n
+jogar lâminas circulares gigantes."
+0x266,"Um demônio na forma de uma\n
+estrela-do-mar."
+0x267,"Um zumbi que protege cemitérios na\n
+companhia do seu adorado cachorro."
+0x268,"Um demônio caolho que se\n
+esconde em relâmpagos."
+0x269,"Um demônio líquido que aparece na\n
+superfície da água."
+0x26A,"Um Pilar de Ossos móvel. É considerado\n
+uma descoberta inovadora."
+0x26B,"Um touro monstruoso que cospe\n
+nuvens de gás tóxico."
+0x26C,"Uma Une alimentada com sangue\n
+em abundância."
+0x26D,"Um soldado de armadura que retalha\n
+suas vítimas com um machado enorme."
+0x26E,"Meio homem, meio mariposa.\n
+Parece ser atraído pela luz."
+0x26F,"Uma besta furiosa da antiga Babilônia. \n
 "
-0x233,"A mythical plant that is said to inflict \n
-death to those that uproot it."
-0x234,"A skeleton that ceaselessly chases after \n
-its own skull."
-0x235,A skeleton that sows haunted plants.
-0x236,"A humanoid creature constructed from \n
-numerous corpses."
-0x237,"This ox-like beast's breath turns \n
-living things to stone."
-0x238,"A foul being that rose from the grave \n
-to feed on corpses."
-0x239,"An Une that feeds off the nutrients of \n
-corpses."
-0x23A,"The notorious abominable snowman. \n
+0x270,"Um guerreiro zumbi portando um\n
+escudo resistente."
+0x271,"Um cavaleiro morto que busca lutar\n
+por toda a eternidade."
+0x272,"A deusa da vingança. \n
 "
-0x23B,"Possessed by the grudges of the dead, \n
-it attacks all living things."
-0x23C,"The spirits of nobles that dance with \n
-great elegance."
-0x23D,"A mysterious figure that hovers in the \n
-distance."
-0x23E,"A little demon with a big heart. \n
+0x273,"Um demônio que assume a forma de uma\n
+bela virgem para drenar vitalidade."
+0x274,"Um demônio que tem muito prazer em\n
+massacrar as pessoas com facas."
+0x275,"Uma besta negra que corre com grande\n
+velocidade."
+0x276,"Um belo demônio formado a partir\n
+da sujeira."
+0x277,"Um molusco gigantesco com uma concha\n
+igualmente enorme."
+0x278,"Um louco que pode se transformar\n
+em um lobo primitivo."
+0x279,"Um demônio que controla o fogo.\n
+Nasceu nas chamas do inferno."
+0x27A,"Um monstro gelatinoso que é resistente\n
+a ataques físicos."
+0x27B,"Usa os poderes das trevas para\n
+causar devastação sobre o mundo."
+0x27C,"Um demônio que serve à Morte.\n
+Cospe fogo enquanto voa."
+0x27D,"Um demônio que serve à Morte.\n
+Luta no solo com um arpão."
+0x27E,"Uma criatura velha e sábia que\n
+dizem ter grande inteligência."
+0x27F,"Um poderoso soldado de armadura que\n
+protege os pontos chave do castelo."
+0x280,"Um demônio de cauda longa que serve\n
+como linha de frente dos guardiões."
+0x281,"Uma espada possuída em busca de vingança\n
+pelas almas de soldados mortos."
+0x282,"Um golem com dureza impenetrável.\n
+Não tem fraquezas conhecidas."
+0x283,"Um ser de capa sinistra que paira\n
+no ar."
+0x284,"Um demônio com um olhar\n
+amedrontador."
+0x285,"Um demônio negro que é acompanhado\n
+por corvos."
+0x286,"Pode aprender habilidades dos outros.\n
+Um dos candidatos a senhor das trevas."
+0x287,"Um homem com poderes incendiários.\n
+É um dos candidatos a senhor das trevas."
+0x288,"O amaldiçoado rei das marionetes.\n
+Controla bonecas e dimensões."
+0x289,"Um monstro que domina os oceanos. \n
 "
-0x23F,"A reincarnation of the ancient \n
-snake god."
-0x240,"An ancient tree animated by a purely \n
-malevolent will."
-0x241,A fearsome archer and a fallen angel.
-0x242,"A female warrior with a pretty face  \n
-and a wicked heart."
-0x243,"A heavily armored knight built out of \n
-the corpses of powerful warriors."
-0x244,"A murderous doll that wanders about in \n
-search of living bodies."
-0x245,"A skeleton that inhabits the castle. \n
-Always carries around a pot of curry."
-0x246,"A demonic maid in the employ of an \n
-unearthly baron."
-0x247,"A spell caster with the ability to cast \n
-a wide variety of clever spells."
-0x248,"A beast with many legs. \n
+0x28A,"Aprisionado na solidão há muito tempo,\n
+gradualmente se tornou mau e demente."
+0x28B,"Um demônio que detém controle\n
+sobre o tempo."
+0x28C,"Um bando de morcegos que pensa e age\n
+como um só."
+0x28D,"Um demônio imundo que se esconde nos\n
+espelhos."
+0x28E,"Um ser que é a encarnação do fogo. \n
 "
-0x249,"An alluring demon that deludes its \n
-victims with its mystifying beauty."
-0x24A,"A creepy jester with murderous intent. \n
-Also a shrewd poker player."
-0x24B,"A skeleton that expertly hurls \n
-boomerangs."
-0x24C,"A sinister little man that leaps about \n
-as if he were a flea."
-0x24D,"Hell's keeper. \n
+0x28F,"Confidente de Drácula. \n
 "
-0x24E,"Rumored to have chopped off thousands \n
-of heads with its bloody guillotine."
-0x24F,"One of the guardians of the dungeons \n
-of hell. He is quite the pessimist."
-0x250,"A giant sea urchin that has been driven \n
-close to extinction from over-fishing."
-0x251,"A boar from hell with exceptional \n
-fighting skills."
-0x252,"The skulls of dinosaurs animated by \n
-a demonic force."
-0x253,"The fossilized remains of a long-necked \n
-dinosaur animated by a demonic force."
-0x254,"A horrifying tree that can produce pods \n
-of men."
-0x255,"A tiny demon who loves mischief. \n
-"
-0x256,"A bizarre bird-like creature with \n
-the torso of a woman."
-0x257,"One of the guardians of the dungeons \n
-of hell."
-0x258,"A pagan being from ancient times that \n
-strikes fear into all in its presence."
-0x259,"A blood-sucking beast that extracts \n
-the entrails of cattle with its tongue."
-0x25A,"A wickedly cruel spirit that inhabits a \n
-giant worm."
-0x25B,"A horrific bug that loves to feed on \n
-hearts."
-0x25C,"An aquatic monster that attacks prey \n
-near water."
-0x25D,"The skeletal remains of a fish \n
-animated by dark power."
-0x25E,"A monster created in great number from \n
-the head of Medusa."
-0x25F,"An enraged demon whose body is \n
-engulfed in flames."
-0x260,"An ancient, man-eating fish.  \n
-Rumored to be quite tasty."
-0x261,"It assumes the guise of a treasure chest \n
-to lure in unsuspecting victims."
-0x262,A zombie pirate cursed by its own greed.
-0x263,"A wraith that manipulates frigid air. \n
-"
-0x264,"A malevolent, artificial life form \n
-created by a demonic scholar."
-0x265,"An armor-clad soldier that is an expert \n
-at throwing giant circular blades."
-0x266,"A demon in the shape of a starfish. \n
-"
-0x267,"A zombie that protects graveyards \n
-together with its beloved dog."
-0x268,"A single-eyed fiend cloaked in \n
-thunderbolts."
-0x269,"A liquid demon that appears on the \n
-surface of water."
-0x26A,"A mobile Bone Pillar. It is considered \n
-an innovative breakthrough."
-0x26B,"A monstrous bull that breathes \n
-clouds of toxic gas."
-0x26C,"An Une fattened with copious pools \n
- of blood."
-0x26D,"An armor-clad soldier that mows down its \n
-victims with a massive axe."
-0x26E,"Half man, half moth. \n
-It appears to be attracted to light."
-0x26F,"A furious beast from ancient Babylonia. \n
-"
-0x270,"A zombie warrior bearing a sturdy\n
-shield."
-0x271,"A dead knight that seeks to fight  \n
-for all eternity."
-0x272,"The goddess of revenge. \n
-"
-0x273,"A demon that assumes the form of a \n
-beautiful maiden to drain vitality."
-0x274,"A fiend that takes great pleasure in \n
-slaughtering people with knives."
-0x275,"A jet-black beast that runs with great \n
-speed."
-0x276,"A good-looking demon formed out of\n
-dirt."
-0x277,"A gigantic mollusk with an equally huge \n
-shell."
-0x278,"A madman that can transform into a \n
-savage wolf."
-0x279,"A fire-wielding demon born in the \n
-fiery pits of the underworld."
-0x27A,"A jelly-like monster that is resistant \n
-to physical attacks."
-0x27B,"Uses the powers of darkness to wreak \n
-havoc upon the world."
-0x27C,"A fiend that serves the Grim Reaper. \n
-It can spit fire while flying."
-0x27D,"A fiend that serves the Grim Reaper. \n
-It fights on the ground with a spear."
-0x27E,"A wise, old creature said to have \n
-considerable intelligence."
-0x27F,"A powerful armored soldier given the \n
-task of guarding the castle's key spots."
-0x280,"A long-tailed demon that serves as the \n
-head of the dungeon guardians."
-0x281,"A possessed sword driven to seek \n
-revenge by the souls of slain soldiers."
-0x282,"A golem with impenetrable durability. \n
-It has no known weaknesses."
-0x283,"A sinister cape-clad figure that hovers \n
-in the air."
-0x284,"A demon with a fear-inducing gaze. \n
-"
-0x285,"A black demon that is accompanied by \n
-crows."
-0x286,"He can learn the abilities of others. \n
-He is one of the dark lord's candidates."
-0x287,"A man with inflammatory powers. \n
-He is one of the dark lord's candidates."
-0x288,"The cursed king of dolls. \n
-It controls dolls and the dimensions."
-0x289,"A monster that dominates the seas. \n
-"
-0x28A,"Imprisoned in solitude long ago, \n
-it gradually grew evil and demented."
-0x28B,"A demon with mastery over time. \n
-"
-0x28C,"A group of bats that thinks and acts \n
-as one."
-0x28D,"A foul fiend that nests inside mirrors. \n
-"
-0x28E,"A being that is the embodiment of fire. \n
-"
-0x28F,"Dracula's confidant. \n
-"
-0x290,"The master of pestilent locusts from the \n
-deep abyss of the underworld."
-0x291,"A humongous amalgamation of powerful \n
-demons."
+0x290,"O mestre dos gafanhotos pestilentos do\n
+abismo profundo do submundo."
+0x291,"Um enorme amálgama dos demônios\n
+poderosos."
 0x292,NULL
 0x293,NULL
