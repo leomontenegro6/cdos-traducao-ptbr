@@ -1,21 +1,21 @@
-0x3D9,Attack
-0x3DA,Super Attack
-0x3DB,Jump
-0x3DC,Change Equipment
-0x3DD,Guardian
-0x3DE,Ability
-0x3DF,Default
-0x3E0,Back
-0x3E1,{BUTTON X} switches equipment.
-0x3E2,EXP
-0x3E3,NEXT
-0x3E4,GOLD
-0x3E5,TIME
-0x3E6,RATE
-0x3E7,GOOD
-0x3E8,POISON
-0x3E9,CURSE
-0x3EA,STONE
+0x3D9,Ataque
+0x3DA,Super Ataque
+0x3DB,Pulo
+0x3DC,Alterna Equip.
+0x3DD,Guardião
+0x3DE,Habilidade
+0x3DF,Padrão
+0x3E0,Voltar
+0x3E1,{BUTTON X} alterna equipamento.
+0x3E2,EXP.
+0x3E3,PRÓX.
+0x3E4,OURO
+0x3E5,TEMPO
+0x3E6,TAXA
+0x3E7,BOM
+0x3E8,VENENO
+0x3E9,MALDIÇÃO
+0x3EA,PEDAR
 0x3EB,ESTADO
 0x3EC,ITEM1
 0x3ED,ITEM2
@@ -30,17 +30,17 @@
 0x3F6,NO.
 0x3F7,NV.
 0x3F8,USE
-0x3F9,TIME
-0x3FA,HP
-0x3FB,MP
-0x3FC,Equip
-0x3FD,Use Item
-0x3FE,Ability
-0x3FF,Suspend
-0x400,Config
-0x401,Enemy
-0x402,Library
-0x403,Magic Seal
+0x3F9,TEMPO
+0x3FA,PV
+0x3FB,PM
+0x3FC,Equipar
+0x3FD,Usar Item
+0x3FE,Habilidade
+0x3FF,Suspender
+0x400,Configurar
+0x401,Inimigos
+0x402,Biblioteca
+0x403,Selos Mágicos
 0x404,""
 0x405,""
 0x406,""
@@ -50,106 +50,113 @@
 0x40A,""
 0x40B,""
 0x40C,""
-0x40D,"It is sealed.\n
-A Magic Seal is needed."
-0x40E,"Switch equipped souls,\n
-weapons, armor, etc."
-0x40F,Check and/or use items.
-0x410,"Switch Ability-type\n
-Tactical Souls."
-0x411,"Interrupt the game and\n
-create a Suspended file."
-0x412,Change button settings.
-0x413,"Examine monsters that\n
-have been defeated."
-0x414,"Check terms used in the\n
-story."
-0x415,"Practice drawing Magic\n
-Seals."
-0x416,Interrupt the game?
-0x417,"There is already another\n
-suspended file."
+0x40D,"Está selado.\n
+Um Selo Mágico é necessário."
+0x40E,"Altera armas, almas,\n
+armaduras equipadas, etc."
+0x40F,Checa e/ou usa itens.
+0x410,"Altera Almas Táticas\n
+de Habilidade."
+0x411,"Interrompe o jogo e cria\n
+um arquivo suspenso."
+0x412,"Muda a configuração\n
+dos botões."
+0x413,"Examina monstros que\n
+foram derrotados."
+0x414,"Checa termos usados na\n
+história."
+0x415,"Pratica o desenho dos\n
+Selos Mágicos."
+0x416,Interromper o jogo?
+0x417,"Já existe um outro\n
+arquivo suspenso."
 0x418,Sobrescrever o arquivo?
-0x419,"The game can't be\n
-interrupted now."
+0x419,"O jogo não pode ser\n
+interrompido agora."
 0x41A,Jogo salvo com sucesso.
 0x41B,Houve um problema ao salvar.
-0x41C,"Magic Seals can't be\n
-practiced now."
+0x41C,"Selos Mágicos não podem\n
+ser praticados agora."
 0x41D,Salvar o jogo?
-0x41E,Start game.
-0x41F,Copy saved data.
-0x420,Delete saved data.
-0x421,Starts a new game.
-0x422,Select the difficulty level.
+0x41E,Iniciar jogo.
+0x41F,Copiar jogos salvos.
+0x420,Apagar jogos salvos.
+0x421,Inicia um novo jogo.
+0x422,Selecione o nível de dificuldade.
 0x423,NORMAL
-0x424,HARD
-0x425,Resume a game.
-0x426,"Resume an interrupted game.\n
-(The suspended file will be deleted.)"
-0x427,"Transfer items and souls to start a new\n
-game on save file 1 (some exceptions)."
-0x428,"Transfer items and souls to start a new\n
-game on save file 2 (some exceptions)."
-0x429,"Transfer items and souls to start a new\n
-game on save file 3 (some exceptions)."
-0x42A,Select the save data to be played.
-0x42B,Select the save data to be copied.
-0x42C,Where should this data be copied to?
-0x42D,This data will be copied.
-0x42E,Select data to be deleted.
-0x42F,Delete this data?
-0x430,Delete all data?
-0x431,All data has been erased.
-0x432,"Input data on the Touch Screen.\n
-Press the {BUTTON B} to go back."
-0x433,The button configuration can be changed.
-0x434,Buttons will be reset to default.
-0x435,Exit the button configuration menu.
-0x436,The button settings can't be finalized.
-0x437,Some button settings are doubled up.
-0x438,Choose the monster to be viewed.
-0x439,Choose the topic you'd like to see.
-0x43A,"Choose the Magic Seal\n
-to be practiced."
-0x43B,Would you like to practice?
-0x43C,Would you like to keep practicing?
-0x43D,"You buyin'? \n
-I'll cut ya some bargains."
-0x43E,I'll pay top cash for good stuff.
-0x43F,What? You're goin' already?
-0x440,"Choose the weapon to be fused.\n
-({BUTTON L} or {BUTTON R} to switch weapon type.)"
-0x441,Proceed with synthesis?
-0x442, was crafted!
-0x443,"Choose the soul to be freed.\n
-({BUTTON L} or {BUTTON R} to switch soul type.)"
-0x444,Release this soul?
+0x424,DIFÍCIL
+0x425,Continuar um jogo.
+0x426,"Retoma um jogo suspenso.\n
+(O arquivo suspenso será deletado.)"
+0x427,"Transfere itens e almas para iniciar um\n
+novo jogo no arquivo 1 (com exceções)."
+0x428,"Transfere itens e almas para iniciar um*
+novo jogo no arquivo 2 (com exceções)."
+0x429,"Transfere itens e almas para iniciar um*
+novo jogo no arquivo 3 (com exceções)."
+0x42A,Escolha o jogo para jogar.
+0x42B,Qual jogo você quer copiar?
+0x42C,"Para qual arquivo você deseja\n
+copiar esse jogo?"
+0x42D,Copiar para este arquivo?
+0x42E,Qual jogo deseja apagar?
+0x42F,Apagar esse jogo? Tem certeza?
+0x430,Deseja apagar todos os arquivos?
+0x431,Arquivos apagados com sucesso.
+0x432,"Escreva seu nome na Tela de Toque.\n
+Para voltar, pressione o botão {BUTTON B}."
+0x433,"A configuração dos botões pode ser\n
+modificada."
+0x434,"O botões serão resetados para o\n
+padrão."
+0x435,Sai do menu de configuração de botões.
+0x436,"A configuração dos botões não pode ser\n
+finalizada."
+0x437,Alguns botões estão duplicados.
+0x438,"Escolha o monstro para ser\n
+visualizado."
+0x439,Escolha o tópico que gostaria de ver.
+0x43A,"Escolha o Selo Mágico\n
+a ser praticado."
+0x43B,Você gostaria de praticar?
+0x43C,Você gostaria de continuar praticando?
+0x43D,"Tá a fim de comprar? \n
+Vou te fazer um ótimo negócio."
+0x43E,Vou te pagar uma grana por coisa boa.
+0x43F,Que foi? Cê já tá indo embora?
+0x440,"Escolha a arma a ser fundida.\n
+({BUTTON L} ou {BUTTON R} para trocar o tipo de arma.)"
+0x441,Proceder com a sintetização?
+0x442, foi forjado(a)!
+0x443,"Escolha a alma a ser libertada.\n
+({BUTTON L} ou {BUTTON R} para trocar o tipo de alma.)"
+0x444,Libertar esta alma?
 0x445,""
-0x446,Buy?
-0x447,Sell?
-0x448,"Craft a new weapon by\n
-fusing a soul with a weapon."
-0x449,Free the soul?
-0x44A,Leaving already?
-0x44B,No reading!
-0x44C,"Select the soul to be traded.\n
-({BUTTON L} or {BUTTON R} to switch soul type.)"
-0x44D,Checking wireless connection...
-0x44E,Please wait briefly.
-0x44F,Is this okay?
-0x450,Sending soul.
+0x446,Comprar?
+0x447,Vender?
+0x448,"Constrói uma nova arma\n
+fundindo uma alma com uma arma."
+0x449,Libertar a alma?
+0x44A,Já vai?
+0x44B,É proibido ler!
+0x44C,"Selecione a alma a ser trocada.\n
+({BUTTON L} ou {BUTTON R} para trocar o tipo de alma.)"
+0x44D,Checando conexão sem fio...
+0x44E,"Por favor, aguarde um pouco."
+0x44F,Está bom assim?
+0x450,Enviando alma.
 0x451,""
 0x452,""
 0x453,""
-0x454,Wireless connection error.
-0x455,The wireless connection has been lost.
+0x454,Erro na conexão sem fio.
+0x455,A conexão sem fio foi perdida.
 0x456,""
 0x457,""
-0x458,The soul trade is completed.
-0x459,Quit Wireless Mode?
-0x45A,Trade souls via Wireless Mode?
-0x45B,Play VS Mode via Wireless Mode?
+0x458,A troca de alma está completa.
+0x459,Sair do Modo Sem Fio?
+0x45A,Trocar almas via Modo Sem Fio?
+0x45B,"Jogar no modo Play Vs via\n
+Modo Sem Fio?"
 0x45C,"Alma Tática\n
 do Tipo Bala\n
 Pressione {BUTTON UP} + {BUTTON Y} para usar.\n
@@ -162,41 +169,44 @@ Consome PM durante o efeito."
 do Tipo Encanto\n
 Surte efeito quando equipado.\n
 Não consome PM."
-0x45F,"Ability-type\n
-Tactical Soul\n
-Takes effect automatically.\n
-(Does not require equipping.)"
-0x460,Choose course.
-0x461,Defeat all monsters in all rooms.
-0x462,Defeat all monsters in this room.
-0x463,Adjust MUSIC volume.
-0x464,Adjust VOICE volume.
-0x465,Adjust SOUND EFFECTS volume.
-0x466,Magic Seal 1
-0x467,Magic Seal 2
-0x468,Magic Seal 3
-0x469,Magic Seal 4
-0x46A,Magic Seal 5
-0x46B,"Data loading failed.\n
-Please turn power off and reinsert\n
-the Game Card."
+0x45F,"Alma Tática\n
+do Tipo Tático\n
+Tem efeito automático.\n
+(Não precisa equipar.)"
+0x460,Escolha o nível.
+0x461,"Derrote todos os monstros em todas\n
+as salas."
+0x462,"Derrote todos os monstros nesta\n
+sala."
+0x463,Ajustar volume da MÚSICA.
+0x464,Ajustar volume das VOZES.
+0x465,Ajustar o volume dos EFEITOS SONOROS.
+0x466,Selo Mágico 1
+0x467,Selo Mágico 2
+0x468,Selo Mágico 3
+0x469,Selo Mágico 4
+0x46A,Selo Mágico 5
+0x46B,"Houve um problema ao carregar o jogo.\n
+Favor desligar o portátil e\n
+reinserir o cartucho em seguida."
 0x46C,"Sala de Salvamento\n
  \n
 Pressione {BUTTON UP} na frente da estátua\n
 para salvar o jogo."
-0x46D,"Warp Room\n
+0x46D,"Sala de Teletransporte\n
  \n
-Press {BUTTON UP} in front of the device to\n
-activate the warp function."
-0x46E,JULIUS MODE has been unlocked!
-0x46F,BOSS RUSH MODE has been unlocked!
-0x470,SOUND MODE has been unlocked!
-0x471,"Saving...Do not remove the Game Card\n
-or turn off the power. "
-0x472,English
+Pressione {BUTTON UP} na frente do dispositivo\n
+para ativar o teletransporte."
+0x46E,MODO JULIUS foi destravado!
+0x46F,"MODO DE CHEFES\n
+foi destravado!"
+0x470,MODO DE SOM foi destravado!
+0x471,"Salvando... Favor não desligar o\n
+portátil nem remover o cartucho. "
+0x472,Inglês
 0x473,Deutsch
 0x474,Français
 0x475,Español
 0x476,Italiano
-0x477,"Save data is corrupted.\n
-Data has been deleted."
+0x477,"O jogo salvo está corrompido.\n
+Apagando dados do arquivo..."
