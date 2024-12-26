@@ -63,8 +63,8 @@ perseguem inimigos."
 devastadoras."
 0x33A,"Cria um pilar de fogo que\n
 se alastra no solo."
-0x33B,"Invoca uma nuvem de gafanho-\n
-tos para atacar os inimigos."
+0x33B,"Invoca uma nuvem de gafa-\n
+nhotos para atacar inimigos."
 0x33C,Parabéns.
 0x33D,NULL
 0x33E,NULL
@@ -132,7 +132,7 @@ um familiar."
 um familiar."
 0x366,"Dispara um raio laser\n
 devastador."
-0x367," Invoca foices da Morte\n
+0x367,"Invoca foices da Morte\n
 para atacar os inimigos."
 0x368,Aumenta FORÇA.
 0x369,Aumenta CON.
