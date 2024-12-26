@@ -1,0 +1,38 @@
+bc/
+  f_abil.dat: ABILITY
+  f_conf.dat: CONFIG
+  f_ene0.dat: ENEMY
+  f_itemu.dat: USE ITEM
+  f_libr.dat: LIBRARY
+  f_mgs.dat: MAGIC SEAL
+  f_pal0: CONFIG / ITEM USE / ABILITY
+  f_sd_e.dat: MUSIC / VOICE / SOUND EFFECT / EXIT / SOUND MODE / SOUND CONFIG
+
+sc/
+  f_area_e00.dat: The Lost Village / Wizardry Lab
+  f_area_e01.dat: Garden of Madness / The Dark Chapel
+  f_area_e02.dat: Demon Guest House / Condemned Tower
+  f_area_e03.dat: Mine of Judgment / Cursed Clock Tower
+  f_area_e04.dat: Subterranean Hell / Silenced Ruins
+  f_area_e05.dat: The Pinnacle / The Abyss
+  f_com01.dat: LV
+  f_com05.dat: Level UP / Guard / Curse / Poison / Stone / PAUSE
+  f_eset.dat: ENEMY SET / PLAY / ENEMY SET
+  f_gover3.dat: GAME OVER
+  f_hai.dat: ROOM / BULLET / GUARDIAN / ENCHANT / OK / ALL CLEAR / CLEAR
+  f_lice.dat: Licensed By Nintendo
+  f_mainob.dat: LV. / SOUL / ARMS / HAND / BODY / ACCESSORY / BULLET / GUARDIAN / ENCHANT / New / EQUIP
+  f_mark_e.dat: NEW RECORD! / CONGRATULATIONS / START / FINISH
+  f_mix_e.dat: WEAPON SYNTHESIS / SWORD / GREAT SWORD / RAPIER / POLEARM / AXE / HAMMER / KATANA / PUNCH
+  f_name0.dat: SIGN YOUR NAME / DEL / OK
+  f_net.dat: SOUL TRADE / VS MODE
+  f_res_e0.dat: VICTORY / DEFEAT / DRAW / START / FINISH
+  f_retry.dat: RETRY / GAME COMPLETE
+  f_scrap.dat: SOUL RELEASE / RELEASE SYNTHESIS / BULLET / GUARDIAN / ENCHANT / OK / WEAPON SYNTHESIS / EXIT
+  f_shop.dat: STOCK / SELL / BUY / EXIT
+  f_tiobj1.dat: GAME START / WIRELESS MODE / SOUND CONFIG / BOSS RUSH MODE / SOUND MODE / JULIUS MODE / ENEMY SET MODE / ₢1986,2025 KONAMI
+  f_tit_e2.dat: Dawn of Sorrow
+  f_top0.dat: SELECT DATA / COPY DATA / DELETE DATA / NEW GAME / CLEAR
+  f_top1.dat: NO DATA / COPY / CLEAR
+  f_trade.dat: SOUL TRADE / BULLET / GUARDIAN / ENCHANT / OK
+  f_vssel_e0.dat: CHOOSE COURSE
