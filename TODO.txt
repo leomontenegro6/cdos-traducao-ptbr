@@ -1,0 +1,16 @@
+- Mudar gráficos "Comércio de Almas" para "Trocar Almas" (tem mais de um)
+- Ao perder no modo de chefes, trocar gráfico "JOGO COMPLETO" para algo como "FECHAR JOGO" ou "SAIR" (a depender do original)
+- No modo de inimigos, editar gráfico "CONFIG. INIMIGO" pra algo mais curto e/ou não-abreviado (também resolver bug do texto cortado)
+- Ao apertar Start e ir em "Equipar", os seguintes gráficos faltam ser editados:
+  - HAND
+  - BODY
+  - ACESSORY
+  - BULLET
+  - GUARDIAN
+  - ENCHANT
+- Ao apertar Start e ir em "Habilidade", o nome "HABILIDADE" no topo da tela não está centralizado.
+- Ao apertar Start e ir em "Configuração", o til em Ã pode ser melhorado.
+- Ao apertar Start e ir em "Inimigos", mudar o nome "INIMIGO" para "INIMIGOS" pra padronizar
+- Ao apertar Start e ir em "Selos mágicos", mudar o nome "SELO MAGICO" para "SELOS MÁGICOS" (e melhorar seu visual)
+- O gráfico "Nível +1" precisa ser diminuído um pouco, pois a versão que veio da européia era maior e aqui ficou cortado
+- Opcional: Cogitar alterar a fonte 1bpp padrão para evitar que certos caracteres fiquem colados com os da linha de baixo
