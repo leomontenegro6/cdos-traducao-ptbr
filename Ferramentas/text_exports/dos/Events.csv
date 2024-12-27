@@ -280,8 +280,8 @@ Não, Yoko, você fica aqui.\n
 Em caso de emergência, se não tivermos\n
 um contato de fora, teremos problemas.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x12}
-Pera um pouco!\n
-Cê não pode...!\n
+Espera um pouco!\n
+Você não pode...!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x14}
 Homens são sempre tão egoístas!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x03}{PORTRAIT 0x14}
