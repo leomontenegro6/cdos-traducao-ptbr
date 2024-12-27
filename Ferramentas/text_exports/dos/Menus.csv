@@ -152,11 +152,10 @@ fundindo uma alma com uma arma."
 0x455,A conexão sem fio foi perdida.
 0x456,""
 0x457,""
-0x458,A troca de alma está completa.
+0x458,A troca de almas está completa.
 0x459,Sair do Modo Sem Fio?
-0x45A,Trocar almas via Modo Sem Fio?
-0x45B,"Jogar no modo Play Vs via\n
-Modo Sem Fio?"
+0x45A,Trocar almas via wi-fi?
+0x45B,"Jogar no modo versus via wi-fi?"
 0x45C,"Alma Tática\n
 do Tipo Bala\n
 Pressione {BUTTON UP} + {BUTTON Y} para usar.\n
