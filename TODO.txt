@@ -1,8 +1,3 @@
-- Ao apertar Start e ir em "Habilidade", o nome "HABILIDADE" no topo da tela não está centralizado.
-- Ao apertar Start e ir em "Configuração", o til em Ã pode ser melhorado.
-- Ao apertar Start e ir em "Inimigos", mudar o nome "INIMIGO" para "INIMIGOS" pra padronizar
-- Ao apertar Start e ir em "Selos mágicos", mudar o nome "SELO MAGICO" para "SELOS MÁGICOS" (e melhorar seu visual)
-- O gráfico "Nível +1" precisa ser diminuído um pouco, pois a versão que veio da européia era maior e aqui ficou cortado
 - Opcional: Cogitar alterar a fonte 1bpp padrão para evitar que certos caracteres fiquem colados com os da linha de baixo
 
 Events.csv
