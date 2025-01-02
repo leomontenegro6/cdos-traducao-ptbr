@@ -104,15 +104,14 @@ selar o fluxo de energia negra."
 0x11C,Punhos nus.
 0x11D,"Um canivete barato.\n
 Corta muito mal."
-0x11E,"Uma faca de combate para\n
-questões militares."
-0x11F,"Uma espada curta com empunhadura\n
-em formato de I."
+0x11E,"Uma faca de combate militar."
+0x11F,"Uma espada curta com\n
+empunhadura em formato de I."
 0x120,"Uma espada curta oriunda do\n
 Leste Indiano."
 0x121,"Uma espada curta decorada com\n
 ornamentação bem elaborada."
-0x122,"Uma arma arremessável com uma\n
+0x122,"Uma arma apunhaladora com uma\n
 lâmina curvada."
 0x123,Uma espada pequena.
 0x124,"Uma espada projetada para defesa\n
@@ -134,10 +133,10 @@ grossa."
 0x12C,"Uma espada usada por\n
 montadores de cavalaria."
 0x12D,"Um tipo comum de espada."
-0x12E,"Uma espada demoníaca na forma de\n
-uma cruz."
-0x12F,"Uma espada assustadora que contém\n
-veneno em sua lâmina."
+0x12E,"Uma espada demoníaca na forma\n
+de uma cruz."
+0x12F,"Uma espada assustadora que\n
+contém veneno em sua lâmina."
 0x130,"Uma espada lapidada da madeira\n
 de uma árvore divina."
 0x131,"Uma linda espada extravagante.\n
@@ -261,12 +260,12 @@ usada por ninjas."
 0x172,Roupas que trazem sorte.
 0x173,"Uma vestimenta luxuosa com\n
 detalhes finos por toda parte."
-0x174,"Jaqueta feita com técnica\n
+0x174,"Jaqueta feita com tecido\n
 especial que resiste a cortes."
 0x175,"Uma capa da cor do preto da\n
 escuridão."
 0x176,"Uma vestimenta oferecida\n
-pelo Conde Orlox."
+pelo Conde Orlock."
 0x177,"Um túnica impregnada com o poder\n
 negro de Drácula."
 0x178,"Uma vestimenta de armadura feita\n
@@ -325,7 +324,7 @@ músculos."
 0x196,"Faixa preta usada por\n
 lutadores habilidosos."
 0x197,"Um cinto usado por uma divindade\n
-de guerra. Aumenta a força do usuário."
+de guerra. Amplifica poder."
 0x198,Um brinco em forma de argola.
 0x199,"Um brinco com um pedra preciosa\n
 de cor azul-piscina."
@@ -341,7 +340,7 @@ traz prosperidade."
 0x1A0,"Um talismã do Templo Hakuba.\n
 Dizem que suprime almas negras."
 0x1A1,"Um anel que já foi usado pelo\n
-senhor das trevas."
+Senhor das Trevas."
 0x1A2,"Um anel que aumenta a frequência\n
 de aparecimento de itens raros."
 0x1A3,"Um anel que aumenta a frequência\n
@@ -350,7 +349,7 @@ de aparição de almas."
 de restauração de PM."
 0x1A5,"Ganha mais pontos de\n
 experiência."
-0x1A6,"Um anel que faz os monstros darem\n
+0x1A6,"Um anel que faz os inimigos darem\n
 mais dinheiro após derrotados."
 0x1A7,"Um anel que drena sem parar\n
 energia negra a partir do caos."

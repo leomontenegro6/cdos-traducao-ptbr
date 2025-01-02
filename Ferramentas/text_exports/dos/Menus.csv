@@ -50,7 +50,7 @@
 0x40A,""
 0x40B,""
 0x40C,""
-0x40D,"Está selado.\n
+0x40D,"Está selada.\n
 Um Selo Mágico é necessário."
 0x40E,"Altera armas, almas,\n
 armaduras equipadas, etc."
@@ -130,7 +130,7 @@ Vou te fazer um ótimo negócio."
 0x442, foi forjado(a)!
 0x443,"Escolha a alma a ser libertada.\n
 ({BUTTON L} ou {BUTTON R} para trocar o tipo de alma.)"
-0x444,Libertar esta alma?
+0x444,Confirmar libertação de almas?
 0x445,""
 0x446,Comprar?
 0x447,Vender?
@@ -167,7 +167,7 @@ Pressione {BUTTON R} para usar.\n
 Consome PM durante o efeito."
 0x45E,"Alma Tática\n
 do Tipo Encanto\n
-Surte efeito quando equipado.\n
+Surte efeito quando equipada.\n
 Não consome PM."
 0x45F,"Alma Tática\n
 do Tipo Tático\n

@@ -1,24 +1,27 @@
 0x30F,"Joga uma marionete e troca\n
 de lugar com ela."
-0x310,Para o tempo.
+0x310,"Dá ao usuário a habilidade\n
+de parar o tempo."
 0x311,"Ganha a habilidade de entrar\n
 em espelhos."
 0x312,"Cria um espaço que inflige\n
 danos espirituais."
 0x313,Arremessa ossos.
-0x314,Invoca Zumbi.
+0x314,Invoca um zumbi.
 0x315,Joga um machado para cima.
-0x316,Invoca um gato.
+0x316,"Arremessa um gato que\n
+avança nos inimigos."
 0x317,"Usa as presas para dilacerar\n
 os adversários."
-0x318,"Lança um explosivo altamente\n
-potente."
+0x318,"Arremessa uma bomba de\n
+grande poder destrutivo."
 0x319,"Invoca um arqueiro para lhe\n
 dar cobertura."
 0x31A,"Ataca colocando a língua\n
 para fora."
-0x31B,Serve um curry delicioso.
-0x31C,"Invoca uma Gosma\n
+0x31B,"Arremessa um prato de curry\n
+delicioso na cara dos inimigos."
+0x31C,"Invoca uma gosma\n
 saltitante."
 0x31D,"Chuta um crânio como uma\n
 bola."
@@ -26,41 +29,44 @@ bola."
 0x31F,"Grite para mandar os monstros\n
 pelos ares."
 0x320,Invoca raios.
-0x321,Invoca Homem-Pulga.
-0x322,Arremessa facas.
+0x321,"Invoca e arremessa\n
+homens-pulga."
+0x322,"Apunhala inimigos com\n
+uma faca."
 0x323,"Invoca uma guilhotina do\n
 inferno."
-0x324,Atira cartas como armas.
+0x324,"Arremessa cartas como\n
+armas."
 0x325,"Invoca uma esfera negra que\n
 emite energia das trevas."
-0x326,"Arremessa uma lâmina circular\n
-bem afiada."
+0x326,"Retalha os inimigos\n
+com um disco giratório."
 0x327,"Executa um ataque giratório\n
-com um machado enorme."
+com um machadão enorme."
 0x328,"Bate nos inimigos com socos\n
 rápidos e diretos."
 0x329,"Derruba inimigos com\n
 ganchos poderosos."
 0x32A,"Cria uma lâmina de gelo que\n
 congela inimigos."
-0x32B,Jorra um fluxo de água.
-0x32C,Invoca Larva.
-0x32D,Causa incêndio.
+0x32B,Atira um jato d'água.
+0x32C,Invoca uma larva.
+0x32D,Põe fogo no ar.
 0x32E,Arremessa uma Decarabia.
 0x32F,Recupera PV ao beber sangue.
 0x330,Arremessa lanças. 
 0x331,"Libera energia divina que\n
 causa danos avassaladores."
-0x332,Invoca Homúnculo. 
+0x332,Invoca um homúnculo. 
 0x333,"Lança projéteis mágicos que\n
 perseguem inimigos."
 0x334,Joga um Cabeça de Peixe. 
-0x335,Invoca um Molusco. 
+0x335,Invoca um molusco. 
 0x336,Invoca um cão. 
 0x337,Lança torpedos na água. 
 0x338,Ataca com uma cauda. 
-0x339,"Atira bolas de fogo\n
-devastadoras."
+0x339,"Lança bolas de fogo\n
+bastante poderosas."
 0x33A,"Cria um pilar de fogo que\n
 se alastra no solo."
 0x33B,"Invoca uma nuvem de gafa-\n
@@ -73,117 +79,129 @@ nhotos para atacar inimigos."
 0x341,NULL
 0x342,NULL
 0x343,NULL
-0x344,Reduz a velocidade de queda.
-0x345,"Transforma-se em morcego\n
-e voa."
-0x346,"Move-se em alta velocidade\n
-criando uma onda de choque."
+0x344,"Diminui velocidade de queda\n
+e aumenta distância de pulo."
+0x345,"Transforma-se em um morcego\n
+e dá a habilidade de voar."
+0x346,"Gera ondas chocantes\n
+quando você corre."
 0x347,Ataca com um arpão giratório.
 0x348,Cria tornados. 
 0x349,"Atira flechas com precisão\n
 mortal."
-0x34A,"Separa-se do corpo e vasculha\n
-o mapa com a própria alma."
-0x34B,"Cria um globo branco de energia\n
-negra que cresce ao rolar."
-0x34C,Veste uma capa de fogo.
+0x34A,"Separa-se do corpo e passeia\n
+pelo mapa com a própria alma."
+0x34B,"Cria uma bola de neve\n
+que cresce ao rolar."
+0x34C,"Cria chamas que giram\n
+ao redor do usuário."
 0x34D,Cresce uma cauda. 
 0x34E,Cresce uma cauda venenosa. 
-0x34F,Cospe fogo. 
-0x350,"Cospe nuvens de gás\n
-petrificante."
-0x351,Cospe gases tóxicos. 
-0x352,"Habilita ""aspirador mágico"".\n
-Suga PV do inimigo."
-0x353,Aumenta INT e SORTE. 
-0x354,"Assine um pacto com o diabo\n
-para aumentar bastante FOR."
-0x355,"Torna-se capaz de flutuar\n
-em um local."
-0x356,"Ganha defesa revestida\n
-de ferro."
-0x357,Executa rasteiras curtas. 
-0x358,"Invoca Alura Une como uma\n
-guardiã."
+0x34F,Irradia chamas pelas mãos. 
+0x350,"Irradia uma nuvem petrificante\n
+no ar, pelas mãos."
+0x351,"Irradia gases tóxicos\n
+pelas mãos."
+0x352,"Absorve PV dos inimigos.\n
+com um aspirador mágico."
+0x353,"Aumenta a INTELIGÊNCIA e\n
+a SORTE."
+0x354,"Faz um pacto com o diabo para\n
+aumentar bastante a FORÇA."
+0x355,"Permite ao usuário parar\n
+em meio ar."
+0x356,"Cria uma barreira que protege\n
+o usuário contra ataques."
+0x357,"Executa uma esquiva rápida\n
+para frente."
+0x358,"Invoca uma Alura Une como\n
+uma guardiã."
 0x359,"Transforma-se em um Golem\n
 de Ferro invencível."
 0x35A,"Invoca um esqueleto que\n
 oferece transporte."
-0x35B,Transforma-se em Barbariccia. 
+0x35B,"Transforma-se em Barbariccia\n
+e avança nos inimigos."
 0x35C,"Transforma-se em Valquíria\n
-e investe nos adversários."
-0x35D,"Invoca Morcego como um\n
-familiar."
-0x35E,"Invoca Armadura Grande como\n
+e avança nos inimigos."
+0x35D,"Invoca ""Morcego"",\n
 um familiar."
-0x35F,"Invoca Diabinho como\n
+0x35E,"Invoca ""Armadura Grande"",\n
 um familiar."
-0x360,"Invoca Harpia como\n
+0x35F,"Invoca ""Diabinho"",\n
 um familiar."
-0x361,"Invoca Daninha-Cadáver como\n
+0x360,"Invoca ""Harpia"",\n
 um familiar."
-0x362,"Invoca Quetzalcoatl como\n
+0x361,"Invoca ""Daninha-Cadáver"",\n
 um familiar."
-0x363,"Invoca Agulhas como\n
+0x362,"Invoca ""Quetzalcoatl"",\n
 um familiar."
-0x364,"Invoca Alastor como\n
+0x363,"Invoca ""Agulhas"",\n
 um familiar."
-0x365,"Invoca Gaibon como\n
+0x364,"Invoca ""Alastor"",\n
+um familiar."
+0x365,"Invoca ""Gaibon"",\n
 um familiar."
 0x366,"Dispara um raio laser\n
 devastador."
 0x367,"Invoca foices da Morte\n
 para atacar os inimigos."
-0x368,Aumenta FORÇA.
-0x369,Aumenta CON.
-0x36A,Aumenta INT.
-0x36B,Aumenta SORTE.
+0x368,Aumenta a FORÇA.
+0x369,Aumenta a CONSTITUIÇÃO.
+0x36A,Aumenta a INTELIGÊNCIA.
+0x36B,Aumenta a SORTE.
 0x36C,"Ganha resistência a ataques\n
 físicos."
 0x36D,Ganha resistência a raio. 
 0x36E,"Ganha resistência contra\n
 encantos e ataques negros."
-0x36F,Anula envenenamento. 
-0x370,Anula maldição. 
-0x371,Anula petrificação. 
-0x372,"Aumenta velocidade de\n
-recuperação de PM."
-0x373,"Come alimentos que são\n
-normalmente intragáveis."
-0x374,"Melhora a habilidade de\n
-arremessar."
-0x375,"Joga um adversário com força\n
-incrível."
-0x376,"Usa almas do tipo Bala ao\n
-executar ataques normais."
+0x36F,"Dá ao usuário imunidade a\n
+veneno."
+0x370,"Dá ao usuário imunidade a\n
+maldição."
+0x371,"Dá ao usuário imunidade a\n
+petrificação."
+0x372,"Aumenta taxa de restauração\n
+de PM por segundo."
+0x373,"Possibilita digerir alimentos\n
+estragados ou vencidos."
+0x374,"Melhora a habilidade com\n
+armas arremessáveis."
+0x375,"Melhora a habilidade de arre-\n
+messar com almas tipo bala."
+0x376,"Permite atacar com armas e\n
+usar almas tipo bala junto."
 0x377,"Causa mais danos nos inimigos\n
 se atacar pelas costas."
-0x378,"Evita recuar após receber\n
+0x378,"Evita o recuo ao receber\n
 danos."
 0x379,Ganha mais corações. 
 0x37A,Identifica paredes quebráveis. 
 0x37B,"Melhora o desempenho das\n
 habilidades com plantas."
 0x37C,Recupera PV gradualmente. 
-0x37D,"Ganha dinheiro ao sofrer\n
+0x37D,"Ganha dinheiro ao receber\n
 danos."
-0x37E,"Ganha mais pontos de\n
-experiência."
+0x37E,"Aumenta pontos de experiência\n
+obtidos."
 0x37F,"Senta na cadeira para\n
 recuperar PV."
 0x380,"Reduz a quantidade de danos\n
 dos ataques."
-0x381,Aumenta INT e diminui FORÇA. 
-0x382,Diminui FORÇA e aumenta CON. 
-0x383,"Toque a Tela para quebrar\n
+0x381,"Aumenta a INTELIGÊNCIA,\n
+ao passo que diminui a FORÇA."
+0x382,"Aumenta a CONSTITUIÇÃO,\n
+ao passo que diminui a FORÇA."
+0x383,"Toque a tela para quebrar\n
 certos blocos."
-0x384,Executa um pulo duplo. 
+0x384,"Permite ao usuário realizar\n
+pulos duplos."
 0x385,"Alterna almas e equipamentos\n
 usando o {BUTTON X}.\n
 Dois conjuntos de equipamentos\n
 pode ser usados no Menu EQUIPAR."
-0x386,"Ganha a habilidade de se\n
-mover embaixo d'água."
+0x386,"Permite ao usuário\n
+movimentar-se debaixo d'água."
 0x387,"Pressione {BUTTON UP} + {BUTTON L} para\n
 pular mais alto."
 0x388,"Aumenta a mobilidade\n
