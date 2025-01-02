@@ -1,6 +1,5 @@
 DAWN OF SORROW
 
-- Alterar a fonte de diálogos grande para evitar que certos caracteres fiquem colados com os da linha de baixo
 - Checar possível bug na rom onde, ao começar um jogo do zero e ir em "Biblioteca", aparecem uns tiles bugados na direita.
   - Só acontece no DraStic, possivelmente culpa do emulador
 - Editar o ícone do jogo pra incluir o BR no canto
