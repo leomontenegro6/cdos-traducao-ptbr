@@ -41,7 +41,7 @@ armas."
 emite energia das trevas."
 0x326,"Retalha os inimigos\n
 com um disco giratório."
-0x327,"Executa um ataque giratório\n
+0x327,"Desfere um ataque giratório\n
 com um machadão enorme."
 0x328,"Bate nos inimigos com socos\n
 rápidos e diretos."
@@ -101,8 +101,8 @@ ao redor do usuário."
 0x350,"Irradia uma nuvem petrificante\n
 no ar, pelas mãos."
 0x351,"Irradia gases tóxicos\n
-pelas mãos."
-0x352,"Absorve PV dos inimigos.\n
+das mãos."
+0x352,"Absorve PV de inimigos.\n
 com um aspirador mágico."
 0x353,"Aumenta a INTELIGÊNCIA e\n
 a SORTE."

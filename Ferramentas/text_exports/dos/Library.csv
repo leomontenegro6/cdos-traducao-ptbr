@@ -198,7 +198,7 @@ pessoas comuns.\n
 "
 0x495,"Como foi previsto em 2035,\n
 o Castelo de Drácula emergiu\n
-de um eclipse solar no Japão.\n
+de um eclipse solar, no Japão.\n
 Sua aura negra atraiu humanos\n
 para servirem como seus donos.\n
 Soma derrotou Graham Jones,\n
@@ -211,7 +211,7 @@ dos seus amigos.\n
 0x496,"Almas Tipo Bala\n
 "
 0x497,"Um tipo de Alma Tática\n
-que é vermelha em sua cor.\n
+que tem cor vermelha.\n
 Usa pontos de magia (PM) para\n
 executar magias tipo bala.\n
 Essas magias são mais efetivas\n
@@ -224,7 +224,7 @@ selecionada.\n
 0x498,"Almas Tipo Guardião\n
 "
 0x499,"Um tipo de Alma Tática\n
-que é azul em sua cor.\n
+que tem cor azul.\n
 Ela contém feitiços que\n
 consomem, gradativamente,\n
 pontos de magia (PM)\n
@@ -232,14 +232,14 @@ quando a alma é usada.\n
 Há dois subtipos: aquelas que\n
 surtem efeito enquanto\n
 o {BUTTON R} é pressionado,\n
-e aquelas que são ligadas\n
-ou desligadas usando o\n
+e aquelas que são ativadas\n
+ou desativadas usando o\n
 botão {BUTTON R}.\n
 "
 0x49A,"Almas Tipo Encanto\n
 "
 0x49B,"Um tipo de Alma Tática\n
-que é amarela em sua cor.\n
+que tem cor amarela.\n
 Ela contém magias que\n
 surtem efeito enquanto\n
 estão equipadas.\n
@@ -259,8 +259,8 @@ quando em sua posse\n
 e não consome pontos\n
 de magia (PM).\n
 Muitas delas são para\n
-movimento de ajuda, como a\n
-Esquiva.\n
+movimento de ajuda, como\n
+a Esquiva.\n
 Acionada com o botão {BUTTON L}.\n
 "
 0x49E,"Doppelganger (Alma)\n

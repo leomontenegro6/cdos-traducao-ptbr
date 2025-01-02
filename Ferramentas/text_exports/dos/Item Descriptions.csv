@@ -48,8 +48,8 @@ do mar."
 0x0FD,Macarrão al dente.
 0x0FE,"Um sorvete de baunilha espesso\n
 e cheio de gema de ovo."
-0x0FF,"Um prato de mariscos temperado com\n
-pó de curry."
+0x0FF,"Um prato de mariscos temperado\n
+com pó de curry."
 0x100,"Tem uma textura firme e\n
 gelatinosa."
 0x101,"Um cogumelo tóxico que induz\n
@@ -267,7 +267,7 @@ escuridão."
 0x176,"Uma vestimenta oferecida\n
 pelo Conde Orlock."
 0x177,"Um túnica impregnada com o poder\n
-negro de Drácula."
+negro de Conde Drácula."
 0x178,"Uma vestimenta de armadura feita\n
 de couro."
 0x179,"Um peitoral modelado a partir\n
@@ -308,8 +308,8 @@ vívida."
 0x18C,"Uma capa da cor do preto da\n
 escuridão."
 0x18D,Um pingente simples.
-0x18E,"Um pingente em formato de\n
-coração."
+0x18E,"Um pingente em formato\n
+de coração."
 0x18F,Um colar macabro.
 0x190,Um colar que simboliza o fogo.
 0x191,"Bolinhas com uma cruz feita\n
