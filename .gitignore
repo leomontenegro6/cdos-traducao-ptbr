@@ -2,6 +2,7 @@
 *.sav
 Extracted files*
 test.bat
+copy_rom_to_anbernic.bat
 Arquivos Patches/cdos_orig*
 Ferramentas/cache/*
 cdos_graficos/

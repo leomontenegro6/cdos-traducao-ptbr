@@ -2,11 +2,14 @@ DAWN OF SORROW
 
 - Checar possível bug na rom onde, ao começar um jogo do zero e ir em "Biblioteca", aparecem uns tiles bugados na direita.
   - Só acontece no DraStic, possivelmente culpa do emulador
+- Pedir ao denim uma mãozinha pra editar os créditos do jogo (envolve tilemaps complicados)
 - Editar o ícone do jogo pra incluir o BR no canto
 - Alterar banner, pra trocar nome do jogo de "Dawn of Sorrow" para "Alvor da Tristeza"
 
+rom americana tem crc32 de 135737F6
+
 Events.csv
-Parei na linha 648
+Parei na linha 1296
 
 ARIA OF SORROW
 
