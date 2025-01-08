@@ -77,7 +77,7 @@ Para trás, você também!\n
 Sr. Arikado!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x06}{PORTRAIT 0x1B}
 Você é o guardião dele, Genya Arikado?!\n
-Hmph! Não interfira!\n
+Humpf! Não interfira!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x02}{PORTRAIT 0x0D}
 Uma barreira!\n
 Droga, não há outro jeito.\n
@@ -89,7 +89,7 @@ Soma Cruz. Farei de tudo\n
 para matá-lo.\n
 Custe o que custar.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-Espere!\n
+Espera!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 É inútil segui-la.\n
 Desista.\n
@@ -109,8 +109,8 @@ Você só não o queria mais,\n
 desde que fugiu do castelo.\n
 {WAITINPUT}{SAMECHAR}
 Então, todas as almas que você\n
-havia dominado antes, foram\n
-libertadas.\n
+havia dominado antes foram\n
+libertas.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Sem a dominância sobre as almas, eu não\n
 podia usar os poderes. Faz sentido...
@@ -127,7 +127,7 @@ planejando algo, por isso estávamos\n
 observando-a de perto.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x01}{PORTRAIT 0x09}
 Por que alguém como ela\n
-está atrás de Soma?\n
+está atrás do Soma?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Ela pretende ressuscitar\n
 o Senhor das Trevas.\n
@@ -162,7 +162,7 @@ Alguns dias depois...\n
 Então essa é a sede do culto...\n
 {WAITINPUT}{SAMECHAR}
 Por essa não esperava. As informações\n
-que Hammer me passou eram mesmo\n
+que o Hammer me passou eram mesmo\n
 confiáveis.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x09}{PORTRAIT 0x18}
 Hahaha!\n
@@ -171,8 +171,8 @@ Pode crer que sim!\n
 H-Hammer?\n
 O que cê tá fazendo aqui?\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x04}{PORTRAIT 0x18}
-Hã? Você é trouxa?\n
-Fui eu quem te falou desse lugar.\n
+Hã? Tu é tapado, é?\n
+Fui eu que te falei desse lugar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Isso é verdade, mas...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
@@ -253,12 +253,12 @@ Então, não tem motivo para você\n
 vir até aqui.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
 É isso mesmo.\n
-Exatamente como Julius disse.\n
-Você está apenas se colocando em perigo.\n
+Exatamente como o Julius disse.\n
+Você só está se colocando em perigo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Aquela mulher, Celia...\n
-Ela planejou envolver Mina\n
-para me matar.\n
+Ela planejou envolver a Mina\n
+pra me matar.\n
 {WAITINPUT}{SAMECHAR}
 Não posso ficar de braços cruzados.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
@@ -427,7 +427,7 @@ Muito provavelmente você vai\n
 precisar desenhar um selo mágico\n
 para derrotar o monstro lá dentro.\n
 {WAITINPUT}{SAMECHAR}
-Fique calmo e dê seu melhor.\n
+Fique calmo e boa sorte.\n
 Eu vou ficar esperando aqui.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Tudo bem.\n
@@ -470,13 +470,13 @@ Então eu vou indo.\n
 Ah, tem mais uma coisa.\n
 {WAITINPUT}{SAMECHAR}
 Pode ser que eu consiga algumas\n
-informações de Julius, então venha\n
+informações com o Julius, então venha\n
 me visitar se estiver por perto.\n
 {WAITINPUT}{SAMECHAR}
 E... Soma, não faça nada\n
 imprudente, tá?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Tudo bem. E cê se cuida\n
+Beleza, e se cuida aí\n
 também, Yoko.\n
 {WAITINPUT}{NEWCHAR}"
 0x4B6,"{NAME 0x03}{PORTRAIT 0x10}
@@ -504,7 +504,7 @@ Do que cê me chamou, Dmitrii!?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x24}
 Ah, eu apenas disse a verdade.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x06}{PORTRAIT 0x1B}
-Dario e Dimitri!\n
+Dario e Dmitrii!\n
 Os dois, parem com isso!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x07}{PORTRAIT 0x1F}
 Tsc!\n
@@ -660,7 +660,7 @@ Eu sou Dmitrii Blinov.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Agora há pouco, você estava lutando com\n
 um demônio deste castelo. Isso quer\n
-dizer que está traindo Celia?\n
+dizer que está traindo a Celia?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x23}
 Não tire conclusões precipitadas.\n
 Isto foi apenas um ritual\n
@@ -670,7 +670,7 @@ Ritual?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x23}
 Você viu, não viu?\n
 {WAITINPUT}{SAMECHAR}
-A menos que seja ignorante como Dario,\n
+A menos que seja ignorante como o Dario,\n
 você conseguirá entender.\n
 Meu verdadeiro poder...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
@@ -690,7 +690,7 @@ Eu não tenho motivo para\n
 lutar com você.\n
 {WAITINPUT}{SAMECHAR}
 Existe alguma razão para você\n
-estar cooperando com Celia?\n
+estar cooperando com a Celia?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x23}
 Não há nenhuma.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
@@ -828,7 +828,7 @@ Arikado!\n
 O que está fazendo aqui?\n
 {WAITINPUT}{SAMECHAR}
 Eu pensei que estava\n
-protegendo Mina...\n
+protegendo a Mina...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Mina está bem.\n
 Meus colegas estão\n
@@ -906,11 +906,11 @@ Fale-me da situação.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 S-sim.\n
 {WAITINPUT}{NEWCHAR}
-(Eu contei a Arikado a situação\n
+(Contei pro Arikado a situação\n
 desde quando eu cheguei aqui.)\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Entendido.\n
-Este tal ""plano"" de Celia\n
+Este tal ""plano"" da Celia\n
 me preocupa.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 De todo modo, só o que\n
@@ -918,7 +918,7 @@ pretendo focar é em chegar\n
 ao último andar que ela mencionou.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Ok. Enquanto isso, vou continuar\n
-rastreando o paradeiro de Dario.\n
+rastreando o paradeiro do Dario.\n
 {WAITINPUT}{NEWCHAR}"
 0x4BD,"{NAME 0x05}{PORTRAIT 0x15}
 ...\n
@@ -953,20 +953,20 @@ barreira, mas teria que usar todo o\n
 meu poder, e me seria perigoso.\n
 {WAITINPUT}{SAMECHAR}
 É melhor entrar em contato com\n
-Yoko e esperar por ajuda.\n
+a Yoko e esperar por ajuda.\n
 {WAITINPUT}{SAMECHAR}
 De todo modo, e quanto a você?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Bem...\n
 {WAITINPUT}{NEWCHAR}
-(Eu contei a Julius a situação\n
+(Contei pro Julius a situação\n
 até o momento.)\n
 {WAITINPUT}{NEWCHAR}{NAME 0x05}{PORTRAIT 0x15}
 Entendo, um candidato a\n
 Senhor das Trevas.\n
 {WAITINPUT}{SAMECHAR}
 Bom, é melhor irmos atrás dele primeiro.\n
-Eu vou me encontrar com Arikado.\n
+Eu vou me encontrar com o Arikado.\n
 {WAITINPUT}{NEWCHAR}"
 0x4BE,"{NAME 0x00}{PORTRAIT 0x00}
 ?!\n
@@ -977,7 +977,7 @@ Pelo jeito, você está relaxado demais.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 O que está tentando dizer?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x06}{PORTRAIT 0x1B}
-Eu fundi Dario com um demônio\n
+Eu fundi o Dario com um demônio\n
 chamejante que invoquei, e ele\n
 ganhou ainda mais poder.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x02}{PORTRAIT 0x0D}
@@ -990,7 +990,7 @@ Arikado!\n
 Julius, também!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x06}{PORTRAIT 0x1B}
 Não importa quem vier,\n
-deter Dario é impossível.\n
+deter o Dario é impossível.\n
 {WAITINPUT}{SAMECHAR}
 O nascimento de um novo\n
 Senhor das Trevas é\n
@@ -998,11 +998,11 @@ praticamente certo agora.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x02}{PORTRAIT 0x0E}
 Julius!\n
 Eu sinto um forte poder demoníaco\n
-vindo das águas subterrâneas.\n
+vindo das águas subterrâneas a leste.\n
 {WAITINPUT}{SAMECHAR}
-É provável que seja Dario.\n
+É provável que seja o Dario.\n
 Vá atrás dele.\n
-Eu vou atrás de Celia.\n
+Eu vou atrás da Celia.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x05}{PORTRAIT 0x15}
 Soma, daqui em diante o dever\n
 é nosso. Fique longe e deixe\n
@@ -1136,7 +1136,7 @@ se deixam levar pela sede de poder.\n
 ...\n
 {WAITINPUT}{SAMECHAR}
 Arikado...\n
-O que aconteceu com Celia?\n
+O que aconteceu com a Celia?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Desculpe-me...\n
 Eu já enviei uma unidade para\n
@@ -1254,7 +1254,7 @@ advento do Senhor das Trevas.\n
 eu me transformo no Senhor das Trevas\n
 ou seja lá o que for.\n
 {WAITINPUT}{SAMECHAR}
-Mina, perdoe-me...\n
+Mina, me perdoe...\n
 Não pude atender ao seu desejo...\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x06}{PORTRAIT 0x1B}
 Está chegando...\n
@@ -1317,7 +1317,7 @@ uma aposta, mas deu certo\n
 no fim das contas.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Então você copiou o Poder da Dominância\n
-de Soma?\n
+do Soma?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x24}
 Ah, então você entendeu.\n
 {WAITINPUT}{SAMECHAR}
@@ -1330,7 +1330,7 @@ um substituto adequado\n
 para o meu corpo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x06}{PORTRAIT 0x1D}
 I-impossível! Você tem os mesmos\n
-poderes de Soma Cruz?\n
+poderes do Soma Cruz?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x23}
 Quando lutei com o garoto,\n
 eu confirmei uma coisa.\n
@@ -1413,7 +1413,7 @@ Sou eu quem tem que detê-lo.\n
 {WAITINPUT}{SAMECHAR}
 Ok...\n
 Mas eu vou na frente\n
-com Julius.\n
+com o Julius.\n
 {WAITINPUT}{NEWCHAR}"
 0x4C6,"{NAME 0x05}{PORTRAIT 0x15}
 Você quer que eu quebre\n
@@ -1463,7 +1463,7 @@ Não me decepcione, garoto.\n
 0x4C7,"{NAME 0x00}{PORTRAIT 0x02}
 !!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-Soma, você chegou?\n
+Soma, é você?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 O que aconteceu?!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x24}
@@ -1491,12 +1491,13 @@ Você matou sua aliada?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x23}
 Ela ansiava por um Senhor das Trevas.\n
 {WAITINPUT}{SAMECHAR}
-Ela serviu até o fim nesse propósito,\n
+Ela serviu até o fim para esse propósito,\n
 para que me tornasse Senhor das Trevas.\n
 Deveria se sentir honrada, não?\n
 {WAITINPUT}{SAMECHAR}
 Além do mais, ela fez isso de tal forma\n
-que Arikado sequer consegue mais lutar.\n
+que o Arikado sequer consegue mais\n
+lutar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 ?!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x02}{PORTRAIT 0x0D}
@@ -1510,14 +1511,13 @@ contra o seu Poder da Dominância.\n
 {WAITINPUT}{SAMECHAR}
 Vejamos qual prevalecerá.\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-Wh-What?\n
+O-o quê?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x25}
 I-impossível...\n
 Eu deveria tê-lo dominado\n
 completamente!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
-Entendo, então foi isso que\n
-aconteceu.\n
+Entendo, então foi isso que houve.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Arikado, o que está acontecendo?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
@@ -1544,7 +1544,7 @@ Aaaaaaaaaaaaah!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
 É inútil.\n
 Você não consegue controlar\n
-este poder.\n
+esse poder.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x26}
 Aaaargh!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}
@@ -1588,7 +1588,7 @@ Na verdade...\n
 {WAITINPUT}{SAMECHAR}
 Parando pra pensar, aconteceu algo\n
 estranho quando eu lutei\n
-contra Dmitrii.\n
+contra o Dmitrii.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x02}{PORTRAIT 0x0D}
 Conte-me sobre isso.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
@@ -1829,7 +1829,7 @@ promessa para você.\n
 {WAITINPUT}{NEWCHAR}"
 0x4D3,"{NAME 0x03}{PORTRAIT 0x10}
 Sinto muito, Soma.\n
-Mas eu vou libertá-lo do seu\n
+Mas eu vou te libertar do seu\n
 tormento agora.\n
 {WAITINPUT}{NEWCHAR}"
 0x4D4,"{NAME 0x04}{PORTRAIT 0x18}
@@ -1896,7 +1896,7 @@ E-ela tá bem na frente\n
 da minha loja!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Sim, ela tá esperando lá\n
-para conversar com Julius.\n
+pra conversar com o Julius.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
 !?\n
 Você sabia que ela tava aqui\n
@@ -1934,7 +1934,7 @@ Você parece triste.\n
 Bom, sabe o que é...\n
 {WAITINPUT}{NEWCHAR}"
 0x4D9,"{NAME 0x04}{PORTRAIT 0x1A}
-Acho que Yoko tá sendo um pouco\n
+Acho que a Yoko tá sendo um pouco\n
 fria demais comigo ultimamente...\n
 {WAITINPUT}{NEWCHAR}"
 0x4DA,"{NAME 0x04}{PORTRAIT 0x1A}
@@ -1961,7 +1961,7 @@ Ei, Soma!\n
 Saca só essa.\n
 {WAITINPUT}{NEWCHAR}"
 0x4DE,"{NAME 0x04}{PORTRAIT 0x19}
-Uns dias atrás, Yoko deu um oi\n
+Uns dias atrás, a Yoko deu um oi\n
 pra mim.\n
 {WAITINPUT}{NEWCHAR}"
 0x4DF,"{NAME 0x04}{PORTRAIT 0x19}
@@ -1998,7 +1998,7 @@ a Yoko com muita frequência.\n
 Não me diga... Será que eles?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 É claro que eles se encontram.\n
-Yoko é o contato de Julius.\n
+A Yoko é o contato do Julius.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
 Ah, tá bom.\n
 Acho que tô vendo coisas.\n
@@ -2030,7 +2030,7 @@ não interfere no amor.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Você tá imaginando coisas.\n
 {WAITINPUT}{SAMECHAR}
-Yoko disse que Julius é\n
+Yoko disse que o Julius é\n
 apenas um parceiro nos negócios.\n
 {WAITINPUT}{SAMECHAR}
 (Na verdade ela não disse,\n
@@ -2047,7 +2047,7 @@ Ele veio também?\n
 Ele quem?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
 Cê sabe.\n
-Aquele tal Arikado.\n
+Aquele tal do Arikado.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Ah é.\n
 Parece que ele está\n
@@ -2061,7 +2061,7 @@ naquele ""bonitão"" do Arikado.\n
 {WAITINPUT}{SAMECHAR}
 Cê acha que ela gosta dele?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-Sim, mas Arikado não parece estar\n
+Sim, mas o Arikado não parece estar\n
 interessado em ninguém.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x04}{PORTRAIT 0x18}
 Sim, é verdade.\n
@@ -2209,7 +2209,7 @@ uma nova habilidade.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Que habilidade?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-O Poder da Dominância em suma consiste\n
+O Poder da Dominância, em suma, consiste\n
 dos poderes das almas dos monstros\n
 que você controla, certo?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
@@ -2268,7 +2268,7 @@ em alguma coisa hoje?\n
 0x4EC,"{NAME 0x03}{PORTRAIT 0x10}
 Bem-vindo, Soma.\n
 {WAITINPUT}{SAMECHAR}
-Julius deixou uma informação.\n
+O Julius deixou uma informação.\n
 Você quer ouvir?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Claro que sim.\n
@@ -2343,7 +2343,7 @@ acontecer.\n
 0x4F4,"{NAME 0x03}{PORTRAIT 0x10}
 Ah, Soma.\n
 {WAITINPUT}{SAMECHAR}
-Arikado deixou uma informação.\n
+O Arikado deixou uma informação.\n
 Você quer ouvir?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Claro que sim.\n
@@ -2359,14 +2359,14 @@ estar bem ciente disso.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Entendo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Foi isso que Arikado deixou pra mim.\n
+Foi isso que o Arikado deixou pra mim.\n
 Tem mais algo que eu possa fazer\n
 por você?\n
 {WAITINPUT}{NEWCHAR}"
 0x4F5,"{NAME 0x00}{PORTRAIT 0x00}
 Entendo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Foi isso que Julius deixou pra mim.\n
+Foi isso que o Julius deixou pra mim.\n
 Tem mais algo que eu possa fazer\n
 por você?\n
 {WAITINPUT}{NEWCHAR}"
@@ -2403,13 +2403,13 @@ Graças a Deus que apareceu!\n
 ""Graças a Deus""?\n
 O que houve?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-É por causa daquele tal Hammer.\n
+É aquele tal do Hammer.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Ele fez alguma coisa?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-Ele está sempre me olhando.\n
+Ele tá sempre me olhando torto.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
-(Eu não acho que isso seja olhar...)\n
+(Tá mais pra olhar apaixonado...)\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
 Então, como somos vizinhos por enquanto,\n
 eu sorrio pra ele como de costume, e aí\n
@@ -2436,7 +2436,7 @@ Ei, posso desabafar uma coisa?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 O que é?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
-É sobre Julius.\n
+É sobre o Julius.\n
 Tenho a sensação de que ele\n
 acha que eu sou um fardo.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
@@ -2495,7 +2495,7 @@ Mas é difícil ficar aqui\n
 só esperando.\n
 {WAITINPUT}{SAMECHAR}
 Quando for em casa,\n
-cuide bem da Mina.\n
+cuida bem da Mina, tá?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Sim, eu sei...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x11}
@@ -2566,7 +2566,7 @@ querendo te perguntar...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 O que é?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x11}
-Até onde você chegou com Mina?\n
+Até onde você chegou com a Mina?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x06}
 Q-quê? Não diga asneiras!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x11}
@@ -2606,13 +2606,13 @@ fazer por você hoje?\n
 0x4FC,"{NAME 0x03}{PORTRAIT 0x10}
 Bem-vindo, Soma.\n
 {WAITINPUT}{SAMECHAR}
-Aliás, parece que Arikado\n
+Aliás, parece que o Arikado\n
 também veio.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Sim, pra ficar de olho em mim.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
 Eu achava que ele estava\n
-protegendo Mina.\n
+protegendo a Mina.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Também achei isso, por isso\n
 vim aqui sem hesitações.\n
@@ -2671,7 +2671,7 @@ fazer por você hoje?\n
 Bem-vindo, Soma.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 O que você sabe sobre aquela\n
-tal Celia?\n
+tal da Celia?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
 Só que eu sei é que ela\n
 é a fundadora desse culto.\n
@@ -2746,7 +2746,7 @@ você?\n
 0x505,"{NAME 0x03}{PORTRAIT 0x10}
 Bem-vindo, Soma.\n
 Eu ouvi que você derrotou\n
-Dmitrii, é verdade?\n
+o Dmitrii, é verdade?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Sim, mas foi estranho.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
@@ -2759,8 +2759,8 @@ Pode me contar em detalhes?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Bem, eu...\n
 {WAITINPUT}{NEWCHAR}
-(Eu contei a Yoko sobre\n
-a luta com Dmitrii.)\n
+(Contei pra Yoko sobre\n
+a luta com o Dmitrii.)\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
 Hmm...\n
 {WAITINPUT}{SAMECHAR}
@@ -2787,7 +2787,7 @@ Qual é o problema?\n
 Você parece triste...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 Eu derrotei todos os candidatos\n
-a Senhor das Trevas. Mas Celia\n
+a Senhor das Trevas. Mas a Celia\n
 disse que ainda não acabou...\n
 {WAITINPUT}{NEWCHAR}{NAME 0x03}{PORTRAIT 0x10}
 Ela ainda está planejando alguma\n
@@ -2816,7 +2816,7 @@ foram copiados?\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 É verdade.\n
 {WAITINPUT}{SAMECHAR}
-Dimitri estava vivendo\n
+Dmitrii estava vivendo\n
 dentro de mim.\n
 {WAITINPUT}{SAMECHAR}
 E lá, ele copiou diretamente\n

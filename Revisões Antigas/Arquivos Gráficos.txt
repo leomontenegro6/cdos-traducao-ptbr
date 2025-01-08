@@ -28,6 +28,15 @@ sc/
   f_net.dat: SOUL TRADE / VS MODE
   f_res_e0.dat: VICTORY / DEFEAT / DRAW / START / FINISH
   f_retry.dat: RETRY / GAME COMPLETE
+  f_roll0.dat: CREDITS (fonte pequena)
+  f_roll1.dat: CREDITS (fonte grande)
+  f_roll2.dat: CREDITS (fonte grande)
+  f_roll3.dat: CREDITS (fonte grande)
+  f_roll4.dat: CREDITS (fonte grande)
+  f_roll5.dat: CREDITS (fonte grande)
+  f_roll6.dat: CREDITS (fonte grande)
+  f_roll7.dat: CREDITS (fonte grande)
+  f_roll8.dat: THE END / copyright
   f_scrap.dat: SOUL RELEASE / RELEASE SYNTHESIS / BULLET / GUARDIAN / ENCHANT / OK / WEAPON SYNTHESIS / EXIT
   f_shop.dat: STOCK / SELL / BUY / EXIT
   f_tiobj1.dat: GAME START / WIRELESS MODE / SOUND CONFIG / BOSS RUSH MODE / SOUND MODE / JULIUS MODE / ENEMY SET MODE / ₢1986,2025 KONAMI

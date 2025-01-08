@@ -65,7 +65,7 @@
 0x04C,Selo Mágico 4
 0x04D,Selo Mágico 5
 0x04E,Punhos nus
-0x04F,Canivete
+0x04F,Faca
 0x050,Faca de Guerra
 0x051,Baselarde
 0x052,Cutall
@@ -80,7 +80,7 @@
 0x05B,Kris Naga
 0x05C,Nébula
 0x05D,Espada Curta
-0x05E,Cutlass
+0x05E,Sabre de Abordagem
 0x05F,Espada Longa
 0x060,Fragarach
 0x061,Hrunting
@@ -94,7 +94,7 @@
 0x069,Valmanway
 0x06A,Espada de Alucard
 0x06B,Claymore
-0x06C,Falchion
+0x06C,Alfange
 0x06D,Espada Grande
 0x06E,Durandal
 0x06F,Dainslef
@@ -120,7 +120,7 @@
 0x083,Machado Grande
 0x084,Machado Dourado
 0x085,Foice da Morte
-0x086,Espada Cega
+0x086,Lâmina Cega
 0x087,Katana
 0x088,Kotetsu
 0x089,Masamune
@@ -131,7 +131,7 @@
 0x08E,Soqueira de Metal
 0x08F,Cesto
 0x090,Punho Chicote
-0x091,Soco Inglês
+0x091,Soco Sônico
 0x092,Soqueira Cáiser
 0x093,Pistola
 0x094,Pistola de Prata
@@ -145,7 +145,7 @@
 0x09C,Chicote
 0x09D,Roupas Casuais
 0x09E,Túnica de Pano
-0x09F,Roupa de Ginástica
+0x09F,Roupas de Luta
 0x0A0,Traje de Kung Fu
 0x0A1,Jaqueta de Motoq.
 0x0A2,Farda Militar
