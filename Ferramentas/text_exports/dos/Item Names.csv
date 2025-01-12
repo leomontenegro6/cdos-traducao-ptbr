@@ -2,7 +2,7 @@
 0x00D,Poção Média
 0x00E,Poção Grande
 0x00F,Elixir
-0x010,Elixir Grande
+0x010,Elixir Médio
 0x011,Prisma de Mana
 0x012,Antídoto
 0x013,Anti-Maldição
@@ -80,7 +80,7 @@
 0x05B,Kris Naga
 0x05C,Nébula
 0x05D,Espada Curta
-0x05E,Sabre de Abordagem
+0x05E,Sabre Naval
 0x05F,Espada Longa
 0x060,Fragarach
 0x061,Hrunting
@@ -194,7 +194,7 @@
 0x0CD,Brinco de Ouro
 0x0CE,Brinco Sangrento
 0x0CF,Brinco de Platina
-0x0D0,Lágrimas de Sangue
+0x0D0,Gota de Sangue
 0x0D1,Amuleto da Sorte
 0x0D2,Talismã de Mina
 0x0D3,Anel do Satã

@@ -1487,17 +1487,17 @@ C-Celia!\n
 Que visão desagradável!\n
 Desapareça!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
-Você matou sua aliada?\n
+Você matou sua aliada?!\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x23}
 Ela ansiava por um Senhor das Trevas.\n
 {WAITINPUT}{SAMECHAR}
 Ela serviu até o fim para esse propósito,\n
-para que me tornasse Senhor das Trevas.\n
-Deveria se sentir honrada, não?\n
+em prol de me tornar Senhor das Trevas.\n
+Deve ter sido uma honra para ela, não?\n
 {WAITINPUT}{SAMECHAR}
-Além do mais, ela fez isso de tal forma\n
-que o Arikado sequer consegue mais\n
-lutar.\n
+Além do mais, ela fez isso de tal maneira\n
+que até mesmo incapacitou o Arikado\n
+de lutar.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x00}{PORTRAIT 0x00}
 ?!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x02}{PORTRAIT 0x0D}
@@ -1544,7 +1544,7 @@ Aaaaaaaaaaaaah!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}{NAME 0x00}{PORTRAIT 0x00}
 É inútil.\n
 Você não consegue controlar\n
-esse poder.\n
+um poder tão grande como esse.\n
 {WAITINPUT}{NEWCHAR}{NAME 0x08}{PORTRAIT 0x26}
 Aaaargh!\n
 {WAITINPUT}{NEWCHAR}{NEXTACTION}

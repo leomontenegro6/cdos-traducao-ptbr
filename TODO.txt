@@ -1,13 +1,12 @@
 DAWN OF SORROW
 
-- Checar bug menor, onde "Lágrimas de Sangue" não cabe por um píxel (ou tentar mudar algo na fonte pequena, ou abreviar)
-- Ver uma forma de fazer "Sabre de Abordagem" caber, pois tá passando em alguns píxels (ou tentar mudar algo na fonte pequena, ou colocar "Sabre Naval", ou abreviar)
-- Mudar "Pensão Demoníaca" para "Pousada Demoníaca" (e possivelmente re-editar todos os outros gráficos, pra garantir mesma aparência, já que não tenho mais o PSD original)
 - Pedir ao denim uma mãozinha pra editar os créditos do jogo (envolve tilemaps complicados)
 - Editar o ícone do jogo pra incluir o BR no canto
 - Alterar banner, pra trocar nome do jogo de "Dawn of Sorrow" para "Alvor da Tristeza"
 - Checar possível bug na rom onde, ao começar um jogo do zero e ir em "Biblioteca", aparecem uns tiles bugados na direita.
   - Só acontece no DraStic, possivelmente culpa do emulador
+- Mudar "Imitador" para "Mímico" (FUTURO)
+- Mudar "Fidalgo Blindado" para "Cavaleiro Armado" (FUTURO)
 
 
 rom americana tem crc32 de 135737F6
@@ -23,6 +22,7 @@ ARIA OF SORROW
 - Corrigir "machago" -> "machado"
 - Checar um erro ortográfico menor, lá no final do jogo.
 - Trocar risadas "Rárárá", "Réréré", "Ríríri" para "Hahaha", "Hehehe", "Ririri".
+- Mudar "Imitador" para "Mímico"
 
 PORTRAIT OF RUIN
 
@@ -30,3 +30,14 @@ PORTRAIT OF RUIN
 - Mudar "Cutlass" para "Sabre de Abordagem"
 - Mudar "Espada de Agni" para "Chama de Agni"
 - Trocar risadas "Rárárá", "Réréré", "Ríríri" para "Hahaha", "Hehehe", "Ririri".
+- Mudar "Imitador" para "Mímico"
+- Mudar "Fidalgo Blindado" para "Cavaleiro Armado"
+
+ORDER OF ECCLESIA
+
+- Mudar "Imitador" para "Mímico"
+- Mudar "Fidalgo Blindado" para "Cavaleiro Armado"
+
+HARMONY OF DISSONANCE
+
+- Mudar "Fidalgo Blindado" para "Cavaleiro Armado" (possivelmente abreviado)
