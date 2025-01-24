@@ -1,7 +1,5 @@
 DAWN OF SORROW
 
-- Pedir ao denim uma mãozinha pra editar os créditos do jogo (envolve tilemaps complicados)
-- Escrever readme da tradução e texto do tópico
 - Tirar 12 screenshots e criar 4 GIFs circulando entre cada 3 delas
 - Finalizar o patcher
 - Mudar "Imitador" para "Mímico" (FUTURO)
@@ -23,7 +21,7 @@ ARIA OF SORROW
 PORTRAIT OF RUIN
 
 - Mudar "Falchion" para "Alfange"
-- Mudar "Cutlass" para "Sabre de Abordagem"
+- Mudar "Cutlass" para "Sabre Naval"
 - Mudar "Espada de Agni" para "Chama de Agni"
 - Trocar risadas "Rárárá", "Réréré", "Ríríri" para "Hahaha", "Hehehe", "Ririri".
 - Mudar "Imitador" para "Mímico"
