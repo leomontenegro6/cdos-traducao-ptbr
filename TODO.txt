@@ -1,12 +1,10 @@
 DAWN OF SORROW
 
 - Tirar 12 screenshots e criar 4 GIFs circulando entre cada 3 delas
-- Finalizar o patcher
+- Finalizar o patcher e upar isso em outro repositório
+- Upar a extensão do previewer 
 - Mudar "Imitador" para "Mímico" (FUTURO)
 - Mudar "Fidalgo Blindado" para "Cavaleiro Armado" (FUTURO)
-
-
-rom americana tem crc32 de 135737F6
 
 ARIA OF SORROW
 
