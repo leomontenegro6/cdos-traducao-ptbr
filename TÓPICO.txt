@@ -58,6 +58,8 @@ A tradução será lançada não em uma, mas em várias versões:
     [li][b]Fixed Luck[/b]: Conserta sorte em drops de almas e equipamentos, assim diminuindo consideravelmente o [i]grinding[/i] do jogo original.[/li]
 [/list]
 
+IMG DO PATCHER TOOL
+
 Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à comunidade. Esperamos que usufruam da tradução, da mesma forma que também o fizemos em todo esse processo.
 
 —————————————————–
@@ -121,4 +123,6 @@ Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à 
 [b][i]Patch[/i][/b]
 —————————————————–
 
-Segue abaixo os patches da tradução, para download. Estão em formato Xdelta 3, e vocês podem aplicá-los através de programas como [url=https://www.romhacking.net/utilities/598/]Xdelta UI[/url] ou similares. O patch deve ser aplicado na rom [b]Castlevania - Dawn of Sorrow (USA).nds[/b], de crc [b]135737f6[/b] / md5sum [b]cc0f25b8783fb83cb4588d1c111bdc18[/b].
+Segue em anexo patches da tradução, para download. Estão em formato Xdelta 3, e vocês podem aplicá-los através de programas como [url=https://www.romhacking.net/utilities/598/]Xdelta UI[/url] ou similares. O patch deve ser aplicado na rom [b]Castlevania - Dawn of Sorrow (USA).nds[/b], de crc [b]135737f6[/b] / md5sum [b]cc0f25b8783fb83cb4588d1c111bdc18[/b].
+
+Os patches pré-prontos são para a versão "Vanilla" (cdos_1.0.xdelta) e "Definitive Edition" (cdos_de_1.0.xdelta) da tradução. Para versões customizadas, você deve baixar a ferramenta [url=https://github.com/leomontenegro6/cdos-patcher-tool/releases]CDOS Patcher Tool[/url], que permite escolher quais patches deseja aplicar na tradução.

@@ -1,37 +1,37 @@
-Fonte: 1 Paleta: 0 Linha: 13 Caveira: 2
+Fonte: 1 Paleta: 2 Linha: 13 Caveira: 2
 EQUIPE
 
-Fonte: 0 Paleta: 0 Linha: 32 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 32 Caveira: 1
 PRODUTOR
 
-Fonte: 1 Paleta: 2 Linha: 34 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 34 Caveira: 0
 IGA
 
-Fonte: 0 Paleta: 0 Linha: 50 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 50 Caveira: 1
 DIRETOR
 
-Fonte: 1 Paleta: 2 Linha: 52 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 52 Caveira: 0
 S. KUSHIBUCHI
 
-Fonte: 0 Paleta: 0 Linha: 67 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 67 Caveira: 1
 PROGRAMADOR CHEFE
 
 Fonte: 1 Paleta: 0 Linha: 69 Caveira: 0
 SHUTARO
 
-Fonte: 0 Paleta: 0 Linha: 84 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 84 Caveira: 1
 PROGRAMAÇÃO DO SISTEMA
 
 Fonte: 1 Paleta: 0 Linha: 86 Caveira: 0
 H. WATANABE
 
-Fonte: 0 Paleta: 0 Linha: 101 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 101 Caveira: 1
 PROGRAMAÇÃO DO JOGADOR
 
 Fonte: 1 Paleta: 0 Linha: 103 Caveira: 0
 CURRY THE KID
 
-Fonte: 0 Paleta: 0 Linha: 118 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 118 Caveira: 1
 PROGRAMAÇÃO DE INIMIGOS
 
 Fonte: 1 Paleta: 0 Linha: 120 Caveira: 0
@@ -49,43 +49,43 @@ A. YAMANE
 Fonte: 1 Paleta: 0 Linha: 136 Caveira: 0
 SHUTARO
 
-Fonte: 0 Paleta: 0 Linha: 147 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 147 Caveira: 1
 PROGRAMAÇÃO DO MAPA
 
 Fonte: 1 Paleta: 0 Linha: 149 Caveira: 0
 H. WATANABE
 
-Fonte: 0 Paleta: 0 Linha: 164 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 164 Caveira: 1
 PROGRAMAÇÃO DE EVENTOS
 
 Fonte: 1 Paleta: 0 Linha: 166 Caveira: 0
 K. NAGAOKA
 
-Fonte: 0 Paleta: 0 Linha: 181 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 181 Caveira: 1
 PROGRAMAÇÃO DE MENUS
 
 Fonte: 1 Paleta: 0 Linha: 183 Caveira: 0
 A. YAMANE
 
-Fonte: 0 Paleta: 0 Linha: 198 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 198 Caveira: 1
 SUPORTE DO SISTEMA
 
 Fonte: 1 Paleta: 0 Linha: 200 Caveira: 0
 T. OTANI
 
-Fonte: 0 Paleta: 0 Linha: 216 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 216 Caveira: 1
 DESIGNER CHEFE
 
 Fonte: 1 Paleta: 0 Linha: 218 Caveira: 0
 H. YAMAGUCHI
 
-Fonte: 0 Paleta: 0 Linha: 233 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 233 Caveira: 1
 DESIGN DE JOGADOR E ARMAS
 
 Fonte: 1 Paleta: 0 Linha: 235 Caveira: 0
 N. YAMAMOTO
 
-Fonte: 0 Paleta: 0 Linha: 250 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 250 Caveira: 1
 DESIGN DE INIMIGOS
 
 Fonte: 1 Paleta: 0 Linha: 252 Caveira: 0
@@ -94,7 +94,7 @@ ASAKA
 Fonte: 1 Paleta: 0 Linha: 256 Caveira: 0
 N. KOSUGE
 
-Fonte: 0 Paleta: 0 Linha: 271 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 271 Caveira: 1
 DESIGN DO MAPA
 
 Fonte: 1 Paleta: 0 Linha: 273 Caveira: 0
@@ -109,31 +109,31 @@ Y. NOZAKI
 Fonte: 1 Paleta: 0 Linha: 285 Caveira: 0
 H. NAMATAME
 
-Fonte: 0 Paleta: 0 Linha: 303 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 303 Caveira: 1
 CENÁRIOS
 
 Fonte: 1 Paleta: 0 Linha: 305 Caveira: 0
 IGA
 
-Fonte: 0 Paleta: 0 Linha: 323 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 323 Caveira: 1
 DIRETOR SONORO
 
 Fonte: 1 Paleta: 0 Linha: 325 Caveira: 0
 AKT
 
-Fonte: 0 Paleta: 0 Linha: 340 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 340 Caveira: 1
 PROGRAMAÇÃO SONORA
 
 Fonte: 1 Paleta: 0 Linha: 342 Caveira: 0
 AKT
 
-Fonte: 0 Paleta: 0 Linha: 358 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 358 Caveira: 1
 EFEITOS SONOROS
 
 Fonte: 1 Paleta: 0 Linha: 360 Caveira: 0
 T. SEKINE
 
-Fonte: 0 Paleta: 0 Linha: 375 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 375 Caveira: 1
 COMPOSITORES
 
 Fonte: 1 Paleta: 0 Linha: 377 Caveira: 0
@@ -142,13 +142,13 @@ M. KIMURA
 Fonte: 1 Paleta: 0 Linha: 381 Caveira: 0
 M. YAMANE
 
-Fonte: 0 Paleta: 0 Linha: 396 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 396 Caveira: 1
 DESIGN DO PRODUTO
 
 Fonte: 1 Paleta: 0 Linha: 398 Caveira: 0
 M. KITAZAWA
 
-Fonte: 1 Paleta: 0 Linha: 416 Caveira: 3
+Fonte: 1 Paleta: 2 Linha: 416 Caveira: 3
 ELENCO
 
 Fonte: 1 Paleta: 0 Linha: 429 Caveira: 0
@@ -172,10 +172,10 @@ H. KANEKO
 Fonte: 1 Paleta: 0 Linha: 453 Caveira: 0
 T. FUJIMOTO
 
-Fonte: 1 Paleta: 0 Linha: 468 Caveira: 3
+Fonte: 1 Paleta: 2 Linha: 468 Caveira: 3
 EQUIPE DE GRAVAÇÃO
 
-Fonte: 0 Paleta: 0 Linha: 480 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 480 Caveira: 1
 DIRETOR DE GRAVAÇÃO
 
 Fonte: 1 Paleta: 0 Linha: 482 Caveira: 0
@@ -184,7 +184,7 @@ S. SHINDO
 Fonte: 1 Paleta: 0 Linha: 484 Caveira: 0
 (YOU AND I)
 
-Fonte: 0 Paleta: 0 Linha: 499 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 499 Caveira: 1
 ENGENHEIRO DE GRAVAÇÃO
 
 Fonte: 1 Paleta: 0 Linha: 501 Caveira: 0
@@ -193,16 +193,16 @@ K. MIURA
 Fonte: 1 Paleta: 0 Linha: 503 Caveira: 0
 (ESTÚDIO HITOKUCHIZAKA)
 
-Fonte: 0 Paleta: 0 Linha: 515 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 515 Caveira: 1
 ESTÚDIO DE GRAVAÇÃO
 
 Fonte: 1 Paleta: 0 Linha: 517 Caveira: 0
 ESTÚDIO HITOKUCHIZAKA
 
-Fonte: 1 Paleta: 0 Linha: 533 Caveira: 3
+Fonte: 1 Paleta: 2 Linha: 533 Caveira: 3
 EQUIPE DO ANIME
 
-Fonte: 0 Paleta: 0 Linha: 545 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 545 Caveira: 1
 PRODUTOR DO ANIME
 
 Fonte: 1 Paleta: 0 Linha: 547 Caveira: 0
@@ -211,25 +211,25 @@ H. NAKAKI
 Fonte: 1 Paleta: 0 Linha: 549 Caveira: 0
 G-creators
 
-Fonte: 0 Paleta: 0 Linha: 561 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 561 Caveira: 1
 DESIGN DE PERSONAGENS ORIGINAL
 
 Fonte: 1 Paleta: 0 Linha: 563 Caveira: 0
 A. KOJIMA
 
-Fonte: 0 Paleta: 0 Linha: 572 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 572 Caveira: 1
 DESIGN DE PERSONAGENS DO ANIME
 
 Fonte: 1 Paleta: 0 Linha: 574 Caveira: 0
 S. YOSHIKAWA
 
-Fonte: 0 Paleta: 0 Linha: 586 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 586 Caveira: 1
 DIRETOR DO ANIME
 
 Fonte: 1 Paleta: 0 Linha: 588 Caveira: 0
 J. KAWAGOE
 
-Fonte: 0 Paleta: 0 Linha: 600 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 600 Caveira: 1
 PRODUTO DO ANIME
 
 Fonte: 1 Paleta: 0 Linha: 602 Caveira: 0
@@ -238,7 +238,7 @@ S. MATSUMOTO
 Fonte: 1 Paleta: 0 Linha: 604 Caveira: 0
 (YUHODO)
 
-Fonte: 0 Paleta: 0 Linha: 617 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 617 Caveira: 1
 LOCALIZAÇÃO NORTE AMERICANA
 
 Fonte: 1 Paleta: 0 Linha: 619 Caveira: 0
@@ -250,7 +250,7 @@ K. OGASAWARA
 Fonte: 1 Paleta: 0 Linha: 625 Caveira: 0
 J. SAITO
 
-Fonte: 0 Paleta: 0 Linha: 639 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 639 Caveira: 1
 LOCALIZAÇÃO BRASILEIRA
 
 Fonte: 1 Paleta: 0 Linha: 641 Caveira: 0
@@ -274,7 +274,7 @@ DJMATHEUSITO
 Fonte: 1 Paleta: 0 Linha: 659 Caveira: 0
 VICTORIEMINI
 
-Fonte: 1 Paleta: 0 Linha: 676 Caveira: 3
+Fonte: 1 Paleta: 2 Linha: 676 Caveira: 3
 AGRADECIMENTOS ESPECIAIS
 
 Fonte: 1 Paleta: 0 Linha: 688 Caveira: 0
@@ -295,11 +295,11 @@ K. MARUYAMA
 Fonte: 1 Paleta: 0 Linha: 708 Caveira: 0
 M. OKUTA
 
-Fonte: 0 Paleta: 0 Linha: 722 Caveira: 1
+Fonte: 0 Paleta: 2 Linha: 722 Caveira: 1
 PRODUTOR EXECUTIVO
 
 Fonte: 1 Paleta: 0 Linha: 724 Caveira: 0
 S. UMEZAKI
 
-Fonte: 0 Paleta: 0 Linha: 736 Caveira: 3
+Fonte: 0 Paleta: 2 Linha: 736 Caveira: 3
 E VOCÊ!

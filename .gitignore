@@ -5,5 +5,8 @@ test.bat
 copy_rom_to_anbernic.bat
 Arquivos Patches/cdos_orig*
 Ferramentas/cache/*
+Ferramentas/cdos_credit_edit/f_roll*
+Ferramentas/cdos_credit_edit/p_roll*
+Ferramentas/cdos_credit_edit/out.bmp
 cdos_graficos/
 cdos_orig/

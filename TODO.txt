@@ -1,7 +1,5 @@
 DAWN OF SORROW
 
-- Créditos: consertar os tiles das caveiras e do "fim"
-- Gerar patch xdelta final, para lançamento
 - Mudar "Imitador" para "Mímico" (FUTURO)
 - Mudar "Fidalgo Blindado" para "Cavaleiro Armado" (FUTURO)
 

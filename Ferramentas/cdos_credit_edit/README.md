@@ -50,6 +50,12 @@ Q: Os tiles das caveiras e do "THE END" estão com alguns píxels pretos ou tran
 
 A: A paleta que a ferramenta utiliza para inserir os gráficos é a padrão do Tile Molester e possui uma cor duplicada, causando esse problema menor. É possível que seja corrigido no futuro, mas nada garantido. Como workaround, recomendo corrigir os píxels manualmente após gerar os arquivos f_roll, usando o Tile Molester. Os créditos estão em formato 4bpp linear reverso, em modo de 2 dimensões, e você pode utilizar a paleta do arquivo "creditos.pal" para facilitar as edições.
 
+Q: Incluí alguns nomes, mas percebi que, na tela do "THE END", o copyright do fundo não apareceu.
+
+A: A ferramenta tenta fazer um cálculo automático das posições das primitivas relacionadas ao "THE END" e ao copyright, mas isso pode não estar funcionando corretamente. Caso queira tentar contornar isso manualmente, você pode abrir o arquivo p_roll.dat num editor hexadecimal, ir nos offset 0x0BE6 / 0x0BF6 / 0x0C06, e incrementar ou decrementar seus valores em 10, até surtir o efeito esperado. A imagem abaixo pode servir como guia.
+
+![alt text](faq_q2.png)
+
 # Disclaimer
 
 Embora esta ferramenta esteja aqui disponibilizada, ela foi fornecida as-is. O código-fonte dela não está disponível, e nenhum suporte será dado. Use-a por sua conta e risco.

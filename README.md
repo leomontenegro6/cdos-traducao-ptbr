@@ -42,6 +42,8 @@ Lá em 2008, Hyllian havia me contactado pra eu ajudar ele, dado que havia mexid
 
 A ideia de revisar a tradução beta do Dawn of Sorrow tem sido um desejo meu desde então, mas só foi possível sair do papel mais de 15 anos depois. No processo, precisamos portar a tradução da rom europeia para a americana, dado que as ferramentas originais do Hyllian se perderam com o tempo, existindo apenas os scripts que eu havia salvo num pendrive anos atrás, e que a melhor ferramenta para a tradução é o [DSVania Editor](https://www.romhacking.net/utilities/1271/), criada por LagoLunatic. Usando essa ferramenta para a parte textual, e copiando os gráficos editados da rom europeia para a americana, o trabalho inicial de portar a tradução para a rom americana foi relativamente curto, de cerca de um mês, a partir daí havendo apenas refinamentos e aprimoramentos diversos.
 
+Falando na parte gráfica, optamos por rebatizar a tela-título para "Alvor da Tristeza", primeiro por ser mais próximo do original, assemelhar-se mais à "Ária" (da Tristeza), e por não ser tão semelhante à "Ordem" (de Eclésia). Além disso, foram feitos vários aprimoramentos gráficos, como os nomes das localidades que foram recriados com uma fonte maior e sem abreviações, as fontes do jogo que tiveram suas alturas levemente reduzidas para evitar letras coladas e melhor acomodar caracteres acentuados maiúsculos, dentre outras correções menores.
+
 Migrar para a rom americana acabou sendo uma mudança bastante positiva, pois no processo conseguimos tornar a tradução compatível com hacks de aprimoramento lançados de uns anos pra cá, como troca de avatares, remoção de mecânicas da tela sensível ao toque, etc. Todos esses patches podem ser livremente aplicados junto à tradução ou não, a depender da preferência dos jogadores. Isso foi tornado possível graças à ajuda do colega "djmatheusito", que me ajudou a criar uma ferramenta de patcher que possibilita, no ato de patchear a rom, selecionar quais hacks de aprimoramento deseja-se aplicar junto à tradução.
 
 Junto a esta empreitada, tive ajuda do Mysterioso, do grupo "jacutem sabão", que fez um breve teste ingame e passou sugestões de revisão textual bem bacanas. Também tive a ajuda do Neko Belmont, responsável pela dublagem do Aria of Sorrow pelo grupo "Stardust Studios", que não somente me ajudou com revisão, como também na parte gráfica e, mais importante, ofereceu sugestões bem interessantes para os bestiários que podem resultar em revisões futuras em outras traduções de Castlevania também. Por fim, as artes de capas foram providas por cortesia de [victoriemini](https://www.youtube.com/@victoriemini), youtuber brasileiro entusiasta de portáteis chineses.
@@ -51,11 +53,13 @@ A parte provavelmente mais difícil e porre da tradução foram editar os crédi
 A tradução será lançada não em uma, mas em várias versões:
 
 - **Vanilla**: Tradução em cima do jogo original, para os que preferem o jogo como ele originalmente é.
-- **Definitive Edition**: Tradução combinada com os patches de aprimoramento "Dawn of Dignity", "Fixed Luck" e "No Required Touch Screen".
+- **Definitive Edition**: Tradução combinada com os patches de aprimoramento "Dawn of Dignity", "No Magic Seals" e "Fixed Luck".
 - **Customizada**: Através da ferramenta CDOS Patcher Tool, que permite ao usuário escolher livremente se quer aplicar ou não ou seguintes patches:
   - **Dawn of Dignity**: Troca os avatares de anime genérico por avatares góticos no estilo da Ayami Kojima.
   - **No Magic Seals**: Desabilita mecânica de selos mágicos, fazendo os bosses serem selados imediatamente após derrotados.
   - **Fixed Luck**: Conserta sorte em drops de almas e equipamentos, assim diminuindo consideravelmente o *grinding* do jogo original.
+
+![alt text](https://github.com/leomontenegro6/cdos-patcher-tool/raw/master/cdos_patcher_tool.gif)
 
 Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à comunidade. Esperamos que usufruam da tradução, da mesma forma que também o fizemos em todo esse processo.
 
@@ -81,8 +85,15 @@ Revisão: 100%
 
 # Imagens
 
-TODO
+![alt text](Screenshots/PNG/01.png) ![alt text](Screenshots/PNG/02.png) ![alt text](Screenshots/PNG/03.png)
+![alt text](Screenshots/PNG/04.png) ![alt text](Screenshots/PNG/05.png) ![alt text](Screenshots/PNG/06.png)
+![alt text](Screenshots/PNG/07.png) ![alt text](Screenshots/PNG/08.png) ![alt text](Screenshots/PNG/09.png)
+![alt text](Screenshots/PNG/10.png) ![alt text](Screenshots/PNG/11.png) ![alt text](Screenshots/PNG/12.png)
+![alt text](Screenshots/PNG/13.png) ![alt text](Screenshots/PNG/14.png) ![alt text](Screenshots/PNG/15.png)
+![alt text](Screenshots/PNG/16.png)
 
 # Patch
 
-TODO
+O patch de tradução está disponível na seção de releases desse repositório. Está em formato Xdelta 3, e vocês podem aplicá-los através de programas como [Xdelta UI](https://www.romhacking.net/utilities/598/) ou similares. O patch deve ser aplicado na rom **Castlevania - Dawn of Sorrow (USA).nds**, de crc **135737f6** / md5sum **cc0f25b8783fb83cb4588d1c111bdc18**.
+
+Os patches pré-prontos são para a versão "Vanilla" (cdos_1.0.xdelta) e "Definitive Edition" (cdos_de_1.0.xdelta) da tradução. Para versões customizadas, você deve baixar a ferramenta [CDOS Patcher Tool](https://github.com/leomontenegro6/cdos-patcher-tool/releases), que permite escolher quais patches deseja aplicar na tradução.
