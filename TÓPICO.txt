@@ -1,0 +1,124 @@
+IMAGENS COVER EM GIF
+
+—————————————————–
+[b]Informações[/b]
+—————————————————–
+
+[b]Nome do jogo[/b]: Castlevania - Dawn of Sorrow
+[b]Versão[/b]: Americana
+[b]Plataforma[/b]: Nintendo DS
+[b]Desenvolvedora[/b]: Konami
+[b]Distribuidora[/b]: Konami
+[b]Gênero[/b]: Plataforma / Metroidvania / RPG de Ação
+[b]Jogadores[/b]: 1
+
+—————————————————–
+[b]Enredo[/b]
+—————————————————–
+
+Primeiro jogo da série lançado pra Nintendo DS, este foi um título com um hype bem alto na época que saiu, tanto que suas vendas foram maiores do que seus sucessores só por conta desse hype. É ainda mais parecido com o famoso "Symphony of the Night" de PS1, pelo menos graficamente falando, dado que vários assets antigos foram reutilizados neste jogo, visto como fanservice por vários jogadores.
+
+Tal como sua prequela, Aria of Sorrow, este também se passa no futuro ao invés do passado. O ano dos acontecimentos é 2036, um ano após os eventos ocorridos no Castelo de Drácula dentro do eclipse no Japão. Soma estava conversando tranquilamente com Mina Hakuba, até que é atacado por Celia Fortner, líder de um culto chamado "Com Luz", e tal como Graham Jones, também acredita que o mal absoluto é necessário para que o bem absoluto também exista.
+
+Genya Arikado, que estava vigiando Soma como seu guardião, aparece para tentar conter essa ameaça. Porém, Soma é cercado por uma barreira invocada por Celia, e é atacado por monstros. Utilizando uma arma lançada por Arikado, Soma derrota os monstros, só para ver que seu velho poder de dominar almas dos monstros que derrota, outrora desaparecido, estranhamente volta.
+
+Após isso, Celia recua. Arikado explica a Soma que o objetivo de Celia é ressuscitar o Senhor das Trevas e que para isso ela precisava matar aquele tido como a reencarnação de Drácula. Arikado também diz a Soma que não precisa se envolver em caçar Celia, pois é de responsabilidade dele e de seus agentes. No entanto, como Mina acabou envolvida no ataque, Soma decide ir atrás de Celia para enfrentá-la, e tentar rechaçar seus planos, sejam lá quais forem.
+
+Com a ajuda de Hammer, Soma descobre o paradeiro de Celia e seu culto, um castelo enorme situado no topo de uma montanha, envolto numa floresta com forte neve na região. Também atrás de Celia estão velhos companheiros como Yoko Belnades e Julius Belmont, chamados para investigar a pedido de Arikado. Embora num impasse inicial por conta de Soma estar num local cujas chances dele cair numa emboscada e virar Senhor das Trevas é alta, Soma insiste em ir atrás de Celia, então todos optam por apoiá-lo nessa missão.
+
+Assim começa sua jornada pelo castelo de Celia para descobrir o que Celia e seu culto estão tramando, que pode resultar no retorno de Drácula, seja por bem ou por mal.
+
+—————————————————–
+[b]Sobre a tradução[/b]
+—————————————————–
+
+Esta tradução foi originalmente lançada em novembro de 2008 por Hyllian, um romhacker brasileiro de longa data, membro do finado grupo CBT e responsável por várias traduções como Zelda Ocarina of Time e Phantasy Star IV, bem como vários shaders de emulação para o RetroArch. Ele havia reaparecido na cena após uns anos fora, motivado pela ideia de traduzir o primeiro Castlevania de Nintendo DS.
+
+Lá em 2008, Hyllian havia me contactado pra eu ajudar ele, dado que havia mexido nos outros Castlevanias de GBA. Eu ajudei ele um pouco, editando gráficos mais complexos como a tela-título, que inicialmente havia ficado como "Origem da Tristeza". Muito embora a tradução estivesse quase 100%, ela tem sido marcada como beta desde o seu lançamento em 2008, ainda faltando revisão textual e aprimorar algumas edições gráficas que inicialmente estavam abreviadas. A ideia era futuramente endereçar essas coisas e lançar a versão 1.0 da mesma, mas essa ideia acabou engavetada por anos, pois acabamos por pedir ao Hyllian para desenvolver ferramentas para o Portrait of Ruin e Order of Ecclesia, resultando nas traduções desses títulos feitas em 2009.
+
+A ideia de revisar a tradução beta do Dawn of Sorrow tem sido um desejo meu desde então, mas só foi possível sair do papel mais de 15 anos depois. No processo, precisamos portar a tradução da rom europeia para a americana, dado que as ferramentas originais do Hyllian se perderam com o tempo, existindo apenas os scripts que eu havia salvo num pendrive anos atrás, e que a melhor ferramenta para a tradução é o [url=https://www.romhacking.net/utilities/1271/]DSVania Editor[/url], criada por LagoLunatic. Usando essa ferramenta para a parte textual, e copiando os gráficos editados da rom europeia para a americana, o trabalho inicial de portar a tradução para a rom americana foi relativamente curto, de cerca de um mês, a partir daí havendo apenas refinamentos e aprimoramentos diversos.
+
+Falando na parte gráfica, optamos por rebatizar a tela-título para "Alvor da Tristeza", primeiro por ser mais próximo do original, assemelhar-se mais à "Ária" (da Tristeza), e por não ser tão semelhante à "Ordem" (de Eclésia). Além disso, foram feitos vários aprimoramentos gráficos, como os nomes das localidades que foram recriados com uma fonte maior e sem abreviações, as fontes do jogo que tiveram suas alturas levemente reduzidas para evitar letras coladas e melhor acomodar caracteres acentuados maiúsculos, dentre outras correções menores.
+
+Migrar para a rom americana acabou sendo uma mudança bastante positiva, pois no processo conseguimos tornar a tradução compatível com hacks de aprimoramento lançados de uns anos pra cá, como troca de avatares, remoção de mecânicas da tela sensível ao toque, etc. Todos esses patches podem ser livremente aplicados junto à tradução ou não, a depender da preferência dos jogadores. Isso foi tornado possível graças à ajuda do colega "djmatheusito", que me ajudou a criar uma ferramenta de patcher que possibilita, no ato de patchear a rom, selecionar quais hacks de aprimoramento deseja-se aplicar junto à tradução.
+
+Junto a esta empreitada, tive ajuda do Mysterioso, do grupo "jacutem sabão", que fez um breve teste ingame e passou sugestões de revisão textual bem bacanas. Também tive a ajuda do Neko Belmont, responsável pela dublagem do Aria of Sorrow pelo grupo "Stardust Studios", que não somente me ajudou com revisão, como também na parte gráfica e, mais importante, ofereceu sugestões bem interessantes para os bestiários que podem resultar em revisões futuras em outras traduções de Castlevania também. Por fim, as artes de capas foram providas por cortesia de [url=https://www.youtube.com/@victoriemini]victoriemini[/url], youtuber brasileiro entusiasta de portáteis chineses.
+
+A parte provavelmente mais difícil e porre da tradução foram editar os créditos. Pedi ajuda do denim, parceiro de longa data em romhacking, que precisou criar uma ferramenta que, baseado numa fonte e num arquivo de texto, constrói os arquivos dos créditos no formato que o jogo espera. Graças a isso, conseguimos tornar esta tradução 100%, bem como creditar todos os envolvidos na própria tradução, sem necessidade de splash-screen no momento.
+
+A tradução será lançada não em uma, mas em várias versões:
+
+[list]
+  [li][b]Vanilla[/b]: Tradução em cima do jogo original, para os que preferem o jogo como ele originalmente é.[/li]
+  [li][b]Definitive Edition[/b]: Tradução combinada com os patches de aprimoramento "Dawn of Dignity", "No Magic Seals" e "Fixed Luck".[/li]
+  [li][b]Customizada[/b]: Através da ferramenta CDOS Patcher Tool, que permite ao usuário escolher livremente se quer aplicar ou não ou seguintes patches:[/li]
+  [ul]
+    [li][b]Dawn of Dignity[/b]: Troca os avatares de anime genérico por avatares góticos no estilo da Ayami Kojima.[/li]
+    [li][b]No Magic Seals[/b]: Desabilita mecânica de selos mágicos, fazendo os bosses serem selados imediatamente após derrotados.[/li]
+    [li][b]Fixed Luck[/b]: Conserta sorte em drops de almas e equipamentos, assim diminuindo consideravelmente o [i]grinding[/i] do jogo original.[/li]
+[/list]
+
+Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à comunidade. Esperamos que usufruam da tradução, da mesma forma que também o fizemos em todo esse processo.
+
+—————————————————–
+[b]Equipe[/b]
+—————————————————–
+
+[list]
+[li]Hyllian : Tradução original de 2008;[/li]
+[li]Solid One : Romhacking geral, gráficos, revisão e teste;[/li]
+[li]Neko Belmont : Revisão, gráficos e sugestões do bestiário;[/li]
+[li]Mysterioso : Revisão;[/li]
+[li]denim : Romhacking;[/li]
+[li]djmatheusito : Ajuda na criação da ferramenta CDOS Patcher Tool.[/li]
+[li]victoriemini : Artes de capas.[/li]
+[/list]
+
+—————————————————–
+[b][i]Status[/i] da Tradução[/b]
+—————————————————–
+
+[b]Textos[/b]: 100%
+[b]Acentos[/b]: 100%
+[b]Gráficos[/b]: 100%
+[b]Revisão[/b]: 100%
+
+—————————————————–
+[b]Ferramentas Utilizadas/Desenvolvidas[/b]
+—————————————————–
+
+[list]
+[li][b][url=https://mh-nexus.de/en/hxd/]HxD Hex Editor[/url][/b] : Editor hexadecimal usado para edições diversas;[/li]
+[li][b][url=https://www.romhacking.net/utilities/1271/]DSVania Editor[/url][/b] : Tool criada por LagoLunatic, capaz de fazer edições em jogos de Castlevania de GBA e DS;[/li]
+[li][b][url=https://code.visualstudio.com/]Visual Studio Code[/url][/b] : Utilizado para traduzir os scripts em CSV exportados pelo DSVania Editor;[/li]
+[li][b][url=https://github.com/leomontenegro6/cdos-dialog-previewer]CDOS Dialog Previewer[/url][/b] : Extensão do VSCode para pré-visualizar diálogos enquanto revisa os scripts;[/li]
+[li][b][url=https://github.com/leomontenegro6/cdos-patcher-tool]CDOS Patcher Tool[/url][/b] : Aplicativo desktop que permite patchear a rom de diversas formas, para criar versões diferentes;[/li]
+[li][b][url=https://github.com/leomontenegro6/cdos-traducao-ptbr/tree/master/Ferramentas/cdos_credit_edit]CDOS Credit Edit[/url][/b] : Ferramenta criada pelo denim para permitir manipular os arquivos de créditos do jogo;[/li]
+[li][b][url=https://www.romhacking.net/utilities/1583/]Tile Molester 0.21[/url][/b] : Editor de tiles usado para edição dos gráficos do jogo.[/li]
+[/list]
+
+—————————————————–
+[b]Agradecimentos[/b]
+—————————————————–
+
+[list]
+[li]Konami e Koji Igarashi, por ter lançado o jogo;[/li]
+[li]Ao Neko Belmont e Mysterioso, pelas revisões e sugestões;[/li]
+[li]Ao denim, por ajudar na edição dos créditos do jogo;[/li]
+[li]Ao LagoLunatic, por ter criado a ferramenta DSVania Editor.[/li]
+[li]Ao djmatheusito, pelo apoio no CDOS Patcher Tool.[/li]
+[li]Ao victoriemini, pelas artes de capas.[/li]
+[/list]
+
+—————————————————–
+[b]Imagens[/b]
+—————————————————–
+
+[img width=320][/img] [img width=320][/img]
+[img width=320][/img] [img width=320][/img]
+
+—————————————————–
+[b][i]Patch[/i][/b]
+—————————————————–
+
+Segue abaixo os patches da tradução, para download. Estão em formato Xdelta 3, e vocês podem aplicá-los através de programas como [url=https://www.romhacking.net/utilities/598/]Xdelta UI[/url] ou similares. O patch deve ser aplicado na rom [b]Castlevania - Dawn of Sorrow (USA).nds[/b], de crc [b]135737f6[/b] / md5sum [b]cc0f25b8783fb83cb4588d1c111bdc18[/b].

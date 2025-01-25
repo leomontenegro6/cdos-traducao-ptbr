@@ -1,8 +1,7 @@
 DAWN OF SORROW
 
-- Tirar 12 screenshots e criar 4 GIFs circulando entre cada 3 delas
-- Finalizar o patcher e upar isso em outro repositório
-- Upar a extensão do previewer 
+- Créditos: consertar os tiles das caveiras e do "fim"
+- Gerar patch xdelta final, para lançamento
 - Mudar "Imitador" para "Mímico" (FUTURO)
 - Mudar "Fidalgo Blindado" para "Cavaleiro Armado" (FUTURO)
 
