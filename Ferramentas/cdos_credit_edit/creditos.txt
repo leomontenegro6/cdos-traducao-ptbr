@@ -274,31 +274,31 @@ DJMATHEUSITO
 Fonte: 1 Paleta: 0 Linha: 659 Caveira: 0
 VICTORIEMINI
 
-Fonte: 1 Paleta: 0 Linha: 679 Caveira: 3
+Fonte: 1 Paleta: 0 Linha: 676 Caveira: 3
 AGRADECIMENTOS ESPECIAIS
 
-Fonte: 1 Paleta: 0 Linha: 691 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 688 Caveira: 0
 K. HONDA
 
-Fonte: 1 Paleta: 0 Linha: 695 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 692 Caveira: 0
 K. YAMANE
 
-Fonte: 1 Paleta: 0 Linha: 699 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 696 Caveira: 0
 N. MATSUFUJI
 
-Fonte: 1 Paleta: 0 Linha: 703 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 700 Caveira: 0
 Y. WATANABE
 
-Fonte: 1 Paleta: 0 Linha: 707 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 704 Caveira: 0
 K. MARUYAMA
 
-Fonte: 1 Paleta: 0 Linha: 711 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 708 Caveira: 0
 M. OKUTA
 
-Fonte: 0 Paleta: 0 Linha: 725 Caveira: 1
+Fonte: 0 Paleta: 0 Linha: 722 Caveira: 1
 PRODUTOR EXECUTIVO
 
-Fonte: 1 Paleta: 0 Linha: 727 Caveira: 0
+Fonte: 1 Paleta: 0 Linha: 724 Caveira: 0
 S. UMEZAKI
 
 Fonte: 0 Paleta: 0 Linha: 736 Caveira: 3
