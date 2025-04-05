@@ -56,6 +56,10 @@ A: A ferramenta tenta fazer um cálculo automático das posições das primitiva
 
 ![alt text](faq_q2.png)
 
+Q: Percebi que, no arquivo "creditos.txt" traduzido, vários nomes tiveram de ser abreviados. Por que não mantê-los sem abreviação, como no original?
+
+A: Muito embora haja bastante espaços nos tiles dos arquivos "f_roll", que teoricamente daria pra comportar nomes desabreviados, o gargalo está no arquivo "p_roll.dat" que contém as primitivas, onde basicamente há um limite de quantas primitivas o arquivo pode comportar. Se a quantidade de palavras (ou partes de palavras) ultrapassarem um determinado limite, o arquivo "p_roll.dat" poderá ultrapassar seu tamanho de 4kb, assim causando diversos bugs ingame durante a rolagem de créditos.
+
 # Disclaimer
 
 Embora esta ferramenta esteja aqui disponibilizada, ela foi fornecida as-is. O código-fonte dela não está disponível, e nenhum suporte será dado. Use-a por sua conta e risco.
