@@ -96,4 +96,4 @@ Revisão: 100%
 
 O patch de tradução está disponível na seção de releases desse repositório. Está em formato Xdelta 3, e vocês podem aplicá-los através de programas como [Xdelta UI](https://www.romhacking.net/utilities/598/) ou similares. O patch deve ser aplicado na rom **Castlevania - Dawn of Sorrow (USA).nds**, de crc **135737f6** / md5sum **cc0f25b8783fb83cb4588d1c111bdc18**.
 
-Os patches pré-prontos são para a versão "Vanilla" (cdos_1.0.xdelta) e "Definitive Edition" (cdos_de_1.0.xdelta) da tradução. Para versões customizadas, você deve baixar a ferramenta [CDOS Patcher Tool](https://github.com/leomontenegro6/cdos-patcher-tool/releases), que permite escolher quais patches deseja aplicar na tradução.
+Os patches pré-prontos são para a versão "Vanilla" (cdos_1.1.xdelta) e "Definitive Edition" (cdos_de_1.1.xdelta) da tradução. Para versões customizadas, você deve baixar a ferramenta [CDOS Patcher Tool](https://github.com/leomontenegro6/cdos-patcher-tool/releases), que permite escolher quais patches deseja aplicar na tradução.

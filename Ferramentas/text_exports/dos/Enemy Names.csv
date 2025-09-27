@@ -8,7 +8,7 @@
 0x1AF,Esquel. Arqueiro
 0x1B0,Fenrir
 0x1B1,Diabo Giratório
-0x1B2,Fidalgo Blindado
+0x1B2,Cavaleiro Armado
 0x1B3,Aprendiz de Bruxa
 0x1B4,Carrasco
 0x1B5,Armad. de Bomba
@@ -65,7 +65,7 @@
 0x1E8,Cabeça de Medusa
 0x1E9,Ukobach
 0x1EA,Peixe-Assassino
-0x1EB,Imitador
+0x1EB,Mímico
 0x1EC,Pirata Morto
 0x1ED,Aparição de Gelo
 0x1EE,Homúnculo
@@ -100,13 +100,13 @@
 0x20B,Alastor
 0x20C,Golem de Ferro
 0x20D,Armadura Voadora
-0x20E,Balore
+0x20E,Balor
 0x20F,Malfas
 0x210,Dmitrii
 0x211,Dario
 0x212,Rei das Marionetes
 0x213,Rahab
-0x214,Gergoth
+0x214,Gergos
 0x215,Zéfiro
 0x216,Bando de Morcegos
 0x217,Paranóia

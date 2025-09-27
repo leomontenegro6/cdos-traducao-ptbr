@@ -1,3 +1,23 @@
 {
-    "editor.rulers": [40]
+    "editor.rulers": [
+        40
+    ],
+    "spellright.language": [
+        "pt"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "dynamic csv"
+    ],
+    "spellright.parserByClass": {
+        "dynamic csv": {
+            "parser": "plain"
+        }
+    },
+    "cSpell.ignoreWords": [
+        "Cê",
+        "Hammer"
+    ]
 }

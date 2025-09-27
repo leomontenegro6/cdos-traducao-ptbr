@@ -49,13 +49,15 @@ A parte provavelmente mais difícil e porre da tradução foram editar os crédi
 A tradução será lançada não em uma, mas em várias versões:
 
 [list]
-  [li][b]Vanilla[/b]: Tradução em cima do jogo original, para os que preferem o jogo como ele originalmente é.[/li]
-  [li][b]Definitive Edition[/b]: Tradução combinada com os patches de aprimoramento "Dawn of Dignity", "No Magic Seals" e "Fixed Luck".[/li]
-  [li][b]Customizada[/b]: Através da ferramenta CDOS Patcher Tool, que permite ao usuário escolher livremente se quer aplicar ou não ou seguintes patches:[/li]
-  [list]
-    [li][b]Dawn of Dignity[/b]: Troca os avatares de anime genérico por avatares góticos no estilo da Ayami Kojima.[/li]
-    [li][b]No Magic Seals[/b]: Desabilita mecânica de selos mágicos, fazendo os bosses serem selados imediatamente após derrotados.[/li]
-    [li][b]Fixed Luck[/b]: Conserta sorte em drops de almas e equipamentos, assim diminuindo consideravelmente o [i]grinding[/i] do jogo original.[/list]
+[li][b]Vanilla[/b]: Tradução em cima do jogo original, para os que preferem o jogo como ele originalmente é.[/li]
+[li][b]Definitive Edition[/b]: Tradução combinada com os patches de aprimoramento "Dawn of Dignity", "No Magic Seals" e "Fixed Luck".[/li]
+[li][b]Customizada[/b]: Através da ferramenta CDOS Patcher Tool, que permite ao usuário escolher livremente se quer aplicar ou não ou seguintes patches:
+[list]
+  [li][b]Dawn of Dignity[/b]: Troca os avatares de anime genérico por avatares góticos no estilo da Ayami Kojima.[/li]
+  [li][b]No Magic Seals[/b]: Desabilita mecânica de selos mágicos, fazendo os bosses serem selados imediatamente após derrotados.[/li]
+  [li][b]Fixed Luck[/b]: Conserta sorte em drops de almas e equipamentos, assim diminuindo consideravelmente o [i]grinding[/i] do jogo original.[/li]
+[/list]
+[/li]
 [/list]
 
 [img]https://i.imgur.com/HBLExv5.gif[/img]
@@ -100,6 +102,37 @@ Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à 
 [/list]
 
 —————————————————–
+[b]Changelog[/b]
+—————————————————–
+
+[b]Versão 1.1[/b] - 27/09/25
+[spoiler]
+Terceiro lançamento. Versão Americana
+- Efetuadas correções menores de terminologia, pra ficar padronizada com outras traduções:
+  - Balore -> Balor
+  - Gergoth -> Gergos
+  - Fidalgo Blindado -> Cavaleiro Armado
+  - Imitador -> Mímico
+- Ajuste menor no cedilha da fonte pequena, pra melhorar sua aparência;
+- Correções textuais menores.
+[/spoiler]
+
+[b]Versão 1.0[/b] - 25/01/25
+[spoiler]
+Segundo lançamento. Versão Americana
+- Revisão textual completa da tradução, tornando-a mais padronizada com as traduções dos jogos seguintes;
+- Diversos aprimoramentos gráficos, como desabreviação de localidades, ajustes em fontes, edição dos créditos finais, etc;
+- Migrada pra versão americana, pra adicionar suporte aos patches de aprimoramento da "Definitive Edition".
+[/spoiler]
+
+[b]Versão beta[/b] - 06/11/08
+[spoiler]
+Primeiro lançamento. Versão Européia
+- Tradução inicial de todos os scripts, pelo Hyllian;
+- Auxílios gráficos e revisões textuais menores, que passei pro Hyllian.
+[/spoiler]
+
+—————————————————–
 [b]Agradecimentos[/b]
 —————————————————–
 
@@ -108,6 +141,7 @@ Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à 
 [li]Ao Neko Belmont e Mysterioso, pelas revisões e sugestões;[/li]
 [li]Ao denim, por ajudar na edição dos créditos do jogo;[/li]
 [li]Ao LagoLunatic, por ter criado a ferramenta DSVania Editor.[/li]
+[li]Ao Thirteen 1355 e acediez, por ter criado o patch da Definitive Edition.[/li]
 [li]Ao djmatheusito, pelo apoio no CDOS Patcher Tool.[/li]
 [li]Ao victoriemini, pelas artes de capas.[/li]
 [/list]
@@ -125,4 +159,4 @@ Com isso, enfim após mais de 15 anos, finalizamos essa revisão e lançamos à 
 
 Segue em anexo patches da tradução, para download. Estão em formato Xdelta 3, e vocês podem aplicá-los através de programas como [url="https://www.romhacking.net/utilities/598/"]Xdelta UI[/url] ou similares. O patch deve ser aplicado na rom [b]Castlevania - Dawn of Sorrow (USA).nds[/b], de crc [b]135737f6[/b] / md5sum [b]cc0f25b8783fb83cb4588d1c111bdc18[/b].
 
-Os patches pré-prontos são para a versão "Vanilla" (cdos_1.0.xdelta) e "Definitive Edition" (cdos_de_1.0.xdelta) da tradução. Para versões customizadas, você deve baixar a ferramenta [url="https://github.com/leomontenegro6/cdos-patcher-tool/releases"]CDOS Patcher Tool[/url], que permite escolher quais patches deseja aplicar na tradução.
+Os patches pré-prontos são para a versão "Vanilla" (cdos_1.1.xdelta) e "Definitive Edition" (cdos_de_1.1.xdelta) da tradução. Para versões customizadas, você deve baixar a ferramenta [url="https://github.com/leomontenegro6/cdos-patcher-tool/releases"]CDOS Patcher Tool[/url], que permite escolher quais patches deseja aplicar na tradução.

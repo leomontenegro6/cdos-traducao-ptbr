@@ -1,18 +1,3 @@
-DAWN OF SORROW
-
-- Mudar "Imitador" para "Mímico" (FUTURO)
-- Mudar "Fidalgo Blindado" para "Cavaleiro Armado" (FUTURO)
-
-ARIA OF SORROW
-
-- Mudar "Joyeuse" para "Joiosa"
-- Mudar "Esp. de Rahab" para "Gelo de Rahab"
-- Mudar "Vjaya" para "Raio de Indra"
-- Corrigir "machago" -> "machado"
-- Checar um erro ortográfico menor, lá no final do jogo.
-- Trocar risadas "Rárárá", "Réréré", "Ríríri" para "Hahaha", "Hehehe", "Ririri".
-- Mudar "Imitador" para "Mímico"
-
 PORTRAIT OF RUIN
 
 - Mudar "Falchion" para "Alfange"
